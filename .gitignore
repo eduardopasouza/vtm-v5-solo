@@ -1,11 +1,21 @@
-# PDFs dos livros (3GB+)
-06_Livros_e_Suplementos/
+# Node
+node_modules/
+package-lock.json
 
-# OS files
+# PDFs (muito grandes para GitHub)
+*.pdf
+
+# Downloads oficiais (pesados)
+11_Downloads_Oficiais/
+
+# OS
 .DS_Store
 Thumbs.db
 desktop.ini
 
 # Temp
 *.tmp
+*.bak
 ~$*
+temp_vtm_caca.txt
+extract_pdf.py
