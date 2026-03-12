@@ -8,12 +8,12 @@
 
 | Campo | Valor |
 |-------|-------|
-| **Sessao** | 14 concluida |
-| **Data ficcional** | ~Noite 76, Dezembro de 1836 |
+| **Sessao** | 15 em progresso |
+| **Data ficcional** | ~Noite 77, Dezembro de 1836 |
 | **Localizacao** | Mayfair (refugio de Anne) |
-| **Fome** | 1 (alimentacao Kindred — Anne) |
-| **FdV** | 5/6 (1 gasta na electio) |
-| **Saude** | 7/7 (Tenacidade) |
+| **Fome** | 1 |
+| **FdV** | 6/6 |
+| **Saude** | 7/7 |
 | **Humanidade** | 6 |
 | **XP** | 116 total / 12 disponivel |
 | **BP** | 4 (coniunctio) |
@@ -26,45 +26,40 @@
 
 ## Historia Actual
 
-**O Espelho Ancestral** — COMPLETA. Coniunctio alcancada. Edward e speculum de Mithras.
+**O Peso do Speculum** — Dominar os poderes, gerir as novas responsabilidades.
 
 ## Aventura Actual
 
-**O Speculum** — COMPLETA. Electio enfrentada Noite 76. Coniunctio. Lucius descansou.
+**Noite 77 concluida.** Ashworth informado. Estrategia de silencio adoptada. Supressao testada com sucesso.
 
-## Resumo da Ultima Sessao (14)
+## Resumo da Ultima Sessao (15 — em progresso)
 
-### O que aconteceu
-- **Noite 74:** Edward informa Valerius sobre electio. Valerius oferece Anel de Investidura (ferro, passado de Principe a Principe) e seu sangue (6a Geracao, Blood Bond 1o grau). Edward aceita ambos. Visita Thomas (despedida velada como conselho de mentor). Visita Anne — informa sobre anel e sangue. Anne planeja contingencias.
-- **Noite 75:** Interdita Mithraeum com vigilancia Nosferatu (Gideon). Visita marcador de Ludgate Hill — ressonancia amplificada pelo anel + sangue de Valerius.
-- **Noite 76 — ELECTIO:** Anne no exterior de Walbrook. Edward desce ao Mithraeum. Rouse Check conexao (falhou, Fome 2). Activa 5 marcadores perifericos. Rouse Check palma (falhou, Fome 3). Mao fecha. Rio comeca.
-  - **Teste 1 (Conhecimento):** Aceitou TUDO (DD 5), sem ancora. FALHA BESTIAL — 4 sucessos vs DD 5, dado de Fome 1. Gastou FdV para re-rolar 3 dados: [10][9][9]. Salvou! 7 sucessos, margem +2.
-  - **Teste 2 (Poder):** Aceitou parcialmente (DD 5), ancora Lucius (+2 dados). SUCESSO — 5 sucessos, margem +0.
-  - **Teste 3 (Identidade):** "Ha espaco para ambos" (DD 6), TODAS as ancoras restantes (+6 dados). SUCESSO — 7 sucessos, margem +1.
-  - **CONIUNCTIO ALCANCADA.** Lucius descansou. Edward emergiu como speculum.
-- **Pos-electio:** Mudancas mecanicas apresentadas (BP 4, Politica 5, Fortitude 2, Speculum). Poderes testados. Blood Surge +4, Sentido de Linhagem, Tenacidade, Politica 5, Presenca Ancestral.
-- **Cena final:** Troca de sangue mutua com Anne (Blood Bond 1o mutuo). Fome 3->1. Regresso a Mayfair.
+### O que aconteceu (Noite 77)
+- **Sonho profetico:** 1o como speculum. Legioes, general, "Antes de conquistar, aprende a perder."
+- **Ashworth informado:** Revelacao directa. Ashworth sentiu Presenca Ancestral. Estrategia: silencio e supressao.
+- **Dorset Street:** Teste de supressao vs Gideon — sucesso (margem +2). Gideon nao detectou speculum.
+- **Sentido de Linhagem:** Marcadores sentidos como extensoes do corpo. Mapa Kindred activo. 1 neonato desconhecido detectado a sul de Whitechapel.
+- **Decisoes pendentes:** Alimentacao BP 4 (adiada), Valerius (alinhar silencio), corte.
 
 ### Proximos passos
-1. Nova historia pos-coniunctio — o que significa ser speculum?
-2. Resultado do voto de Viena (Adelbert, ~15 dias)
-3. Alimentacao: BP 4 exige drenar mortal ou Kindred mensal
-4. Reaccao da corte ao Edward transformado
-5. Informar Ashworth sobre resultado
-6. Kaspar — destino final
-7. FdV recuperar (1 por sessao ao agir conforme Ambicao/Desejo)
+1. Alimentacao BP 4 — deve drenar mortal ou Kindred (mensal)
+2. Alinhar Valerius com estrategia de silencio
+3. Resultado do voto de Viena (~12 dias restantes)
+4. Reaccao da corte se presenca escapar
+5. Thomas — risco com Presenca Ancestral
+6. Neonato desconhecido no East End?
 
 ## Relacoes Activas
 
 | NPC | Atitude | Nota |
 |-----|---------|------|
-| Valerius | Confianca total + Blood Bond 1o | Anel + sangue. Sabe da electio. |
+| Valerius | Confianca total + Blood Bond 1o | Anel + sangue. Sabe da electio. A INFORMAR sobre estrategia silencio. |
 | Anne | Aliada profunda + Blood Bond 1o mutuo | Troca de sangue. Ancora permanente. |
-| Ashworth | Conselheiro | Campanha completa. A informar sobre electio. |
+| Ashworth | Conselheiro (INFORMADO) | Sabe do speculum. Aprova silencio. |
 | Adelbert | Aliado formal (PARTIU) | Viena com provas. Selo de comunicacao. |
-| Crowe | Aliado firme | 3 portos. Estavel. |
-| Gideon | Assustado | Coopera. Vigilancia Mithraeum. |
-| Marguerite | Aliada formal | Durham em vigor. |
+| Crowe | Aliado firme | 3 portos. Estavel. NAO SABE. |
+| Gideon | Assustado | Coopera. Vigilancia Mithraeum. NAO DETECTOU speculum. |
+| Marguerite | Aliada formal | Durham em vigor. NAO SABE. |
 | Sibyl | Profecia cumprida | 3a porta atravessada. |
 | Lucius | DESCANSOU | Speculum transferido. Dentro do rio. |
 | Dunstan | Aliado operacional | Brujah enforcer. |
@@ -73,4 +68,4 @@
 
 ---
 
-*Contexto atualizado em 12/03/2026 — Sessao 14*
+*Contexto atualizado em 12/03/2026 — Sessao 15 (Noite 77)*
