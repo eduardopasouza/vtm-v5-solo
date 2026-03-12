@@ -1,41 +1,46 @@
-# História: O Peso da Coroa
+# Historia: O Peso da Coroa
 
 ## Dados
 
 | Campo | Valor |
 |-------|-------|
 | **Partida** | A Coroa de Cinzas |
-| **Tipo** | Principal (eixo político — consolidação) |
-| **Status** | Em andamento |
+| **Aventuras** | A Primeira Divida, O Veredicto de Gideon, A Emissaria de Viena, O Sangue do Cla |
+| **Sessoes** | 7, 8, 9 |
+| **Status** | CONCLUIDA |
 
-## Premissa
+## Resumo
 
-Edward conquistou o assento Ventrue. Agora precisa mantê-lo. Cada clã testará o novo Primogênito: Crowe cobrará a contrapartida reformista, Marguerite testará o Tratado de Durham, Thane pedirá acção directa, Gideon esperará os alvarás. E nas sombras, Ashworth — exilado mas não destruído — pode buscar retorno.
+Edward sobreviveu o primeiro mes como Primogenito Ventrue. Cumpriu obrigacoes (Crowe, Gideon), resolveu a crise da Condessa de Viena sem guerra, descobriu o segredo de Mithras sob Londres, e reconciliou com Ashworth em Brocket Hall. Estabeleceu autoridade independente de Anne e foi designado Emissario de Londres para Assuntos Continentais.
 
-O verdadeiro desafio não é o poder. É o preço do poder.
-
-## Objectivos da História
+## Objectivos
 
 | ID | Tipo | Objectivo | Status |
 |----|------|-----------|--------|
-| H3-1 | Principal | Sobreviver o primeiro mês como Primogênito | Ativo |
-| H3-2 | Principal | Cumprir pelo menos 2 obrigações pendentes | Ativo |
-| H3-3 | Secundário | Estabelecer autoridade independente de Anne | Ativo |
-| H3-4 | Secundário | Explorar reconciliação com Ashworth | Ativo |
+| H3-1 | Principal | Sobreviver o primeiro mes como Primogenito | COMPLETO |
+| H3-2 | Principal | Cumprir pelo menos 2 obrigacoes pendentes | COMPLETO (Crowe S7 + Gideon S8) |
+| H3-3 | Secundario | Estabelecer autoridade independente de Anne | COMPLETO (Sessao 9) |
+| H3-4 | Secundario | Explorar reconciliacao com Ashworth | COMPLETO (Sessao 9) |
 
 ## Aventuras
 
-| # | Nome | Sessões | Status |
-|---|------|---------|--------|
-| 1 | A Primeira Dívida | — | Em andamento |
+1. **A Primeira Divida** (Sessao 7) - Resolveu demanda de Crowe.
+2. **O Veredicto de Gideon** (Sessao 8) - Alvaras garantidos. Conspiracoa exposta.
+3. **A Emissaria de Viena** (Sessao 9) - Condessa expulsa. Mithras revelado.
+4. **O Sangue do Cla** (Sessao 9) - Ashworth reconciliado em Brocket Hall.
 
-## Temas
+## Arcos Resolvidos
+- Obrigacao Crowe: lugar a mesa
+- Obrigacao Gideon: alvaras de proteccao
+- Crise Condessa: expulsao diplomatica
+- Ashworth: reconciliacao
 
-- **Consolidação:** autoridade se conquista duas vezes — pela nomeação e pela acção
-- **Dívidas:** todo poder tem preço. Cada aliado tem um preço
-- **Independência:** quando o pupilo se torna o colega
-- **Reconciliação vs. Eliminação:** Ashworth — pacificar ou neutralizar?
+## Arcos Abertos (para proxima historia)
+- Mithras: 3/6 marcadores, ressonancia em Edward
+- Emissario: cargo a formalizar
+- Canal Viena: Guardioes via Condessa
+- Ceifadores: Kaspar em Viena, retaliacao possivel
 
 ---
 
-*História iniciada em 10/03/2026 — Sessão 7*
+*Historia concluida em 10/03/2026 — Sessao 9*

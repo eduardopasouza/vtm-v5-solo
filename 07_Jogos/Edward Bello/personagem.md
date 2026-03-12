@@ -12,12 +12,12 @@
 | **Nascido** | ~1660, Londres (família de origem veneziana) |
 | **Idade Aparente** | ~40 anos |
 | **Idade Real** | ~176 anos (40 mortal + 136 vampiro) |
-| **Potência de Sangue** | 3 |
+| **Potência de Sangue** | 4 |
 | **Humanidade** | 6 |
 | **Tipo de Predador** | Aranha (Spider) |
 | **Conceito** | Jurista-manipulador / A Aranha |
 | **Ambição** | Ser Príncipe. Ser o Ventrue mais forte. |
-| **Desejo** | Descobrir como aumentar a Potência de Sangue |
+| **Desejo** | Dominar os poderes do speculum sem perder a identidade |
 | **Restrição Alimentar Ventrue** | Homens de profissão intelectual (advogados, médicos, acadêmicos, clérigos letrados, escritores) |
 
 ## Convicções e Touchstone
@@ -98,23 +98,23 @@ As Guerras Napoleônicas trouxeram refugiados vampíricos. Anne designou Edward 
 ### Físicos (Terciários — +2)
 | Atributo | Valor |
 |----------|-------|
-| Força | 1 |
+| Força | 3 |
 | Destreza | 2 |
 | Vigor | 2 |
 
 ### Sociais (Primários — +4)
 | Atributo | Valor |
 |----------|-------|
-| Carisma | 2 |
+| Carisma | 3 |
 | Manipulação | 4 |
-| Autocontrole | 2 |
+| Autocontrole | 3 |
 
 ### Mentais (Secundários — +3)
 | Atributo | Valor |
 |----------|-------|
 | Inteligência | 3 |
-| Raciocínio | 2 |
-| Determinação | 2 |
+| Raciocínio | 3 |
+| Determinação | 3 |
 
 ---
 
@@ -135,7 +135,7 @@ As Guerras Napoleônicas trouxeram refugiados vampíricos. Anne designou Edward 
 ### Mentais
 | Habilidade | Valor | Especialidade |
 |------------|-------|---------------|
-| Política | 4 | Sociedade Vampírica |
+| Política | 5 | Sociedade Vampírica |
 | Acadêmicos | 3 | Direito |
 | Finanças | 3 | — |
 | Investigação | 3 | — |
@@ -159,26 +159,27 @@ As Guerras Napoleônicas trouxeram refugiados vampíricos. Anne designou Edward 
 ### Dominação ●●● (Clã)
 | Nível | Poder | Efeito | Pool |
 |-------|-------|--------|------|
-| 1 | Compelir | Comando curto irresistível | Car 2 + Dom 3 + BP 1 = **6** vs. AC + Int |
-| 2 | Mesmerizar | Implanta comandos complexos com contato visual | Man 4 + Dom 3 + BP 1 = **8** vs. Int + Det |
-| 3 | Mente Esquecida | Reescreve memórias inteiras | Man 4 + Dom 3 + BP 1 = **8** vs. Int + Det |
+| 1 | Compelir | Comando curto irresistível | Car 3 + Dom 3 + BP 2 = **8** vs. AC + Int |
+| 2 | Mesmerizar | Implanta comandos complexos com contato visual | Man 4 + Dom 3 + BP 2 = **9** vs. Int + Det |
+| 3 | Mente Esquecida | Reescreve memórias inteiras | Man 4 + Dom 3 + BP 2 = **9** vs. Int + Det |
 
 ### Presença ●● (Clã)
 | Nível | Poder | Efeito | Pool |
 |-------|-------|--------|------|
-| 1 | Fascinar | Aura de fascínio; +2 dados em testes sociais não-intimidatórios por cena | Man 4 + Pre 2 + BP 1 = **7** (ativar) |
+| 1 | Fascinar | Aura de fascínio; +2 dados em testes sociais não-intimidatórios por cena | Man 4 + Pre 2 + BP 2 = **8** (ativar) |
 | 2 | Beijo Persistente | Mordida causa êxtase viciante; vítimas retornam voluntariamente | Passivo |
 
-### Fortitude ● (Clã)
+### Fortitude ●● (Clã)
 | Nível | Poder | Efeito |
 |-------|-------|--------|
-| 1 | Mente Inabalável | +1 dado (Fortitude) à resistência contra Dominação e Presença |
+| 1 | Mente Inabalável | +Fortitude à resistência contra Dominação e Presença |
+| 2 | Tenacidade | +Fortitude à Saúde. Saúde = Vigor 2 + Fortitude 2 + 3 = 7 |
 
 ### Auspícios ●● (Fora de Clã)
 | Nível | Poder | Efeito | Pool |
 |-------|-------|--------|------|
 | 1 | Sentidos Aguçados | Percepção sobrenatural; +1 em testes de percepção | Passivo |
-| 2 | Premonição | Pressentimentos de perigo iminente | Rac 2 + Aus 2 + BP 1 = **5** (reflexivo) |
+| 2 | Premonição | Pressentimentos de perigo iminente | Rac 3 + Aus 2 + BP 2 = **7** (reflexivo) |
 
 ### Ofuscação ● (Fora de Clã)
 | Nível | Poder | Efeito |
@@ -239,9 +240,9 @@ Identidade com 96 anos (criada em 1740), agora reforçada. "Bell & Associates" p
 
 *Risco reduzido:* a fachada é mais robusta, mas não impenetrável. Conexão entre os três "Bells" ainda é vulnerabilidade teórica.
 
-### Status ●●● — Primogênito Ventrue
+### Status ●●●● — Primogênito Ventrue + Emissário designado
 
-Primogênito Ventrue de Londres. Nomeado por Anne Bowesley, confirmado por Valerius (Noite 12, Novembro 1836). Voto no conselho. Representa o clã Ventrue perante a corte.
+Primogênito Ventrue de Londres. Nomeado por Anne Bowesley, confirmado por Valerius (Noite 12). Voto no conselho. Emissário de Londres para Assuntos Continentais (formalizado por Valerius, Noite 31, Somerset House). Canal com Guardiões de Viena.
 
 ### Lacaios ●●● — Dois Carniçais
 
@@ -261,9 +262,9 @@ Sire, mentora, protetora — e carcereira. 136 anos juntos. Anne é Senescal de 
 
 | Defeito | Descrição |
 |---------|-----------|
-| **Restrição Alimentar** (Bane Ventrue) | Só se alimenta de homens de profissão intelectual. Feeding from wrong type: dano = Severidade da Maldição (2). |
-| **Adversário ●** | **Lord Ashworth** — EXILADO. Guerra fria terminada com remoção. Edward busca pacificação. Ashworth pode retornar. |
-| **Segredo ●** | **Câmara de Mithras.** Edward conhece a câmara de torpor e a identidade da cria. Segredo partilhado com Marguerite e Gideon. |
+| **Restrição Alimentar** (Bane Ventrue) | Só se alimenta de homens de profissão intelectual. Feeding from wrong type: dano = Severidade da Maldição (3). |
+| **Adversário ●** | **Lord Ashworth** — RECONCILIADO (Sessão 9). Aceitou termos de Edward. Regressa como conselheiro. Defeito pode ser removido com XP. |
+| **Segredo ●●●** | **Speculum de Mithras.** Edward É o speculum — coniunctio alcançada (Sessão 14). Ressonância permanente. Sabido por Valerius, Anne, Ashworth. Lucius descansou. |
 
 ---
 
@@ -283,16 +284,16 @@ Sire, mentora, protetora — e carcereira. 136 anos juntos. Anne é Senescal de 
 
 | Campo | Valor |
 |-------|-------|
-| **BP Atual** | 3 |
+| **BP Atual** | 4 |
 | **BP Máximo (9a Geração)** | 5 |
-| **Surto de Sangue** | +3 dados |
-| **Cura por Rouse** | 2 Superficial |
-| **Bônus Disciplina** | +1 (já incluído nas paradas) |
-| **Severidade da Maldição** | 2 |
-| **Penalidade Alimentar** | Sangue animal/embalado causa náusea (AC + Det, DD 3) |
-| **Reforço** | +0 |
+| **Surto de Sangue** | +4 dados |
+| **Cura por Rouse** | 3 Superficial |
+| **Bônus Disciplina** | +2 (já incluído nas paradas) |
+| **Severidade da Maldição** | 3 |
+| **Penalidade Alimentar** | Animal/embalado inútil. Deve drenar mortal ou alimentar-se de Kindred mensalmente. |
+| **Reforço** | +1 |
 
-> **Objetivo Secundário — Potência de Sangue:** Edward busca elevar sua BP de 3 para 4 e eventualmente 5 (máximo da 9a geração). Caminhos possíveis: alimentação prolongada de vampiros mais velhos, rituais, diablerie (tensão moral com "Inocentes não se tocam"), ou tempo + sangue poderoso. Este objetivo guiará decisões narrativas ao longo do jogo.
+> **Potência de Sangue 4 — Coniunctio:** BP elevada a 4 pela coniunctio com Mithras (Sessão 14). Máximo da 9a geração: 5. Alimentação agora exige drenar mortais ou beber de Kindred mensalmente.
 
 ---
 
@@ -300,10 +301,10 @@ Sire, mentora, protetora — e carcereira. 136 anos juntos. Anne é Senescal de 
 
 | Recurso | Valor | Cálculo |
 |---------|-------|---------|
-| Saúde | 5 | Vigor 2 + 3 |
-| Força de Vontade | 4 | Autocontrole 2 + Determinação 2 |
+| Saúde | 7 | Vigor 2 + Fortitude 2 + 3 |
+| Força de Vontade | 6 | Autocontrole 3 + Determinação 3 |
 | Humanidade | 6 | 7 base - 1 (Aranha) |
-| Fome | 2 | Sessão 6 |
+| Fome | 1 | Sessão 14 (alimentação Kindred — Anne) |
 
 ---
 
@@ -322,63 +323,95 @@ Sire, mentora, protetora — e carcereira. 136 anos juntos. Anne é Senescal de 
 ### Leitura e Análise
 | Parada | Pool | Total |
 |--------|------|-------|
-| Ler pessoas (Insight) | Rac 2 + Ins 4 | **6** |
-| Política vampírica | Int 3 + Pol 4 | **7** |
+| Ler pessoas (Insight) | Rac 3 + Ins 4 | **7** |
+| Política vampírica | Int 3 + Pol 5 | **8** |
 | Investigação | Int 3 + Inv 3 | **6** |
-| Percepção geral | Rac 2 + Con 3 (+1 Sentidos) | **6** |
+| Percepção geral | Rac 3 + Con 3 (+1 Sentidos) | **7** |
 | Acadêmicos/Direito | Int 3 + Acad 3 | **6** |
 
-### Disciplinas (com BP +1)
+### Disciplinas (com BP +2)
 | Parada | Pool | Total | Resistência |
 |--------|------|-------|-------------|
-| Compelir | Car 2 + Dom 3 + BP 1 | **6** | AC + Int do alvo |
-| Mesmerizar | Man 4 + Dom 3 + BP 1 | **8** | Int + Det do alvo |
-| Mente Esquecida | Man 4 + Dom 3 + BP 1 | **8** | Int + Det do alvo |
-| Fascinar (ativar) | Man 4 + Pre 2 + BP 1 | **7** | AC + Det do alvo |
+| Compelir | Car 3 + Dom 3 + BP 2 | **8** | AC + Int do alvo |
+| Mesmerizar | Man 4 + Dom 3 + BP 2 | **9** | Int + Det do alvo |
+| Mente Esquecida | Man 4 + Dom 3 + BP 2 | **9** | Int + Det do alvo |
+| Fascinar (ativar) | Man 4 + Pre 2 + BP 2 | **8** | AC + Det do alvo |
 
 ### Resistência
 | Parada | Pool | Total |
 |--------|------|-------|
-| vs. Dominação (Compelir) | AC 2 + Int 3 + Fort 1 | **6** |
-| vs. Dominação (Mesmerizar) | Int 3 + Det 2 + Fort 1 | **6** |
-| vs. Presença (Fascinar/Pavor) | AC 2 + Det 2 + Fort 1 | **5** |
-| vs. Frenesi | AC 2 + Det 2 | **4** |
+| vs. Dominação (Compelir) | AC 3 + Int 3 + Fort 2 | **8** |
+| vs. Dominação (Mesmerizar) | Int 3 + Det 3 + Fort 2 | **8** |
+| vs. Presença (Fascinar/Pavor) | AC 3 + Det 3 + Fort 2 | **8** |
+| vs. Frenesi | AC 3 + Det 3 | **6** |
 
 ### Combate (a fraqueza)
 | Parada | Pool | Total |
 |--------|------|-------|
 | Bengala-espada | Des 2 + AB 2 | **4** |
 | Furtividade | Des 2 + Furt 2 | **4** |
-| Briga | For 1 + Bri 1 | **2** |
+| Briga | For 3 + Bri 1 | **4** |
 
 ---
 
 ## Resumo Tático
 
-**Forte em:** Manipulação social (pool 9-11 com Fascinar), controle mental (Mesmerizar/Mente Esquecida a 8 dados), leitura política (Política 7), investigação (6), rede de contatos e informação, desaparecer em sombras quando necessário.
+**Forte em:** Manipulação social (pool 9-11 com Fascinar), controle mental (Mesmerizar/Mente Esquecida a 9 dados), Compelir forte (8 dados), leitura política (Política 8 — maestria), leitura de pessoas (Insight 7), percepção (7 com Sentidos), rede de contatos, Sentido de Linhagem (speculum).
 
-**Fraco em:** Combate físico (pool 2-4), Força de Vontade melhorada (4 — mais resiliente mas ainda limitada), Carisma modesto (2 — melhorou, mas ainda depende mais de Manipulação), resistência a Frenesi (3 dados — arriscado em situações de alta tensão), Compelir funcional (6 dados — Mesmerizar continua sendo a ferramenta principal).
+**Fraco em:** Combate físico (Briga 4, Bengala 4 — funcional), resistência a Frenesi (6 dados), alimentação restrita (BP 4: deve drenar ou Kindred mensal).
 
 **Pontos de atenção:**
-- FdV 4 permite mais re-rolls e resistência mental. Determinação 2 melhora todas as resistências.
-- Carisma 2 é funcional mas não brilhante. Edward ainda depende mais de Manipulação que de charme direto.
-- Fome é risco constante: BP 3 causa náusea com sangue animal/embalado, e a restrição Ventrue limita alvos. Planejamento de alimentação é crítico.
+- **SPECULUM DE MITHRAS:** Sentido de Linhagem, sonhos proféticos, presença ancestral. Falha Bestial → manifestação de Mithras.
+- BP 4: Surge +4, Disciplina +2, Saúde 7 (Tenacidade), Bane 3. Alimentação EXIGE drenar mortal ou Kindred mensal.
+- FdV 6: 6 re-rolls. Todas as resistências a Dominação/Presença a 8 dados (Fortitude 2).
+- Política 5 (maestria): leitura política praticamente infalível.
+- Blood Bond 1° grau: Valerius (seu sangue) + Anne (mútuo). Laços de linhagem reforçados.
+- Autocontrole 3: Frenesi a 6 dados (sólida).
 
-**Estilo de jogo:** Planejador. Tece redes antes de agir. Lê a sala com Insight + Sentidos Aguçados, controla com Mesmerizar e Fascinar, desaparece com Manto das Sombras se as coisas saírem do controle. Nunca entra em combate que não venceu antes de começar. Quando forçado a lutar — foge.
+**Estilo de jogo:** Planejador-speculum. Tece redes antes de agir. Lê a sala com Insight + Sentidos Aguçados + Política 5, controla com Mesmerizar (9) e Fascinar (8), comanda com Compelir (8), desaparece com Manto das Sombras. Sentido de Linhagem detecta vampiros e ressonância. Mais resiliente (Saúde 7, resistências a 8). O peso de Mithras altera cada encontro.
 
 ---
+
+## Condição: Speculum de Mithras (Sessão 14)
+
+Edward alcançou **coniunctio** com Mithras durante a electio (Noite 76). É agora o speculum — recipiente vivo da consciência ancestral.
+
+| Poder | Efeito |
+|-------|--------|
+| **Sentido de Linhagem** | Detecta vampiros da linhagem de Mithras. Sente a "rede" de sangue. |
+| **Sonhos Proféticos** | Sonhos com fragmentos de 4000 anos de memória. Podem conter pistas. |
+| **Presença Ancestral** | Aura de autoridade sobrenatural. Carniçais e vampiros jovens sentem peso. |
+
+| Desvantagem | Efeito |
+|-------------|--------|
+| **Manifestação de Mithras** | Em Falha Bestial, Mithras manifesta-se brevemente: latim arcaico, presença esmagadora, perda de controlo momentânea. |
+
+## Laços de Sangue (Blood Bond)
+
+| Alvo | Grau | Origem | Efeito |
+|------|------|--------|--------|
+| **Valerius** | 1° (Edward → Valerius) | Bebeu sangue de Valerius (Noite 74) | Atenção ligeiramente aumentada, respeito reforçado |
+| **Anne Bowesley** | 1° mútuo | Troca de sangue pós-electio (Noite 76) | Laço sire-childe reforçado, conexão empática |
+
+## Objectos Especiais
+
+| Objecto | Descrição |
+|---------|-----------|
+| **Anel de Investidura** | Ferro frio, sem adorno. Passado de Príncipe a Príncipe na linhagem. Dado por Valerius (Noite 74). Amplifica ressonância de Mithras. |
+| **Relógio de J.B.** | Relógio de bolso antigo. "J.B." gravado. Âncora de identidade. Encontrado em Dorset Street. |
+| **Moeda de Sol Invictus** | Moeda romana. Deixada por Lucius no Mithraeum. Símbolo da linhagem. |
 
 ## Linhagem
 
 ```
-Mithras (4a? / Metusalém) — AUSENTE
-  └── [intermediário desconhecido]
-        └── Valerius (6a) — Regente de Londres
-              └── Anne Bowesley (7a) — Senescal / Sire de Edward
-                    └── [intermediário?]
-                          └── Edward Bello (9a) — PC
+Mithras (4a / Metusalém) — DORME SOB LONDRES (speculum: Edward)
+  └── [intermediários]
+        └── Valerius (6a) — Regente [Blood Bond 1° com Edward]
+              └── Anne Bowesley (7a) — Senescal [Blood Bond 1° mútuo]
+                    └── [intermediário]
+                          └── Edward Bello (9a) — ★ SPECULUM DE MITHRAS ★
 ```
 
 ---
 
-*Personagem — Edward Bello "Beard" | Atualizado em 10/03/2026 — Sessão 7*
+*Personagem — Edward Bello "Beard" | Atualizado em 12/03/2026 — Sessão 14*

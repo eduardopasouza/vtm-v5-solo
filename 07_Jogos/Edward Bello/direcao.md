@@ -12,101 +12,159 @@
 Um vampiro descontrolado está atacando mortais no East End, violando a Máscara por descuido ou loucura.
 
 ### Camada 1 (REVELADA — Sessão 2)
-Os ataques seguem um **padrão** — localizações específicas, timing regular, alvos selecionados. Não é um vampiro em frenesi. É alguém agindo com método. O "atacante" é um vampiro recém-desperto de torpor — confuso, violento, mas sendo **guiado** para locais específicos por alguém que sabe o que faz.
+Os ataques seguem um **padrão**. O atacante é um vampiro recém-desperto de torpor — confuso, violento, mas **guiado** para locais específicos.
 
 ### Camada 2 (REVELADA — Sessões 2-5)
-Quem despertou e guia o vampiro feral tem **conexões Tremere**. Os Tremere queriam criar uma crise que desacreditasse a liderança atual. **OPERAÇÃO DESMANTELADA:** Friedrich (o Doktor) capturado, Ilse capturada, Kaspar em fuga para Viena.
+Conexões Tremere. Queriam desacreditar a liderança. **DESMANTELADA:** Friedrich capturado, Ilse capturada, Kaspar em fuga.
 
-### Camada 3 (semente para Partida futura)
-O vampiro feral é um **cria esquecido de Mithras** — Abraçado antes da ausência do Metusalém e posto em torpor. Sua existência prova que Mithras tinha planos secretos para Londres. **NÃO resolvida.** Plantada para arcos futuros.
+### Camada 3 (REVELADA — Sessão 9)
+O feral é um **sentinela de Mithras**. Os Tremere (Ceifadores de Viena) despertaram-no durante sondagens. Mithras agora conhecido por Edward, Valerius, Ashworth e Sibyl.
+
+### Camada 4 (REVELADA — Sessão 11)
+Mecanismo de herança revelado por Adelbert: não é despertar, é **sucessão**. Nepos forte herda consciência de Mithras. Nepos fraco é absorvido. 4 nepos anteriores falharam. Edward é o 5º.
+
+### Camada 5 (REVELADA — Sessão 12)
+**Coniunctio:** 4º nepos (Lucius) NÃO foi absorvido — alcançou união. Factor: humanitas. Viveu 200 anos como speculum. Depois enfrentou electio. Destino desconhecido.
+
+### Camada 6 (REVELADA — Sessão 13)
+**Lucius Valerius Maximus ENCONTRADO.** Vive como speculum ambulante. Vigiou linhagem Bello por 200 anos. Encontro no Mithraeum. Revelou: electio = rio de memórias + escolha, coniunctio = empate por amor, Lucius precisa ser substituído. Recomendou activar nos termos de Edward. Máscara de ressonância EXPIRADA.
+
+### Camada 7 (REVELADA — Sessão 14)
+**ELECTIO RESOLVIDA.** Edward activou os 6 marcadores. 3 testes de Humanidade com escolhas narrativas.
+- **Teste 1 (Conhecimento):** Aceitou TUDO (DD 5). FALHA BESTIAL salva por FdV. Política 4→5.
+- **Teste 2 (Poder):** Aceitou parcialmente (DD 5). Âncora Lucius. Sucesso raspado. Fortitude 1→2.
+- **Teste 3 (Identidade):** "Há espaço para ambos" (DD 6). Todas as âncoras. Sucesso.
+- **RESULTADO: CONIUNCTIO.** Edward é o novo speculum. Lucius descansou.
+- BP 3→4 (coniunctio). Sentido de Linhagem, Sonhos Proféticos, Presença Ancestral.
+- Blood Bond 1° com Valerius (pré-electio) e Anne (pós-electio, mútuo).
+
+---
+
+## Mithras — O Segredo Central
+
+### O que se sabe (Sessão 13)
+- Mithras: Ventrue, 4a Geração, dorme sob Londres há séculos
+- **TODOS 6 marcadores localizados:** Ludgate Hill, Tower Hill, Moorgate, Wapping, Southwark + Walbrook (palma/Mithraeum)
+- Marcadores formam uma MÃO (5 dedos + palma) — Lectio Sanguinis
+- Sangue de Edward é CHAVE. "Nepos eligitur."
+- Mithras SABE que Edward existe
+- **Selo hereditário:** Príncipe a Príncipe (Valerius revelou S11)
+- **Mithraeum verdadeiro:** Sob Walbrook (palma da mão). Reconhecido por Edward S13.
+- Viena: **Guardiões** (proteger processo) vs **Ceifadores** (explorar/forçar)
+- **Adelbert von Hasselt:** PARTIU para Viena com provas. Selo de comunicação activo.
+- **Crónica do Custos (sec. XIV):** Herdar, não despertar. 4 nepos anteriores.
+- **Mecanismo de herança:** 3 resultados — absorptio, coniunctio, reiectio. Critério: animus/humanitas.
+- **Lucius Valerius Maximus:** ENCONTRADO. Speculum há 200 anos. Vigiou linhagem Bello. Encontro no Mithraeum. Recomendou electio nos termos de Edward. Precisa ser substituído.
+- **Electio:** Rio de memórias. Escolha no momento impossível. O sangue decide baseado no que amas.
+- **Máscara de ressonância:** EXPIRADA (Noite 73). Sem renovação possível. Ressonância exposta.
+- **Activação forçada:** Possível com sangue roubado (Tremere). Resultado: Mithras agitado — pior cenário.
+- **Contramedidas restantes:** Ancora vontade (relógio J.B.), âncoras emocionais (Thomas, Anne).
+- **Kaspar:** Politicamente neutralizado. Prisioneiros + carta + campanha = derrota em Viena.
+
+### O que NÃO se sabe
+- O que acontece EXACTAMENTE durante a electio (Edward nunca viveu isso)
+- Se Edward é definitivamente "forte" para coniunctio
+- O que Lucius se torna quando/se Edward o substitui
+- Se Mithras pode ser "convencido" durante a electio (ou se é puramente mecânico)
+- Reacção de Valerius quando souber do plano de activação
+- Consequências da ressonância exposta (quem mais detecta?)
+
+### Profecias de Sibyl (resolução próxima)
+- Três portas: trono (feita), teste (feita), espelho (ELECTIO = Sessão 14)
+- O avô sonha com o neto — "Reconheço-te"
+- "A terceira porta não se atravessa. Abre-se em ti."
+- "Não olhes para trás."
 
 ---
 
 ## Motivações Ocultas dos NPCs
 
-### Lord Ashworth — EXILADO
-- **Estado:** Removido do Primogênito por Valerius (Noite 12). Exílio, não Morte Final. Levou cria não-autorizada.
-- **Futuro:** Ashworth humilhado mas vivo. Mithrista convicto. Pode tentar retorno. Pode buscar aliados fora de Londres.
-- **Nota do jogador:** Edward deseja reconciliação/pacificação. Ashworth como adversário pacificado seria estabilidade política. Explorar este ângulo.
+### Lucius Valerius Maximus — DESCANSOU
+- **Estado:** Dentro do speculum. Largou o fardo após 200 anos. Edward substituiu-o.
+- **Futuro:** Pode aparecer em sonhos proféticos? Memória fragmentada dentro do rio. Descanso merecido.
+
+### Lord Ashworth — RECONCILIADO
+- **Estado:** Conselheiro. Campanha continental completa. Kaspar destruído politicamente.
+- **Futuro:** Recurso contínuo. Pode reagir à revelação da electio.
 
 ### Anne Bowesley
-- **Agenda oculta:** Anne apoia Edward porque cria no Primogênito = poder por procuração. Se Edward ficar forte demais, recalibrará.
-- **Estado actual:** Relação REDEFINIDA. Edward é Primogênito — já não é pupilo, é colega com posição formal. "A porta está aberta. Mas bata primeiro." Anne observará se Edward se torna independente demais.
-- **Limite:** Anne não sacrificará posição de Senescal por Edward. Se protegê-lo custar demais, abandonará.
+- **Estado:** Blood Bond 1° mútuo com Edward. Bebeu sangue de BP 4 + Mithras. Sentiu fragmento do rio.
+- **Futuro:** Dinâmica sire-childe alterada. Anne sente o peso de Mithras no sangue de Edward. Como se adapta?
 
 ### Old Gideon
-- **Jogo duplo:** Gideon vende informação para Edward, mas venderá a outros se necessário. Não é aliado — é mercado.
-- **Estado actual:** Exclusividade mantida. Alvarás de protecção legal em progresso via Pembrook. Gideon confirmou movimento de Ashworth (cria) antes do Elísio — informação que levou à captura.
-- **Preço real:** Protecção legal permanente dos túneis. Edward prometeu sob Compulsão — DEVE cumprir.
+- **Estado:** ASSUSTADO. Coopera por medo. Vigilância Dorset Street mantida.
+- **Futuro:** Pode detectar ressonância exposta. Reporta a Valerius?
 
 ### Valerius
-- **Estado actual:** Removeu Ashworth. Aceitou nomeação de Edward. Avisou: "Se a sua utilidade tem limites, descobriremos ambos." Observa com cautela.
-- **Interesse em Edward:** Reconheceu honestidade na resposta "Porquê tu?" — mas cautela permanece. Viu ambição declarada. Primeiro teste de Edward como Primogênito será decisivo.
-- **Nota:** Valerius escolheu exílio sobre Morte Final para Ashworth — sinal de que equilibra facções (Mithristas não alienados completamente).
+- **Estado:** INFORMADO. Aprovou electio. Deu anel + sangue. Blood Bond 1° grau.
+- **Futuro:** Como reage ao resultado? Sabe que Edward é speculum? Implicações para a relação Príncipe-Emissário.
 
-### Lady Marguerite
-- **Estado actual:** ALIADA CONDICIONAL confirmada. Votou não-oposição no Elísio. Tratado de Durham vigente.
-- **Futuro:** Marguerite vai testar Edward sobre o Tratado. Primeiro pedido concreto virá em breve.
+### Adelbert von Hasselt — PARTIU
+- **Estado:** A caminho de Viena. Prisioneiros + carta + documentação Berlim.
+- **Futuro:** Resultado do voto de Viena (~15 dias). Comunicação via selo.
 
-### Desmond Crowe
-- **Estado actual:** ALIADO CONFIRMADO. Votou a favor. "Um lugar à mesa" = voz consultiva sobre questões que afectam Brujah e classes baixas.
-- **Futuro:** Crowe vai cobrar. Primeiro pedido pode envolver acesso a território, protecção de neonatos Brujah, ou reforma social.
+### Sibyl
+- **Estado:** Profecia CUMPRIDA. Terceira porta atravessada.
+- **Futuro:** Nova profecia? Ou silêncio?
 
-### Sibyl Moorhouse
-- **Profecia restante:**
-  - "Três portas. Uma leva ao trono, outra à cova, a terceira ao espelho."
-  - "O avô dorme, mas sonha com o neto."
-- **Significado:** Sibyl não apareceu no segundo Elísio. Sabe mais sobre Mithras do que mostra.
-
-### Robert Sedgwick
-- **Estado:** NEUTRALIZADO. Caderno confiscado. Mesmerizar activo (memória de ter perdido interesse na história). Fascinar anterior expirado.
-- **Futuro:** Se Mesmerizar falhar ou for quebrado, Sedgwick pode reconstituir investigação. Timer removido por agora mas não permanentemente eliminado.
-
-### Thane
-- **Estado:** ABSTENÇÃO formal. Não vota a favor, não vota contra. Pacto de acção directa com Edward — ajuda mútua se necessário em território norte (Hampstead).
-- **Futuro:** Thane vai testar Edward com um pedido concreto. Provavelmente relacionado com incursões em território Gangrel.
+### Kaspar Hesse — NEUTRALIZADO
+- **Estado:** Sem operativos. Sem apoio político (campanha continental + provas).
+- **Futuro:** Resultado do voto de Viena selará destino. Pode tentar algo desesperado? Improvável sem recursos.
 
 ---
 
-## Mecânicas Ocultas
-
-### Tracker de Reputação (não visível ao jogador)
+## Tracker de Reputação
 
 | NPC | Atitude | Notas |
 |-----|---------|-------|
-| Valerius | Cauteloso-positivo | Aceitou honestidade. "Utilidade" como medida. Observa. |
-| Anne | Respeitosa-calculada | Relação redefinida. Colega, não pupilo. Observa independência. |
-| Ashworth | EXILADO — hostilidade latente | Removido. Edward quer pacificar. Ashworth pode não querer. |
-| Crowe | ALIADO FIRME | Votou a favor. Espera contrapartida reformista. |
-| Marguerite | ALIADA CONDICIONAL | Não-oposição confirmada. Tratado de Durham como moeda. |
-| Sibyl | Interesse profético | Ausente do Elísio. Profecias pendentes. |
-| Flint | Profissional neutro | Capturou cria de Ashworth antes do Elísio. |
-| Gideon | Transacional — exclusivo | Alvarás em progresso. Confirmou movimento de Ashworth. |
-| Kaspar Hesse | EM FUGA | Dover → Viena. Reportará falha ao Conselho. |
-| Ilse Vogt | PRISIONEIRA | Sob custódia de Valerius (entregue por Anne). |
-| Friedrich (Doktor) | PRISIONEIRO | Sob custódia de Valerius. |
-| Sedgwick | NEUTRALIZADO | Caderno confiscado + Mesmerizar. |
-| Thane | Neutro-respeitoso | Abstenção. Pacto de acção directa. Respeita directness. |
+| Valerius | **Confiança total + BB 1°** | Anel + sangue. Electio aprovada. |
+| Anne | **BB 1° mútuo** | Troca de sangue. Ancora permanente. |
+| Ashworth | **Conselheiro** | Campanha completa. Kaspar destruído. |
+| Lucius | **DESCANSOU** | Speculum transferido para Edward. |
+| Adelbert | **Aliado formal (PARTIU)** | Viena. Selo activo. |
+| Crowe | ALIADO FIRME | 3 portos. Estável. |
+| Marguerite | **ALIADA FORMAL** | Durham em vigor. |
+| Dunstan | Aliado operacional | Brujah enforcer. |
+| Sibyl | Profecia cumprida | 3 portas atravessadas. |
+| Gideon | **Assustado** | Coopera. Vigilância. |
+| Henrik | **CAPTURADO** | Tower Hill. |
+| Kaspar | **NEUTRALIZADO** | Sem operativos, sem apoio político. |
 
-### Escalada da Crise — RESOLVIDA
-A crise da Máscara está **encerrada**. Tremere desmantelados. Feral contido. Sedgwick neutralizado. Inquérito policial sem novos incidentes.
+## Ressonância de Mithras — TRACKER SECRETO
+Manifestações:
+1. Messy Critical social no Elísio — presença expandida (subtil)
+2. Messy Critical em Brocket Hall — manifestação clara, Ashworth reconheceu
+3. **Falha Bestial nos túneis de Ludgate Hill** — projecção total. Latim arcaico. Gideon aterrorizado.
+4. **Messy Critical em Cross (S11)** — Alimentação. Brutalidade do Sangue.
+5. **Sonhos-fragmento (S13):** Escalação progressiva ao longo de 6 noites. Mão + olho → segunda mão → corredor → figura (Lucius) → voz no ar → rosto visto.
+6. **MÁSCARA EXPIRADA (Noite 73):** Ressonância constante. 6 marcadores sentidos. Carniçais detectam presença.
 
----
-
-## Ganchos para Próxima História
-
-- **Consolidação:** Primeiros actos como Primogênito. Cada clã testará Edward.
-- **Crowe cobra:** "Um lugar à mesa" — primeira contrapartida.
-- **Marguerite cobra:** Tratado de Durham — primeiro teste concreto.
-- **Thane pede:** Ajuda com território norte.
-- **Gideon espera:** Alvarás de protecção legal.
-- **Ashworth pacificação:** Edward quer reconciliar — Ashworth aceitará?
-- **Câmara de Mithras:** Segredo latente. Sibyl sabe. Cria sob custódia.
-- **Tremere retorno:** Kaspar em Viena. Reavaliação futura.
-- **Anne vs Edward:** Quando a lealdade muda de patrona-pupilo para rival-colega?
-- **Thomas Bello:** Touchstone intocado. Alguém descobrirá a conexão?
-- **Potência de Sangue 4-5:** Quando a Fome cresce além do Rebanho.
+Gatilho original: Messy Criticals sociais E Falhas Bestiais perto de marcadores.
+Estado actual: MÁSCARA CAIU. Ressonância permanente. Não precisa de gatilho.
+**CONIUNCTIO ALCANCADA (Noite 76).** Edward é speculum. Ressonância integrada. Manifestação apenas em Falhas Bestiais.
 
 ---
 
-*Direção do narrador — SEGREDOS | Atualizado em 10/03/2026 — Sessão 6*
+## Ganchos para Sessão 15 — PÓS-CONIUNCTIO
+
+### Imediato (Noites 77-80)
+- **Informar Ashworth:** Como reage ao saber que Edward é speculum? Medo? Reverencia?
+- **Alimentação BP 4:** Primeira caça com restrição nova. Deve drenar mortal ou buscar Kindred. Como Edward lida?
+- **Sonhos proféticos:** Primeiro sonho como speculum. O que Mithras mostra? Memória antiga ou visão do futuro?
+- **Reacção da corte:** A presença ancestral é notável. Outros vampiros sentem algo diferente em Edward.
+
+### Médio prazo
+- **Voto de Viena:** Resultado chega (~15 dias). Kaspar condenado? Guardiões reforçados?
+- **Gideon e Nosferatu:** Detectam a mudança? O que reportam a Valerius?
+- **Thomas:** Edward agora tem Presença Ancestral. Encontro com Thomas torna-se arriscado (pode assustar o mortal).
+- **Marguerite/Durham:** O tratado mantém-se? Como reage ao speculum?
+
+### Longo prazo
+- **Nova história:** "O Peso do Speculum" — Dominar os poderes, gerir as novas responsabilidades.
+- **J-1 (Príncipe):** Com BP 4 e speculum, Edward está mais perto do trono. Mas o caminho é político, não de força.
+- **Mithras consciente:** O que significa Mithras estar "acordado" dentro de Edward? Eventual comunicação?
+- **Lucius no rio:** Aparece em sonhos? Guia? Ou desapareceu?
+
+---
+
+*Direção do narrador — SEGREDOS | Atualizado em 12/03/2026 — Sessão 14*
