@@ -13,10 +13,13 @@ Skill de criação e evolução de personagens para VtM V5 solo em Português BR
 | Recurso | Caminho |
 |---------|---------|
 | Base VtM | `./` |
-| Jogos | `[Base]/07_Jogos/` |
+| Settings do jogador | `[Base]/.claude/vtm.local.md` (opcional; template em `vtm.local.md.example`) |
+| Jogos | `[Base]/07_Jogos/` (ou `pasta_jogos` do `.local.md`) |
 | Resumos | `[Base]/12_Resumos_dos_Livros/` |
-| PDFs integrais | `[Base]/06_Livros_e_Suplementos/` |
+| PDFs integrais | `pasta_acervo` do `.local.md` (opcional). Se vazio ou pasta não existir, usar só resumos. |
 | Referências V5 | `[Base]/01_Sistema/` |
+
+Ler `.claude/vtm.local.md` antes de criar ou evoluir ficha.
 
 ## Criação de Personagem — Fluxo V5
 
@@ -31,7 +34,7 @@ Perguntar ao jogador:
 - Desejo (objetivo de curto prazo)
 - Clã (ou deixar aberto para o narrador sugerir)
 
-Consultar `01_Sistema/02_Clas.md` e PDFs dos clãs para detalhes oficiais.
+Consultar `01_Sistema/02_Criacao_de_Personagem.md` (passo 2) para a tabela resumo de clãs, bane e disciplinas; `02_Clas/<cla>.md` para a ficha completa de cada clã; e os PDFs integrais para detalhes oficiais.
 
 ### Etapa 2 — Atributos (7/5/3)
 
@@ -56,11 +59,11 @@ Distribuir pontos em 3 categorias:
 - Categoria secundária: 7 pontos
 - Categoria terciária: 4 pontos
 
-Consultar `01_Sistema/03_Habilidades.md` para lista completa e especialidades.
+Consultar `01_Sistema/02_Criacao_de_Personagem.md` (passo 4) para a lista completa de habilidades e especialidades.
 
 ### Etapa 4 — Disciplinas
 
-Conforme o clã (consultar `01_Sistema/04_Disciplinas.md`):
+Conforme o clã (consultar `03_Disciplinas/<disciplina>.md` para cada poder; `01_Sistema/02_Criacao_de_Personagem.md` passo 5 para as regras de distribuição):
 - 2 pontos em Disciplinas do clã
 - Distribuir: 2 em uma ou 1+1
 
@@ -68,7 +71,7 @@ Consultar PDF integral para poderes específicos de cada nível.
 
 ### Etapa 5 — Vantagens e Defeitos
 
-Consultar `01_Sistema/05_Vantagens_e_Defeitos.md`:
+Consultar `01_Sistema/02_Criacao_de_Personagem.md` (passo 7) para a lista de Vantagens e Defeitos:
 - 7 pontos em Vantagens
 - Até 2 pontos em Defeitos (cada Defeito dá +1 ponto para Vantagens)
 - Incluir Touchstone (humano que ancora a Humanidade)

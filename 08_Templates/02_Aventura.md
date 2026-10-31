@@ -147,4 +147,4 @@
 
 ---
 
-<!-- Criado com template IAra v10 — VtM V5 -->
+<!-- Criado com template VtM V5 Solo — VtM V5 -->

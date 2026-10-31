@@ -36,7 +36,7 @@ Ambas as manifestacoes sao mecanicamente a mesma Disciplina, mas com esteticas e
 | 3 | Touch of Oblivion (Toque do Oblivio) | 1 Rouse Check | Raciocinio + Oblivio | Instantaneo |
 | 3 | Passion Feast (Festim de Paixoes) | 1 Rouse Check | Manipulacao + Oblivio | Um turno |
 | 3 | Shadow Perspective (Perspectiva da Sombra) | 1 Rouse Check | Raciocinio + Oblivio | Uma cena |
-| 4 | Skuld Fulfilled (Destino Cumprido) | 1 Rouse Check | Manipulacao + Oblivio vs. Autocontrole + Determinacao | Uma cena |
+| 4 | Skuld Fulfilled (Destino Cumprido) | 1 Rouse Check | Manipulacao + Oblivio vs. Compostura + Determinacao | Uma cena |
 | 4 | Stygian Shroud (Mortalha Estigia) | 1 Rouse Check | Raciocinio + Oblivio | Concentracao |
 | 5 | Tenebrous Avatar (Avatar Tenebroso) | 2 Rouse Checks | — | Uma cena |
 
@@ -180,7 +180,7 @@ Alem disso, pode perceber a "saude" da Mortalha em qualquer area — se esta gro
 
 **Amalgama:** Obrigatorio — Auspicios 1
 **Custo:** 1 Rouse Check
-**Parada de Dados:** Manipulacao + Oblivio vs. Autocontrole + Determinacao
+**Parada de Dados:** Manipulacao + Oblivio vs. Compostura + Determinacao
 **Sistema:** O vampiro pode drenar emocoes e energia vital de fantasmas proximos, convertendo-a em sustento. Pode reduzir Fome em 1 por fantasma drenado. O fantasma perde potencia e memórias no processo, podendo ser enfraquecido ate o ponto de dissolucao.
 
 Alternativamente, pode ser usado em mortais em luto ou profundamente emocionais — drenando a intensidade de suas emocoes e ganhando 1 ponto de Fome reduzida.
@@ -225,7 +225,7 @@ Alternativamente, pode ser usado em mortais em luto ou profundamente emocionais 
 
 **Amalgama:** Obrigatorio — Auspicios 2
 **Custo:** 1 Rouse Check
-**Parada de Dados:** Manipulacao + Oblivio vs. Autocontrole + Determinacao
+**Parada de Dados:** Manipulacao + Oblivio vs. Compostura + Determinacao
 **Sistema:** O vampiro pode invocar e comandar um fantasma para que atormente um alvo vivo. O fantasma (que deve estar disponivel — o vampiro nao cria fantasmas) se fixa ao alvo e o persegue, causando perturbacoes: pesadelos, alucinacoes, objetos se movendo, vozes sussurradas, sensacao de presenca maligna.
 
 **Efeitos mecanicos no alvo:**

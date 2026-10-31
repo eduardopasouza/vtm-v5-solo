@@ -122,7 +122,7 @@ def teste_remorso(humanidade_desmarcada: int) -> dict:
 
 
 def teste_frenesi(pool: int, dificuldade: int = 3) -> dict:
-    """Teste de Frenesi — pool de Autocontrole + Determinação."""
+    """Teste de Frenesi — pool de Compostura + Determinação."""
     dados = [random.randint(1, 10) for _ in range(pool)]
     sucessos = sum(1 for d in dados if d >= 6)
 

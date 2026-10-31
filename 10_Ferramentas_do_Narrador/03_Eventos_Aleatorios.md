@@ -1,6 +1,6 @@
 # Eventos Aleatorios — Tabelas para Sessoes — VtM V5
 
-> Tabelas de eventos aleatorios para enriquecer sessoes, gerar complicacoes e criar atmosfera. Otimizadas para Londres vitoriana (1862).
+> Tabelas de eventos aleatorios para enriquecer sessoes, gerar complicacoes e criar atmosfera. Otimizadas para cenarios vitorianos (1830-1900).
 
 ---
 
@@ -55,7 +55,7 @@ Quando uma cena de alimentacao nao sai como planejado:
 | 1 | **Testemunha inesperada** | Alguem viu a alimentacao — mortal, outro vampiro, ou pior. Precisa ser neutralizado ou a Mascara esta em risco. |
 | 2 | **Vitima resiste violentamente** | A vitima nao desmaia — luta, grita, arranha. Pool: 6d. Risco de ferimento e exposicao. Sangue Colerico. |
 | 3 | **Territorio de outro vampiro** | O PC invadiu territorio de caca de outro Cainita sem saber. O dono aparece furioso. Teste social ou confronto. |
-| 4 | **Vitima esta doente** | Sangue contaminado — tifo, colera, sifilis. Sem efeito mecanico no vampiro, mas sabor horrivel. Teste Autocontrole DD 3 para nao vomitar (perde Fome reduzida). |
+| 4 | **Vitima esta doente** | Sangue contaminado — tifo, colera, sifilis. Sem efeito mecanico no vampiro, mas sabor horrivel. Teste Compostura DD 3 para nao vomitar (perde Fome reduzida). |
 | 5 | **Vitima e "protegida"** | A vitima e parente, empregado ou amante de alguem poderoso (mortal ou vampiro). Consequencias sociais/politicas a caminho. |
 | 6 | **Policia nas proximidades** | Bobby aparece no momento exato. Ser pego com vitima inconsciente e desastroso. Furtividade ou Subterfugio imediato. |
 | 7 | **Frenesi durante alimentacao** | O PC falha no teste de controle e drena demais. Vitima morre ou fica criticamente ferida. -1 Humanidade em jogo? Corpo para esconder. |

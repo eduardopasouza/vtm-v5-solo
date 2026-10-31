@@ -124,7 +124,7 @@ Vampiros com Auspicios frequentemente sao acometidos por visoes involuntarias, s
 
 **Amalgama:** Nenhum
 **Custo:** 1 Rouse Check
-**Parada de Dados:** Inteligencia + Auspicios vs. Autocontrole + Subterfugio
+**Parada de Dados:** Inteligencia + Auspicios vs. Compostura + Subterfugio
 **Sistema:** O vampiro percebe a aura emocional de um alvo — uma nimbus de cores e padroes que revela o estado emocional, a natureza sobrenatural e certas condicoes do alvo. Requer concentracao visual no alvo por pelo menos alguns segundos.
 
 **Interpretacao da Aura:**
@@ -207,7 +207,7 @@ Enquanto compartilhando sentidos, o vampiro pode ver, ouvir, sentir cheiros, etc
 
 **Amalgama:** Nenhum
 **Custo:** 1 Rouse Check
-**Parada de Dados:** Manipulacao + Auspicios vs. Autocontrole + Determinacao (se resistido)
+**Parada de Dados:** Manipulacao + Auspicios vs. Compostura + Determinacao (se resistido)
 **Sistema:** O vampiro pode entrar na psique de outro vampiro e confrontar seus traumas, manchas na alma (Stains) e o peso de sua Besta. Se bem-sucedido, pode ajudar o alvo a resolver uma mancha na alma, permitindo que o alvo role para remover Stains na proxima verificacao de Humanidade com bonus.
 
 Alternativamente, pode ser usado ofensivamente para agravar traumas, causando Stains adicionais ou forcando um teste de Frenesi.

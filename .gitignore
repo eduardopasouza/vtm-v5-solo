@@ -19,3 +19,9 @@ desktop.ini
 ~$*
 temp_vtm_caca.txt
 extract_pdf.py
+
+# Settings locais do plugin (nao commitar)
+.claude/*.local.md
+
+# Documentos de retomada e proposta (fora do versionamento)
+_retomada/

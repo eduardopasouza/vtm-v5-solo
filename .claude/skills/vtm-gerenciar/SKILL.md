@@ -17,9 +17,12 @@ Gestão macro: rastrear objetivos em 4 níveis, avançar agendas de NPCs, manter
 | Recurso | Caminho |
 |---------|---------|
 | Base VtM | `./` |
-| Jogos | `[Base]/07_Jogos/` |
-| PDFs integrais | `[Base]/06_Livros_e_Suplementos/` |
+| Settings do jogador | `[Base]/.claude/vtm.local.md` (opcional; template em `vtm.local.md.example`) |
+| Jogos | `[Base]/07_Jogos/` (ou `pasta_jogos` do `.local.md`) |
+| PDFs integrais | `pasta_acervo` do `.local.md` (opcional). Se vazio ou pasta não existir, usar só resumos. |
 | Resumos | `[Base]/12_Resumos_dos_Livros/` |
+
+Ler `.claude/vtm.local.md` antes de revisar campanha.
 
 ## Sistema de Objetivos — 4 Níveis
 

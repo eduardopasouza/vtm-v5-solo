@@ -63,7 +63,7 @@ O Gato de Beco vive no fio da navalha. Cada caca e um ato de violencia, e a Best
 **Implicacoes Narrativas:**
 O Ensacador mantem distancia emocional da caca, o que protege sua Humanidade mas pode criar dependencia de fontes frageis. Se o contato medico for comprometido, o vampiro fica sem fonte. Sangue embalado nunca tem Ressonancia forte, limitando avanco em certas Disciplinas.
 
-**Nota sobre Iron Gullet:** Sem este merito, consumir sangue embalado ou animal causa nausea e pode exigir teste de Autocontrole para manter o sangue.
+**Nota sobre Iron Gullet:** Sem este merito, consumir sangue embalado ou animal causa nausea e pode exigir teste de Compostura para manter o sangue.
 
 **Ideal para:** Tremere, Hecata, Malkavian, personagens academicos ou que evitam violencia.
 

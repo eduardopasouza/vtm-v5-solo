@@ -119,7 +119,7 @@ Role os dados indicados em cada tabela e combine os resultados para criar um NPC
 
 ## Tabela de Cla (d10)
 
-Para vampiros aleatorios encontrados em Londres, 1862:
+Para vampiros aleatorios encontrados em cenario vitoriano (1830-1900):
 
 | d10 | Cla | Probabilidade em Londres |
 |-----|-----|------------------------|
@@ -229,7 +229,7 @@ Para vampiros encontrados aleatoriamente:
 | 9 | 10a | 3-4 | Ancillae |
 | 10 | 9a ou menor | 4-6 | Anciao (MUITO raro) |
 
-**Nota:** Em 1862, nao ha Sangue-Ralos (conceito mais moderno no V5). Para o periodo, re-role 1 como 13a Geracao.
+**Nota:** Na era vitoriana (1830-1900), nao ha Sangue-Ralos (conceito mais moderno no V5). Para o periodo, re-role 1 como 13a Geracao.
 
 ---
 
@@ -258,7 +258,7 @@ Tracos de personalidade que definem como o NPC age e reage:
 
 Para gerar um mortal de cena (vitima de caca, testemunha, transeunte):
 
-### Profissao por Horario (d8) — Noite em Londres, 1862
+### Profissao por Horario (d8) — Noite em cidade vitoriana
 
 | d8 | Quem esta na rua a noite? |
 |----|--------------------------|

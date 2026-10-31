@@ -13,10 +13,13 @@ Skill de criação e manutenção de NPCs para VtM V5 solo em Português BR.
 | Recurso | Caminho |
 |---------|---------|
 | Base VtM | `./` |
-| Jogos | `[Base]/07_Jogos/` |
-| PDFs integrais | `[Base]/06_Livros_e_Suplementos/` |
+| Settings do jogador | `[Base]/.claude/vtm.local.md` (opcional; template em `vtm.local.md.example`) |
+| Jogos | `[Base]/07_Jogos/` (ou `pasta_jogos` do `.local.md`) |
+| PDFs integrais | `pasta_acervo` do `.local.md` (opcional). Se vazio ou pasta não existir, usar só resumos. |
 | Resumos | `[Base]/12_Resumos_dos_Livros/` |
 | Referências | `[Base]/01_Sistema/` |
+
+Ler `.claude/vtm.local.md` antes de criar NPC.
 
 ## Três Níveis de Profundidade
 

@@ -1,179 +1,163 @@
-# Convencoes de Nomenclatura — VtM V5
+# Convenções de Nomenclatura — VtM V5
 
-<!-- Referencia rapida para nomear arquivos e pastas de forma consistente -->
-
----
-
-## Regra Geral
-
-- Usar **snake_case** (palavras separadas por underline) em todos os nomes de arquivo e pasta
-- Sem acentos, cedilha ou caracteres especiais nos nomes de arquivo
-- Prefixo numerico para ordenacao: `[NN]_` ou `[NNN]_`
-- Extensao padrao: `.md` (Markdown)
+<!-- Referência canônica para nomear arquivos e pastas de forma consistente -->
+<!-- Decisão D2 — 2026-10-31: híbrido legalizado -->
 
 ---
 
-## Nomenclatura por Tipo de Arquivo
+## Regra Geral: híbrido
 
-### Ficha de NPC
+| Tipo | Convenção | Permite |
+|------|-----------|---------|
+| **Pastas narrativas** (Jogo, Partida, História, Aventura) | Legível | Espaços, acentos, maiúsculas em cada palavra |
+| **Arquivos técnicos** (`.md` de documentação) | snake_case | Minúsculas, underline, sem acentos |
+
+A razão: pastas narrativas aparecem em caminhos lidos por humanos ("A Coroa de Cinzas" é parte do nome do arco, não só do caminho). Arquivos técnicos entram em comandos, scripts e grep — simples e previsíveis.
+
+---
+
+## Pastas Narrativas (legíveis)
+
+### Jogo
+
 ```
-[NN]_[nome_snake_case].md
+07_Jogos/[Nome do PC]/
 ```
-- Pasta: `03_npcs\`
-- Numerar na ordem de criacao
-- Usar nome principal do NPC (sem titulos)
-- Exemplos:
-  - `01_helena_voss.md`
-  - `02_padre_carlos.md`
-  - `03_o_xerife.md` (alcunha se nao tiver nome revelado)
 
----
+Nome legível do PC. Exemplos:
+- `07_Jogos/Edward Bello/`
+- `07_Jogos/Marcus Wells/`
+- `07_Jogos/Dona Rita de Cássia/`
+
+### Partida
+
+```
+07_Jogos/[Nome do PC]/partidas/[Nome da Partida]/
+```
+
+Exemplos:
+- `A Coroa de Cinzas`
+- `Noites de São Luís`
+- `A Grande Jyhad de 1888`
+
+### História
+
+```
+.../partidas/[Nome da Partida]/[Nome da História]/
+```
+
+Exemplos:
+- `A Primeira Rachadura`
+- `O Peso do Speculum`
+- `O Espelho Ancestral`
 
 ### Aventura
+
 ```
-aventura_[NN]_[titulo_snake_case].md
+.../[Nome da História]/[Nome da Aventura]/
 ```
-- Pasta: `04_historia_[N]_[titulo]\`
-- Numerar sequencialmente dentro de cada historia
-- Titulo curto e descritivo
-- Exemplos:
-  - `aventura_01_a_convocacao.md`
-  - `aventura_02_sombras_no_porto.md`
-  - `aventura_03_o_julgamento.md`
+
+Exemplos:
+- `A Noite do Artigo`
+- `O Veredicto de Gideon`
+- `A Emissária de Viena`
 
 ---
 
-### Log de Sessao
-```
-sessao_[NNN]_[titulo_snake_case].md
-```
-- Pasta: `05_gestao\logs\`
-- Tres digitos para ordenacao (001, 002, ..., 999)
-- Titulo curto que capture o evento principal da sessao
-- Exemplos:
-  - `sessao_001_noite_do_abraco.md`
-  - `sessao_002_primeiro_elysium.md`
-  - `sessao_015_queda_do_principe.md`
+## Arquivos Técnicos (snake_case)
 
----
+### Arquivos de Jogo (fixos)
 
-### Caderno de Campanha
-```
-caderno_[campanha_snake_case].md
-```
-- Pasta: `05_gestao\`
-- Um por campanha
-- Exemplos:
-  - `caderno_beard.md`
-  - `caderno_noites_de_sao_luis.md`
+| Arquivo | Pasta | Propósito |
+|---------|-------|-----------|
+| `contexto.md` | `07_Jogos/[Nome do PC]/` | Estado atual global |
+| `personagem.md` | `07_Jogos/[Nome do PC]/` | Ficha do PC |
+| `direcao.md` | `07_Jogos/[Nome do PC]/` | Segredos do narrador (NUNCA mostrar) |
+| `timeline.md` | `07_Jogos/[Nome do PC]/` | Cronologia |
+| `objetivos.md` | `07_Jogos/[Nome do PC]/` | Tracker 4 níveis |
+| `partida.md` | `.../partidas/[Nome]/` | Resumo da partida |
+| `ramificacoes.md` | `.../partidas/[Nome]/` | Consequências de longo prazo |
+| `historia.md` | `.../[Nome da História]/` | Arco da história |
+| `aventura.md` | `.../[Nome da Aventura]/` | Resumo da aventura |
 
----
+### Logs de Sessão
 
-### Ficha de Personagem (PC)
 ```
-ficha_[nome_snake_case].md
+sessao_NN.md
 ```
-- Pasta: `01_personagem\`
-- Usar nome do personagem, nao do jogador
-- Exemplos:
-  - `ficha_beard.md`
-  - `ficha_marcus_wells.md`
 
----
+- Numeração sempre com **dois dígitos**: `sessao_01.md`, `sessao_15.md`, `sessao_99.md`
+- Para campanhas longas (>99 sessões), passar a 3 dígitos: `sessao_100.md` em diante
+- Fica dentro da pasta da **Aventura** que contém a sessão
 
-### Pasta de Historia
-```
-04_historia_[N]_[titulo_snake_case]\
-```
-- Um digito para o numero da historia
-- Titulo do arco narrativo
-- Exemplos:
-  - `04_historia_1_despertar\`
-  - `04_historia_2_guerra_de_dominio\`
-  - `04_historia_3_a_longa_noite\`
+### Fichas de NPC
 
----
+```
+07_Jogos/[Nome do PC]/npcs/[nome_npc].md
+```
+
+- `[nome_npc]` em snake_case, nome principal sem título
+- Exemplos: `anne_bowesley.md`, `lord_ashworth.md`, `o_doktor.md`, `graf_auerbach.md`
+- Alcunhas (quando o nome real é desconhecido) também em snake_case: `o_doktor.md`, `the_feral.md`
+
+### Índice e Relações
+
+| Arquivo | Caminho |
+|---------|---------|
+| `indice.md` | `07_Jogos/[Nome do PC]/npcs/` |
+| `relacoes.md` | `07_Jogos/[Nome do PC]/npcs/` |
+
+### Cenário (snake_case fixo)
+
+| Arquivo | Conteúdo |
+|---------|----------|
+| `cenario.md` | Hub central |
+| `geografia.md` | Mapa, bairros, territórios |
+| `historia.md` | Contexto histórico |
+| `sociedade.md` | Mortais |
+| `politica.md` | Política vampírica |
+| `economia.md` | Recursos |
+| `cultura.md` | Arte, religião |
+| `arquitetura.md` | Edifícios, refúgios |
+| `clima.md` | Noites, estações |
 
 ### Templates
-```
-[NN]_[nome].md
-```
-- Pasta: `08_Templates\`
-- Numerados para ordenacao
-- Exemplos:
-  - `01_Ficha_NPC.md`
-  - `02_Aventura.md`
-  - `03_Log_de_Sessao.md`
+
+Em `08_Templates/`:
+- `[NN]_[Nome_Legível].md` — permite nome legível porque templates são referências de leitura, não lidos por script.
+- Exemplos existentes: `01_Ficha_NPC.md`, `04_Caderno_de_Campanha.md`.
 
 ---
 
-### Documentos de Cenario
+## Hierarquia de Nomenclatura
+
+Resumo visual:
+
 ```
-[NN]_[aspecto_snake_case].md
-```
-- Pasta: `02_cenario\`
-- `00_` reservado para o hub central
-- Exemplos:
-  - `00_hub_central.md`
-  - `01_politica_e_poder.md`
-  - `02_territorios.md`
-  - `03_elysiums.md`
-
----
-
-### Documentos de Gestao
-```
-[nome_descritivo_snake_case].md
-```
-- Pasta: `05_gestao\`
-- Sem prefixo numerico (sao poucos e fixos)
-- Nomes padrao:
-  - `caderno_[campanha].md`
-  - `objetivos_ativos.md`
-  - `enredo_arcos_narrativos.md`
-  - `ramificacoes_consequencias.md`
-  - `direcao_narrador_SEGREDOS.md`
-
----
-
-## Hierarquia Narrativa — Terminologia
-
-Estes termos sao usados de forma consistente em toda a documentacao:
-
-| Nivel     | Escopo                            | Duracao Tipica        | Analogia         |
-|-----------|-----------------------------------|-----------------------|------------------|
-| **Jogo**      | Campanha inteira                  | Meses a anos          | Serie de TV      |
-| **Partida**   | Grande arco, "temporada"          | Varias historias      | Temporada        |
-| **Historia**  | Arco narrativo coeso              | Varias aventuras      | Volume / Arco    |
-| **Aventura**  | Episodio jogavel                  | 1-3 sessoes           | Episodio         |
-| **Cena**      | Unidade minima de jogo            | Minutos a 1 hora      | Cena             |
-
-**Exemplo concreto:**
-```
-Jogo: Cronicas de Sao Luis
-└── Partida 1: A Mascara Rachada
-    ├── Historia 1: Despertar
-    │   ├── Aventura 01: A Convocacao
-    │   │   ├── Cena 1: O Telefonema
-    │   │   ├── Cena 2: O Encontro no Elysium
-    │   │   └── Cena 3: A Proposta
-    │   ├── Aventura 02: Sombras no Porto
-    │   └── Aventura 03: O Julgamento
-    └── Historia 2: Guerra de Dominio
-        ├── Aventura 01: Linhas no Mapa
-        └── ...
+07_Jogos/                            ← técnico
+└── Edward Bello/                    ← LEGÍVEL (nome do PC)
+    ├── contexto.md                  ← técnico
+    ├── personagem.md                ← técnico
+    ├── npcs/
+    │   └── lord_ashworth.md         ← técnico (snake_case)
+    └── partidas/
+        └── A Coroa de Cinzas/       ← LEGÍVEL (partida)
+            └── O Peso do Speculum/  ← LEGÍVEL (história)
+                └── A Primeira Noite/ ← LEGÍVEL (aventura)
+                    ├── aventura.md  ← técnico
+                    └── sessao_16.md ← técnico
 ```
 
 ---
 
 ## Regras Adicionais
 
-1. **Nunca usar espacos** em nomes de arquivo ou pasta — usar underline `_`
-2. **Nunca usar acentos** em nomes de arquivo — usar versao sem acento (`convocacao`, nao `convocação`)
-3. **Maiusculas** apenas em nomes proprios dentro de titulos de arquivo quando necessario para clareza (`SEGREDOS` no arquivo de direcao)
-4. **Datas** em nomes de arquivo, quando necessarias, usar formato `DDMMAA`: `caderno_beard_050326.md`
-5. **Versoes** quando aplicavel: sufixo `_v[N]`: `aventura_01_a_convocacao_v2.md`
+1. **Pastas narrativas** podem ter espaços, acentos e cedilha — são para leitura humana.
+2. **Arquivos técnicos** não podem ter espaços nem acentos — entram em comandos e scripts.
+3. **Datas** em nomes de arquivo, quando necessárias, usar formato `AAAA-MM-DD`: `handoff_2026-10-31.md`.
+4. **Versões** quando aplicável: sufixo `_v[N]`: `aventura_v2.md`.
+5. **Caracteres proibidos** em qualquer nome: `< > : " / \ | ? *` (restrições do sistema de arquivos Windows).
 
 ---
 
-<!-- Criado com template IAra v10 — VtM V5 -->
+*Convenções canonizadas em 2026-10-31 — decisão D2 da Onda 0 de consolidação. Casa com a prática real da campanha Edward Bello e com a skill `vtm-criar`.*

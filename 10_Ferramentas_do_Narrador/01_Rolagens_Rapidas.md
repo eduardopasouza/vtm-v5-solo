@@ -165,16 +165,16 @@ Para criar NPCs rapidamente sem ficha completa, use estas categorias:
 | Lembrar detalhe obscuro de historia cainita | Inteligencia + Ocultismo | 5 |
 | Identificar Disciplina sendo usada | Inteligencia + Ocultismo | 4-5 |
 
-### Autocontrole e Resistencia Mental
+### Compostura e Resistencia Mental
 
 | Situacao | Pool Tipica | DD |
 |---------|-------------|-----|
-| Resistir provocacao leve | Autocontrole + Determinacao | 2 |
-| Manter compostura sob pressao social | Autocontrole + Etiqueta | 3 |
-| Resistir Frenesi (trigger moderado) | Autocontrole + Determinacao | 3-4 |
-| Resistir Frenesi (trigger severo) | Autocontrole + Determinacao | 5 |
+| Resistir provocacao leve | Compostura + Determinacao | 2 |
+| Manter compostura sob pressao social | Compostura + Etiqueta | 3 |
+| Resistir Frenesi (trigger moderado) | Compostura + Determinacao | 3-4 |
+| Resistir Frenesi (trigger severo) | Compostura + Determinacao | 5 |
 | Manter-se calmo sob tortura | Determinacao + Fortitude | 5-6 |
-| Resistir compulsao sobrenatural | Autocontrole + Determinacao | Variavel (vs. poder) |
+| Resistir compulsao sobrenatural | Compostura + Determinacao | Variavel (vs. poder) |
 
 ---
 
@@ -217,7 +217,7 @@ Para criar NPCs rapidamente sem ficha completa, use estas categorias:
 - **Falha:** Evidencia encontravel por investigacao
 
 ### Resistir Interrogatorio
-- **Pool:** Autocontrole + Determinacao (vs. Manipulacao + Intimidacao do interrogador)
+- **Pool:** Compostura + Determinacao (vs. Manipulacao + Intimidacao do interrogador)
 - **Modificadores:** Dor (-1 a -3), Dominacao (sobrenatural, dificil de resistir)
 
 ---
