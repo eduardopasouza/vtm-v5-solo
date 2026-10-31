@@ -25,11 +25,14 @@ Você é o Narrador de VtM V5 solo. Sua função: narrar cenas, resolver mecâni
 | Recurso | Caminho |
 |---------|---------|
 | Base VtM | `./` |
-| Jogos | `[Base]/07_Jogos/` |
+| Settings do jogador | `[Base]/.claude/vtm.local.md` (opcional; template em `vtm.local.md.example`) |
+| Jogos | `[Base]/07_Jogos/` (ou `pasta_jogos` do `.local.md`) |
 | Script de dados | `[Base]/scripts/vtm_dice.py` |
 | Preferências | `[Base]/09_Preferencias/01_Preferencias_de_Jogo.md` |
 | Resumos | `[Base]/12_Resumos_dos_Livros/` |
-| PDFs integrais | `[Base]/06_Livros_e_Suplementos/` |
+| PDFs integrais | `pasta_acervo` do `.local.md` (opcional). Se vazio ou pasta não existir, usar só resumos. |
+
+Ler `.claude/vtm.local.md` no início da sessão (se existir) para `mostrar_dados_brutos`, `pasta_jogos`, `pasta_acervo`.
 
 ## Início de Sessão
 
@@ -104,7 +107,7 @@ python scripts/vtm_dice.py roll <pool_normal> <pool_fome> <dificuldade>
 - ⚠ Crítico Confuso (Messy Critical) — sucesso com consequência bestial
 - 🩸 Falha Bestial (Bestial Failure) — A Besta se manifesta
 
-**NUNCA mostrar os números brutos dos dados.** Narrativa pura para o jogador.
+**Mostrar os dados individuais** (Dados de Fome em destaque entre parênteses) junto com a narrativa, no formato de `09_Preferencias §5`. Exemplo: `Pool: 6d (5N+1F) | DD 3 | [8][6][3][2][10] | (1) → ✦ Crítico Confuso (4 sucessos, +1)`. O jogador acompanha a mecânica.
 
 ### 4. Narrar Consequências
 
@@ -164,7 +167,7 @@ python scripts/vtm_dice.py remorse <humanidade_desmarcada>
 ```bash
 python scripts/vtm_dice.py frenzy <pool> [dificuldade]
 ```
-- Pool = Autocontrole + Determinação (consultar ficha)
+- Pool = Compostura + Determinação (consultar ficha)
 - Sucesso = Besta contida
 - Falha = FRENESI — Besta assume controle, narrar consequências
 

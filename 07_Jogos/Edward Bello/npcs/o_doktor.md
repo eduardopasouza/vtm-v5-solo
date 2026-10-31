@@ -27,7 +27,7 @@ Ambicioso, metódico, convicto. Acreditava genuinamente que os Tremere mereciam 
 | Raciocínio | 3 |
 | Determinação | 2 |
 | Manipulação | 3 |
-| Autocontrole | 3 |
+| Compostura | 3 |
 
 **Resistência vs Mesmerizar:** Int 4 + Det 2 = **6**
 **Resistência vs Compelir:** AC 3 + Int 4 = **7**

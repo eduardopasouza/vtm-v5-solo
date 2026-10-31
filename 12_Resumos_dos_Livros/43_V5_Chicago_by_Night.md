@@ -647,4 +647,4 @@ NERISSA BLACKWATER (???, ~4a) ----comanda----> Cultivares
 
 ---
 
-*Resumo compilado por IAra v10 — Guerreiro Advogados Associados | Referencia para narracao de Vampiro: A Mascara V5*
+*Resumo compilado por VtM V5 Solo — Guerreiro Advogados Associados | Referencia para narracao de Vampiro: A Mascara V5*

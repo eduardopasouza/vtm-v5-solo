@@ -380,4 +380,4 @@ Para fans e colecoes dedicadas, o livro e considerado --- junto com Croatan Song
 
 ---
 
-*Resumo compilado para referencia do Narrador. IAra v10 | Guerreiro Advogados Associados | 07/03/2026*
+*Resumo compilado para referencia do Narrador. VtM V5 Solo | Guerreiro Advogados Associados | 07/03/2026*

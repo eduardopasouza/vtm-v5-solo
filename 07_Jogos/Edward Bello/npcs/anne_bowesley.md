@@ -49,7 +49,7 @@ Anne sabe que Edward quer o trono. Ela também quer. Por ora, seus caminhos se a
 |--------|--------|--------|
 | Carisma 4 | Inteligência 4 | Força 2 |
 | Manipulação 5 | Raciocínio 4 | Destreza 3 |
-| Autocontrole 4 | Determinação 4 | Vigor 2 |
+| Compostura 4 | Determinação 4 | Vigor 2 |
 
 ## Disciplinas Conhecidas
 

@@ -31,12 +31,12 @@ Ambas as tradicoes acessam os mesmos poderes mecanicamente no V5, embora a estet
 |-------|-------|-------|-----------------|---------|
 | 1 | Corrosive Vitae (Vitae Corrosivo) | 1 Rouse Check | — | Instantaneo |
 | 1 | A Taste for Blood (Sabor do Sangue) | Gratis | Determinacao + Feiticaria de Sangue | Instantaneo |
-| 2 | Extinguish Vitae (Extinguir Vitae) | 1 Rouse Check | Inteligencia + Feiticaria de Sangue vs. Vigor + Autocontrole | Instantaneo |
+| 2 | Extinguish Vitae (Extinguir Vitae) | 1 Rouse Check | Inteligencia + Feiticaria de Sangue vs. Vigor + Compostura | Instantaneo |
 | 3 | Blood of Potency (Sangue de Potencia) | 1 Rouse Check | Determinacao + Feiticaria de Sangue | Uma cena / uma noite |
 | 3 | Scorpion's Touch (Toque do Escorpiao) | 1 Rouse Check | — | Um ataque |
 | 4 | Theft of Vitae (Roubo de Vitae) | 1 Rouse Check | Raciocinio + Feiticaria de Sangue | Instantaneo |
 | 5 | Baal's Caress (Caricia de Baal) | 1 Rouse Check | — | Uma cena |
-| 5 | Cauldron of Blood (Caldeirão de Sangue) | 1 Rouse Check | Determinacao + Feiticaria de Sangue vs. Vigor + Autocontrole | Instantaneo |
+| 5 | Cauldron of Blood (Caldeirão de Sangue) | 1 Rouse Check | Determinacao + Feiticaria de Sangue vs. Vigor + Compostura | Instantaneo |
 
 ---
 
@@ -98,7 +98,7 @@ Se aplicado a carne (mortal ou vampirica), causa dano Agravado — 1 ponto por a
 
 **Amalgama:** Nenhum
 **Custo:** 1 Rouse Check
-**Parada de Dados:** Inteligencia + Feiticaria de Sangue vs. Vigor + Autocontrole
+**Parada de Dados:** Inteligencia + Feiticaria de Sangue vs. Vigor + Compostura
 **Sistema:** O vampiro pode fazer o sangue de outro vampiro "queimar" internamente, aumentando sua Fome. Cada sucesso na margem aumenta a Fome do alvo em 1. Se a Fome do alvo chegar a 5, ele deve imediatamente testar contra Frenesi de Fome.
 
 Requer contato visual e concentracao. O alvo sente a Fome aumentar subitamente, mas pode nao perceber a causa sobrenatural.
@@ -163,7 +163,7 @@ Requer contato visual e concentracao. O alvo sente a Fome aumentar subitamente, 
 
 **Amalgama:** Nenhum
 **Custo:** 1 Rouse Check
-**Parada de Dados:** Raciocinio + Feiticaria de Sangue vs. Raciocinio + Autocontrole (se o alvo perceber)
+**Parada de Dados:** Raciocinio + Feiticaria de Sangue vs. Raciocinio + Compostura (se o alvo perceber)
 **Sistema:** O vampiro pode telecineticamente extrair sangue de um alvo a distancia — ate ~5 metros. O sangue e arrancado do corpo do alvo (atraves de poros, ferimentos existentes ou ate rompendo a pele) e flui pelo ar ate o vampiro, que pode absorvê-lo para reduzir Fome.
 
 **Contra mortais:** Causa dano Agravado equivalente ao sangue extraido (potencialmente letal).
@@ -206,7 +206,7 @@ Requer contato visual e concentracao. O alvo sente a Fome aumentar subitamente, 
 
 **Amalgama:** Nenhum
 **Custo:** 1 Rouse Check
-**Parada de Dados:** Determinacao + Feiticaria de Sangue vs. Vigor + Autocontrole
+**Parada de Dados:** Determinacao + Feiticaria de Sangue vs. Vigor + Compostura
 **Sistema:** O vampiro faz o sangue do alvo ferver dentro de seu corpo. O efeito e agonizante e potencialmente letal.
 
 **Contra mortais:** Cada sucesso na margem causa 1 ponto de dano Agravado. 3+ pontos de dano geralmente sao fatais (orgaos internos cozidos, vasos sanguineos rompidos).

@@ -51,7 +51,7 @@ Edward precisa agir em três frentes simultâneas: pagar a dívida com Gideon (c
 | **Local** | Elísio ou encontro político |
 | **Propósito** | Ashworth descobre que foi marginalizado. Confronto político |
 | **NPCs** | Lord Ashworth, possivelmente outros Primogênitos |
-| **Testes prováveis** | Autocontrole + Etiqueta, Manipulação + Persuasão |
+| **Testes prováveis** | Compostura + Etiqueta, Manipulação + Persuasão |
 | **Decisão do jogador** | Como lidar com Ashworth? Confrontar, apaziguar, ou ignorar? |
 
 ## Condições

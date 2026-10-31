@@ -50,7 +50,7 @@ Esses dissidentes buscaram refugio na **Camarilla**, que os aceitou em troca de 
 
 Os Banu Haqim sao amaldicoados com um desejo compulsivo de consumir sangue vampirico — especificamente, de cometer **Diablerie** (o ato de drena outro vampiro ate a destruicao e absorver sua essencia).
 
-**Mecanica em V5:** Quando um Banu Haqim prova o sangue de outro vampiro (nao de mortais), ele deve fazer um teste de Autocontrole + Resolucao com Dificuldade igual a sua **Severidade da Maldicao**. Se falhar, fica **compelido a tentar a Diablerie** — a drenar completamente o vampiro cuja vitae provou.
+**Mecanica em V5:** Quando um Banu Haqim prova o sangue de outro vampiro (nao de mortais), ele deve fazer um teste de Compostura + Resolucao com Dificuldade igual a sua **Severidade da Maldicao**. Se falhar, fica **compelido a tentar a Diablerie** — a drenar completamente o vampiro cuja vitae provou.
 
 Isso significa que:
 - Lacos de Sangue sao extremamente perigosos (provar sangue vampirico dispara a compulsao)

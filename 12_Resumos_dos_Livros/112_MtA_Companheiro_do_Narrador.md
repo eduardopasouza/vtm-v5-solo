@@ -434,4 +434,4 @@ O Mage Storytellers Companion, apesar de seu tamanho modesto, e um suplemento re
 ---
 
 *Resumo #112 — Compilado para a biblioteca de referencia VtM V5 / World of Darkness*
-*IAra v10 | Guerreiro Advogados Associados | 07/03/2026*
+*VtM V5 Solo | Guerreiro Advogados Associados | 07/03/2026*

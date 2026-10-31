@@ -27,7 +27,7 @@ Persistente até à obsessão. Fareja histórias como cão de caça. Não é cor
 | Vigor | 2 |
 | Carisma | 2 |
 | Manipulação | 2 |
-| Autocontrole | 2 |
+| Compostura | 2 |
 | Inteligência | 3 |
 | Raciocínio | 3 |
 | Determinação | 2 |

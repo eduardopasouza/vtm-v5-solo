@@ -423,5 +423,5 @@ Para Narradores que possuem ambas as edicoes:
 
 ---
 
-*Resumo #115 | Criado em 07/03/2026 | IAra v10 — Guerreiro Advogados Associados*
+*Resumo #115 | Criado em 07/03/2026 | VtM V5 Solo — Guerreiro Advogados Associados*
 *Fonte primaria: PDF da Biblioteca Elfica (edicao Revised traduzida) + White Wolf Wiki + conhecimento interno*

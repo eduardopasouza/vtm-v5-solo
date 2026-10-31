@@ -525,5 +525,5 @@ O certámen funciona melhor como **ferramenta narrativa** do que como sistema me
 **Linha:** Mago: A Ascensão (Mage: The Ascension)
 **Origem:** Seção de The Book of Shadows: The Mage Players Guide (WW4050, 1993)
 **PDF:** Tradução fan-made — Biblioteca Élfica (9 páginas)
-**Compilado por:** IAra v10 — Guerreiro Advogados Associados
+**Compilado por:** VtM V5 Solo — Guerreiro Advogados Associados
 **Data:** 07/03/2026

@@ -50,7 +50,7 @@ A ironia: Ashworth teme exatamente o que Edward representa — um mundo onde com
 |--------|--------|--------|
 | Carisma 3 | Inteligência 3 | Força 3 |
 | Manipulação 3 | Raciocínio 2 | Destreza 2 |
-| Autocontrole 4 | Determinação 4 | Vigor 3 |
+| Compostura 4 | Determinação 4 | Vigor 3 |
 
 ## Disciplinas Conhecidas
 

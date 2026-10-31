@@ -68,7 +68,7 @@ Vampiros com Animalismo frequentemente possuem uma afinidade natural com animais
 
 **Amalgama:** Nenhum
 **Custo:** Gratis
-**Parada de Dados:** Determinacao + Animalismo vs. Autocontrole + Subterfugio (se o alvo tentar esconder sua natureza)
+**Parada de Dados:** Determinacao + Animalismo vs. Compostura + Subterfugio (se o alvo tentar esconder sua natureza)
 **Sistema:** O vampiro pode sentir a Besta em outros seres. Pode identificar vampiros em uma multidao, sentir o nivel de Fome de outro Membro, ou detectar se alguem esta proximo a Frenesi. Tambem permite sentir lobisomens e outras criaturas sobrenaturais com uma Besta interior.
 
 **Duracao:** Passivo
@@ -202,7 +202,7 @@ Vampiros com Animalismo frequentemente possuem uma afinidade natural com animais
 
 **Amalgama:** Nenhum
 **Custo:** 1 Rouse Check
-**Parada de Dados:** Raciocinio + Animalismo vs. Autocontrole + Determinacao (se resistido)
+**Parada de Dados:** Raciocinio + Animalismo vs. Compostura + Determinacao (se resistido)
 **Sistema:** Quando o vampiro esta prestes a entrar em Frenesi, pode projetar sua Besta em outro ser (mortal, animal ou vampiro) nas proximidades. O alvo sofre os efeitos do Frenesi no lugar do vampiro, enquanto o vampiro permanece frio e racional.
 
 Se nao houver alvo disponivel, ou se o teste falhar, o vampiro entra em Frenesi normalmente.
@@ -212,7 +212,7 @@ Se nao houver alvo disponivel, ou se o teste falhar, o vampiro entra em Frenesi 
 **Notas:**
 - O alvo se comporta como se estivesse em Frenesi de Furia (atacando indiscriminadamente) ou Terror (fugindo em panico), dependendo do gatilho original.
 - Mortais alvos podem sofrer traumas psicologicos severos.
-- Vampiros alvos podem resistir com Autocontrole + Determinacao.
+- Vampiros alvos podem resistir com Compostura + Determinacao.
 - Este poder e considerado uma violacao extrema por muitos vampiros e pode violar a Mascarada se usado descuidadamente.
 - Enquanto a Besta esta fora, o vampiro NAO PODE entrar em Frenesi (para bem ou mal — nenhum bonus de Frenesi de combate).
 

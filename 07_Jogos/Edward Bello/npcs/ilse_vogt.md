@@ -28,7 +28,7 @@ Pragmática acima de tudo. Menos fanática que Friedrich, menos metódica que Ka
 | Vigor | 2 |
 | Carisma | 2 |
 | Manipulação | 3 |
-| Autocontrole | 2 |
+| Compostura | 2 |
 | Inteligência | 3 |
 | Raciocínio | 3 |
 | Determinação | 2 |

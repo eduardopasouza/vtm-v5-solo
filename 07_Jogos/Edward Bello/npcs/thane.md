@@ -30,7 +30,7 @@ A Besta de Thane é visível — não controlada, *integrada*. Move-se como pred
 | Vigor | 4 |
 | Carisma | 1 |
 | Manipulação | 2 |
-| Autocontrole | 3 |
+| Compostura | 3 |
 | Inteligência | 2 |
 | Raciocínio | 3 |
 | Determinação | 3 |

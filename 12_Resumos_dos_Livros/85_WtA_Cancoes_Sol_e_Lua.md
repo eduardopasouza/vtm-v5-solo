@@ -348,5 +348,5 @@ O fato de a antologia ter nascido de um Kickstarter e relevante para Narradores 
 
 ---
 
-*Resumo compilado em 07/03/2026 | IAra v10 -- Guerreiro Advogados Associados*
+*Resumo compilado em 07/03/2026 | VtM V5 Solo -- Guerreiro Advogados Associados*
 *Nota: Contos cujos titulos nao puderam ser confirmados por fontes publicas estao marcados com descricoes baseadas no perfil dos autores e nas Racas Metamorficas tipicamente associadas a eles. Titulos confirmados: "Fear and Loathing in Malfeas" (Jason Andrew), "The Way of Endings" (Bill Bridges), "A Nuwisha Walks Into A Bar" (Eddy Webb).*

@@ -17,11 +17,14 @@ Criar e estruturar todos os níveis narrativos: Jogo, Partida, História, Aventu
 | Recurso | Caminho |
 |---------|---------|
 | Base VtM | `./` |
-| Jogos | `[Base]/07_Jogos/` |
+| Settings do jogador | `[Base]/.claude/vtm.local.md` (opcional; template em `vtm.local.md.example`) |
+| Jogos | `[Base]/07_Jogos/` (ou `pasta_jogos` do `.local.md`) |
 | Resumos | `[Base]/12_Resumos_dos_Livros/` |
-| PDFs integrais | `[Base]/06_Livros_e_Suplementos/` |
+| PDFs integrais | `pasta_acervo` do `.local.md` (opcional). Se vazio ou pasta não existir, usar só resumos. |
 | Templates | `[Base]/08_Templates/` |
 | Preferências | `[Base]/09_Preferencias/01_Preferencias_de_Jogo.md` |
+
+Ler `.claude/vtm.local.md` antes de criar jogo novo.
 
 ## Hierarquia Narrativa
 

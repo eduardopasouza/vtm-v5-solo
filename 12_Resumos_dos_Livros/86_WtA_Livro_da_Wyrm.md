@@ -459,4 +459,4 @@ O codigo WW3203 identifica inequivocamente a **Segunda Edicao** (1998), compativ
 
 ---
 
-*Resumo compilado por IAra v10 -- Guerreiro Advogados Associados -- 07/03/2026*
+*Resumo compilado por VtM V5 Solo -- Guerreiro Advogados Associados -- 07/03/2026*

@@ -41,7 +41,7 @@ scripts/            → Script Python de dados (vtm_dice.py)
 ```bash
 python scripts/vtm_dice.py roll <pool> <hunger> [dif]
 python scripts/vtm_dice.py rouse [count]
-python scripts/vtm_dice.py remorse <humanity> <stains>
+python scripts/vtm_dice.py remorse <caixas_vazias>  # caixas_vazias = humanidade_atual - manchas
 python scripts/vtm_dice.py frenzy <pool>
 ```
 

@@ -66,7 +66,7 @@ Todo Malkavian sofre de pelo menos uma condicao mental sobrenatural que nao pode
 
 Quando ativada, o Malkavian experimenta uma distorcao severa da realidade. O mundo ao redor se torna irreal, ameacador, ou carregado de significados ocultos que so ele pode ver.
 
-**Mecanica:** O Malkavian sofre penalidade de -2 dados em testes de Destreza, Manipulacao, Raciocinio e Autocontrole enquanto tenta distinguir o real do ilusorio. A Compulsao dura ate o final da cena.
+**Mecanica:** O Malkavian sofre penalidade de -2 dados em testes de Destreza, Manipulacao, Raciocinio e Compostura enquanto tenta distinguir o real do ilusorio. A Compulsao dura ate o final da cena.
 
 Durante o Delirio, o Malkavian pode:
 - Ver ameacas que nao existem (ou perceber ameacas reais que outros ignoram)
@@ -181,7 +181,7 @@ Alguns Malkavian simplesmente nao se encaixam em nenhuma seita — sua loucura o
 | **Apelido** | Os Lunáticos, Videntes, Pândegos |
 | **Disciplinas** | Auspícios, Dominação, Ofuscação |
 | **Maldição** | Aflição mental permanente e incurável |
-| **Compulsão** | Delírio (-2 em Destreza/Manipulação/Raciocínio/Autocontrole) |
+| **Compulsão** | Delírio (-2 em Destreza/Manipulação/Raciocínio/Compostura) |
 | **Seita principal** | Camarilla (com presença em todas) |
 | **Estereótipo** | O profeta louco que sabe todos os seus segredos |
 | **Frase icônica** | "Você acha que eu sou louco? Não, querido. Eu apenas vejo o que você se recusa a enxergar." |

@@ -33,7 +33,7 @@
 
 ### Cena 3 — Dorset Street (East End)
 - Edward patrulha território. Testa supressão perto de Gideon.
-- **Teste: Autocontrole 3 + Subterfúgio 4 = 7 dados vs DD 3.**
+- **Teste: Compostura 3 + Subterfúgio 4 = 7 dados vs DD 3.**
   - Normal: [7][9][4][2][10][8] | Fome: (9)
   - **Sucesso — 5 acertos, margem +2.**
 - Gideon aparece. Hesitou um segundo (sentiu algo), mas a supressão aguentou.

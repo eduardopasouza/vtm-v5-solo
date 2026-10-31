@@ -5,7 +5,7 @@
 **Editora:** White Wolf Publishing
 **Código:** WW3861
 **Autores:** Richard Dansky, Jim Kiley
-**Resumo elaborado por:** IAra v10 — Guerreiro Advogados Associados
+**Resumo elaborado por:** VtM V5 Solo — Guerreiro Advogados Associados
 **Data:** 07/03/2026
 
 ---
@@ -332,5 +332,5 @@ O livro e essencial para qualquer Narrador que deseje adicionar profundidade pol
 
 ---
 
-*Resumo elaborado por IAra v10 para fins de consulta rapida em sessoes de RPG.*
+*Resumo elaborado por VtM V5 Solo para fins de consulta rapida em sessoes de RPG.*
 *Guerreiro Advogados Associados | 07/03/2026*

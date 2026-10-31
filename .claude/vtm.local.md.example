@@ -1,0 +1,40 @@
+---
+# Settings do VtM V5 Solo — exemplo
+# Copiar para `.claude/vtm.local.md` e adaptar.
+# NÃO vai pro git (está no .gitignore).
+
+# Jogo ativo (nome da pasta em 07_Jogos/)
+jogo_ativo: "Edward Bello"
+
+# Pasta onde os jogos vivem (default = 07_Jogos/ dentro do repo)
+# Se externa, usar caminho absoluto. Útil para separar campanha do motor do plugin.
+pasta_jogos: "./07_Jogos"
+
+# Pasta do acervo de PDFs integrais (opcional)
+# Se existir, as skills consultam PDFs quando precisão importar.
+# Se não existir, as skills degradam para 12_Resumos_dos_Livros/.
+# Caminho absoluto é recomendado (acervo não deve estar no repo).
+pasta_acervo: ""   # ex.: "C:/Users/eduar/Documents/VtM-Acervo"
+
+# Mostrar os dados individuais ao jogador (D5 — padrão: true)
+mostrar_dados_brutos: true
+
+# Nomenclatura V5 (D3 — padrão: "Compostura" para alinhar com 01_Sistema/)
+atributo_composure: "Compostura"
+---
+
+# Configuração local do VtM V5 Solo
+
+Este arquivo guarda preferências do jogador para o funcionamento das 5 skills VtM.
+
+**Como as skills usam:**
+- `vtm-narrar` lê `mostrar_dados_brutos` para decidir se exibe os números brutos.
+- `vtm-criar`, `vtm-personagem`, `vtm-npcs` leem `pasta_acervo`: se vazio, usam apenas os resumos; se preenchido, consultam PDFs integrais quando a precisão importar.
+- Todas as skills leem `jogo_ativo` para saber qual pasta de `07_Jogos/` é a campanha ativa (quando houver mais de uma).
+
+**Como alterar:**
+1. Copie este arquivo para `.claude/vtm.local.md` (sem o `.example`).
+2. Edite os valores no YAML frontmatter.
+3. Reinicie o Claude Code para que as skills recarreguem (hooks precisam reiniciar; skills podem ou não — depende do caso).
+
+**Nunca commitar.** `.claude/*.local.md` está no `.gitignore`.

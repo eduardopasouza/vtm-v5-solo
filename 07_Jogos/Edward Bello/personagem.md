@@ -107,7 +107,7 @@ As Guerras Napoleônicas trouxeram refugiados vampíricos. Anne designou Edward 
 |----------|-------|
 | Carisma | 3 |
 | Manipulação | 4 |
-| Autocontrole | 3 |
+| Compostura | 3 |
 
 ### Mentais (Secundários — +3)
 | Atributo | Valor |
@@ -302,7 +302,7 @@ Sire, mentora, protetora — e carcereira. 136 anos juntos. Anne é Senescal de 
 | Recurso | Valor | Cálculo |
 |---------|-------|---------|
 | Saúde | 7 | Vigor 2 + Fortitude 2 + 3 |
-| Força de Vontade | 6 | Autocontrole 3 + Determinação 3 |
+| Força de Vontade | 6 | Compostura 3 + Determinação 3 |
 | Humanidade | 6 | 7 base - 1 (Aranha) |
 | Fome | 1 | Sessão 14 (alimentação Kindred — Anne) |
 
@@ -366,7 +366,7 @@ Sire, mentora, protetora — e carcereira. 136 anos juntos. Anne é Senescal de 
 - FdV 6: 6 re-rolls. Todas as resistências a Dominação/Presença a 8 dados (Fortitude 2).
 - Política 5 (maestria): leitura política praticamente infalível.
 - Blood Bond 1° grau: Valerius (seu sangue) + Anne (mútuo). Laços de linhagem reforçados.
-- Autocontrole 3: Frenesi a 6 dados (sólida).
+- Compostura 3: Frenesi a 6 dados (sólida).
 
 **Estilo de jogo:** Planejador-speculum. Tece redes antes de agir. Lê a sala com Insight + Sentidos Aguçados + Política 5, controla com Mesmerizar (9) e Fascinar (8), comanda com Compelir (8), desaparece com Manto das Sombras. Sentido de Linhagem detecta vampiros e ressonância. Mais resiliente (Saúde 7, resistências a 8). O peso de Mithras altera cada encontro.
 

@@ -434,5 +434,5 @@ Este livro e essencial para:
 
 ---
 
-*Resumo criado por IAra v10 para uso do narrador Eduardo Souza - Guerreiro Advogados Associados*
+*Resumo criado por VtM V5 Solo para uso do narrador Eduardo Souza - Guerreiro Advogados Associados*
 *Data: 06/03/2026*

@@ -34,7 +34,7 @@ Dominacao funciona exclusivamente atraves de contato visual e comandos verbais. 
 | 1 | Cloud Memory (Nublar Memoria) | Gratis | Carisma + Dominacao vs. Raciocinio + Determinacao | Permanente |
 | 1 | Compel (Compelir) | Gratis | Carisma + Dominacao vs. Inteligencia + Determinacao | Um comando |
 | 2 | Mesmerize (Mesmerizar) | 1 Rouse Check | Manipulacao + Dominacao vs. Inteligencia + Determinacao | Ate ser cumprido |
-| 2 | Dementation (Dementacao) | 1 Rouse Check | Manipulacao + Dominacao vs. Autocontrole + Inteligencia | Variavel |
+| 2 | Dementation (Dementacao) | 1 Rouse Check | Manipulacao + Dominacao vs. Compostura + Inteligencia | Variavel |
 | 3 | The Forgetful Mind (A Mente Esquecida) | 1 Rouse Check | Manipulacao + Dominacao vs. Inteligencia + Determinacao | Permanente |
 | 3 | Submerged Directive (Diretiva Submersa) | Gratis (parte de Mesmerize) | — | Ate o gatilho |
 | 4 | Rationalize (Racionalizar) | Gratis | — | Permanente |
@@ -123,7 +123,7 @@ Requer contato visual ininterrupto durante a implantacao (pode levar de alguns s
 
 **Amalgama:** Obrigatorio — Auspicios 2
 **Custo:** 1 Rouse Check
-**Parada de Dados:** Manipulacao + Dominacao vs. Autocontrole + Inteligencia
+**Parada de Dados:** Manipulacao + Dominacao vs. Compostura + Inteligencia
 **Sistema:** O vampiro pode transferir aspectos de sua propria instabilidade mental para o alvo, induzindo condicoes psicologicas temporarias: paranoia, alucinacoes, fobias, compulsoes obsessivas ou desrealizacao. Em vampiros, pode agravar Defeitos existentes ou provocar comportamento erratico.
 
 **Efeitos por margem de sucesso:**
@@ -259,7 +259,7 @@ Requer tempo (minutos a horas, dependendo da complexidade da memoria alterada) e
 
 **Amalgama:** Nenhum
 **Custo:** 1 Rouse Check
-**Parada de Dados:** Carisma + Dominacao vs. Autocontrole + Inteligencia
+**Parada de Dados:** Carisma + Dominacao vs. Compostura + Inteligencia
 **Sistema:** O poder maximo de Dominacao. O vampiro emite um comando que supera TODAS as defesas mentais e instintos de autopreservacao do alvo. O alvo obedece comandos suicidas, auto-destrutivos ou completamente contrarios a sua natureza. "Mate-se", "Ataque seu aliado mais proximo", "Entregue todos os seus segredos" — tudo se torna possivel.
 
 Funciona em outros vampiros (de Geracao igual ou superior), embora vampiros resistam com teste completo.

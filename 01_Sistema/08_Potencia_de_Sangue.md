@@ -108,7 +108,7 @@ A restricao mais importante mecanicamente — determina de **quem** o vampiro po
 Qualquer sangue serve — humano, animal, embalado. Neonatos tem a maior liberdade alimentar.
 
 **Nivel 3: Sangue animal e embalado causa nausea**
-Consumir sangue animal ou de bolsa exige teste de Autocontrole (Composure + Resolve) DD 3 para nao regurgitar. Se falhar, perde o sangue e nao reduz Fome.
+Consumir sangue animal ou de bolsa exige teste de Compostura (Composure + Resolve) DD 3 para nao regurgitar. Se falhar, perde o sangue e nao reduz Fome.
 
 **Nivel 4: Sangue animal e embalado nao sustenta**
 Nao importa quanto beba, sangue animal ou embalado **nao reduz Fome**. O vampiro PRECISA de sangue humano vivo.

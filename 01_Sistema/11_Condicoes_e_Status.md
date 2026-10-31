@@ -17,7 +17,7 @@ O V5 utiliza um conjunto de condicoes e estados que modificam a capacidade de ac
 Todo personagem tem duas tracks de saude baseadas em seus Atributos:
 
 - **Saude Fisica (Health):** Vigor (Stamina) + 3. Registra dano fisico.
-- **Forca de Vontade (Willpower):** Autocontrole (Composure) + Determinacao (Resolve). Registra dano social/mental.
+- **Forca de Vontade (Willpower):** Compostura (Composure) + Determinacao (Resolve). Registra dano social/mental.
 
 ### Tipos de Dano
 
@@ -136,7 +136,7 @@ O Frenesi e a manifestacao da Besta assumindo controle do vampiro. Durante o Fre
 
 **Trigger:** Provocacao extrema, humilhacao, dano fisico, ameaca a entes queridos, frustração intensa.
 
-**Teste para resistir:** Autocontrole (Composure) + Determinacao (Resolve) vs. DD variavel (geralmente 3-5)
+**Teste para resistir:** Compostura (Composure) + Determinacao (Resolve) vs. DD variavel (geralmente 3-5)
 
 **Comportamento durante:** O vampiro ataca a fonte da raiva com violencia maxima. Usa garras, presas, Disciplinas fisicas — tudo para destruir o alvo. Se o alvo for eliminado ou fugir, o vampiro pode virar-se contra o proximo alvo disponivel.
 
@@ -156,7 +156,7 @@ O Frenesi e a manifestacao da Besta assumindo controle do vampiro. Durante o Fre
 
 **Trigger:** Fome alta (especialmente 4-5), exposicao a sangue fresco, Rouse Check que elevaria Fome acima de 5.
 
-**Teste para resistir:** Autocontrole (Composure) + Determinacao (Resolve) vs. DD variavel
+**Teste para resistir:** Compostura (Composure) + Determinacao (Resolve) vs. DD variavel
 
 **Comportamento durante:** O vampiro busca sangue a qualquer custo. Ataca a fonte de sangue mais proxima — mortal, animal, ate outro vampiro. Nao se preocupa com a Mascara, com aliados, com nada. Drena completamente se nao for parado.
 
@@ -176,7 +176,7 @@ O Frenesi e a manifestacao da Besta assumindo controle do vampiro. Durante o Fre
 
 **Trigger:** Fogo, luz solar, dano agravado, ameacas verdadeiramente sobrenaturais.
 
-**Teste para resistir:** Autocontrole (Composure) + Determinacao (Resolve) vs. DD variavel
+**Teste para resistir:** Compostura (Composure) + Determinacao (Resolve) vs. DD variavel
 
 **Comportamento durante:** O vampiro **foge**. Nao ataca — corre. Atravessa paredes, janelas, multidoes, qualquer coisa para escapar da fonte do terror. Pode usar Celeridade e Proteanismo instintivamente para fugir. Ignora aliados, Mascara, tudo.
 

@@ -41,7 +41,7 @@ Lord Ashworth não sabe o que está chegando. Os Tremere sabem que Edward sabe. 
 | **Local** | Somerset House (Elísio) |
 | **Propósito** | Sessão extraordinária. Edward apresenta. Ashworth reage. Corte decide. |
 | **NPCs** | Valerius, Anne, Ashworth, Marguerite, Crowe, Sibyl, possivelmente Gideon |
-| **Testes prováveis** | Manipulação + Persuasão, Autocontrole + Etiqueta, possível contestação |
+| **Testes prováveis** | Manipulação + Persuasão, Compostura + Etiqueta, possível contestação |
 | **Decisão** | Como apresentar? Quanto revelar? Como lidar com Ashworth? |
 
 ### Cena 4 — As Consequências

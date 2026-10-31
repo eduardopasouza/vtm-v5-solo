@@ -13,7 +13,7 @@
 | **Paginas** | 104 |
 | **Preco Referencia** | $8.99 (PDF) / $14.99 (Print-on-Demand) |
 | **Genero** | Suplemento de ambientacao / Livro de lore in-universe |
-| **Resumo por** | IAra v10 — 07/03/2026 |
+| **Resumo por** | VtM V5 Solo — 07/03/2026 |
 
 ---
 
@@ -367,4 +367,4 @@ O livro permanece disponivel em formato PDF e print-on-demand, tornando-o acessi
 
 ---
 
-*Resumo elaborado por IAra v10 — Guerreiro Advogados Associados — 07/03/2026*
+*Resumo elaborado por VtM V5 Solo — Guerreiro Advogados Associados — 07/03/2026*

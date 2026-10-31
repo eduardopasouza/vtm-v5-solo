@@ -32,7 +32,7 @@ Transacional pura. Edward compra informação; Gideon vende. Ambos respeitam os 
 
 ## Atributos-Chave
 
-Raciocínio 5, Manipulação 4, Autocontrole 5. Ofuscação 5, Animalismo 3, Potência 3.
+Raciocínio 5, Manipulação 4, Compostura 5. Ofuscação 5, Animalismo 3, Potência 3.
 
 ---
 

@@ -34,10 +34,10 @@ Presenca e sedutora por natureza. Vampiros com esta Disciplina sao magneticos, h
 | 1 | Daunt (Intimidar) | Gratis | Carisma + Presenca | Uma cena |
 | 2 | Lingering Kiss (Beijo Persistente) | Gratis | — | Passivo |
 | 2 | Eyes of the Serpent (Olhos da Serpente) | 1 Rouse Check | Carisma + Presenca vs. Raciocinio + Determinacao | Concentracao |
-| 3 | Entrancement (Encantamento) | 1 Rouse Check | Carisma + Presenca vs. Autocontrole + Raciocinio | Variavel |
-| 3 | Dread Gaze (Olhar Apavorante) | 1 Rouse Check | Carisma + Presenca vs. Autocontrole + Determinacao | Um turno a uma cena |
+| 3 | Entrancement (Encantamento) | 1 Rouse Check | Carisma + Presenca vs. Compostura + Raciocinio | Variavel |
+| 3 | Dread Gaze (Olhar Apavorante) | 1 Rouse Check | Carisma + Presenca vs. Compostura + Determinacao | Um turno a uma cena |
 | 4 | Irresistible Voice (Voz Irresistivel) | Gratis | — | Passivo (modifica poderes) |
-| 4 | Summon (Convocar) | 1 Rouse Check | Manipulacao + Presenca vs. Autocontrole + Inteligencia | Ate atendido |
+| 4 | Summon (Convocar) | 1 Rouse Check | Manipulacao + Presenca vs. Compostura + Inteligencia | Ate atendido |
 | 5 | Majesty (Majestade) | 2 Rouse Checks | Carisma + Presenca | Uma cena |
 | 5 | Star Magnetism (Magnetismo Estelar) | 1 Rouse Check | — | Uma cena |
 
@@ -65,7 +65,7 @@ O efeito e sutil — os afetados nao percebem que estao sob influencia sobrenatu
 **Notas:**
 - Afeta todos em alcance de percepcao — nao e direcionado a um unico alvo.
 - Nao forca ninguem a fazer nada — apenas cria predisposicao favoravel.
-- Pode ser "resistido" conscientemente por alguem que decida desconfiar do vampiro (Autocontrole + Determinacao).
+- Pode ser "resistido" conscientemente por alguem que decida desconfiar do vampiro (Compostura + Determinacao).
 - Toreador e Ventrue usam extensivamente em eventos sociais, Elysiums e negociacoes.
 - Funciona em mortais e vampiros igualmente.
 
@@ -140,7 +140,7 @@ O efeito dura semanas a meses, diminuindo gradualmente. Alimentacoes repetidas p
 
 **Amalgama:** Nenhum
 **Custo:** 1 Rouse Check
-**Parada de Dados:** Carisma + Presenca vs. Autocontrole + Raciocinio
+**Parada de Dados:** Carisma + Presenca vs. Compostura + Raciocinio
 **Sistema:** O vampiro foca sua atencao em um unico alvo, criando uma devocao emocional intensa — o alvo torna-se obcecado em agradar, proteger e servir o vampiro. Nao e amor verdadeiro — e uma fixacao obsessiva que o alvo racionaliza como admiracao profunda, paixao ou lealdade.
 
 O alvo obedecera pedidos do vampiro (nao ordens — Presenca trabalha com persuasao, nao comando) e fara o possivel para agradá-lo. Pedidos perigosos ou extremos podem enfraquecer o efeito.
@@ -160,7 +160,7 @@ O alvo obedecera pedidos do vampiro (nao ordens — Presenca trabalha com persua
 
 **Amalgama:** Nenhum
 **Custo:** 1 Rouse Check
-**Parada de Dados:** Carisma + Presenca vs. Autocontrole + Determinacao
+**Parada de Dados:** Carisma + Presenca vs. Compostura + Determinacao
 **Sistema:** O vampiro projeta uma onda de terror sobrenatural em um ou mais alvos proximos. Mortais fogem em panico, se escondem ou ficam paralisados de medo. Vampiros devem testar contra Frenesi de Terror.
 
 **Efeitos por margem de sucesso:**
@@ -204,7 +204,7 @@ O alvo obedecera pedidos do vampiro (nao ordens — Presenca trabalha com persua
 
 **Amalgama:** Nenhum
 **Custo:** 1 Rouse Check
-**Parada de Dados:** Manipulacao + Presenca vs. Autocontrole + Inteligencia
+**Parada de Dados:** Manipulacao + Presenca vs. Compostura + Inteligencia
 **Sistema:** O vampiro pode convocar mentalmente uma pessoa que ja tenha encontrado pelo menos uma vez. O alvo sente uma compulsao irresistivel de ir ate o vampiro — nao sabe necessariamente onde ir, mas instintivamente caminha na direcao certa, toma decisoes que o aproximam e sente desconforto crescente se tentar resistir.
 
 O alvo nao sabe POR QUE esta se movendo — racionaliza como um desejo subito ("tenho que ir aquele bar", "algo me diz para ir ao centro"), mas a compulsao e inexoravel.
@@ -233,7 +233,7 @@ O alvo nao sabe POR QUE esta se movendo — racionaliza como um desejo subito ("
 **Parada de Dados:** Carisma + Presenca (para ativar)
 **Sistema:** O vampiro se torna o ser mais magnificente, terrível e fascinante do ambiente. Ninguem — mortal ou vampiro — pode levantar a voz contra ele, ataca-lo, desafia-lo ou agir de qualquer forma hostil enquanto o efeito durar. Aqueles ao redor sentem reverencia absoluta, medo paralisante ou adoracao extática.
 
-Para resistir e agir contra o vampiro sob Majestade, um personagem deve gastar um ponto de Forca de Vontade E vencer um teste de Autocontrole + Determinacao (dificuldade igual a Carisma + Presenca do vampiro).
+Para resistir e agir contra o vampiro sob Majestade, um personagem deve gastar um ponto de Forca de Vontade E vencer um teste de Compostura + Determinacao (dificuldade igual a Carisma + Presenca do vampiro).
 
 **Duracao:** Uma cena
 

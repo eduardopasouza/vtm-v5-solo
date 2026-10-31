@@ -546,5 +546,5 @@ O WW3800 original e geralmente considerado o mais completo dos dois, especialmen
 
 ---
 
-*Resumo compilado para a biblioteca de referencia de VtM/WoD — IAra v10 | Guerreiro Advogados Associados*
+*Resumo compilado para a biblioteca de referencia de VtM/WoD — VtM V5 Solo | Guerreiro Advogados Associados*
 *Data de compilacao: 07/03/2026*

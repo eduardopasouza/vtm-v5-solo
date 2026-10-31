@@ -138,7 +138,7 @@ Alem disso, o dano corpo a corpo ganha bonus igual a metade do nivel de Potencia
 
 **Amalgama:** Obrigatorio — Presenca 3
 **Custo:** 1 Rouse Check
-**Parada de Dados:** Manipulacao + Potencia vs. Autocontrole + Inteligencia
+**Parada de Dados:** Manipulacao + Potencia vs. Compostura + Inteligencia
 **Sistema:** O vampiro pode projetar uma onda de raiva primal em um alvo proximo, forcando-o a um surto de violencia irracional. Mortais atacam a pessoa mais proxima; vampiros devem testar contra Frenesi de Furia (dificuldade baseada na margem de sucesso do poder).
 
 **Duracao:** Um turno (o surto de raiva)

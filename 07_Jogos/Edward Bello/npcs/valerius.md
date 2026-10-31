@@ -45,7 +45,7 @@ Valerius vê Edward como um recurso competente e um membro legítimo da linhagem
 |--------|--------|--------|
 | Carisma 3 | Inteligência 4 | Força 4 |
 | Manipulação 3 | Raciocínio 3 | Destreza 3 |
-| Autocontrole 5 | Determinação 5 | Vigor 4 |
+| Compostura 5 | Determinação 5 | Vigor 4 |
 
 ## Disciplinas Conhecidas
 
