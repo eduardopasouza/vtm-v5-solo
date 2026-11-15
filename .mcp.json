@@ -6,7 +6,8 @@
       "env": {
         "PYTHONIOENCODING": "utf-8",
         "VTM_PASTA_CAMPANHAS": "${user_config.pasta_campanhas}",
-        "VTM_CAMPANHA_ATIVA": "${user_config.campanha_ativa}"
+        "VTM_CAMPANHA_ATIVA": "${user_config.campanha_ativa}",
+        "VTM_PASTA_ACERVO": "${user_config.pasta_acervo}"
       }
     }
   }

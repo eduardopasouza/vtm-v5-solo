@@ -146,7 +146,11 @@ def test_hook_so_dentro_da_pasta(tmp_path):
     dentro = cli.modo_hook(json.dumps({"cwd": str(camp)}), env)
     assert json.loads(dentro)["hookSpecificOutput"]["hookEventName"] == "SessionStart"
     pai = cli.modo_hook(json.dumps({"cwd": str(tmp_path.parent)}), env)
-    assert pai  # pasta logo acima da de campanhas (o repositório do plugin)
+    assert pai == ""  # pasta mãe comum (ex.: C:\dev) não recebe
+    (tmp_path.parent / ".claude-plugin").mkdir(exist_ok=True)
+    (tmp_path.parent / ".claude-plugin" / "plugin.json").write_text("{}", encoding="utf-8")
+    pai = cli.modo_hook(json.dumps({"cwd": str(tmp_path.parent)}), env)
+    assert pai  # pasta mãe que é o repositório do plugin
     avo = cli.modo_hook(json.dumps({"cwd": str(tmp_path.parent.parent)}), env)
     assert avo == ""  # mais acima (ex.: C:\dev) não recebe
     fora = tmp_path.parent / "outro_projeto"

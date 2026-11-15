@@ -50,9 +50,11 @@ def modo_hook(stdin_txt: str, env: dict) -> str:
     if pasta is None:
         return ""
     base = Path(base_txt).resolve()
-    # Dentro da pasta de campanhas, ou na pasta logo acima dela (o repositório).
-    # Pastas mais altas (ex.: C:\dev) não recebem o resumo.
-    if not (_dentro(cwd, base) or cwd == base.parent):
+    # Dentro da pasta de campanhas, ou na pasta logo acima dela quando essa é o
+    # repositório do plugin (tem .claude-plugin/plugin.json). Outras pastas
+    # (ex.: C:\dev, mesmo sendo mãe da pasta de campanhas) não recebem o resumo.
+    eh_repo_plugin = cwd == base.parent and (cwd / ".claude-plugin" / "plugin.json").is_file()
+    if not (_dentro(cwd, base) or eh_repo_plugin):
         return ""
     return json.dumps({"hookSpecificOutput": {"hookEventName": "SessionStart",
                                               "additionalContext": c.resumo(pasta)}},

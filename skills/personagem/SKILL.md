@@ -17,9 +17,10 @@ Skill de criação e evolução de personagens para VtM V5 solo em Português BR
 | Campanha ativa | `${user_config.campanha_ativa}` |
 | Resumos | `[Base]/12_Resumos_dos_Livros/` |
 | PDFs integrais | `${user_config.pasta_acervo}` (opcional) |
+| Livros (busca) | Ferramenta MCP `buscar_acervo` ou agente `guardiao-regras`: índice local dos PDFs com livro + página. CLI: `python "${CLAUDE_PLUGIN_ROOT}/scripts/acervo.py" buscar "termo"`. Regra citada só com página; sem resultado, "não sei". Hierarquia P6: regras da casa > V5 Core > suplementos V5 > `01_Sistema`/resumos > edições antigas (só lore) |
 | Referências V5 | `[Base]/01_Sistema/` |
 
-**Configuração não preenchida.** Se um valor acima aparecer vazio ou ainda como `${user_config...}` literal: Jogos = `[Base]/07_Jogos/`; Campanha ativa = perguntar se houver mais de uma; PDFs = usar só os resumos.
+**Configuração não preenchida.** Se um valor acima aparecer vazio ou ainda como `${user_config...}` literal: Jogos = perguntar ao jogador onde ficam as campanhas e sugerir configurar `pasta_campanhas` (`/plugin configure vtm@vtm-local`); **nunca gravar campanha dentro de `[Base]`**, que é o repositório público do plugin; Campanha ativa = perguntar se houver mais de uma; PDFs = usar só os resumos.
 
 ## Criação de Personagem — Fluxo V5
 

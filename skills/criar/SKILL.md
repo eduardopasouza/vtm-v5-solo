@@ -20,10 +20,11 @@ Criar e estruturar todos os níveis narrativos: Jogo, Partida, História, Aventu
 | Jogos | `${user_config.pasta_campanhas}` |
 | Resumos | `[Base]/12_Resumos_dos_Livros/` |
 | PDFs integrais | `${user_config.pasta_acervo}` (opcional) |
+| Livros (busca) | Ferramenta MCP `buscar_acervo` ou agente `guardiao-regras`: índice local dos PDFs com livro + página. CLI: `python "${CLAUDE_PLUGIN_ROOT}/scripts/acervo.py" buscar "termo"`. Regra citada só com página; sem resultado, "não sei". Hierarquia P6: regras da casa > V5 Core > suplementos V5 > `01_Sistema`/resumos > edições antigas (só lore) |
 | Templates | `[Base]/08_Templates/` |
 | Preferências | `[Base]/09_Preferencias/01_Preferencias_de_Jogo.md` |
 
-**Configuração não preenchida.** Se um valor acima aparecer vazio ou ainda como `${user_config...}` literal: Jogos = `[Base]/07_Jogos/`; PDFs = usar só os resumos. O jogo novo é criado dentro da pasta de Jogos.
+**Configuração não preenchida.** Se um valor acima aparecer vazio ou ainda como `${user_config...}` literal: Jogos = perguntar ao jogador onde ficam as campanhas e sugerir configurar `pasta_campanhas` (`/plugin configure vtm@vtm-local`); **nunca gravar campanha dentro de `[Base]`**, que é o repositório público do plugin; PDFs = usar só os resumos. O jogo novo é criado dentro da pasta de Jogos.
 
 ## Hierarquia Narrativa
 

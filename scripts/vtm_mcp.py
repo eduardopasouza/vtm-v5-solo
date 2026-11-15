@@ -139,6 +139,24 @@ def auditar_campanha() -> dict:
 
 
 @mcp.tool()
+def buscar_acervo(consulta: str, linha: str | None = None, edicao: str | None = None,
+                  idioma: str | None = None, limite: int = 8) -> dict:
+    """Busca no índice local dos livros (V5 Core primeiro, depois suplementos V5,
+    depois edições antigas). Devolve livro, página impressa e trecho curto para
+    citar. Frase exata entre aspas. Filtros: linha (VtM, VtDA, WtA, MtA, HtR),
+    edicao (core, v5, classica), idioma (en, pt). Sem resultado = não citar."""
+    import vtm_acervo as acervo
+    caminho = acervo.indice_padrao()
+    if not caminho.exists():
+        return {"erro": f"índice não encontrado em {caminho}; rode scripts/acervo.py indexar"}
+    con = acervo.conectar(caminho)
+    try:
+        return {"consulta": consulta, "resultados": acervo.buscar(con, consulta, linha, edicao, idioma, limite)}
+    finally:
+        con.close()
+
+
+@mcp.tool()
 def tabela_potencia(bp: int) -> dict:
     """Linha da tabela de Potência de Sangue (Core p. 216)."""
     from dataclasses import asdict

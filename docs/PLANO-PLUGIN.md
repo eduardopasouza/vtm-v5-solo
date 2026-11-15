@@ -385,3 +385,16 @@ Total: **~50-75 h**, em 12-18 sessões. As estimativas são de ordem de grandeza
   - criar o `estado.json` do Edward Bello e tirar os números dos `.md`;
   - consertar as defasagens até a auditoria voltar sem erros (aceite da frente 3);
   - confirmar numa sessão nova que o hook roda pelo plugin.
+
+## 9. Andamento da Onda 4 — acervo indexado (2026-11-15)
+
+- **Escopo (Eduardo, 2026-11-15):** o núcleo (índice, busca, MCP e agente) e mais três extras: conferir a `01_Sistema` contra o Core, OCR, e retirar a campanha e os resumos com reescrita do histórico.
+- **Feito (parte 1):**
+  - `scripts/vtm_acervo.py`: classifica cada PDF pela pasta e pelo nome (linha VtM/VtDA/WtA/MtA/HtR; edição core/v5/clássica; idioma). CofD fica fora (P9). Extrai texto por página com PyMuPDF e OCR opcional (Tesseract). Detecta a página impressa e grava em SQLite FTS5 (`remove_diacritics`), em `%LOCALAPPDATA%/vtm-v5/acervo.sqlite` (ou `VTM_INDICE`), fora do repositório. Reindexação incremental. A busca ordena pela P6 (Core > V5 > clássica) e devolve livro, página impressa e trecho curto.
+  - `scripts/acervo.py` (CLI `indexar` / `buscar` / `status`), ferramenta MCP `buscar_acervo` e agente `agents/guardiao-regras.md` (sem fonte, "não sei").
+  - As 5 skills passam a buscar no acervo e citar página.
+  - Reserva da pasta de Jogos: em vez de `[Base]/07_Jogos`, pergunta ao jogador e nunca grava no repositório. Hook: a pasta logo acima só recebe o resumo se for o repositório do plugin.
+  - 64 testes verdes, incluindo OCR real e `buscar_acervo` pelo servidor MCP.
+- **Índice real (2026-11-15):** 161 livros, 18.604 páginas, 15.717 com texto; 14 PDFs do CofD fora. **Aceite da busca ✓:** "Blood Surge" → Core p. 218; "Rouse Check" → p. 211; "Ventrue bane" → p. 102.
+- **OCR:** o Tesseract 5.4.0 **já estava instalado**, com `por` e `eng`, e nada foi baixado. Cerca de 6 s por página. A rodada nos ~2.900 páginas sem texto está em andamento.
+- **Pendente:** resultado do OCR; conferência da `01_Sistema`; mudança da campanha e dos resumos com reescrita do histórico.

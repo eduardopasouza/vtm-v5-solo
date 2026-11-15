@@ -46,6 +46,23 @@ def test_servidor_lista_e_rola(tmp_path):
     assert len(linhas) == 2
 
 
+def test_buscar_acervo_pelo_servidor(tmp_path):
+    fitz = pytest.importorskip("fitz")
+    sys.path.insert(0, str(SERVIDOR.parent))
+    import vtm_acervo as acervo
+    raiz = tmp_path / "acervo" / "Vampiro a Máscara"
+    raiz.mkdir(parents=True)
+    doc = fitz.open()
+    doc.new_page().insert_text((72, 72), "1\nIntro " * 10)
+    doc.new_page().insert_text((72, 72), "2\nRouse Check: roll one die and hope.\n" + "texto " * 20)
+    doc.save(raiz / "Vampire the Masquerade.pdf")
+    indice = tmp_path / "idx.sqlite"
+    acervo.indexar(tmp_path / "acervo", acervo.conectar(indice), aviso=None)
+    env = dict(os.environ, VTM_INDICE=str(indice))
+    _, (r,) = asyncio.run(_chamar(env, [("buscar_acervo", {"consulta": '"Rouse Check"'})]))
+    assert r["resultados"][0]["pagina"] == 2
+
+
 def test_sem_campanha_nao_grava(tmp_path):
     env = dict(os.environ, VTM_PASTA_CAMPANHAS="${user_config.pasta_campanhas}", VTM_CAMPANHA_ATIVA="")
     _, (r,) = asyncio.run(_chamar(env, [("remorso", {"humanidade": 7, "manchas": 1})]))
