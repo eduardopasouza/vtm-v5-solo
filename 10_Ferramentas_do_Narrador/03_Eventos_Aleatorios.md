@@ -25,15 +25,15 @@ Eventos que podem ocorrer durante a movimentacao noturna pelas ruas de Londres:
 |-----|---------|---------|
 | 1 | **Mendigo desesperado** | Pede esmola agressivamente. Pode ser informante valioso se tratado com gentileza. Conhece os becos como ninguem. |
 | 2 | **Patrulha policial (2 Bobbies)** | Fazendo ronda. Vao questionar qualquer pessoa com aparencia suspeita ou coberta de sangue. Pool: 5d para Percepcao. |
-| 3 | **Carruagem desgovernada** | Um cavalo assustado puxa carruagem por rua estreita. Risco de atropelamento (Destreza + Atletismo DD 3 para desviar). Passageiro pode ser alguem importante. |
+| 3 | **Carruagem desgovernada** | Um cavalo assustado puxa carruagem por rua estreita. Risco de atropelamento (Destreza + Atletismo DD 2 para desviar). Passageiro pode ser alguem importante. |
 | 4 | **Briga de pub** | Dois ou mais homens brigando na rua. Sangue fresco, emocoes altas (Colerico). Risco: testemunhas, policia a caminho. |
-| 5 | **Incendio em edificio** | Fogo em casa ou fabrica proxima. Fumaca e chamas. Rotschreck DD 3-4 se o fogo for proximo. Oportunidade: caos permite alimentacao disfarçada. |
+| 5 | **Incendio em edificio** | Fogo em casa ou fabrica proxima. Fumaca e chamas. teste de frenesi de terror: fogueira DD 2, dentro do predio em chamas DD 3 (Core p. 220). Oportunidade: caos permite alimentacao disfarçada. |
 | 6 | **Cortejo funebre noturno** | Processao levando caixao para enterro matutino. Melancolico. Possivel conexao com Hecata ou Saqueadores de Tumulos. |
 | 7 | **Grupo de marinheiros bebados** | 4-6 marinheiros saindo de taverna nas docas. Barulhentos, agressivos, faceis de provocar. Pool: 4d cada. Sangue Colerico. |
 | 8 | **Carruagem elegante parada** | Carruagem de aristocrata parada em beco suspeito. O que o ocupante esta fazendo ali? Segredo, caso extraconjugal, ou encontro cainita? |
 | 9 | **Grito na escuridao** | Grito de mulher vindo de beco proximo. Pode ser: vitima real, armadilha, outro vampiro se alimentando, ou briga domestica. |
 | 10 | **Vendedor ambulante noturno** | Vendedor de castanhas, empadas ou jornais. Fonte de informacao casual. Pode ter visto coisas estranhas. |
-| 11 | **Fog (nevoa densa)** | Nevoa rola pelas ruas, reduzindo visibilidade a poucos metros. -2 dados em Percepcao visual. +2 dados em Furtividade. Atmosferico. |
+| 11 | **Fog (nevoa densa)** | Nevoa rola pelas ruas, reduzindo visibilidade a poucos metros. -2 dados em testes de visao (Raciocinio + Prontidao). +2 dados em Furtividade. Atmosferico. |
 | 12 | **Pregador de rua** | Evangelista gritando sobre pecado e salvacao. Fe Verdadeira? Provavelmente nao, mas a duvida e desconfortavel. Pode atrair multidao. |
 | 13 | **Crianca perdida** | Orfao ou crianca perdida chorando. Touchstone test: abandonar ou ajudar? Se ajudar, a crianca pode levar a lugares inesperados. |
 | 14 | **Ratazanas em debandada** | Centenas de ratos correndo dos esgotos. Sinal de: inundacao subterranea, Nosferatu em movimento, presenca sobrenatural, ou simplesmente ratos. |
@@ -55,11 +55,11 @@ Quando uma cena de alimentacao nao sai como planejado:
 | 1 | **Testemunha inesperada** | Alguem viu a alimentacao — mortal, outro vampiro, ou pior. Precisa ser neutralizado ou a Mascara esta em risco. |
 | 2 | **Vitima resiste violentamente** | A vitima nao desmaia — luta, grita, arranha. Pool: 6d. Risco de ferimento e exposicao. Sangue Colerico. |
 | 3 | **Territorio de outro vampiro** | O PC invadiu territorio de caca de outro Cainita sem saber. O dono aparece furioso. Teste social ou confronto. |
-| 4 | **Vitima esta doente** | Sangue contaminado — tifo, colera, sifilis. Sem efeito mecanico no vampiro, mas sabor horrivel. Teste Compostura DD 3 para nao vomitar (perde Fome reduzida). |
+| 4 | **Vitima esta doente** | Sangue contaminado — tifo, colera, sifilis. Sem efeito mecanico no vampiro, mas sabor horrivel. Sabor e narrativa; o Core nao preve penalidade mecanica para doenca no sangue (o vampiro a transmite, nao a contrai; Core p. 221). |
 | 5 | **Vitima e "protegida"** | A vitima e parente, empregado ou amante de alguem poderoso (mortal ou vampiro). Consequencias sociais/politicas a caminho. |
 | 6 | **Policia nas proximidades** | Bobby aparece no momento exato. Ser pego com vitima inconsciente e desastroso. Furtividade ou Subterfugio imediato. |
-| 7 | **Frenesi durante alimentacao** | O PC falha no teste de controle e drena demais. Vitima morre ou fica criticamente ferida. -1 Humanidade em jogo? Corpo para esconder. |
-| 8 | **Sangue com Dyscrasia** | Surpresa positiva! A vitima tem Ressonancia Aguda (Dyscrasia). Role d4: 1=Sanguineo, 2=Colerico, 3=Melancolico, 4=Fleumatico. Bonus de +1 dado na Disciplina associada. |
+| 7 | **Frenesi durante alimentacao** | O PC falha no teste de controle e drena demais. Vitima morre ou fica criticamente ferida. Manchas pelos Principios da Cronica? Corpo para esconder. |
+| 8 | **Sangue com Dyscrasia** | Surpresa positiva! A vitima tem Ressonancia Aguda (Dyscrasia). Role d4: 1=Sanguineo, 2=Colerico, 3=Melancolico, 4=Fleumatico. +1 dado na Disciplina associada, mais o efeito proprio da Discrasia; para obte-lo, matar e drenar ou se alimentar por tres noites (Core p. 228). |
 | 9 | **A vitima acorda/lembra** | Horas depois, a vitima lembra de detalhes — rosto, local, sensacao. Pode ir a policia ou, pior, a algum grupo de cacadores. |
 | 10 | **Laco de Sangue acidental** | A vitima recebeu sangue vampirico (ferimento na boca do PC, reflexo de cuspir sangue). Primeiro estagio de Laco de Sangue. A vitima vai procurar o PC obsessivamente. |
 
@@ -112,7 +112,7 @@ Para ambientar cenas com detalhes sensoriais:
 | 1 | **Nevoa densa** | Ruas engolidas por branco leitoso. Lampioes a gas sao halos difusos. Passos ecoam sem direcao. Perfeito para emboscadas e desaparecimentos. | -2 Percepcao visual, +2 Furtividade |
 | 2 | **Chuva constante** | Agua escorre por telhados e sarjetas. Ruas viram lama. Poucos mortais nas ruas. O cheiro de esgoto se intensifica. Sons abafados. | -1 Percepcao auditiva, ruas mais vazias |
 | 3 | **Lua cheia** | Ceu limpo, lua enorme e prateada. Ruas inundadas de luz palida. Romanticamente sinistro. Lobisomens mais ativos (cuidado nos arredores da cidade). | +1 Percepcao visual noturna, risco lupino |
-| 4 | **Tempestade** | Trovoes, relampagos, vento forte. Ruido ensurdecedor. Mortais se abrigam. Ruas desertas exceto por desesperados. Atmosfera gotica perfeita. | -2 Percepcao auditiva, ruas vazias, Rotschreck DD 2 por relampagos (se paranóico com fogo) |
+| 4 | **Tempestade** | Trovoes, relampagos, vento forte. Ruido ensurdecedor. Mortais se abrigam. Ruas desertas exceto por desesperados. Atmosfera gotica perfeita. | -2 dados em testes de audicao, ruas vazias, Rotschreck DD 2 por relampagos (se paranóico com fogo) |
 | 5 | **Noite clara e gelada** | Estrelas visiveis, ar cortante. Geada nos paralelepipedos. Respiracao visivel (dos mortais — vampiros nao respiram, detalhe que pode denunciar). | +1 Percepcao geral, risco de detalhe da Mascara |
 | 6 | **Frio cortante** | Temperatura abaixo de zero. Mortais apressados, cabisbaixos, sofrendo. Mendigos congelando. Rios e fontes comecam a congelar. Melancolico. | Mortais vulneraveis (pool -1 por frio), oportunidade de alimentacao |
 

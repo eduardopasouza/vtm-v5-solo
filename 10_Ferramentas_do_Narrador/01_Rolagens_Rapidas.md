@@ -8,18 +8,19 @@
 
 | DD | Classificacao | Descricao | Exemplo |
 |----|--------------|-----------|---------|
-| 1 | Trivial | Quase impossivel de falhar | Abrir uma porta destrancada |
-| 2 | Rotineiro | Facil para qualquer competente | Ler linguagem corporal de mortal relaxado |
-| 3 | Simples | Requer alguma habilidade | Persuadir mortal receptivo, notar alguem seguindo |
-| 4 | Moderado | Desafiador para a maioria | Convencer NPC neutro, arrombar fechadura comum |
-| 5 | Desafiador | Requer competencia real | Manipular vampiro experiente, hackear sistema |
-| 6 | Dificil | Proeza notavel | Enganar anciao, feito atletico excepcional |
-| 7 | Muito Dificil | Quase heroico | Desafiar Principe, resistir Dominacao de anciao |
-| 8 | Extremo | Feito lendario | Escapar de emboscada de 10+ inimigos |
-| 9 | Quase Impossivel | Mitico | Convencer Antediluviano a mudar de ideia |
-| 10 | Impossivel (quase) | Apenas com poderes sobrenaturais | Resistir comando direto de Matusalem |
+Escala do Core (p. 119); os exemplos sao orientacao do Narrador:
 
-**Regra pratica:** A maioria dos testes em jogo fica entre DD 2-6. DD 7+ e raro e reservado para momentos dramaticos.
+| DD | Classificacao | Exemplo |
+|----|--------------|---------|
+| 1 | Rotineiro | Acertar alvo parado, convencer amigo leal a ajudar (exemplos do Core); ler linguagem corporal de mortal relaxado |
+| 2 | Direto | Seduzir quem ja esta no clima, intimidar um fraco (exemplos do Core); persuadir mortal receptivo |
+| 3 | Moderado | Convencer NPC neutro, arrombar fechadura comum |
+| 4 | Desafiador | Manipular vampiro experiente, hackear sistema |
+| 5 | Dificil | Enganar anciao, feito atletico excepcional |
+| 6 | Muito Dificil | Desafiar Principe, resistir Dominacao de anciao |
+| 7+ | Quase Impossivel | Convencer Antediluviano a mudar de ideia |
+
+**Regra pratica:** a maioria dos testes fica entre DD 1 e 5. Com parada pelo menos o dobro da DD, o Narrador pode dar vitoria automatica (Core p. 120).
 
 ---
 
@@ -60,45 +61,45 @@ Para criar NPCs rapidamente sem ficha completa, use estas categorias:
 
 | Situacao | Pool Tipica | DD |
 |---------|-------------|-----|
-| Pedir informacao a mortal amigavel | Carisma + Persuasao | 2 |
-| Convencer desconhecido a ajudar | Manipulacao + Persuasao | 3 |
-| Barganhar preco em negociacao | Manipulacao + Persuasao | 3-4 |
-| Mentir de forma convincente | Manipulacao + Subterfugio | 3 (vs. percepcao do alvo) |
-| Convencer NPC hostil | Carisma + Persuasao | 5 |
-| Manipular vampiro experiente | Manipulacao + Subterfugio | 5-6 |
-| Convencer anciao a mudar posicao | Carisma + Politica | 6-7 |
+| Pedir informacao a mortal amigavel | Carisma + Persuasao | 1 |
+| Convencer desconhecido a ajudar | Manipulacao + Persuasao | 2 |
+| Barganhar preco em negociacao | Manipulacao + Persuasao | 2-3 |
+| Mentir de forma convincente | Manipulacao + Subterfugio | 2 (vs. percepcao do alvo) |
+| Convencer NPC hostil | Carisma + Persuasao | 4 |
+| Manipular vampiro experiente | Manipulacao + Subterfugio | 4-5 |
+| Convencer anciao a mudar posicao | Carisma + Politica | 5-6 |
 
 ### Intimidacao
 
 | Situacao | Pool Tipica | DD |
 |---------|-------------|-----|
-| Ameacar mortal comum | Forca + Intimidacao | 2 |
-| Intimidar policial/soldado | Carisma + Intimidacao | 4 |
-| Intimidar vampiro neonato | Carisma + Intimidacao | 3-4 |
-| Intimidar ancillae | Carisma + Intimidacao | 5 |
-| Intimidar anciao | Carisma + Intimidacao | 7+ |
+| Ameacar mortal comum | Forca + Intimidacao | 1 |
+| Intimidar policial/soldado | Carisma + Intimidacao | 3 |
+| Intimidar vampiro neonato | Carisma + Intimidacao | 2-3 |
+| Intimidar ancillae | Carisma + Intimidacao | 4 |
+| Intimidar anciao | Carisma + Intimidacao | 6+ |
 
 ### Etiqueta e Politica
 
 | Situacao | Pool Tipica | DD |
 |---------|-------------|-----|
-| Comportar-se em Elysium | Manipulacao + Etiqueta | 2 |
-| Navegar politica de corte | Manipulacao + Politica | 3-4 |
-| Identificar facçoes e aliancas | Inteligencia + Politica | 3 |
-| Negociar com Primogenitura | Carisma + Politica | 4-5 |
-| Audiencia com Principe | Manipulacao + Etiqueta | 4 |
-| Pedir boon ao Principe | Carisma + Politica | 5-6 |
+| Comportar-se em Elysium | Manipulacao + Etiqueta | 1 |
+| Navegar politica de corte | Manipulacao + Politica | 2-3 |
+| Identificar facçoes e aliancas | Inteligencia + Politica | 2 |
+| Negociar com Primogenitura | Carisma + Politica | 3-4 |
+| Audiencia com Principe | Manipulacao + Etiqueta | 3 |
+| Pedir boon ao Principe | Carisma + Politica | 4-5 |
 
 ### Investigacao e Informacao
 
 | Situacao | Pool Tipica | DD |
 |---------|-------------|-----|
-| Procurar informacao em jornal | Inteligencia + Investigacao | 2 |
-| Interrogar testemunha cooperativa | Manipulacao + Investigacao | 2-3 |
-| Investigar cena de crime | Percepcao + Investigacao | 3-4 |
-| Pesquisar em biblioteca/arquivo | Inteligencia + Academicos | 3-4 |
-| Interrogar suspeito resistente | Manipulacao + Intimidacao | 4-5 |
-| Decifrar codigo ou mensagem oculta | Inteligencia + Investigacao | 5-6 |
+| Procurar informacao em jornal | Inteligencia + Investigacao | 1 |
+| Interrogar testemunha cooperativa | Manipulacao + Investigacao | 1-2 |
+| Investigar cena de crime | Raciocinio + Investigacao | 2-3 |
+| Pesquisar em biblioteca/arquivo | Inteligencia + Academicos | 2-3 |
+| Interrogar suspeito resistente | Manipulacao + Intimidacao | 3-4 |
+| Decifrar codigo ou mensagem oculta | Inteligencia + Investigacao | 4-5 |
 
 ---
 
@@ -108,36 +109,38 @@ Para criar NPCs rapidamente sem ficha completa, use estas categorias:
 
 | Situacao | Pool Atacante | Pool Defensor | DD (se nao contestado) |
 |---------|-------------|--------------|------------------------|
-| Soco/chute | Forca + Briga | Destreza + Briga | — (contestado) |
-| Arma branca | Destreza + Combate | Destreza + Combate | — (contestado) |
-| Arma de fogo (perto) | Destreza + Armas de Fogo | Destreza + Atletismo | — (contestado) |
-| Arma de fogo (longe) | Destreza + Armas de Fogo | — | 3-5 (baseado em distancia) |
+| Soco/chute | Forca + Briga | Habilidade de combate ou Destreza + Atletismo | — (contestado) |
+| Arma branca de uma mao | Destreza + Armas Brancas | Idem | — (contestado) |
+| Arma branca de duas maos | Forca + Armas Brancas | Idem | — (contestado) |
+| Arma de fogo | Compostura + Armas de Fogo (Determinacao no tiro de precisao) | Destreza + Atletismo, modificada pela cobertura | — (contestado; -2 alem do alcance efetivo) |
+| Alvo parado | Qualquer | — | 1 |
 | Agarrar/imobilizar | Forca + Briga | Forca + Briga | — (contestado) |
-| Morder (alimentar) | Forca + Briga | Destreza + Briga | — (contestado) |
-| Estaquear | Forca + Combate | — | 5 (alem do ataque normal) |
+| Estaquear | Forca + Armas Brancas | Defesa normal | Tiro dirigido -2 e 5+ de dano |
+
+(Core p. 125, 221, 300-302)
 
 ### Atletismo e Movimento
 
 | Situacao | Pool Tipica | DD |
 |---------|-------------|-----|
-| Correr em linha reta | Destreza + Atletismo | 2 |
-| Escalar muro baixo | Forca + Atletismo | 2-3 |
-| Saltar entre telhados | Destreza + Atletismo | 4 |
-| Perseguir alguem em multidao | Destreza + Atletismo | 3-4 |
-| Nadar em rio com correnteza | Forca + Atletismo | 4 |
-| Escalar parede lisa | Forca + Atletismo | 5-6 |
-| Equilibrar-se em superficie estreita | Destreza + Atletismo | 3-4 |
+| Correr em linha reta | Destreza + Atletismo | 1 |
+| Escalar muro baixo | Forca + Atletismo | 1-2 |
+| Saltar entre telhados | Destreza + Atletismo | 3 |
+| Perseguir alguem em multidao | Destreza + Atletismo | 2-3 |
+| Nadar em rio com correnteza | Forca + Atletismo | 3 |
+| Escalar parede lisa | Forca + Atletismo | 4-5 |
+| Equilibrar-se em superficie estreita | Destreza + Atletismo | 2-3 |
 
 ### Furtividade
 
 | Situacao | Pool Tipica | DD |
 |---------|-------------|-----|
-| Esconder-se em area escura | Destreza + Furtividade | 2 |
-| Mover-se silenciosamente em casa | Destreza + Furtividade | 3 |
-| Seguir alguem na rua | Percepcao + Furtividade | 3-4 |
-| Infiltrar-se em propriedade vigiada | Destreza + Furtividade | 4-5 |
-| Evitar deteccao sobrenatural | Destreza + Furtividade | 5-6 (vs. Auspicios) |
-| Mover-se sem ser percebido em multidao | Manipulacao + Furtividade | 3 |
+| Esconder-se em area escura | Destreza + Furtividade | 1 |
+| Mover-se silenciosamente em casa | Destreza + Furtividade | 2 |
+| Seguir alguem na rua | Destreza + Furtividade | 2-3 |
+| Infiltrar-se em propriedade vigiada | Destreza + Furtividade | 3-4 |
+| Evitar deteccao sobrenatural | Destreza + Furtividade | 4-5 (vs. Auspicios) |
+| Mover-se sem ser percebido em multidao | Manipulacao + Furtividade | 2 |
 
 ---
 
@@ -147,32 +150,32 @@ Para criar NPCs rapidamente sem ficha completa, use estas categorias:
 
 | Situacao | Pool Tipica | DD |
 |---------|-------------|-----|
-| Notar algo obvio fora do lugar | Percepcao + Percepcao | 2 |
-| Detectar mentira obitoria | Percepcao + Perspicacia | 3 |
-| Identificar vampiro em multidao | Percepcao + Ocultismo | 4 |
-| Notar emboscada antes de acontecer | Percepcao + Percepcao | 4-5 |
-| Ler emocoes ocultas de anciao | Percepcao + Perspicacia | 6 |
-| Sentir presenca sobrenatural (sem Disciplina) | Percepcao + Ocultismo | 5 |
+| Notar algo obvio fora do lugar | Raciocinio + Prontidao | 1 |
+| Detectar mentira obitoria | Raciocinio + Intuicao | 2 |
+| Identificar vampiro em multidao | Raciocinio + Ocultismo | 3 |
+| Notar emboscada antes de acontecer | Raciocinio + Prontidao | 3-4 |
+| Ler emocoes ocultas de anciao | Raciocinio + Intuicao | 5 |
+| Sentir presenca sobrenatural (sem Disciplina) | Raciocinio + Ocultismo | 4 |
 
 ### Conhecimento
 
 | Situacao | Pool Tipica | DD |
 |---------|-------------|-----|
-| Conhecimento geral de historia | Inteligencia + Academicos | 2 |
-| Identificar cla de vampiro por comportamento | Inteligencia + Ocultismo | 3-4 |
-| Conhecer detalhes de lei vampirica | Inteligencia + Politica | 3 |
-| Reconhecer ritual ou simbolo oculto | Inteligencia + Ocultismo | 4 |
-| Lembrar detalhe obscuro de historia cainita | Inteligencia + Ocultismo | 5 |
-| Identificar Disciplina sendo usada | Inteligencia + Ocultismo | 4-5 |
+| Conhecimento geral de historia | Inteligencia + Academicos | 1 |
+| Identificar cla de vampiro por comportamento | Inteligencia + Ocultismo | 2-3 |
+| Conhecer detalhes de lei vampirica | Inteligencia + Politica | 2 |
+| Reconhecer ritual ou simbolo oculto | Inteligencia + Ocultismo | 3 |
+| Lembrar detalhe obscuro de historia cainita | Inteligencia + Ocultismo | 4 |
+| Identificar Disciplina sendo usada | Inteligencia + Ocultismo | 3-4 |
 
 ### Compostura e Resistencia Mental
 
 | Situacao | Pool Tipica | DD |
 |---------|-------------|-----|
-| Resistir provocacao leve | Compostura + Determinacao | 2 |
-| Manter compostura sob pressao social | Compostura + Etiqueta | 3 |
+| Resistir provocacao leve | Compostura + Determinacao | 1 |
+| Manter compostura sob pressao social | Compostura + Etiqueta | 2 |
 | Resistir Frenesi | Forca de Vontade intacta + Humanidade ÷ 3 (Core p. 219) | 2-4 (exemplos na Core p. 220) |
-| Manter-se calmo sob tortura | Determinacao + Fortitude | 5-6 |
+| Manter-se calmo sob tortura | Determinacao + Fortitude | 4-5 |
 | Resistir compulsao sobrenatural | Compostura + Determinacao | Variavel (vs. poder) |
 
 ---
@@ -200,10 +203,10 @@ Para criar NPCs rapidamente sem ficha completa, use estas categorias:
 ## Regras Rapidas para Situacoes Comuns
 
 ### Alimentacao Rapida (Hunting Roll)
-- **Pool:** Variavel por Tipo de Predador
-- **DD:** 2-5 (baseado em local e risco)
-- **Sucesso:** Reduz Fome em 1-3 (baseado em margem)
-- **Falha:** Fome nao reduz + complicacao
+- **Pool:** conforme a abordagem e o Tipo de Predador (Core p. 306-307)
+- **DD:** a do territorio, de 2 (favela) a 6 (bairro rico), com ajustes por policia, seguranca e multidoes; minimo 1 (Core p. 308). Tabela em `05_Guia_de_Dificuldades.md`
+- **Sucesso:** a Fome cai conforme a tabela de alimentacao (quanto se bebe da vitima), nao pela margem (Core p. 212, 307)
+- **Falha:** Fome nao reduz + complicacao; ou vitoria com custo: a Fome cai, mas algo deu errado (Core p. 307)
 
 ### Perseguicao
 - **3 testes contestados** de Destreza + Atletismo
@@ -212,7 +215,7 @@ Para criar NPCs rapidamente sem ficha completa, use estas categorias:
 
 ### Esconder Evidencia
 - **Pool:** Inteligencia + Furtividade (ou Ciencias)
-- **DD:** 3 (cena simples), 5 (cena complexa com testemunhas)
+- **DD:** 2 (cena simples), 4 (cena complexa com testemunhas)
 - **Falha:** Evidencia encontravel por investigacao
 
 ### Resistir Interrogatorio

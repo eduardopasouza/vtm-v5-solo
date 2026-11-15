@@ -10,15 +10,17 @@ O V5 usa um sistema simples: **pool de dados vs. Dificuldade (DD)**. Cada dado q
 
 **Principio fundamental:** DD nao mede apenas a complexidade da tarefa — mede a combinacao de complexidade, circunstancias e oposicao. Um teste "facil" em circunstancias horriveis pode ter DD alto. Um teste "dificil" com preparacao perfeita pode ter DD baixo.
 
+**Escala do Core (p. 119):** rotineiro 1, direto 2, moderado 3, desafiador 4, dificil 5, muito dificil 6, quase impossivel 7+. As secoes abaixo seguem essa escala; os exemplos sao orientacao do Narrador, nao regra do livro. Com parada pelo menos o dobro da DD, o Narrador pode dar vitoria automatica (Core p. 120).
+
 **Regra de ouro do Narrador:** Se nao ha risco significativo de falha E nao ha consequencia interessante para falha, **nao peca rolagem**. Apenas narre o sucesso.
 
 ---
 
-## DD 2 — Rotineiro
+## DD 1 — Rotineiro
 
 **Filosofia:** Qualquer pessoa minimamente competente consegue. Falha so ocorre com azar extremo ou incompetencia total.
 
-**Quando usar DD 2:**
+**Quando usar DD 1:**
 - A tarefa e simples e o personagem tem treinamento basico
 - Nao ha pressao de tempo ou oposicao
 - O ambiente e favoravel
@@ -54,11 +56,11 @@ O V5 usa um sistema simples: **pool de dados vs. Dificuldade (DD)**. Cada dado q
 
 ---
 
-## DD 3 — Simples
+## DD 2 — Direto (Simples)
 
 **Filosofia:** Requer competencia. Pessoa treinada consegue na maioria das vezes. Amadores podem falhar.
 
-**Quando usar DD 3:**
+**Quando usar DD 2:**
 - A tarefa exige habilidade mas nao e extraordinaria
 - Ha alguma pressao ou complicacao menor
 - O alvo tem resistencia passiva
@@ -95,11 +97,11 @@ O V5 usa um sistema simples: **pool de dados vs. Dificuldade (DD)**. Cada dado q
 
 ---
 
-## DD 4 — Moderado
+## DD 3 — Moderado
 
 **Filosofia:** Tarefa genuinamente desafiadora. Requer competencia real e um pouco de sorte. Profissionais conseguem; amadores provavelmente falham.
 
-**Quando usar DD 4:**
+**Quando usar DD 3:**
 - A tarefa exige habilidade especializada
 - Ha pressao significativa ou complicacoes ativas
 - O alvo tem resistencia consciente
@@ -139,11 +141,11 @@ O V5 usa um sistema simples: **pool de dados vs. Dificuldade (DD)**. Cada dado q
 
 ---
 
-## DD 5 — Desafiador
+## DD 4 — Desafiador
 
 **Filosofia:** Feito notavel. Mesmo profissionais falham com frequencia. Requer combinacao de habilidade, preparo e circunstancia favoravel.
 
-**Quando usar DD 5:**
+**Quando usar DD 4:**
 - A tarefa e excepcional para o campo
 - Ha oposicao ativa e competente
 - Falha tem consequencias serias
@@ -184,11 +186,11 @@ O V5 usa um sistema simples: **pool de dados vs. Dificuldade (DD)**. Cada dado q
 
 ---
 
-## DD 6 — Dificil
+## DD 5 — Dificil
 
 **Filosofia:** Proeza excepcional. A maioria dos profissionais falha. Requer mestria, preparo extenso e circunstancias ideais.
 
-**Quando usar DD 6:**
+**Quando usar DD 5:**
 - A tarefa e extraordinaria mesmo para especialistas
 - A oposicao e ativa, competente e preparada
 - Falha pode ser catastrofica
@@ -224,40 +226,40 @@ O V5 usa um sistema simples: **pool de dados vs. Dificuldade (DD)**. Cada dado q
 
 ---
 
-## DD 7+ — Extremo / Quase Impossivel
+## DD 6 — Muito Dificil / DD 7+ — Quase Impossivel
 
 **Filosofia:** Feito heroico ou mitico. Apenas os mais poderosos e afortunados conseguem. Use com extrema parcimonia.
 
-**Quando usar DD 7+:**
+**Quando usar DD 6+:**
 - A tarefa beira o impossivel
 - A oposicao e sobrenatural e preparada
 - O resultado mudaria o curso da cronica
 
 ### Exemplos
 
-**DD 7:**
+**DD 6:**
 - Desafiar Principe em seu proprio territorio e sobreviver
 - Resistir Dominacao de anciao com Potencia de Sangue 5+
 - Convencer Matusalem a mudar planos centenarios
 - Feito sobrenatural raro (destruir ward Tremere nivel 5)
 - Combater anciao solo e vencer
 
-**DD 8:**
+**DD 7:**
 - Escapar de armadilha de Matusalem
 - Penetrar defesas de Chantry Tremere protegida por seculos de wards
 - Convencer Antediluviano a poupar sua existencia
 - Feito fisico que desafia leis naturais (sem Disciplinas)
 
-**DD 9-10:**
+**DD 8-9:**
 - Territorio de NPCs lendarios — nao deveria aparecer em jogo normal
 - Reservado para momentos verdadeiramente apocalipticos
-- Se o Narrador precisa de DD 9+, provavelmente o teste nao deveria existir
+- Se o Narrador precisa de DD 8+, provavelmente o teste nao deveria existir
 
 ---
 
 ## Modificadores de Dificuldade
 
-Modificadores ajustam o DD (ou a pool) baseado em circunstancias:
+Modificadores ajustam o DD (ou a pool) baseado em circunstancias. O Core sugere limitar os modificadores ad hoc a +/-2 na DD ou 3 dados na parada; penalidades nunca deixam a parada abaixo de 1 dado (Core p. 120). Os valores abaixo sao orientacao do Narrador:
 
 ### Modificadores que DIMINUEM o DD (facilitam)
 
@@ -274,7 +276,7 @@ Modificadores ajustam o DD (ou a pool) baseado em circunstancias:
 | Modificador | Ajuste | Exemplo |
 |------------|--------|---------|
 | Escuridao total (para mortais) | +1 DD | Sem iluminacao alguma |
-| Ferimento (Incapacitado) | +1 DD (efetivo via -2 pool) | Metade da track de saude preenchida |
+| Prejudicado (track de Saude cheia) | -2 dados nas paradas Fisicas, nao DD (Core p. 126) | Track de Saude totalmente marcada |
 | Surpresa/choque | +1 DD | Situacao inesperada, sem preparo |
 | Superioridade do oponente | +1 a +2 DD | Inimigo com mais recursos, posicao, poder |
 | Tempo limitado | +1 DD | Precisa agir em segundos, nao minutos |
@@ -295,14 +297,14 @@ Modificadores ajustam o DD (ou a pool) baseado em circunstancias:
 - Ambas as partes estao tomando acoes simultaneas
 - O resultado depende da comparacao direta de competencias
 
-**Teste contestado:** Ambos rolam suas pools. Quem tiver mais sucessos vence. Empate = Narrador decide ou situacao fica em impasse.
+**Teste contestado:** Ambos rolam suas pools. Quem tiver mais sucessos vence. Empate: vence quem age (Core p. 123); em conflito de dois lados, ambos sofrem dano como se a margem fosse 1 (Core p. 125). Contra NPC, o Narrador pode Tomar Metade da parada dele em vez de rolar (Core p. 123).
 
 ---
 
 ## Dicas para Narradores
 
 ### Erro Comum #1: DD muito alto
-Se o PC tem pool de 5 dados e o DD e 5, ele precisa de 100% de taxa de sucesso nos dados. Isso e quase impossivel. **Verifique:** o DD e realmente proporcional a pool do PC?
+Se o PC tem pool de 5 dados e o DD e 5, ele precisa que quase todos os dados deem 6+ (ou de pares de 10). Isso e muito improvavel. **Verifique:** o DD e realmente proporcional a pool do PC?
 
 ### Erro Comum #2: DD muito baixo
 Se o PC tem pool de 8 dados e o DD e 2, ele vai ter sucesso 95%+ das vezes. **Pergunta:** por que pedir rolagem? Narre o sucesso.
@@ -312,51 +314,52 @@ Nem tudo precisa de teste. Se nao ha risco interessante, nao role. A narrativa f
 
 ### Regra de Bolso para DD
 Olhe a pool do PC. O "sweet spot" de tensao e:
-- **DD = 40-60% da pool.** Com pool de 7, DD 3-4 e o ponto ideal
-- **DD > 70% da pool:** Muito dificil — reserve para momentos especiais
-- **DD < 30% da pool:** Muito facil — nao vale a rolagem
+- **DD = 30-45% da pool.** Com pool de 7, DD 2-3 e o ponto ideal (a media e cerca de 1 sucesso a cada 2 dados)
+- **DD > 55% da pool:** Muito dificil — reserve para momentos especiais
+- **DD < 25% da pool:** Muito facil — nao vale a rolagem (e, com parada pelo menos o dobro da DD, cabe vitoria automatica; Core p. 120)
 
 ### Exemplo Calibrado
 
 | Pool do PC | DD Facil | DD Tenso | DD Dificil | DD Epico |
 |-----------|---------|---------|-----------|---------|
-| 4 dados | 2 | 3 | 4 | 5 |
-| 6 dados | 2-3 | 3-4 | 5 | 6 |
-| 8 dados | 3 | 4-5 | 6 | 7 |
-| 10 dados | 3-4 | 5-6 | 7 | 8 |
-| 12 dados | 4 | 6-7 | 8 | 9 |
+| 4 dados | 1 | 2 | 3 | 4 |
+| 6 dados | 1-2 | 2-3 | 4 | 5 |
+| 8 dados | 2 | 3-4 | 5 | 6 |
+| 10 dados | 2-3 | 4-5 | 6 | 7 |
+| 12 dados | 3 | 5-6 | 7 | 8 |
 
 ---
 
 ## Dificuldades por Tipo de Cena
 
 ### Cena de Investigacao
-- **Pista obvia:** DD 2 (nao deveria ser rolada na maioria dos casos)
-- **Pista escondida:** DD 3-4
-- **Pista crucial (muda a historia):** DD 4-5
-- **Pista protegida (alguem escondeu deliberadamente):** DD 5-6
+- **Pista obvia:** DD 1 (nao deveria ser rolada na maioria dos casos)
+- **Pista escondida:** DD 2-3
+- **Pista crucial (muda a historia):** DD 3-4
+- **Pista protegida (alguem escondeu deliberadamente):** DD 4-5
 
 ### Cena de Alimentacao
-- **Area abundante, sem risco:** DD 2
-- **Area normal, risco moderado:** DD 3
-- **Area escassa ou vigiada:** DD 4
-- **Territorio de outro vampiro:** DD 5
-- **Busca de Ressonancia especifica:** DD 4-5
-- **Busca de Dyscrasia:** DD 6
+A caca e um teste simples contra a DD do territorio escolhido (Core p. 307-308):
+- **Favela, cracolandia, conjuntos habitacionais:** DD 2
+- **Bairro boemio ou hipster, bairro operario em gentrificacao ou decadencia:** DD 3
+- **Bairro operario estavel, centro comercial, area turistica, aeroporto ou cassino:** DD 4
+- **Zona industrial, de armazens ou portuaria; parque urbano; suburbio de classe media:** DD 5
+- **Bairro rico:** DD 6
+- Policia acima do normal: +1. Seguranca pesada (dignitario, alerta de terror): +2 para alguns tipos de caca. Festival, desfile, comicio ou tumulto: -2. A DD minima e sempre 1. Vampiros muito inumanos (Nosferatu, alguns Gangrel, Humanidade 4 ou menos) podem ter DD maior (Core p. 308).
+- **Ressonancia especifica ou Discrasia:** criterio do Narrador; o Core nao fixa DD.
 
 ### Cena Politica
-- **Pedir favor menor a aliado:** DD 2
-- **Negociar com NPC neutro:** DD 3-4
-- **Pedir favor significativo a NPC:** DD 4-5
-- **Convencer adversario:** DD 5-6
-- **Mudar posicao de facção inteira:** DD 6-7
+- **Pedir favor menor a aliado:** DD 1
+- **Negociar com NPC neutro:** DD 2-3
+- **Pedir favor significativo a NPC:** DD 3-4
+- **Convencer adversario:** DD 4-5
+- **Mudar posicao de facção inteira:** DD 5-6
 
 ### Cena de Fuga
-- **Fugir de mortal sem treinamento:** DD 2-3
-- **Fugir de policial:** DD 3-4
-- **Fugir de vampiro neonato:** DD 4 (contestado)
-- **Fugir de vampiro ancillae:** DD 5 (contestado)
-- **Fugir de emboscada organizada:** DD 5-6
+- **Fugir de mortal sem treinamento:** DD 1-2
+- **Fugir de policial:** DD 2-3
+- **Fugir de vampiro:** disputa contra a parada do perseguidor, sem DD fixa
+- **Fugir de emboscada organizada:** DD 4-5
 
 ---
 

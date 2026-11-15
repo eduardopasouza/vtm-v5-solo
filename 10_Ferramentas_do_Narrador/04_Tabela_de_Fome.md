@@ -60,22 +60,16 @@ O Rouse Check e a mecanica que pode aumentar a Fome. Role 1d10:
 | **Despertar ao anoitecer** | 1 Rouse Check (toda noite, automatico) |
 | **Surto de Sangue (Blood Surge)** | 1 Rouse Check |
 | **Curar dano Superficial** | 1 Rouse Check (cura conforme Potencia de Sangue) |
-| **Curar dano Agravado** | 1 Rouse Check (requer Potencia alta) |
-| **Ativar Disciplina nivel 1** | 1 Rouse Check (algumas sao gratuitas) |
-| **Ativar Disciplina nivel 2-3** | 1 Rouse Check |
-| **Ativar Disciplina nivel 4-5** | 1-2 Rouse Checks (dependendo do poder) |
-| **Manter Disciplina ativa** | 1 Rouse Check por cena (para poderes com duracao) |
-| **Criar Ghoul** | 1 Rouse Check por mes (manter o ghoul) |
-| **Laco de Sangue (Blood Bond)** | 1 Rouse Check (dar sangue a outro) |
-| **Amalgamas poderosas** | 2+ Rouse Checks |
-| **Aumentar Atributo Fisico com sangue** | 1 Rouse Check |
+| **Curar dano Agravado** | 3 Rouse Checks ao anoitecer, alem do despertar; cura 1 ponto por noite (Core p. 218-219) |
+| **Ativar Disciplina** | O custo de cada poder (gratis, 1 ou mais Rouses); o poder ativado dura o que a descricao disser, sem Rouse por cena (Core p. 219) |
+| **Re-rolagem pela Potencia** | Poderes ate certo nivel rolam 2 dados no Rouse e ficam com o maior (Core p. 216) |
+| **Blush of Life** | 1 Rouse Check, dura a noite (Core p. 218) |
+| **Surto de Sangue em qualquer parada com Atributo** | 1 Rouse Check (Core p. 218) |
+
+O Core nao cobra Rouse por cena para manter Disciplina, nem para criar carnical ou lacar alguem. Esses custos vem da descricao do poder, ou do sangue dado (quem doa ganha Fome; Core p. 213).
 
 ### Disciplinas Gratuitas (Sem Rouse Check)
-Alguns poderes de nivel 1 sao "passivos" e nao exigem Rouse Check:
-- Auspicios 1 (Sentidos Aguçados) — ativo permanentemente
-- Potencia 1 (Corpo Letal) — ativo permanentemente
-- Fortitude 1 (Resiliencia) — ativo permanentemente
-- Celeridade 1 (Graca Felina) — ativo permanentemente
+Alguns poderes tem custo "Gratis" na descricao do Core, por exemplo Sentidos Aguçados (Auspicios, Core p. 249). Nao presuma que todo poder de nivel 1 e gratis; o custo esta em cada poder.
 
 **Nota:** Verifique cada Disciplina individualmente. As regras de Rouse Check variam por poder.
 
@@ -108,17 +102,25 @@ Alguns poderes de nivel 1 sao "passivos" e nao exigem Rouse Check:
 
 | Metodo | Reducao de Fome | Notas |
 |--------|----------------|-------|
-| **Gole rapido (sip)** | -1 Fome | Mordida rapida, vitima vive. Marca de mordida visivel. |
-| **Alimentacao parcial** | -2 Fome | Vitima fica tonta mas vive. Mais arriscado de ser notado. |
-| **Alimentacao completa** | -3 a -4 Fome | Vitima fica muito fraca. Pode precisar de hospital. |
-| **Drenagem total (matar)** | Fome vai a 0 | Vitima morre. Corpo para esconder. Possivel perda de Humanidade. |
-| **Sangue animal** | -1 a -2 Fome | Nunca reduz abaixo de 2 (Fazendeiro). Sem Ressonancia. |
-| **Sangue embalado (bolsa)** | -1 a -2 Fome | Requer Iron Gullet se Potencia 3+. Sem Ressonancia confiavel. |
-| **Vitae vampirica** | Variavel | Depende da Potencia da vitima. Risco de Laco de Sangue. |
+Tabela do Core (p. 212); a Potencia reduz o quanto cada humano sacia (p. 216):
+
+| Metodo | Reducao de Fome | Notas |
+|--------|----------------|-------|
+| **Gole (sip)** | -1 | Tres turnos, ja fechando a ferida com a lingua |
+| **Maximo sem ferir** | -2 | Uma cena |
+| **Gole perigoso** | -1 a -4 | Um turno por ponto. A vitima sofre Agravado igual a Fome saciada e rola Forca + Vigor contra DD igual a esse valor para sobreviver |
+| **Drenar e matar** | -5 | Cinco turnos. **Unico jeito de chegar a Fome 0** |
+| **Varios animais pequenos** | -1 | Uma cena |
+| **Animal medio (cachorro, guaxinim)** | -1 | Um turno |
+| **Animal grande (cavalo)** | -2 | Uma cena |
+| **Bolsa de sangue** | -1 | Um turno. Sangue processado (fracionado) exige Iron Gullet (Core p. 182) |
+| **Sangue de vampiro** | 1 por ponto de Fome que o doador ganha; 2 por ponto se o doador tem 2+ de Potencia acima; 1 a cada 2 se tem 2+ abaixo (Core p. 213) | Risco de Laco de Sangue |
+
+Animais e bolsas nao saciam nada acima da Potencia 2 e nao tem Ressonancia util para Disciplinas humanas: o animal tem a de Animalismo/Proteanismo, a bolsa nenhuma (Core p. 212, 227).
 
 ### Matando a Vitima
-- Drenar completamente um mortal reduz Fome a 0 automaticamente
-- Causa perda automatica de Humanidade (Mancha/Stain)
+- Drenar completamente um mortal e o unico jeito de chegar a Fome 0 (Core p. 212); com Potencia alta, so matando a Fome cai abaixo de 2 ou 3 (Core p. 216)
+- Gera Manchas conforme os Principios da Cronica (nao perda direta de Humanidade; Core p. 239)
 - Corpo precisa ser descartado
 - Se descoberto: violacao da Mascara
 
