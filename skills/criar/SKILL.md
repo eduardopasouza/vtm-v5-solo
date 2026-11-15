@@ -39,7 +39,8 @@ Criar e estruturar todos os níveis narrativos: Jogo, Partida, História, Aventu
 
 ```
 [Jogos]/[Nome do PC]/
-├── contexto.md              # Estado atual global
+├── estado.json              # Números da campanha (P8) — copiar de [Base]/08_Templates/07_estado.json
+├── contexto.md              # Situação atual global (sem números)
 ├── personagem.md            # Ficha do PC
 ├── direcao.md               # Segredos do narrador (NUNCA mostrar)
 ├── timeline.md              # Linha do tempo cronológica

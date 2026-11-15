@@ -41,8 +41,8 @@ Nos comandos de dados abaixo, `python` é o valor de Python desta tabela.
 ## Início de Sessão
 
 1. Abrir a campanha ativa; sem ela, listar os jogos da pasta de Jogos — se múltiplos, perguntar qual
-2. Ler `contexto.md` do jogo — estado atual, localização, decisão pendente
-3. Ler `personagem.md` — ficha com stats atuais (Fome, FdV, Saúde)
+2. Ler `estado.json` do jogo — **fonte única dos números** (Fome, BP, Humanidade, Manchas, Saúde, FdV, XP, sessão, noite, data, local, hora). Se não existir (campanha anterior à P8), os números estão na tabela "Estado Actual" do `contexto.md`
+3. Ler `contexto.md` — situação, decisão pendente, relações; e `personagem.md` — ficha (atributos, habilidades, disciplinas)
 4. Ler `objetivos.md` — objetivos ativos por nível
 5. Apresentar resumo breve: "Onde paramos: [situação]. [decisão pendente]."
 6. Retomar do ponto pendente
@@ -127,9 +127,9 @@ Atualizar IMEDIATAMENTE após consequências, ANTES da próxima cena:
 
 | Sempre | Se aplicável |
 |--------|-------------|
-| `contexto.md` — estado, localização, pendências | `ramificacoes.md` (na partida) — decisão com impacto |
-| Sessão ativa (`sessao_XX.md`) — log da cena | `historia.md` — pista ou arco avançou |
-| | `personagem.md` — Fome, FdV, Saúde, XP mudaram |
+| `estado.json` — todo número que mudou (Fome, dano, FdV, Manchas, XP, noite, hora, local). **Se a campanha ainda não tem `estado.json`, gravar os números na tabela "Estado Actual" do `contexto.md`, como antes; não criar o `estado.json` no meio do jogo** (a migração é feita à parte) | `ramificacoes.md` (na partida) — decisão com impacto |
+| `contexto.md` — situação, localização, pendências (sem números) | `historia.md` — pista ou arco avançou |
+| Sessão ativa (`sessao_XX.md`) — log da cena | `personagem.md` — ficha mudou (XP gasto, disciplina nova) — números de estado não |
 | | `npcs/[nome].md` — NPC novo ou atitude mudou |
 | | `direcao.md` — planos do narrador mudaram |
 | | `objetivos.md` — objetivo completado ou novo |
@@ -198,7 +198,8 @@ Quando o jogador encerrar:
 1. Revisar TODOS os arquivos — `contexto.md` reflete estado exato
 2. Se há Manchas → Teste de Remorso
 3. Rouse Check de despertar para próxima noite
-4. Atualizar `personagem.md` com estado final (Fome, Saúde, FdV)
+4. Atualizar `estado.json` com o estado final (Fome, Saúde, FdV, Manchas, XP, sessão, noite) — ou, se ele não existir, a tabela "Estado Actual" do `contexto.md`
+5. Opcional: pedir ao agente `arquivista` a lista de mudanças por arquivo e conferir com `python "${CLAUDE_PLUGIN_ROOT}/scripts/campanha.py" auditar "<pasta da campanha>"` (ou a ferramenta MCP `auditar_campanha`)
 5. XP: base 2-3 + bônus por marcos narrativos (1-3 extra)
 6. Atualizar `objetivos.md` — progresso e novos objetivos
 7. Resumo breve: o que aconteceu + o que está por vir

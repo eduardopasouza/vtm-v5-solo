@@ -32,10 +32,13 @@ def test_servidor_lista_e_rola(tmp_path):
     camp = tmp_path / "Teste"
     camp.mkdir()
     env = dict(os.environ, VTM_PASTA_CAMPANHAS=str(tmp_path), VTM_CAMPANHA_ATIVA="Teste")
-    nomes, (rolagem, rouse) = asyncio.run(_chamar(env, [
+    nomes, (rolagem, rouse, auditoria) = asyncio.run(_chamar(env, [
         ("rolar", {"parada": 5, "fome": 2, "dificuldade": 3}),
         ("rouse", {"fome_atual": 1, "bp": 1}),
+        ("auditar_campanha", {}),
     ]))
+    assert auditoria["campanha"] == "Teste"
+    assert any(a["codigo"] == "ESTADO" for a in auditoria["achados"])
     assert {"rolar", "rouse", "frenesi", "remorso", "alimentar", "conflito"} <= nomes
     assert len(rolagem["dados_normais"]) == 3 and len(rolagem["dados_fome"]) == 2
     assert rouse["tipo"] == "ROUSE"

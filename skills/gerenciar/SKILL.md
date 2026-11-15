@@ -138,15 +138,17 @@ Se algum item está fraco → propor ações corretivas.
 
 ## Manutenção de Documentação
 
-Verificar consistência entre todos os arquivos:
-- Datas e eventos na `timeline.md` batem com sessões?
-- Stats do PC em `personagem.md` estão corretos?
-- NPCs no `indice.md` correspondem às fichas individuais?
-- `relacoes.md` reflete interações recentes?
-- `objetivos.md` está atualizado?
-- `contexto.md` reflete o estado real?
+1. **Auditoria mecânica** (só leitura):
+   ```bash
+   python "${CLAUDE_PLUGIN_ROOT}/scripts/campanha.py" auditar "<pasta da campanha>"
+   ```
+   (ou a ferramenta MCP `auditar_campanha`). Aponta: `estado.json` ausente ou inválido; número divergente entre `estado.json` e os `.md` (ou entre `contexto.md` e `personagem.md` sem estado); número repetido nos `.md` (pela P8 fica só no `estado.json`); Potência declarada x tabela do Core p. 216; sessões fora da `timeline.md`; rodapés "atualizado em" defasados; NPCs nas relações sem ficha; fichas fora do `indice.md`.
+2. **Continuidade narrativa:** pedir ao agente `continuidade` as contradições entre sessões, fichas, linha do tempo e `direcao.md`.
+3. Conferir também:
+   - `relacoes.md` reflete interações recentes?
+   - `objetivos.md` está atualizado?
 
-Corrigir discrepâncias silenciosamente.
+Corrigir as discrepâncias e rodar a auditoria de novo até voltar sem erros. Números do personagem vão para o `estado.json`, não para os `.md`.
 
 ## Regras Universais
 

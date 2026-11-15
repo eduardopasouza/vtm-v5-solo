@@ -354,3 +354,34 @@ Total: **~50-75 h**, em 12-18 sessões. As estimativas são de ordem de grandeza
 - **[a verificar]:** na tabela da p. 216 as células de alimentação das linhas 7 e 9 saem mescladas na extração. O motor usa BP 7 = sacia 2 a menos, piso 2 (pelo texto da p. 211) e BP 9 = 3 a menos, piso 3. "Sangue animal sacia metade" (BP 2) arredonda para baixo.
 - **Fora desta onda:** combate avançado (p. 295-305), Disciplinas e poderes específicos, Ressonância e Discrasia, regras da casa (arquivo ainda não existe).
 - **Pendente:** confirmar numa sessão nova que o servidor `dados` sobe pelo plugin (Python `python` = alias do WindowsApps neste computador) e que o `env` recebe o `userConfig` substituído.
+
+## 8. Andamento da Onda 3 — memória da campanha (2026-11-15)
+
+- **Ordem decidida (2026-11-15):** a parte do plugin vem agora, testada com uma campanha fictícia criada nos testes. O Edward Bello só foi **lido** pelo auditor. A migração dos números para o `estado.json` e os consertos ficam para depois de a campanha ir para o repositório privado (P3).
+- **Feito:**
+  - `scripts/vtm_campanha.py` com:
+    - schema v1 do `estado.json`, validado só com a biblioteca padrão (sessão; tempo: noite, data ficcional, local, hora; personagem: Fome, BP, Humanidade, Manchas, Saúde e FdV com máximo e dano, XP);
+    - auditor;
+    - resumo para o início de sessão (não lê `direcao.md`).
+  - `scripts/campanha.py`: CLI `auditar` / `validar` / `resumo` / `hook`.
+  - `08_Templates/07_estado.json`: template.
+  - `hooks/hooks.json`: SessionStart que injeta até 15 linhas, só quando o `cwd` está dentro da pasta de campanhas ou na pasta logo acima (o repositório); `C:\dev` e `C:\Cowork` não recebem o resumo. Lê `CLAUDE_PLUGIN_OPTION_*`, exportadas aos hooks.
+  - Ferramenta MCP `auditar_campanha`.
+  - Agentes `agents/arquivista.md` e `agents/continuidade.md` (Read, Grep, Glob + `auditar_campanha`; só propõem).
+  - Skills `narrar`, `criar` e `gerenciar` e o `CLAUDE.md` passam a usar o `estado.json`.
+  - 54 testes verdes.
+- **Auditoria do Edward Bello (2026-11-15, só leitura): 3 erros e 13 avisos.**
+  - Erro: `timeline.md` sem as sessões 8-15 (confirma o plano). Conferido à mão: a coluna numérica das tabelas finais é "Noite", não "Sessão".
+  - Erro (2): `personagem.md:365` diz "Surge +4" e "Bane 3" com BP 4; a tabela do Core p. 216 dá 2 e 2. **Pergunta para a migração:** erro da ficha ou regra da casa ligada à coniunctio com Mithras? Se for regra da casa, registrá-la por escrito (P6) e ensinar o auditor a aceitá-la.
+  - Aviso: rodapés de `objetivos.md` e `personagem.md` na Sessão 14 e de `timeline.md` na 7 (confirma o plano).
+  - Aviso: Adelbert, Lucius, Dunstan e Henrik aparecem nas relações sem ficha.
+  - Aviso: as fichas de Ilse Vogt, Kaspar Hesse, O Doktor, Robert Sedgwick e Thane estão fora do `npcs/indice.md`.
+  - Aviso: `estado.json` ausente.
+  - O auditor ainda não confere as referências quebradas de `09_Preferencias.md` (`:58`, `:122`, `:171-172`), que estão fora da pasta da campanha.
+- **Perguntas em aberto para a migração:**
+  - Máximos derivados da ficha (Saúde 7 = Vigor + Fortitude + 3, FdV 6 = Compostura + Determinação), BP e Humanidade: são estado ou ficha? Enquanto ficarem no `personagem.md`, o auditor marca `NUMERO_DUPLICADO`.
+- **Pendente:**
+  - mover a campanha para o repositório privado. No repositório novo também é preciso rodar `claude plugin marketplace add C:/dev/vtm-v5-solo --scope local` e `claude plugin install vtm@vtm-local --scope local --config ...`; senão as sessões lá não terão skills, hook nem MCP. E criar o `settings.local.json` que desliga o IUS;
+  - criar o `estado.json` do Edward Bello e tirar os números dos `.md`;
+  - consertar as defasagens até a auditoria voltar sem erros (aceite da frente 3);
+  - confirmar numa sessão nova que o hook roda pelo plugin.

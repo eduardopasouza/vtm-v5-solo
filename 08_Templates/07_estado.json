@@ -1,0 +1,21 @@
+{
+  "versao": 1,
+  "campanha": "Nome do PC",
+  "sessao": 0,
+  "tempo": {
+    "noite": 1,
+    "data_ficcional": "1836-10-01",
+    "local": "Cidade, bairro",
+    "hora": null
+  },
+  "personagem": {
+    "nome": "Nome do PC",
+    "fome": 1,
+    "potencia_sangue": 1,
+    "humanidade": 7,
+    "manchas": 0,
+    "saude": { "max": 5, "superficial": 0, "agravado": 0 },
+    "forca_vontade": { "max": 5, "superficial": 0, "agravado": 0 },
+    "xp": { "total": 0, "disponivel": 0 }
+  }
+}

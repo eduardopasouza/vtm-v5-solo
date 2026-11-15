@@ -23,8 +23,11 @@ docs/PLANO-PLUGIN.md → plano do plugin (frentes, decisões, ondas)
 10_Ferramentas_do_Narrador/ → Tabelas e ferramentas
 12_Resumos_dos_Livros/     → Resumos detalhados de 126 livros
 scripts/            → Motor de dados: vtm_motor.py (regras, com página do Core), vtm_dice.py (CLI), vtm_mcp.py (servidor MCP)
-tests/              → Testes do motor (python -m pytest tests)
-.mcp.json           → Servidor MCP `dados` do plugin
+scripts/campanha.py → Memória da campanha: auditar, validar, resumo, hook (regras em vtm_campanha.py)
+tests/              → Testes (python -m pytest tests)
+.mcp.json           → Servidor MCP `dados` do plugin (rolagens + auditar_campanha)
+hooks/hooks.json    → SessionStart: resumo da campanha ativa (só no repositório ou na pasta de campanhas)
+agents/             → arquivista (fim de sessão) e continuidade (entre sessões); só propõem, não gravam
 ```
 
 ## COMO JOGAR

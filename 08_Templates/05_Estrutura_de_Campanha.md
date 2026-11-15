@@ -10,7 +10,8 @@
 
 ```
 07_Jogos/[Nome do PC]/
-├── contexto.md              # Estado atual global do jogo
+├── estado.json              # Números da campanha (P8, 2026-11-15) — modelo em 08_Templates/07_estado.json
+├── contexto.md              # Estado atual global do jogo (narrativa; sem números quando há estado.json)
 ├── personagem.md            # Ficha do PC
 ├── direcao.md               # Segredos do narrador (NUNCA mostrar ao jogador)
 ├── timeline.md              # Linha do tempo cronológica
@@ -71,7 +72,7 @@ Ver `06_Convencoes_de_Nomenclatura.md` para a regra completa.
 
 ## Como Usar
 
-1. **Nova campanha:** Criar `07_Jogos/[Nome do PC]/` e popular `contexto.md`, `personagem.md`, `direcao.md`, `timeline.md`, `objetivos.md`, pastas `npcs/` e `cenario/`.
+1. **Nova campanha:** Criar `07_Jogos/[Nome do PC]/` e popular `estado.json` (do modelo `07_estado.json`), `contexto.md`, `personagem.md`, `direcao.md`, `timeline.md`, `objetivos.md`, pastas `npcs/` e `cenario/`.
 2. **Nova partida:** Criar pasta `partidas/[Nome da Partida]/` com `partida.md` e `ramificacoes.md`.
 3. **Nova história:** Criar pasta `[Nome da História]/` dentro da partida com `historia.md`.
 4. **Nova aventura:** Criar pasta `[Nome da Aventura]/` dentro da história com `aventura.md`.

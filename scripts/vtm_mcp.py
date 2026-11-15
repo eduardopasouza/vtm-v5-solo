@@ -125,6 +125,20 @@ def alimentar(fonte: str, fome_atual: int, bp: int, quantidade_arriscada: int = 
 
 
 @mcp.tool()
+def auditar_campanha() -> dict:
+    """Audita a campanha ativa (só leitura): estado.json, números divergentes entre
+    estado e .md, Potência x tabela do Core, sessões fora da linha do tempo,
+    rodapés defasados e NPCs sem ficha."""
+    import vtm_campanha as camp
+    pasta = _pasta_campanha()
+    if pasta is None:
+        return {"erro": "campanha ativa não configurada ou pasta inexistente"}
+    achados = camp.auditar(pasta)
+    return {"campanha": pasta.name, "achados": camp.achados_como_dict(achados),
+            "erros": sum(a.nivel == "erro" for a in achados)}
+
+
+@mcp.tool()
 def tabela_potencia(bp: int) -> dict:
     """Linha da tabela de Potência de Sangue (Core p. 216)."""
     from dataclasses import asdict
