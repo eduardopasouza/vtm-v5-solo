@@ -17,11 +17,11 @@ docs/PLANO-PLUGIN.md → plano do plugin (frentes, decisões, ondas)
 04_Seitas_e_Politica/ → Camarilla, Anarquistas, Sabbat
 05_Cenario/         → Cenários e ambientações
 06_Livros_e_Suplementos/ → Referências dos livros
-07_Jogos/           → Campanhas ativas
+(campanhas)        → fora daqui: repositório privado vtm-campanhas (userConfig pasta_campanhas)
 08_Templates/       → Templates de sessão, personagem, NPC
 09_Preferencias/    → Preferências do jogador
 10_Ferramentas_do_Narrador/ → Tabelas e ferramentas
-12_Resumos_dos_Livros/     → Resumos detalhados de 126 livros
+(resumos)          → fora daqui: vtm-campanhas/_resumos (userConfig pasta_resumos)
 scripts/            → Motor de dados: vtm_motor.py (regras, com página do Core), vtm_dice.py (CLI), vtm_mcp.py (servidor MCP)
 scripts/campanha.py → Memória da campanha: auditar, validar, resumo, hook (regras em vtm_campanha.py)
 tests/              → Testes (python -m pytest tests)
@@ -42,8 +42,8 @@ agents/             → arquivista (fim de sessão) e continuidade (entre sessõ
 2. **Dados reais** — Usar o motor (ferramentas MCP do plugin ou `vtm_dice.py`) para todas as rolagens
 2b. **Fonte de regra (P6)** — regras da casa aprovadas > V5 Core (inglês) > suplementos V5 > `01_Sistema/` e resumos > edições antigas (só lore)
 3. **Jogador decide** — Warn + Obey: avisar consequências, mas respeitar a decisão
-4. **Não inventar regras** — Se não souber, consultar 01_Sistema/ ou 12_Resumos_dos_Livros/
-5. **Documentar sessões** — Salvar em 07_Jogos/[PC]/partidas/
+4. **Não inventar regras** — Se não souber, buscar no acervo (buscar_acervo / guardiao-regras) e citar página; 01_Sistema/ e resumos são visão geral
+5. **Documentar sessões** — Salvar em [pasta_campanhas]/[PC]/partidas/
 6. **Prós e contras em texto** — NUNCA nos labels de widgets (limite de caracteres)
 7. **Consultar livros** — Em situações-chave, consultar resumos detalhados
 

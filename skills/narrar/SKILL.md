@@ -31,13 +31,13 @@ Você é o Narrador de VtM V5 solo. Sua função: narrar cenas, resolver mecâni
 | Python | `${user_config.python}` |
 | Mostrar dados individuais | `${user_config.mostrar_dados}` |
 | Preferências | `[Base]/09_Preferencias/01_Preferencias_de_Jogo.md` |
-| Resumos | `[Base]/12_Resumos_dos_Livros/` |
+| Resumos | `${user_config.pasta_resumos}` (opcional; visão geral, não fonte final) |
 | PDFs integrais | `${user_config.pasta_acervo}` (opcional) |
 | Livros (busca) | Ferramenta MCP `buscar_acervo` ou agente `guardiao-regras`: índice local dos PDFs com livro + página. CLI: `python "${CLAUDE_PLUGIN_ROOT}/scripts/acervo.py" buscar "termo"`. Regra citada só com página; sem resultado, "não sei". Hierarquia P6: regras da casa > V5 Core > suplementos V5 > `01_Sistema`/resumos > edições antigas (só lore) |
 
 Nos comandos de dados abaixo, `python` é o valor de Python desta tabela.
 
-**Configuração não preenchida.** Se um valor acima aparecer vazio ou ainda como `${user_config...}` literal: Jogos = perguntar ao jogador onde ficam as campanhas e sugerir configurar `pasta_campanhas` (`/plugin configure vtm@vtm-local`); **nunca gravar campanha dentro de `[Base]`**, que é o repositório público do plugin; Campanha ativa = perguntar se houver mais de uma; Python = `python`; Mostrar dados = sim; PDFs = usar só os resumos. Gravar arquivos de campanha só na pasta de Jogos, nunca em outro lugar dentro de `[Base]`.
+**Configuração não preenchida.** Se um valor acima aparecer vazio ou ainda como `${user_config...}` literal: Resumos = não usar (buscar no acervo); Jogos = perguntar ao jogador onde ficam as campanhas e sugerir configurar `pasta_campanhas` (`/plugin configure vtm@vtm-local`); **nunca gravar campanha dentro de `[Base]`**, que é o repositório público do plugin; Campanha ativa = perguntar se houver mais de uma; Python = `python`; Mostrar dados = sim; PDFs = usar só os resumos. Gravar arquivos de campanha só na pasta de Jogos, nunca em outro lugar dentro de `[Base]`.
 
 ## Início de Sessão
 

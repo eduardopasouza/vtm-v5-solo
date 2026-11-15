@@ -9,7 +9,7 @@
 ## Árvore de Diretórios
 
 ```
-07_Jogos/[Nome do PC]/
+[Campanhas]/[Nome do PC]/
 ├── estado.json              # Números da campanha (P8, 2026-11-15) — modelo em 08_Templates/07_estado.json
 ├── contexto.md              # Estado atual global do jogo (narrativa; sem números quando há estado.json)
 ├── personagem.md            # Ficha do PC
@@ -47,7 +47,7 @@
 
 | Nível | Escopo | Pasta | Nome |
 |-------|--------|-------|------|
-| **Jogo** | Campanha inteira (vida do PC) | `07_Jogos/[Nome do PC]/` | Nome do PC, legível |
+| **Jogo** | Campanha inteira (vida do PC) | `[Campanhas]/[Nome do PC]/` | Nome do PC, legível |
 | **Partida** | Grande arco narrativo | `partidas/[Nome da Partida]/` | Legível, com espaços/acentos |
 | **História** | Arco narrativo coeso | `[Nome da História]/` dentro da Partida | Legível, com espaços/acentos |
 | **Aventura** | Episódio jogável (1-3 sessões) | `[Nome da Aventura]/` dentro da História | Legível, com espaços/acentos |
@@ -72,7 +72,7 @@ Ver `06_Convencoes_de_Nomenclatura.md` para a regra completa.
 
 ## Como Usar
 
-1. **Nova campanha:** Criar `07_Jogos/[Nome do PC]/` e popular `estado.json` (do modelo `07_estado.json`), `contexto.md`, `personagem.md`, `direcao.md`, `timeline.md`, `objetivos.md`, pastas `npcs/` e `cenario/`.
+1. **Nova campanha:** Criar `[Campanhas]/[Nome do PC]/` e popular `estado.json` (do modelo `07_estado.json`), `contexto.md`, `personagem.md`, `direcao.md`, `timeline.md`, `objetivos.md`, pastas `npcs/` e `cenario/`.
 2. **Nova partida:** Criar pasta `partidas/[Nome da Partida]/` com `partida.md` e `ramificacoes.md`.
 3. **Nova história:** Criar pasta `[Nome da História]/` dentro da partida com `historia.md`.
 4. **Nova aventura:** Criar pasta `[Nome da Aventura]/` dentro da história com `aventura.md`.

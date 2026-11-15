@@ -169,7 +169,7 @@ Toda cena narrada pelo agente DEVE seguir este formato:
   - Evolucao significativa de jogo ou personagem
   - Duvidas sobre mecanica ou lore que resumos nao resolvem
 - Os PDFs estao em `Eduardo Souza/VtM 5/06_Livros_e_Suplementos/`
-- Os resumos estao em `Eduardo Souza/VtM 5/12_Resumos_dos_Livros/`
+- Os resumos estao no repositorio privado `vtm-campanhas`, pasta `_resumos/`
 - Resumos sao uteis para visao geral. **Integra e obrigatoria quando a precisao importa.**
 
 ---

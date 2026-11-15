@@ -24,8 +24,9 @@ extract_pdf.py
 __pycache__/
 .pytest_cache/
 
-# Log de rolagens do motor (fica com a campanha, não no repositório público)
-07_Jogos/**/rolagens.jsonl
+# Campanha e resumos ficam no repositório privado vtm-campanhas (P3, 2026-11-15)
+07_Jogos/
+12_Resumos_dos_Livros/
 
 # Settings locais do plugin (nao commitar)
 .claude/*.local.md

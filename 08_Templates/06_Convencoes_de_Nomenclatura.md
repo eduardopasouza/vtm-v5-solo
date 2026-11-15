@@ -21,18 +21,18 @@ A razão: pastas narrativas aparecem em caminhos lidos por humanos ("A Coroa de 
 ### Jogo
 
 ```
-07_Jogos/[Nome do PC]/
+[Campanhas]/[Nome do PC]/
 ```
 
 Nome legível do PC. Exemplos:
-- `07_Jogos/Edward Bello/`
-- `07_Jogos/Marcus Wells/`
-- `07_Jogos/Dona Rita de Cássia/`
+- `[Campanhas]/Edward Bello/`
+- `[Campanhas]/Marcus Wells/`
+- `[Campanhas]/Dona Rita de Cássia/`
 
 ### Partida
 
 ```
-07_Jogos/[Nome do PC]/partidas/[Nome da Partida]/
+[Campanhas]/[Nome do PC]/partidas/[Nome da Partida]/
 ```
 
 Exemplos:
@@ -70,11 +70,11 @@ Exemplos:
 
 | Arquivo | Pasta | Propósito |
 |---------|-------|-----------|
-| `contexto.md` | `07_Jogos/[Nome do PC]/` | Estado atual global |
-| `personagem.md` | `07_Jogos/[Nome do PC]/` | Ficha do PC |
-| `direcao.md` | `07_Jogos/[Nome do PC]/` | Segredos do narrador (NUNCA mostrar) |
-| `timeline.md` | `07_Jogos/[Nome do PC]/` | Cronologia |
-| `objetivos.md` | `07_Jogos/[Nome do PC]/` | Tracker 4 níveis |
+| `contexto.md` | `[Campanhas]/[Nome do PC]/` | Estado atual global |
+| `personagem.md` | `[Campanhas]/[Nome do PC]/` | Ficha do PC |
+| `direcao.md` | `[Campanhas]/[Nome do PC]/` | Segredos do narrador (NUNCA mostrar) |
+| `timeline.md` | `[Campanhas]/[Nome do PC]/` | Cronologia |
+| `objetivos.md` | `[Campanhas]/[Nome do PC]/` | Tracker 4 níveis |
 | `partida.md` | `.../partidas/[Nome]/` | Resumo da partida |
 | `ramificacoes.md` | `.../partidas/[Nome]/` | Consequências de longo prazo |
 | `historia.md` | `.../[Nome da História]/` | Arco da história |
@@ -93,7 +93,7 @@ sessao_NN.md
 ### Fichas de NPC
 
 ```
-07_Jogos/[Nome do PC]/npcs/[nome_npc].md
+[Campanhas]/[Nome do PC]/npcs/[nome_npc].md
 ```
 
 - `[nome_npc]` em snake_case, nome principal sem título
@@ -104,8 +104,8 @@ sessao_NN.md
 
 | Arquivo | Caminho |
 |---------|---------|
-| `indice.md` | `07_Jogos/[Nome do PC]/npcs/` |
-| `relacoes.md` | `07_Jogos/[Nome do PC]/npcs/` |
+| `indice.md` | `[Campanhas]/[Nome do PC]/npcs/` |
+| `relacoes.md` | `[Campanhas]/[Nome do PC]/npcs/` |
 
 ### Cenário (snake_case fixo)
 
@@ -134,7 +134,7 @@ Em `08_Templates/`:
 Resumo visual:
 
 ```
-07_Jogos/                            ← técnico
+[Campanhas]/                            ← técnico
 └── Edward Bello/                    ← LEGÍVEL (nome do PC)
     ├── contexto.md                  ← técnico
     ├── personagem.md                ← técnico

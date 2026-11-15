@@ -11,7 +11,12 @@
     "pasta_campanhas": {
       "type": "directory",
       "title": "Pasta das campanhas",
-      "description": "Pasta onde ficam as campanhas (uma subpasta por jogo). Use caminho absoluto. Vazio = 07_Jogos dentro do plugin."
+      "description": "Pasta onde ficam as campanhas (uma subpasta por jogo), fora do repositório público do plugin. Use caminho absoluto. Vazio = o narrador pergunta."
+    },
+    "pasta_resumos": {
+      "type": "directory",
+      "title": "Pasta dos resumos dos livros",
+      "description": "Pasta com os resumos dos livros (material de terceiros, fora do repositório público). Vazio = usar só o acervo indexado."
     },
     "campanha_ativa": {
       "type": "string",

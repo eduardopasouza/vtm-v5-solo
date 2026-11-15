@@ -250,7 +250,7 @@ Alem das publicacoes V5 listadas acima, a biblioteca contem **157 PDFs** de edic
 | Mage: The Ascension (2a-3a ed) | 26 | 23 |
 | Hunter: The Reckoning (5E) | 3 | 4 |
 
-Todos os 126 resumos estao disponiveis em `12_Resumos_dos_Livros/`.
+Todos os 126 resumos estao disponiveis no repositorio privado `vtm-campanhas`, pasta `_resumos/` (fora do repositorio publico desde 2026-11-15).
 Para o catalogo completo de PDFs, consulte `03_Catalogo_de_PDFs.md`.
 
 ---

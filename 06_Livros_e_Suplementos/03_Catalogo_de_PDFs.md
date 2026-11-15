@@ -3,7 +3,7 @@
 **Atualizado em:** 07/03/2026
 **Total:** 157 PDFs | ~3.5 GB
 **Idioma predominante:** Portugues BR (traducoes Biblioteca Elfica + Devir)
-**Resumos criados:** 126 arquivos em `12_Resumos_dos_Livros/`
+**Resumos criados:** 126 arquivos no repositorio privado `vtm-campanhas`, pasta `_resumos/`
 
 ---
 
@@ -270,7 +270,7 @@ Estes arquivos podem ter texto nao-pesquisavel.
 
 ## Resumos dos Livros (126 arquivos)
 
-Todos os 157 PDFs da biblioteca ativa foram lidos e resumidos em portugues BR. Os resumos estao em `12_Resumos_dos_Livros/` organizados por numero sequencial e linha de jogo:
+Todos os 157 PDFs da biblioteca ativa foram lidos e resumidos em portugues BR. Os resumos estao no repositorio privado `vtm-campanhas`, pasta `_resumos/`, organizados por numero sequencial e linha de jogo:
 
 | Prefixo | Linha de Jogo | Resumos |
 |---------|--------------|---------|

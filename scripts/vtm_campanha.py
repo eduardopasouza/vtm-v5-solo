@@ -430,7 +430,7 @@ def pasta_ativa(pasta_campanhas: str | None, campanha_ativa: str | None) -> Path
     if campanha_ativa and "${" not in campanha_ativa:
         p = base / campanha_ativa
         return p if p.is_dir() else None
-    jogos = [d for d in base.iterdir() if d.is_dir()]
+    jogos = [d for d in base.iterdir() if d.is_dir() and not d.name.startswith(("_", "."))]
     return jogos[0] if len(jogos) == 1 else None
 
 
