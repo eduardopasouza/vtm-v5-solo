@@ -88,21 +88,23 @@ Repetir a cada cena. Cada cena exige pelo menos uma decisão do jogador.
 
 ### 3. Resolver a Ação
 
-Se há chance de falha → rolar dados via script.
+Se há chance de falha → rolar dados com o motor.
+
+**Como rolar.** Usar as ferramentas MCP do plugin (`mcp__plugin_vtm_dados__*`: `rolar`, `rerolar_fdv`, `teste_tracker`, `rouse`, `despertar`, `surto_de_sangue`, `curar`, `curar_agravado`, `frenesi`, `remorso`, `conflito`, `aplicar_dano`, `alimentar`, `tabela_potencia`). Elas gravam cada rolagem em `rolagens.jsonl` da campanha. Se não estiverem disponíveis, usar o CLI equivalente (comandos abaixo, `python` = valor de Python da tabela Caminhos), com `--campanha "<pasta de Jogos>/<campanha>"` antes do comando para registrar. Regras e páginas: `${CLAUDE_PLUGIN_ROOT}/scripts/vtm_motor.py` (Core = V5 Core Rulebook, página impressa).
 
 **Montar a parada:**
 1. Declarar Atributo + Habilidade (ex: Carisma + Persuasão)
-2. Pool total = valor atributo + valor habilidade
-3. Pool_fome = min(Fome_atual, pool_total)
-4. Pool_normal = pool_total - pool_fome
-5. Dificuldade: fácil=2 (PADRÃO), moderado=3, difícil=4+
-6. Bônus: +1/+2 dados por criatividade, vantagem situacional
-7. Penalidades: só com desvantagem objetiva
+2. Parada = atributo + habilidade + bônus − penalidades (Prejudicado: −2)
+3. Passar a parada **total** e a Fome atual: o motor troca dados normais por dados de Fome (Core p. 205)
+4. Dificuldade: fácil=2 (PADRÃO), moderado=3, difícil=4+; ou `oponente` = sucessos do adversário
+5. Bônus: +1/+2 dados por criatividade, vantagem situacional
+6. Penalidades: só com desvantagem objetiva
 
 **Rodar:**
 ```bash
-python "${CLAUDE_PLUGIN_ROOT}/scripts/vtm_dice.py" roll <pool_normal> <pool_fome> <dificuldade>
+python "${CLAUDE_PLUGIN_ROOT}/scripts/vtm_dice.py" roll <parada_total> <fome> <dificuldade>
 ```
+Falha com algum sucesso: o Narrador pode oferecer vitória com custo (Core p. 121).
 
 **Apresentar ao jogador apenas o resumo narrativo:**
 - ✓ Sucesso — narrar efeito
@@ -136,43 +138,58 @@ Atualizar IMEDIATAMENTE após consequências, ANTES da próxima cena:
 
 ## Mecânicas
 
-### Rouse Check (Fome)
+### Rouse Check (Fome) — Core p. 211, 216
 ```bash
-python "${CLAUDE_PLUGIN_ROOT}/scripts/vtm_dice.py" rouse [quantidade]
+python "${CLAUDE_PLUGIN_ROOT}/scripts/vtm_dice.py" rouse <fome> [--bp N] [--nivel N] [--quantidade N]
 ```
-- Resultado 1-5 = Fome +1
+- 1 dado; 1-5 = Fome +1. Com `--nivel` de Disciplina dentro do limite da Potência, rola 2 e fica o maior
+- Com Fome 5 não se desperta o sangue de propósito; se forçado e falhar, frenesi de fome DD 4
 - Fome 5 = ALERTA ao jogador + próxima cena oferece caça
+- Ao acordar: `despertar <fome> --bp N` (falha com Fome 5 = torpor)
 
-### Alimentação
-- Gole (sem matar): Fome -1
-- Drenar até matar: Fome volta a 1 (Mancha na Humanidade)
-- Bolsa de sangue: Fome -1 (anciões: pode não funcionar)
-- Ressonância do sangue: bônus conforme emoção da vítima
-
-### Força de Vontade
-- Gastar 1 FdV = re-rolar até 3 dados normais (NÃO de Fome)
-- Recupera 1/sessão ao agir conforme Ambição ou Desejo
-
-### Combate (Simplificado para Solo)
-- Sem turnos táticos complexos
-- Resolução dramática: intenção → teste → resultado
-- Combate é brutal e rápido
-- Dano superficial vs agravado conforme V5
-
-### Teste de Remorso
+### Alimentação — Core p. 211-212, 216
 ```bash
-python "${CLAUDE_PLUGIN_ROOT}/scripts/vtm_dice.py" remorse <humanidade_desmarcada>
+python "${CLAUDE_PLUGIN_ROOT}/scripts/vtm_dice.py" feed <fonte> <fome> <bp> [--quantidade 1-4]
 ```
-- Acumular Manchas → resolver ao fim da sessão
-- Sucesso = remorso, Humanidade preservada, manchas removidas
-- Falha = sem remorso, Humanidade -1
+- Fontes: `gole_humano` (1), `humano_seguro` (2), `humano_arriscado` (1-4, dano Agravado na vítima), `humano_drenar_e_matar` (único jeito de chegar a Fome 0), `animais_pequenos`, `animal_medio`, `animal_grande`, `bolsa`
+- O motor aplica as penalidades da Potência (animal e bolsa param de saciar a partir de BP 3) e o piso de Fome sem matar
+- Ressonância do sangue: bônus conforme emoção da vítima (`01_Sistema/09_Ressonancia_Sanguinea.md`)
 
-### Teste de Frenesi
+### Força de Vontade — Core p. 122-123
 ```bash
-python "${CLAUDE_PLUGIN_ROOT}/scripts/vtm_dice.py" frenzy <pool> [dificuldade]
+python "${CLAUDE_PLUGIN_ROOT}/scripts/vtm_dice.py" reroll --normais 2,3,4,8 --fome 1 --indices 0,1,2 --dificuldade 3
 ```
-- Pool = Compostura + Determinação (consultar ficha)
-- Sucesso = Besta contida
+- 1 FdV = re-rolar até 3 dados normais; nunca dados de Fome, nunca Checks (Rouse) nem testes de FdV, Humanidade ou frenesi — o `reroll` não tem como conferir isso sozinho
+- O gasto marca 1 Superficial na Força de Vontade (sem dividir)
+- Testes de FdV ou Humanidade: `tracker <valor_intacto> <dificuldade>` (sem Fome, mínimo 1 dado)
+
+### Blood Surge e cura — Core p. 216-219
+- `surge <parada> <fome> <bp> [dif]`: soma dados pela Potência a uma parada com Atributo + 1 Rouse
+- `mend <dano_superficial> <fome> <bp>`: 1 Rouse por turno cura dano Superficial pela Potência
+- `mend-agg <fome> <bp>`: ao anoitecer, 3 Rouses curam 1 Agravado (1 por noite)
+
+### Combate (Simplificado para Solo) — Core p. 124-126
+```bash
+python "${CLAUDE_PLUGIN_ROOT}/scripts/vtm_dice.py" conflict <parada_a> <fome_a> <parada_b> [--dois-lados] [--arma-a N] [--arma-b N]
+python "${CLAUDE_PLUGIN_ROOT}/scripts/vtm_dice.py" damage <dano> superficial|agravado
+```
+- Sem turnos táticos complexos; resolução dramática: intenção → teste → resultado
+- Vencedor causa margem + arma. Em conflito de dois lados, empate = 1 de dano para cada
+- Superficial é dividido pela metade (para cima) antes de marcar; armas comuns causam Superficial a vampiros
+
+### Teste de Remorso — Core p. 239
+```bash
+python "${CLAUDE_PLUGIN_ROOT}/scripts/vtm_dice.py" remorse <humanidade> <manchas>
+```
+- Fim da sessão, se houver Manchas. Dados = 10 − Humanidade − Manchas (mínimo 1)
+- 1 sucesso = Humanidade mantida; nenhum = Humanidade −1. Manchas apagadas nos dois casos
+
+### Teste de Frenesi — Core p. 219
+```bash
+python "${CLAUDE_PLUGIN_ROOT}/scripts/vtm_dice.py" frenzy <fdv_intacta> <humanidade> <dificuldade>
+```
+- Parada = Força de Vontade intacta + Humanidade ÷ 3 (para baixo)
+- Vitória = resiste, mas gasta o turno contendo a Besta; crítico = resiste sem perder o turno
 - Falha = FRENESI — Besta assume controle, narrar consequências
 
 ## Fim de Sessão

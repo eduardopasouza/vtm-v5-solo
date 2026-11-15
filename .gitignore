@@ -20,6 +20,13 @@ desktop.ini
 temp_vtm_caca.txt
 extract_pdf.py
 
+# Python
+__pycache__/
+.pytest_cache/
+
+# Log de rolagens do motor (fica com a campanha, não no repositório público)
+07_Jogos/**/rolagens.jsonl
+
 # Settings locais do plugin (nao commitar)
 .claude/*.local.md
 

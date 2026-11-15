@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "dados": {
+      "command": "python",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/scripts/vtm_mcp.py"],
+      "env": {
+        "PYTHONIOENCODING": "utf-8",
+        "VTM_PASTA_CAMPANHAS": "${user_config.pasta_campanhas}",
+        "VTM_CAMPANHA_ATIVA": "${user_config.campanha_ativa}"
+      }
+    }
+  }
+}

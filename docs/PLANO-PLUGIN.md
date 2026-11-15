@@ -41,7 +41,7 @@ Lacunas para "todos os elementos do WoD": **Wraith, Changeling, Demon, Mummy, Hu
 
 Alguns PDFs pedem OCR (o nome do arquivo diz "passar OCR", ex.: `Livro de Clã - Tremere (passar OCR)`).
 
-**Nada desse acervo foi lido ainda.** Teste em 2026-11-14: a leitura de uma página do V5 Core e de um livro marcado "passar OCR" falhou nos dois casos, porque falta o `pdftoppm` (Poppler) neste computador. Hoje o Claude não consegue ler nenhum desses PDFs. A frente 8 resolve isso com um extrator próprio.
+Teste em 2026-11-14: o leitor de PDF do Claude falhou (falta o `pdftoppm`). **Atualização 2026-11-15:** o PyMuPDF (`fitz`) já está instalado no Python global e extrai o texto do V5 Core inteiro (431 páginas; página impressa = PDF − 2). Os livros marcados "passar OCR" ainda não foram testados.
 
 ### 0.3 O repositório é público
 
@@ -214,7 +214,7 @@ O frontmatter libera ou nega uma ferramenta inteira: não dá para dar a um agen
 - **Alvo:** todas as rolagens do V5, cada função com a regra citada no código; registro de cada rolagem em `rolagens.jsonl` da campanha; testes com semente fixa conferindo as tabelas de referência.
 - **Componente:** script (ou servidor MCP, decisão P5).
 - **Dependências:** passo 0; P5; P6 (fonte canônica das regras).
-- **Aceite:** testes verdes; cada caso das tabelas de `01_Sistema/04` e `05` reproduzido.
+- **Aceite:** testes verdes; os exemplos e as tabelas do V5 Core reproduzidos com citação de página (pela P6, o Core prevalece sobre `01_Sistema/04` e `05`).
 - **Esforço:** 6-8 h.
 - **Decisões:** P5, P6.
 
@@ -241,7 +241,7 @@ O frontmatter libera ou nega uma ferramenta inteira: não dá para dar a um agen
   - Regra do narrador: regra só com citação; sem citação, "não sei".
   - Conferência dos resumos e da `reference/` contra o índice, marcando divergências.
 - **Componente:** scripts, agente `guardiao-regras`.
-- **Dependências:** passo 0; P6; biblioteca Python para ler PDF (`pypdf` ou `pymupdf`), OCR (`tesseract`) e suporte a FTS5 no `sqlite3` do Python do Windows — os três **[a verificar no computador]**. O leitor de PDF do Claude não funciona aqui (falta `pdftoppm`, seção 0.2).
+- **Dependências:** passo 0; P6; verificado em 2026-11-15: `pymupdf` e `pypdf` instalados, FTS5 disponível no `sqlite3` do Python 3.14; `tesseract` (OCR) **ausente**. O `pdftoppm` deixou de ser necessário (seção 0.2).
 - **Aceite:** busca por "Blood Surge", "Rouse Check" e "Ventrue bane" devolve a página certa do V5 Core; PDFs com OCR legíveis.
 - **Esforço:** 6-10 h (OCR pesa).
 - **Decisões:** P3, P6.
@@ -324,6 +324,7 @@ Total: **~50-75 h**, em 12-18 sessões. As estimativas são de ordem de grandeza
 | 2026-11-15 | P3 — campanha | A campanha Edward Bello vai para um repositório privado separado (nome provisório `vtm-campanhas`) e sai do histórico público no mesmo `filter-repo` dos resumos | Separa motor e campanha (camadas da seção 1) e fecha os segredos do narrador. Exige: criar o repo, apontar `pasta_campanhas`, desligar o IUS lá |
 | 2026-11-15 | P7 | (a) lore dos livros de cada linha, com citação; em cena, as outras criaturas são NPCs com estatísticas V5, e cada poder marcante convertido vira regra da casa registrada (P6) | Um sistema só na mesa; esforço dentro das 10-15 h. Os poderes são aproximações, não a regra original da linha |
 | 2026-11-15 | P9 | Entram todas as linhas do WoD clássico: Lobisomem, Mago, Caçador, Wraith, Changeling, Demon, Múmia, Kindred of the East. CofD fica fora do índice e do `cronista-wod` | Cobertura completa sem misturar universos. Lobisomem e Mago têm livros no acervo; para as outras linhas é preciso adquirir: livro do H5 (o acervo só tem as fichas), Wraith, Changeling, Demon, Múmia, KotE (só há Vampiros do Oriente, Revised). Sem livro, a linha fica sem citação e o `cronista-wod` diz "não sei" |
+| 2026-11-15 | Exceção à frente 4 | O servidor MCP `dados` grava cada rolagem em `rolagens.jsonl` da campanha (só acréscimo), embora as ferramentas MCP sejam "só leitura" | É um log de rolagens, não estado de jogo; nenhum arquivo da campanha é editado. O log fica fora do git (`.gitignore`) até a campanha sair do repositório público |
 | 2026-11-14 | Escopo da Onda 1 | Pastas `01_Sistema`…`10_Ferramentas` ficam onde estão; `reference/` e `templates/` numa onda futura | Evita quebrar 49+ referências internas; nenhum aceite da Onda 1 depende disso |
 
 ## 6. Andamento da Onda 1 (2026-11-14)
@@ -333,3 +334,23 @@ Total: **~50-75 h**, em 12-18 sessões. As estimativas são de ordem de grandeza
 - Aceite 1 ✓ (as 5 skills aparecem como `/vtm:*` com `--plugin-dir`). Aceite 3 parcial (o script roda pelo caminho absoluto, de fora do repositório).
 - Ativação (2026-11-14): só escrever `extraKnownMarketplaces` + `enabledPlugins` no `.claude/settings.local.json` **não instala**; o CLI não enxergou o marketplace. Funcionou com `claude plugin marketplace add C:/dev/vtm-v5-solo --scope local` e depois `claude plugin install vtm@vtm-local --scope local --config pasta_campanhas=... --config campanha_ativa=...`. O status ficou `enabled` (escopo local), e os valores foram para `pluginConfigs."vtm@vtm-local".options` em `~/.claude/settings.json`. `pasta_acervo` ficou vazia até a frente 8.
 - Pendente: aceites 2 e 3 numa sessão nova aberta nesta pasta; aceite 5 com o Claude aninhado (precisa renovar o login do `claude` no terminal).
+
+## 7. Andamento da Onda 2 — motor de dados (2026-11-15)
+
+- **Fonte:** V5 Core lido localmente com PyMuPDF (`fitz` já instalado; o `pdftoppm` não é necessário). Texto extraído só na pasta temporária, fora do repositório. Página impressa = página do PDF − 2. Código e testes parafraseiam e citam "Core p. N".
+- **Feito:**
+  - `scripts/vtm_motor.py`: núcleo puro (recebe `random.Random` ou dados prontos) com avaliação de parada (sucesso, crítico, crítico confuso, falha bestial, falha total, vitória com custo), Fome substituindo dados, re-rolagem por FdV, testes de tracker, Rouse com 2 dados pela Potência, despertar, Blood Surge, cura Superficial e Agravada, frenesi, Remorso, conflito e dano, alimentação com penalidades da Potência, tabela de Potência (p. 216) e registro em `rolagens.jsonl`.
+  - `scripts/vtm_dice.py`: CLI reescrito sobre o núcleo (mesma saída humana + `---JSON---`; `--campanha` ou `VTM_CAMPANHA` para registrar).
+  - `scripts/vtm_mcp.py` + `.mcp.json` (servidor `dados`, FastMCP do pacote `mcp` 1.26.0 do Python global): ferramentas `mcp__plugin_vtm_dados__*`. O caminho da campanha chega por `env` com `${user_config.*}` (único uso documentado com exemplo).
+  - `tests/`: 39 testes verdes (`python -m pytest tests`): núcleo com dados escolhidos, CLI por subprocesso com semente, servidor MCP real por stdio.
+  - `skills/narrar` e `CLAUDE.md` atualizados para a nova semântica.
+- **Mudança de semântica (quebra o uso antigo):** `roll <parada_total> <fome> <dif>` — antes os dois números eram somados. `remorse <humanidade> <manchas>` e `frenzy <fdv_intacta> <humanidade> <dif>` mudaram de argumentos.
+- **Divergências encontradas (o Core prevalece, P6; alimentam a frente 8):**
+  - Script antigo: somava a Fome ao pool (Core p. 205: substitui); Remorso com 0 dados virava degeneração automática (p. 239: mínimo 1 dado); frenesi sem o bônus de Humanidade ÷ 3 e sem a diferença do crítico (p. 219); Rouse sem 2 dados pela Potência (p. 211, 216).
+  - `CLAUDE.md`: fórmula do Remorso era `humanidade − manchas` (correto: `10 − humanidade − manchas`). Corrigido.
+  - `skills/narrar`: "drenar até matar → Fome 1" (Core p. 211-212: matar é o único jeito de chegar a 0). Corrigido.
+  - `01_Sistema/03_Combate.md:374,473` e `04_Fome_e_Bestia.md:262,455`: frenesi sem o bônus de Humanidade ÷ 3. **Não corrigido** (frente 8).
+  - `01_Sistema/08_Potencia_de_Sangue.md:126-133`: trata o bônus de poder como dados extras de re-rolagem; no Core (p. 216) são dados somados à parada da Disciplina. **Não corrigido** (frente 8).
+- **[a verificar]:** na tabela da p. 216 as células de alimentação das linhas 7 e 9 saem mescladas na extração. O motor usa BP 7 = sacia 2 a menos, piso 2 (pelo texto da p. 211) e BP 9 = 3 a menos, piso 3. "Sangue animal sacia metade" (BP 2) arredonda para baixo.
+- **Fora desta onda:** combate avançado (p. 295-305), Disciplinas e poderes específicos, Ressonância e Discrasia, regras da casa (arquivo ainda não existe).
+- **Pendente:** confirmar numa sessão nova que o servidor `dados` sobe pelo plugin (Python `python` = alias do WindowsApps neste computador) e que o `env` recebe o `userConfig` substituído.

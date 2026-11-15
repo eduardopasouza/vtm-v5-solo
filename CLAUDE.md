@@ -22,7 +22,9 @@ docs/PLANO-PLUGIN.md → plano do plugin (frentes, decisões, ondas)
 09_Preferencias/    → Preferências do jogador
 10_Ferramentas_do_Narrador/ → Tabelas e ferramentas
 12_Resumos_dos_Livros/     → Resumos detalhados de 126 livros
-scripts/            → Script Python de dados (vtm_dice.py)
+scripts/            → Motor de dados: vtm_motor.py (regras, com página do Core), vtm_dice.py (CLI), vtm_mcp.py (servidor MCP)
+tests/              → Testes do motor (python -m pytest tests)
+.mcp.json           → Servidor MCP `dados` do plugin
 ```
 
 ## COMO JOGAR
@@ -34,7 +36,8 @@ scripts/            → Script Python de dados (vtm_dice.py)
 
 ## REGRAS UNIVERSAIS
 1. **Consultar referências** — Sempre verificar nos arquivos .md antes de inventar regras
-2. **Dados reais** — Usar o script vtm_dice.py para todas as rolagens
+2. **Dados reais** — Usar o motor (ferramentas MCP do plugin ou `vtm_dice.py`) para todas as rolagens
+2b. **Fonte de regra (P6)** — regras da casa aprovadas > V5 Core (inglês) > suplementos V5 > `01_Sistema/` e resumos > edições antigas (só lore)
 3. **Jogador decide** — Warn + Obey: avisar consequências, mas respeitar a decisão
 4. **Não inventar regras** — Se não souber, consultar 01_Sistema/ ou 12_Resumos_dos_Livros/
 5. **Documentar sessões** — Salvar em 07_Jogos/[PC]/partidas/
@@ -43,10 +46,11 @@ scripts/            → Script Python de dados (vtm_dice.py)
 
 ## SCRIPT DE DADOS
 ```bash
-python scripts/vtm_dice.py roll <pool> <hunger> [dif]
-python scripts/vtm_dice.py rouse [count]
-python scripts/vtm_dice.py remorse <caixas_vazias>  # caixas_vazias = humanidade_atual - manchas
-python scripts/vtm_dice.py frenzy <pool>
+python scripts/vtm_dice.py roll <parada_total> <fome> [dif]     # a Fome substitui dados normais
+python scripts/vtm_dice.py rouse <fome> [--bp N] [--nivel N]
+python scripts/vtm_dice.py remorse <humanidade> <manchas>         # dados = 10 - humanidade - manchas, mínimo 1
+python scripts/vtm_dice.py frenzy <fdv_intacta> <humanidade> <dif>
+python scripts/vtm_dice.py --help                                 # demais: reroll, tracker, surge, mend, conflict, damage, feed
 ```
 
 ## HIERARQUIA NARRATIVA
