@@ -7,6 +7,18 @@
   },
   "repository": "https://github.com/eduardopasouza/vtm-v5-solo",
   "keywords": ["vampiro", "vtm", "v5", "rpg", "solo"],
+  "mcpServers": {
+    "dados": {
+      "command": "python",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/scripts/vtm_mcp.py"],
+      "env": {
+        "PYTHONIOENCODING": "utf-8",
+        "VTM_PASTA_CAMPANHAS": "${user_config.pasta_campanhas}",
+        "VTM_CAMPANHA_ATIVA": "${user_config.campanha_ativa}",
+        "VTM_PASTA_ACERVO": "${user_config.pasta_acervo}"
+      }
+    }
+  },
   "userConfig": {
     "pasta_campanhas": {
       "type": "directory",

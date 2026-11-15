@@ -341,7 +341,7 @@ Total: **~50-75 h**, em 12-18 sessões. As estimativas são de ordem de grandeza
 - **Feito:**
   - `scripts/vtm_motor.py`: núcleo puro (recebe `random.Random` ou dados prontos) com avaliação de parada (sucesso, crítico, crítico confuso, falha bestial, falha total, vitória com custo), Fome substituindo dados, re-rolagem por FdV, testes de tracker, Rouse com 2 dados pela Potência, despertar, Blood Surge, cura Superficial e Agravada, frenesi, Remorso, conflito e dano, alimentação com penalidades da Potência, tabela de Potência (p. 216) e registro em `rolagens.jsonl`.
   - `scripts/vtm_dice.py`: CLI reescrito sobre o núcleo (mesma saída humana + `---JSON---`; `--campanha` ou `VTM_CAMPANHA` para registrar).
-  - `scripts/vtm_mcp.py` + `.mcp.json` (servidor `dados`, FastMCP do pacote `mcp` 1.26.0 do Python global): ferramentas `mcp__plugin_vtm_dados__*`. O caminho da campanha chega por `env` com `${user_config.*}` (único uso documentado com exemplo).
+  - `scripts/vtm_mcp.py` + `.mcp.json` (em 2026-11-15 passou para `mcpServers` do `plugin.json`, ver seção 9) (servidor `dados`, FastMCP do pacote `mcp` 1.26.0 do Python global): ferramentas `mcp__plugin_vtm_dados__*`. O caminho da campanha chega por `env` com `${user_config.*}` (único uso documentado com exemplo).
   - `tests/`: 39 testes verdes (`python -m pytest tests`): núcleo com dados escolhidos, CLI por subprocesso com semente, servidor MCP real por stdio.
   - `skills/narrar` e `CLAUDE.md` atualizados para a nova semântica.
 - **Mudança de semântica (quebra o uso antigo):** `roll <parada_total> <fome> <dif>` — antes os dois números eram somados. `remorse <humanidade> <manchas>` e `frenzy <fdv_intacta> <humanidade> <dif>` mudaram de argumentos.
@@ -397,4 +397,12 @@ Total: **~50-75 h**, em 12-18 sessões. As estimativas são de ordem de grandeza
   - 64 testes verdes, incluindo OCR real e `buscar_acervo` pelo servidor MCP.
 - **Índice real (2026-11-15):** 161 livros, 18.604 páginas, 15.717 com texto; 14 PDFs do CofD fora. **Aceite da busca ✓:** "Blood Surge" → Core p. 218; "Rouse Check" → p. 211; "Ventrue bane" → p. 102.
 - **OCR:** o Tesseract 5.4.0 **já estava instalado**, com `por` e `eng`, e nada foi baixado. Cerca de 6 s por página. A rodada nos ~2.900 páginas sem texto está em andamento.
-- **Pendente:** resultado do OCR; conferência da `01_Sistema`; mudança da campanha e dos resumos com reescrita do histórico.
+- **Mudança da campanha e dos resumos (2026-11-15):**
+  - Backup espelho em `C:\dev\_backup-vtm-v5-solo-2026-11-15\`, com cópia do `settings.local.json` e do `_retomada/`.
+  - `git-filter-repo` instalado pelo pip.
+  - Repositório **privado** `eduardopasouza/vtm-campanhas` (`C:\dev\vtm-campanhas`): `Edward Bello/` + `_resumos/`, histórico das sessões preservado. Os 192 arquivos foram conferidos blob a blob contra o público.
+  - Plugin instalado lá (escopo local) e IUS desligado.
+  - `userConfig`: `pasta_campanhas = C:/dev/vtm-campanhas`, `pasta_resumos = C:/dev/vtm-campanhas/_resumos`, `pasta_acervo = D:/Downloads-ES101026/BibliotecaElfica`. Gravado com `claude plugin configure --values-stdin` pelo `cmd` (no PowerShell o wrapper `.ps1` do `claude` estraga o stdin).
+  - Histórico do público reescrito no lugar com `--invert-paths`: nenhum commit tem mais `07_Jogos` ou `12_Resumos_dos_Livros`. Todos os SHAs mudaram, e o commit só de campanha (Sessão 15) caiu. A pasta `07_Jogos/` ficou só com subpastas vazias, ignoradas.
+- **MCP pelo plugin ✓ (2026-11-15):** numa sessão com o plugin recarregado, `auditar_campanha` e `buscar_acervo` responderam com o `userConfig` substituído. Achado: o `.mcp.json` na raiz era lido também como MCP **do projeto** (o repo do plugin é a pasta da sessão), sem `${CLAUDE_PLUGIN_ROOT}` substituído, e falhava. O servidor foi para `mcpServers` do `plugin.json` e o `.mcp.json` saiu.
+- **Pendente:** resultado do OCR; conferência da `01_Sistema`; force push do histórico reescrito; pedir ao suporte do GitHub a limpeza dos commits antigos em cache (cabe ao Eduardo).

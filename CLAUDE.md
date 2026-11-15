@@ -25,7 +25,7 @@ docs/PLANO-PLUGIN.md → plano do plugin (frentes, decisões, ondas)
 scripts/            → Motor de dados: vtm_motor.py (regras, com página do Core), vtm_dice.py (CLI), vtm_mcp.py (servidor MCP)
 scripts/campanha.py → Memória da campanha: auditar, validar, resumo, hook (regras em vtm_campanha.py)
 tests/              → Testes (python -m pytest tests)
-.mcp.json           → Servidor MCP `dados` do plugin (rolagens + auditar_campanha)
+.claude-plugin/plugin.json → também declara o servidor MCP `dados` (rolagens, auditar_campanha, buscar_acervo). Não usar `.mcp.json` na raiz: aqui ele seria lido também como MCP do projeto, sem `${CLAUDE_PLUGIN_ROOT}`
 hooks/hooks.json    → SessionStart: resumo da campanha ativa (só no repositório ou na pasta de campanhas)
 agents/             → arquivista (fim de sessão) e continuidade (entre sessões); só propõem, não gravam
 ```
