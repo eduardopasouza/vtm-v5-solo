@@ -317,6 +317,11 @@ Total: **~50-75 h**, em 12-18 sessões. As estimativas são de ordem de grandeza
 | 2026-11-14 | P1 | (a) plugin neste repositório | Histórico e referências juntos, nada a migrar |
 | 2026-11-14 | P4 | (a) disparo automático, descrições ancoradas em VtM/vampiro/campanha | Mantém a linguagem natural; colisão conferida em teste |
 | 2026-11-14 | P5 | Núcleo Python + servidor MCP do plugin + `vtm_dice.py` como CLI | Agentes rolam sem ganhar o Bash; um servidor para motor e acervo |
+| 2026-11-14 | P6 | Hierarquia: regras da casa aprovadas por escrito pelo Eduardo > V5 Core (inglês) > suplementos V5 > `01_Sistema` e resumos > edições antigas (só lore). PT-BR só para termos | Regra verificável por página; adaptação registrada em vez de disfarçada de regra oficial. Exige um arquivo de regras da casa (a criar) |
+| 2026-11-14 | P8 | (a) `.md` + `estado.json`: números só no JSON, `.md` só narrativa e sem repetir números | Uma fonte para os números; o motor lê e grava com a biblioteca padrão. Exige migrar os números do `personagem.md` na Onda 3 |
+| 2026-11-14 | P3 | (b) repositório continua público; os 126 resumos de `12_Resumos_dos_Livros/` saem para a camada do acervo, fora do repositório | Mantém o plugin público. Em aberto: reescrever ou não o histórico do git (os resumos seguem nele sem isso) e se a campanha Edward Bello continua pública |
+| 2026-11-15 | P3 — histórico | Reescrever o histórico na retirada dos resumos (frente 8): `git filter-repo` apaga `12_Resumos_dos_Livros/` de todos os commits, seguido de force push com OK explícito | Histórico limpo; 0 forks, então custo baixo. Todos os SHAs mudam; pedir ao suporte do GitHub a limpeza dos commits antigos em cache |
+| 2026-11-15 | P3 — campanha | A campanha Edward Bello vai para um repositório privado separado (nome provisório `vtm-campanhas`) e sai do histórico público no mesmo `filter-repo` dos resumos | Separa motor e campanha (camadas da seção 1) e fecha os segredos do narrador. Exige: criar o repo, apontar `pasta_campanhas`, desligar o IUS lá |
 | 2026-11-14 | Escopo da Onda 1 | Pastas `01_Sistema`…`10_Ferramentas` ficam onde estão; `reference/` e `templates/` numa onda futura | Evita quebrar 49+ referências internas; nenhum aceite da Onda 1 depende disso |
 
 ## 6. Andamento da Onda 1 (2026-11-14)
