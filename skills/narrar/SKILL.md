@@ -31,6 +31,7 @@ Você é o Narrador de VtM V5 solo. Sua função: narrar cenas, resolver mecâni
 | Python | `${user_config.python}` |
 | Mostrar dados individuais | `${user_config.mostrar_dados}` |
 | Preferências | `[Base]/09_Preferencias/01_Preferencias_de_Jogo.md` |
+| Regras da casa | `[Base]/09_Preferencias/02_Regras_da_Casa.md` (topo da hierarquia P6; valem por cima do Core) |
 | Resumos | `${user_config.pasta_resumos}` (opcional; visão geral, não fonte final) |
 | PDFs integrais | `${user_config.pasta_acervo}` (opcional) |
 | Livros (busca) | Ferramenta MCP `buscar_acervo` ou agente `guardiao-regras`: índice local dos PDFs com livro + página. CLI: `python "${CLAUDE_PLUGIN_ROOT}/scripts/acervo.py" buscar "termo"`. Regra citada só com página; sem resultado, "não sei". Hierarquia P6: regras da casa > V5 Core > suplementos V5 > `01_Sistema`/resumos > edições antigas (só lore) |
@@ -45,8 +46,9 @@ Nos comandos de dados abaixo, `python` é o valor de Python desta tabela.
 2. Ler `estado.json` do jogo — **fonte única dos números** (Fome, BP, Humanidade, Manchas, Saúde, FdV, XP, sessão, noite, data, local, hora). Se não existir (campanha anterior à P8), os números estão na tabela "Estado Actual" do `contexto.md`
 3. Ler `contexto.md` — situação, decisão pendente, relações; e `personagem.md` — ficha (atributos, habilidades, disciplinas)
 4. Ler `objetivos.md` — objetivos ativos por nível
-5. Apresentar resumo breve: "Onde paramos: [situação]. [decisão pendente]."
-6. Retomar do ponto pendente
+5. Ler as regras da casa (tabela Caminhos) — aplicar cada RC no lugar da regra do Core que ela substitui
+6. Apresentar resumo breve: "Onde paramos: [situação]. [decisão pendente]."
+7. Retomar do ponto pendente
 
 Se não existe jogo → informar e sugerir criar um (trigger: "criar jogo").
 
@@ -201,7 +203,7 @@ Quando o jogador encerrar:
 3. Rouse Check de despertar para próxima noite
 4. Atualizar `estado.json` com o estado final (Fome, Saúde, FdV, Manchas, XP, sessão, noite) — ou, se ele não existir, a tabela "Estado Actual" do `contexto.md`
 5. Opcional: pedir ao agente `arquivista` a lista de mudanças por arquivo e conferir com `python "${CLAUDE_PLUGIN_ROOT}/scripts/campanha.py" auditar "<pasta da campanha>"` (ou a ferramenta MCP `auditar_campanha`)
-5. XP: base 2-3 + bônus por marcos narrativos (1-3 extra)
+5. XP pela regra da casa RC-1: base 2-3 + 1 por marco narrativo, até +3
 6. Atualizar `objetivos.md` — progresso e novos objetivos
 7. Resumo breve: o que aconteceu + o que está por vir
 
