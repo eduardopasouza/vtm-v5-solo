@@ -437,6 +437,13 @@ Total: **~50-75 h**, em 12-18 sessões. As estimativas são de ordem de grandeza
   - **Aceite 3 ok.** Com o plugin instalado, as 6 chaves chegam substituídas na skill; `python` e `mostrar_dados` foram gravados via `claude plugin configure --values-stdin`. Com `--plugin-dir`, nenhuma chave é substituída, então esse modo não serve para o aceite 3.
   - **Cuidado:** `--allowedTools` não impede edições, porque as permissões da sessão já as liberam. O primeiro teste gravou na campanha, e as edições foram revertidas. O script `_retomada/teste_plugin.ps1` agora passa `--disallowedTools` para Edit, Write, PowerShell e Bash.
   - **Aceite 5:** coberto pelo teste negativo em pasta neutra ("continuar a sessão de ontem" não disparou a skill). O teste com cwd em `C:\Cowork` não foi rodado de propósito: o SessionStart ali injeta dados de clientes na saída do teste (LGPD).
-  - Pendente: o erro TIMELINE do auditor no Edward (sessões 8-15 sem registro na linha do tempo; é tarefa da migração da campanha).
+- **Migração da campanha Edward Bello concluída (2026-11-15):**
+  - Aceite da frente 3: **"Auditoria: nada a apontar."**
+  - `timeline.md`: sessões 8-15 preenchidas a partir dos logs; rodapé na Sessão 15.
+  - `estado.json` (schema v1) criado com o estado do fim da Noite 77 e validado. Os números saíram de `contexto.md` e `personagem.md`, que agora apontam para o JSON (P8). Os cálculos dos máximos (Vigor + Fortitude + 3, Compostura + Determinação) continuam na ficha, como texto.
+  - Fichas novas: Adelbert von Hasselt, Lucius Valerius Maximus, Dunstan e Henrik Grau, só com o que as sessões registram.
+  - `npcs/indice.md` passou a listar todas as fichas.
+  - `objetivos.md` atualizado pela Sessão 15: H5-3 completo, H5-6 e H5-7 novos.
+  - Em `09_Preferencias/01_Preferencias_de_Jogo.md`, as três referências quebradas (`objetivos_ativos.md`, `direcao_narrador_SEGREDOS.md`, caminho antigo dos PDFs) foram corrigidas.
 - **Loresheets (2026-11-15):** níveis de Helena (p. 391), Tyler (p. 397), Golconda 1-5 (p. 389) e Week of Nightmares (p. 395) conferidos e parafraseados.
 - **Pendente:** `10_Ferramentas_do_Narrador/01_Rolagens_Rapidas.md:172-177` ainda usa a parada antiga do frenesi; conferir o resultado da segunda rodada de OCR (os processos já terminaram); aceite 2 (disparo automático por "quero jogar VtM", ainda não testado); `python` e `mostrar_dados` sem valor gravado no `userConfig` (chegam literais na skill; o fallback cobre); pedir ao suporte do GitHub a limpeza dos commits antigos em cache (cabe ao Eduardo).

@@ -55,7 +55,7 @@ A estrutura narrativa segue cinco niveis, do mais amplo ao mais granular:
 - Objetivos existem em **4 niveis:** jogo, partida, historia e aventura.
 - Cada nivel pode ter **objetivos principais** (obrigatorios para avanco) e **objetivos secundarios** (opcionais, mas enriquecedores).
 - Objetivos servem para **manter o engajamento e dar direcao ao jogador**, evitando que a narrativa perca foco.
-- Objetivos sao rastreados em arquivo separado: `objetivos_ativos.md`.
+- Objetivos sao rastreados em arquivo separado: `objetivos.md`, na pasta da campanha.
 - Atualizados ao final de cada sessao pelo narrador, com aprovacao do jogador.
 
 ---
@@ -119,7 +119,7 @@ Regras inviolaveis para manter a integridade narrativa:
 4. **Mudancas de estado exigem registro no log de sessao.** Alteracoes em Fome, Humanidade, Vitalidade, Forca de Vontade, relacionamentos ou territorio sao registradas formalmente.
 5. **Nao contradizer fatos ja estabelecidos sem checkpoint.** Retcons sao proibidos a menos que o jogador aprove explicitamente.
 6. **Para fatos nao-documentados:** o narrador propoe ao jogador e aguarda aprovacao antes de estabelecer como verdade. Nada e inventado unilateralmente.
-7. **Segredos do narrador** (contidos em `direcao_narrador_SEGREDOS.md`) **nunca sao revelados ao jogador** — apenas quando a mecanica ou a narrativa justificam organicamente a descoberta.
+7. **Segredos do narrador** (contidos em `direcao.md`, na pasta da campanha) **nunca sao revelados ao jogador** — apenas quando a mecanica ou a narrativa justificam organicamente a descoberta.
 
 ---
 
@@ -168,7 +168,7 @@ Toda cena narrada pelo agente DEVE seguir este formato:
   - Solicitacao do PC sobre regras ou lore especificos
   - Evolucao significativa de jogo ou personagem
   - Duvidas sobre mecanica ou lore que resumos nao resolvem
-- Os PDFs estao em `Eduardo Souza/VtM 5/06_Livros_e_Suplementos/`
+- Os PDFs estao na pasta do acervo (`userConfig` `pasta_acervo`) e indexados para busca com pagina (`buscar_acervo`)
 - Os resumos estao no repositorio privado `vtm-campanhas`, pasta `_resumos/`
 - Resumos sao uteis para visao geral. **Integra e obrigatoria quando a precisao importa.**
 
