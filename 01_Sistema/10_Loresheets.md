@@ -54,16 +54,16 @@ Cada Loresheet tem **5 niveis** (1 a 5 pontos), com beneficios crescentes:
 
 ### Descendant of Helena
 
-**Fonte:** Core p. 391 (os niveis abaixo nao foram conferidos com a pagina)
+**Fonte:** Core p. 391 — **so Toreador**
 
-**Contexto:** Helena e uma Toreador antediluviana (ou quase) de beleza lendaria. Sua rivalidade com Menelaus e suas manipulacoes atravessam milenios. Ser descendente de Helena e pertencer a uma linhagem de beleza, arte e intriga sobrenatural.
+**Contexto:** Helena e uma Toreador antiquissima de beleza lendaria, ligada ao Succubus Club de Chicago. Ser descendente dela e pertencer a uma linhagem de beleza, arte e intriga.
 
-**Niveis resumidos:**
-1. **Beleza Herdada:** Conhecimento sobre Helena e reconhecimento entre Toreadores por sua linhagem
-2. **A Galeria:** Acesso a uma rede de arte e informacao mantida por descendentes de Helena
-3. **O Olhar da Musa:** Presenca amplificada — bonus em testes sociais quando a beleza e relevante
-4. **Sangue de Troia:** Capacidade de inspirar obsessao em outros (mortais e vampiros)
-5. **A Mascara de Helena:** Poder de transformar aparencia temporariamente, ecoando a beleza sobrenatural de Helena
+**Niveis (Core p. 391, parafraseados):**
+1. **Superficial (Skin-Deep):** citar Helena diante de um Toreador ou de quem a conhece conta como +1 ponto de Status; uma vez por historia
+2. **Talento de Verdade:** escolher Oficio, Etiqueta ou Atuacao; aumentar essa Habilidade custa metade do XP (para baixo)
+3. **Abracar o Estereotipo:** uma vez por historia, dar uma festa lendaria que soma +2 em Status e/ou Influencia com os convidados enquanto ela durar
+4. **Pureza Divina:** +2 dados para escapar da culpa pelos proprios atos
+5. **Franquia do Succubus Club:** licenca para abrir um Succubus Club no seu dominio; enquanto aberto, +2 na Caca (Chasse) do dominio da coterie, mais 4 pontos entre Recursos, Fama e Status
 
 ---
 
@@ -115,19 +115,27 @@ Cada Loresheet tem **5 niveis** (1 a 5 pontos), com beneficios crescentes:
 
 **Contexto:** estado lendario de equilibrio perfeito entre Humanidade e Besta, supostamente descoberto por Saulot. Diz-se que acalma a Besta, domina a Fome e ate permite ficar ao sol, mas o Core trata isso como boato, nao como regra. Ha quem diga que Golconda transforma o vampiro num predador frio, e nao num redimido. O Mestre dos Corvos quer desmascarar o mito.
 
-**Niveis (Core p. 389, parafraseados; so os tres primeiros conferidos):**
+**Niveis (Core p. 389, parafraseados):**
 1. **Sementes de Golconda:** uma vez por historia, perguntar ao Narrador se uma acao poe em risco a busca por Golconda
 2. **O Unico Caminho Verdadeiro:** tem o tratado do Mestre dos Corvos; uma vez por historia, +3 dados num teste Social sobre a natureza de Golconda
-3. **Discipulo de Saulot:** segue os ensinamentos de Saulot (efeito na pagina)
-4-5. Ver a pagina
+3. **Discipulo de Saulot:** alterna soltar e conter a Besta; sempre que ceder ao frenesi por vontade propria, vence automaticamente o proximo teste de frenesi
+4. **Saciar a Fome:** uma vez por sessao, baixa a Fome em 1 sem se alimentar (nao abaixo de 1)
+5. **Saudar o Sol:** uma vez por historia, anda em plena luz do dia sem dano; na noite seguinte, acorda em frenesi de fome
 
 ---
 
 ### Descendant of Tyler
 
-**Fonte:** Core p. 397
+**Fonte:** Core p. 397 — **so Brujah**
 
-**Contexto:** Tyler e a lendaria Brujah que supostamente destroiu o primeiro Principe Brujah e iniciou a revolta que levou a fundacao do movimento Anarquista.
+**Contexto:** Tyler, antes Patricia de Bollingbroke, e o idolo de todo rebelde Brujah e figura fundadora da tradicao Anarquista.
+
+**Niveis (Core p. 397, parafraseados):**
+1. **Instigador:** uma vez por historia, +2 dados para incitar uma multidao mortal a violencia
+2. **Campeao da Causa:** em rebelioes, os vampiros pedem seu conselho ou lideranca; +2 de Status com eles enquanto durar a rebeliao
+3. **Misericordia de Tyler:** uma vez por historia, durante um frenesi, aceitar a Compulsao Brujah (p. 210) para encerra-lo na hora
+4. **Os Furores:** uma vez por cronica, o grupo secreto dos Furores arma e abriga voce e ativa Aliados-surpresa (ate 5 pontos de Efetividade), so para derrubar um Principe, Barao indigno ou vampiro de posicao superior; mau uso faz de voce alvo deles
+5. **Revolucao Permanente:** ja derrubou uma lideranca de seita e comanda um exercito revolucionario; enquanto lutar e nao se render ao luxo, Anarquistas escutam e Anarquistas Brujah obedecem, sem rolagem se o discurso convencer
 
 ---
 
@@ -143,7 +151,14 @@ Cada Loresheet tem **5 niveis** (1 a 5 pontos), com beneficios crescentes:
 
 **Fonte:** Core p. 395
 
-**Contexto:** A Semana dos Pesadelos (1999) foi quando o Antediluviano Ravnos despertou na India, causando destruicao apocaliptica antes de ser destruido por armas nucleares e magia. Sobreviventes carregam traumas e conhecimentos unicos.
+**Contexto:** A Semana dos Pesadelos se estendeu, na verdade, por anos; ha quem a confunda com o inicio da Gehenna. O Antediluviano Ravnos (Zapathasura) despertou, drenou o proprio cla e teve Morte Final em julho de 1999, por armas avancadas e pelo poder do sol, em Bangladesh. Desde entao, os Ravnos sao pouco mais que uma linhagem (Core p. 395).
+
+**Niveis (Core p. 395, parafraseados):**
+1. **Historia Oral:** conta a historia nos Elisios; +3 dados de Atuacao para narra-la
+2. **Restos dos Ravnos:** Mawla 3 representando remanescentes Ravnos; trazem noticias e, uma vez por cronica, talvez lancem grandes ilusoes, mas a ligacao e malvista
+3. **Eu Estava La:** veterano da Semana; uma vez por historia, usa esse Status para obter um favor menor de historiadores, ocultistas, Ravnos ou cultistas da Gehenna
+4. **A Estrela Vermelha:** Wormwood ainda brilha para voce; uma vez por historia, olhar para ela por 10 minutos baixa a Fome para 2 ou da +1 dado numa Disciplina pela noite
+5. **Sangue de Zapathasura:** tem um frasco do sangue do Antediluviano Ravnos; o efeito fica a criterio do Narrador
 
 ---
 
