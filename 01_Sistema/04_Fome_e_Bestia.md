@@ -59,8 +59,8 @@ O Rouse Check e o mecanismo que pode **aumentar** a Fome.
 | Despertar ao anoitecer | 1 |
 | Ativar uma Disciplina | 1 (ou mais, para poderes poderosos) |
 | Curar dano Superficial | 1 |
-| Curar dano Agravado (por noite) | 1 |
-| Aumentar Atributos Fisicos (Blood Surge) | 1 |
+| Curar dano Agravado (ao anoitecer, 1 ponto por noite) | 3, alem do Rouse de despertar (Core p. 218-219) |
+| Somar dados a uma parada com Atributo (Blood Surge) | 1 (Core p. 218) |
 | Manter aparencia humana (Blush of Life) | 1 |
 | Manter-se acordado durante o dia | 1 por hora |
 
@@ -82,34 +82,38 @@ Potencia do Sangue elevada permite fazer Rouse Checks com **re-roll** para certa
 | 3 | Nivel 2 (Disciplinas nivel 1-2) |
 | 4 | Nivel 2 |
 | 5 | Nivel 3 (Disciplinas nivel 1-3) |
+| 6 | Nivel 3 |
+| 7-8 | Nivel 4 |
+| 9-10 | Nivel 5 |
 
-Com re-roll, role 2d10 e pegue o **melhor** resultado.
+Com re-roll, role 2d10 e pegue o **melhor** resultado. Vale só para o Rouse de ativar poder de Disciplina (Core p. 216, 219).
 
 ### Fome no Maximo (5)
 
-Se a Fome ja esta em 5 e o personagem falha em um Rouse Check, a Fome nao pode aumentar mais, mas:
-- O personagem deve fazer um teste para resistir ao **Frenesi de Fome** imediatamente.
-- O poder ou efeito que gerou o Rouse Check **ainda funciona** — a Vitae do vampiro ainda responde, mas a Besta esta quase no controle.
+Com Fome 5, o vampiro **não pode despertar o sangue de propósito**: nada de Disciplina, Surto, cura ou Blush of Life por escolha própria (Core p. 211). Se algo externo forçar um Rouse Check nesse estado:
+- O jogador faz na hora um teste de **Frenesi de Fome** com DD 4 (Core p. 211, 220).
+- O efeito que exigiu o Rouse **ainda acontece** mesmo com a falha.
+- Ao despertar ou ao curar Agravado ao anoitecer, um Rouse que levaria a Fome acima de 5 manda o vampiro para o **torpor**, e não para o teste de frenesi (Core p. 219).
 
 ---
 
 ## 4. Blood Surge (Impulso de Sangue)
 
-O vampiro pode temporariamente aumentar seus Atributos Fisicos atraves do sangue.
+O vampiro pode reforcar com o sangue qualquer parada que inclua um Atributo — Fisico, Social ou Mental (Core p. 218).
 
 - Gasta **1 Rouse Check**.
-- Adiciona dados iguais a **Potencia do Sangue** (minimo 1) ao proximo teste de um Atributo Fisico.
-- O bonus dura apenas para um unico teste.
-- Pode ser feito uma vez por turno.
+- Soma os dados da tabela abaixo a **uma** rolagem; uma vez por rolagem.
+- Nao vale em testes de Forca de Vontade ou Humanidade, nem em rolagens que cubram mais de uma cena.
+- Rolagem com Surto nao usa vitoria automatica nem "Tomar Metade".
 
-| Potencia do Sangue | Dados adicionados pelo Blood Surge |
+| Potencia do Sangue | Dados adicionados pelo Blood Surge (Core p. 216) |
 |---|---|
-| 0 | +1 |
-| 1 | +1 |
-| 2 | +1 |
-| 3 | +2 |
-| 4 | +2 |
-| 5 | +3 |
+| 0 | Nenhum (Sangue Ralo nao tem Surto) |
+| 1-2 | +1 |
+| 3-4 | +2 |
+| 5-6 | +3 |
+| 7-8 | +4 |
+| 9-10 | +5 |
 
 ---
 
@@ -126,8 +130,8 @@ A **unica** forma confiavel de reduzir a Fome e **se alimentar de sangue humano*
 | Alimentacao intensa | -3 Fome | Vitima precisa de atendimento medico |
 | Drenar completamente (matar) | Fome reduzida a **0** | Vitima morre. Possivel Mancha na Humanidade |
 | Sangue de vampiro | -1 por Rouse Check do doador | Gera Laco de Sangue; pode ser insuficiente |
-| Sangue animal | Fome reduzida ate **minimo 2** | Nao satisfaz completamente. Inutil para Potencia 2+ |
-| Bolsa de sangue | -1 ou -2 Fome | Requer Iron Gullet para tolerar sem penalidade. Inutil para Potencia 4+ |
+| Sangue animal | -1 (pequenos em bando ou medio), -2 (grande) | Potencia 2: sacia metade; Potencia 3+: nao sacia (Core p. 212, 216) |
+| Bolsa de sangue | -1 Fome | Sangue processado exige o Merito Iron Gullet. Potencia 2: metade; 3+: nao sacia (Core p. 212, 216) |
 
 ### Processo de Alimentacao
 
@@ -144,13 +148,16 @@ A **unica** forma confiavel de reduzir a Fome e **se alimentar de sangue humano*
 
 | Potencia | Restricao |
 |---|---|
-| 0 | Nenhuma |
-| 1 | Nenhuma |
-| 2 | Sangue animal nao sustenta |
-| 3 | Sangue animal nao sustenta |
-| 4 | Sangue animal e bolsas de sangue nao sustentam |
-| 5 | Deve drenar e matar para saciar completamente |
-| 6+ | So sangue de vampiro ou sangue "potente" sustenta |
+| 0-1 | Nenhuma |
+| 2 | Animal e bolsa saciam metade |
+| 3 | Animal e bolsa nao saciam |
+| 4 | Idem; cada humano sacia 1 a menos |
+| 5 | Idem; cada humano sacia 1 a menos; so matando a Fome cai abaixo de 2 |
+| 6-7 | Idem; cada humano sacia 2 a menos; so matando cai abaixo de 2 |
+| 8-9 | Idem; cada humano sacia 2 a menos; so matando cai abaixo de 3 |
+| 10 | Idem; cada humano sacia 3 a menos; so matando cai abaixo de 3 |
+
+Fonte: Core p. 216. Sangue humano continua saciando em todas as Potencias.
 
 ---
 
@@ -259,7 +266,7 @@ O Frenesi ocorre quando a Besta assume o controle do vampiro. E uma das experien
 
 ### Resistindo ao Frenesi
 
-**Teste:** Forca de Vontade (Compostura + Determinacao) vs Dificuldade.
+**Teste:** Forca de Vontade **atual** (caixas sem dano no tracker, nao a soma de Compostura + Determinacao) + 1/3 da Humanidade (arredondado para baixo) vs Dificuldade (Core p. 219). Vitoria normal = resiste, mas gasta o turno contendo a Besta; critico = resiste sem perder o turno.
 
 | Situacao | DD |
 |---|---|
@@ -273,22 +280,18 @@ O Frenesi ocorre quando a Besta assume o controle do vampiro. E uma das experien
 
 | Fator | Efeito |
 |---|---|
-| Brujah (Furia) | -2 dados para resistir |
-| Gangrel | -1 dado para Rotschreck |
-| Alta Humanidade (8+) | +1 dado para resistir |
-| Baixa Humanidade (3-) | -1 dado para resistir |
-| Conviccao relevante | +1 a +3 dados |
+| Humanidade | +1 dado a cada 3 pontos (Humanidade ÷ 3, para baixo) — ja incluido no teste acima (Core p. 219) |
+| Brujah (so frenesi de furia) | -dados iguais a Severidade da Perdicao, sem baixar a parada de 1 dado (Core p. 67) |
+
+O Core nao traz outros modificadores gerais (nem por Gangrel, nem por Conviccao).
 
 ### Cavalgando a Onda (Riding the Wave)
 
-Em vez de resistir, o vampiro aceita o Frenesi mas tenta **direciona-lo**.
+Em vez de resistir, o vampiro **cede de proposito** ao frenesi, **sem teste** (Core p. 219-220).
 
-- **Teste:** Forca de Vontade vs DD 4.
-- **Sucesso:** O vampiro entra em Frenesi, mas pode:
-  - Escolher alvos (evitando aliados e Ancoras).
-  - Direcionar a fuga (no caso de Rotschreck).
-  - Parar antes de matar (no caso de Frenesi de Fome).
-- **Falha:** Frenesi total, sem qualquer direcao.
+- Valem as regras normais do frenesi.
+- A diferenca: o jogador conduz o proprio frenesi (por exemplo, escolhe de quem se alimenta primeiro), em vez de o Narrador assumir o personagem.
+- Sem Cavalgar a Onda, o vampiro em frenesi fica nas maos do Narrador ate o fim.
 
 ### Saindo do Frenesi
 
@@ -308,15 +311,17 @@ A Potencia do Sangue afeta profundamente como o vampiro se alimenta e o que o su
 
 ### Tabela Completa de Potencia do Sangue
 
+Fonte: Core p. 216. Tabela completa (0 a 10) em `08_Potencia_de_Sangue.md`.
+
 | Potencia | Blood Surge | Mend Amount | Rouse Re-Roll | Bane Severity | Restricoes Alimentares |
 |---|---|---|---|---|---|
-| 0 | +1 | 1 Sup. | Nenhum | 0 | Nenhuma |
-| 1 | +1 | 1 Sup. | Nivel 1 | 2 | Nenhuma |
-| 2 | +1 | 2 Sup. | Nivel 1 | 2 | Animal nao sustenta |
-| 3 | +2 | 2 Sup. | Nivel 2 | 3 | Animal nao sustenta |
-| 4 | +2 | 3 Sup. | Nivel 2 | 4 | Animal e bolsas nao sustentam |
-| 5 | +3 | 3 Sup. | Nivel 3 | 5 | Deve matar para saciar |
-| 6 | +3 | 3 Sup. | Nivel 3 | 6 | So Kindred ou sangue potente |
+| 0 | Nenhum | 1 Sup. | Nenhum | 0 | Nenhuma |
+| 1 | +1 | 1 Sup. | Nivel 1 | 1 | Nenhuma |
+| 2 | +1 | 2 Sup. | Nivel 1 | 1 | Animal e bolsa saciam metade |
+| 3 | +2 | 2 Sup. | Nivel 2 | 2 | Animal e bolsa nao saciam |
+| 4 | +2 | 3 Sup. | Nivel 2 | 2 | Idem; humano sacia 1 a menos |
+| 5 | +3 | 3 Sup. | Nivel 3 | 3 | Idem; humano sacia 1 a menos; so matando abaixo de Fome 2 |
+| 6 | +3 | 3 Sup. | Nivel 3 | 3 | Idem; humano sacia 2 a menos; so matando abaixo de Fome 2 |
 
 ### Bane Severity
 
@@ -435,15 +440,15 @@ ROUSE CHECK:
 - Role 1d10
 - 6+ = Sucesso (Fome nao aumenta)
 - 5- = Falha (Fome +1)
-- Fome 5 + falha = Teste de Frenesi de Fome
+- Fome 5: nao desperta o sangue de proposito; Rouse forcado que falha = Frenesi de Fome DD 4 (Core p. 211)
 
 ALIMENTACAO:
 - Mordida rapida = -1 Fome
 - Alimentacao moderada = -2 Fome
 - Alimentacao intensa = -3 Fome
 - Drenar e matar = Fome vai a 0
-- Sangue animal = Fome minima 2
-- Bolsa de sangue = -1 ou -2
+- Sangue animal = -1 a -2; Potencia 2 sacia metade, 3+ nada (Core p. 212, 216)
+- Bolsa de sangue = -1; Potencia 2 metade, 3+ nada; processado exige Iron Gullet
 
 DADOS DE FOME:
 - Substituem dados normais (nao somam)
@@ -452,8 +457,8 @@ DADOS DE FOME:
 - Dados de Fome NAO podem ser rerolados com FdV
 
 FRENESI:
-- Resistir: Compostura + Determinacao vs DD
-- Cavalgar: FdV vs DD 4
+- Resistir: FdV atual + Humanidade/3 vs DD (Core p. 219)
+- Cavalgar a Onda: sem teste; o jogador conduz o frenesi (Core p. 219-220)
 - Furia: Ataca fonte de raiva
 - Fome: Drena fonte de sangue proxima
 - Terror: Foge de fogo/sol

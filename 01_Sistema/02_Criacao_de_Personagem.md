@@ -61,24 +61,25 @@ O V5 possui **9 Atributos** divididos em tres categorias.
 
 ### Distribuicao
 
-1. **Priorize** as tres categorias: Uma recebe **4 pontos**, outra recebe **3 pontos**, a terceira recebe **2 pontos** para distribuir.
-2. Todos os Atributos comecam com **1 ponto** (o valor minimo).
-3. Distribua os pontos adicionais da seguinte forma:
+Nao ha prioridade por categoria. Os 9 Atributos recebem estes valores, em qualquer combinacao (Core p. 136):
 
-| Prioridade | Pontos para distribuir | Maximo por Atributo |
-|---|---|---|
-| Primaria (4 pontos) | 4 pontos adicionais entre os 3 Atributos da categoria | 4 |
-| Secundaria (3 pontos) | 3 pontos adicionais entre os 3 Atributos da categoria | 3 |
-| Terciaria (2 pontos) | 2 pontos adicionais entre os 3 Atributos da categoria | 3 |
+| Valor | Quantos Atributos |
+|---|---|
+| 4 | 1 |
+| 3 | 3 |
+| 2 | 4 |
+| 1 | 1 |
 
 > **Nota:** O maximo na criacao de personagem e 4 em qualquer Atributo. O valor 5 so pode ser alcancado com Experiencia durante o jogo.
 
 ### Exemplo de Distribuicao
 
-Um Brujah academico que prioriza Mentais > Sociais > Fisicos:
-- **Mentais (Primaria, +4):** Inteligencia 4, Raciocinio 3, Determinacao 2
-- **Sociais (Secundaria, +3):** Carisma 3, Manipulacao 2, Compostura 2
-- **Fisicos (Terciaria, +2):** Forca 2, Destreza 2, Vigor 1
+Um Brujah academico:
+- **Mentais:** Inteligencia 4, Raciocinio 3, Determinacao 2
+- **Sociais:** Carisma 3, Manipulacao 2, Compostura 2
+- **Fisicos:** Forca 3, Destreza 2, Vigor 1
+
+(Um 4, tres 3, quatro 2, um 1.)
 
 ---
 
@@ -110,12 +111,12 @@ Distribuicao equilibrada, muitas habilidades em nivel baixo.
 
 | Nivel | Quantidade |
 |---|---|
-| 1 ponto | 8 Habilidades |
-| 2 pontos | 5 Habilidades |
-| 3 pontos | 3 Habilidades |
-| 0 pontos | 11 Habilidades |
+| 3 pontos | 1 Habilidade |
+| 2 pontos | 8 Habilidades |
+| 1 ponto | 10 Habilidades |
+| 0 pontos | 8 Habilidades |
 
-**Total: 25 pontos**
+**Total: 29 pontos** (Core p. 136)
 
 #### Equilibrado (Balanced)
 
@@ -123,13 +124,12 @@ Meio-termo entre generalista e especialista.
 
 | Nivel | Quantidade |
 |---|---|
-| 1 ponto | 5 Habilidades |
-| 2 pontos | 5 Habilidades |
 | 3 pontos | 3 Habilidades |
-| 4 pontos | 1 Habilidade |
-| 0 pontos | 13 Habilidades |
+| 2 pontos | 5 Habilidades |
+| 1 ponto | 7 Habilidades |
+| 0 pontos | 12 Habilidades |
 
-**Total: 27 pontos**
+**Total: 26 pontos** (Core p. 136)
 
 #### Especialista (Specialist)
 
@@ -137,14 +137,13 @@ Focado em poucas areas com alto nivel.
 
 | Nivel | Quantidade |
 |---|---|
-| 1 ponto | 3 Habilidades |
-| 2 pontos | 3 Habilidades |
-| 3 pontos | 3 Habilidades |
 | 4 pontos | 1 Habilidade |
-| 5 pontos | 1 Habilidade |
-| 0 pontos | 16 Habilidades |
+| 3 pontos | 3 Habilidades |
+| 2 pontos | 3 Habilidades |
+| 1 ponto | 3 Habilidades |
+| 0 pontos | 17 Habilidades |
 
-**Total: 28 pontos**
+**Total: 22 pontos** (Core p. 136)
 
 ### Especialidades Iniciais
 
@@ -156,6 +155,8 @@ O personagem comeca com uma **Especialidade** gratuita para cada Habilidade com 
 
 O Tipo de Predador define **como** o vampiro se alimenta habitualmente. Cada tipo concede bonus mecanicos e implica consequencias narrativas.
 
+> **Regra (Core p. 136, 175-178):** o Tipo de Predador da **uma especialidade**, **1 ponto em uma das Disciplinas listadas** e as **Vantagens/Defeitos** do tipo. **Nunca da pontos de Habilidade.** Nas fichas abaixo, especialidades e Vantagens de cada tipo ainda nao foram todas conferidas com o Core; os tipos Blood Leech, Consensualist e Farmer ja foram.
+
 ### Tipos de Predador
 
 ---
@@ -166,7 +167,6 @@ O Tipo de Predador define **como** o vampiro se alimenta habitualmente. Cada tip
 
 | Bonus | Detalhe |
 |---|---|
-| +1 Habilidade | Intimidacao ou Briga |
 | +1 Disciplina | Celeridade ou Potencia |
 | Especialidade | Briga (Garras) ou Intimidacao (Ameacas Fisicas) |
 | Humanidade | -1 Humanidade |
@@ -180,7 +180,6 @@ O Tipo de Predador define **como** o vampiro se alimenta habitualmente. Cada tip
 
 | Bonus | Detalhe |
 |---|---|
-| +1 Habilidade | Furto ou Manha |
 | +1 Disciplina | Feiticaria do Sangue ou Obfuscacao |
 | Especialidade | Manha (Mercado Negro) |
 | Humanidade | Nenhuma alteracao |
@@ -195,12 +194,13 @@ O Tipo de Predador define **como** o vampiro se alimenta habitualmente. Cada tip
 
 | Bonus | Detalhe |
 |---|---|
-| +1 Habilidade | Furtividade ou Briga |
 | +1 Disciplina | Celeridade ou Proteanismo |
-| Especialidade | Briga (Mordida) |
-| Humanidade | Nenhuma alteracao |
-| Vantagens | +1 Potencia do Sangue (comeca com 2) |
-| Desvantagem | +2 Desprezado (Dark Secret ou Estigma entre Kindred) |
+| Especialidade | Briga (Kindred) ou Furtividade (contra Kindred) |
+| Humanidade | -1 Humanidade |
+| Vantagens | +1 Potencia do Sangue |
+| Desvantagem | Dark Secret: Diablerista (••) ou Shunned (••); e Prey Exclusion: mortais (••) |
+
+Fonte: Core p. 176.
 
 ---
 
@@ -210,7 +210,6 @@ O Tipo de Predador define **como** o vampiro se alimenta habitualmente. Cada tip
 
 | Bonus | Detalhe |
 |---|---|
-| +1 Habilidade | Persuasao ou Subterfugio |
 | +1 Disciplina | Animalismo ou Dominacao |
 | Especialidade | Persuasao (Sedução) ou Subterfugio (Mentiras Convincentes) |
 | Humanidade | Nenhuma alteracao |
@@ -225,12 +224,12 @@ O Tipo de Predador define **como** o vampiro se alimenta habitualmente. Cada tip
 
 | Bonus | Detalhe |
 |---|---|
-| +1 Habilidade | Medicina ou Persuasao |
 | +1 Disciplina | Auspicio ou Fortitude |
-| Especialidade | Medicina (Flebotomia) ou Persuasao (Negociacao) |
+| Especialidade | Medicina (Flebotomia) ou Persuasao (Vitimas) |
 | Humanidade | +1 Humanidade |
-| Vantagens | +1 Conviccao extra (de que nao machucara para se alimentar) |
-| Desvantagem | +1 DD em Rouse Checks de Fome (ou variante, a criterio do Narrador) |
+| Desvantagem | Dark Secret: Masquerade Breacher (•) e Prey Exclusion: quem nao consente (•) |
+
+Fonte: Core p. 177.
 
 ---
 
@@ -240,12 +239,13 @@ O Tipo de Predador define **como** o vampiro se alimenta habitualmente. Cada tip
 
 | Bonus | Detalhe |
 |---|---|
-| +1 Habilidade | Manha Animal ou Sobrevivencia |
 | +1 Disciplina | Animalismo ou Proteanismo |
-| Especialidade | Manha Animal (Gado) ou Sobrevivencia (Caca) |
+| Especialidade | Manha Animal (animal especifico) ou Sobrevivencia (Caca) |
 | Humanidade | +1 Humanidade |
-| Vantagem | Vegan Merit |
-| Desvantagem | Sangue animal so reduz Fome ate no minimo 2 (nunca abaixo disso) |
+| Desvantagem | Defeito de alimentacao Vegan (••): para beber sangue humano, gasta 2 pontos de Forca de Vontade |
+| Restricoes | Ventrue nao pode escolher; nem quem tem Potencia do Sangue 3 ou mais |
+
+Fonte: Core p. 177, 181. Nao ha piso de Fome 2 para sangue animal; o limite e o da Potencia (p. 216).
 
 ---
 
@@ -255,7 +255,6 @@ O Tipo de Predador define **como** o vampiro se alimenta habitualmente. Cada tip
 
 | Bonus | Detalhe |
 |---|---|
-| +1 Habilidade | Medicina ou Ocultismo |
 | +1 Disciplina | Fortitude ou Obfuscacao |
 | Especialidade | Medicina (Sedação) ou Ocultismo (Rituais Funerarios) |
 | Humanidade | Nenhuma alteracao |
@@ -270,7 +269,6 @@ O Tipo de Predador define **como** o vampiro se alimenta habitualmente. Cada tip
 
 | Bonus | Detalhe |
 |---|---|
-| +1 Habilidade | Atuacao ou Subterfugio |
 | +1 Disciplina | Presenca ou Feiticaria do Sangue |
 | Especialidade | Atuacao (Oratoria) ou Subterfugio (Personalidade Publica) |
 | Humanidade | Nenhuma alteracao |
@@ -285,7 +283,6 @@ O Tipo de Predador define **como** o vampiro se alimenta habitualmente. Cada tip
 
 | Bonus | Detalhe |
 |---|---|
-| +1 Habilidade | Furtividade ou Furto |
 | +1 Disciplina | Auspicio ou Obfuscacao |
 | Especialidade | Furtividade (Invasao) ou Medicina (Anestesia) |
 | Humanidade | Nenhuma alteracao |
@@ -300,7 +297,6 @@ O Tipo de Predador define **como** o vampiro se alimenta habitualmente. Cada tip
 
 | Bonus | Detalhe |
 |---|---|
-| +1 Habilidade | Etiqueta ou Lideranca |
 | +1 Disciplina | Dominacao ou Presenca |
 | Especialidade | Etiqueta (Festas) ou Lideranca (Vida Noturna) |
 | Humanidade | Nenhuma alteracao |
@@ -315,7 +311,6 @@ O Tipo de Predador define **como** o vampiro se alimenta habitualmente. Cada tip
 
 | Bonus | Detalhe |
 |---|---|
-| +1 Habilidade | Persuasao ou Subterfugio |
 | +1 Disciplina | Fortitude ou Presenca |
 | Especialidade | Persuasao (Seducao) |
 | Humanidade | Nenhuma alteracao |
@@ -330,7 +325,6 @@ O Tipo de Predador define **como** o vampiro se alimenta habitualmente. Cada tip
 
 | Bonus | Detalhe |
 |---|---|
-| +1 Habilidade | Tecnologia ou Intimidacao |
 | +1 Disciplina | Dominacao ou Obfuscacao |
 | Especialidade | Tecnologia (Redes Sociais) ou Intimidacao (Cyberbullying) |
 | Humanidade | -1 Humanidade |
@@ -341,11 +335,11 @@ O Tipo de Predador define **como** o vampiro se alimenta habitualmente. Cada tip
 
 ## Passo 6: Disciplinas
 
-Na criacao, o personagem recebe **2 pontos em Disciplinas do Cla**.
+Na criacao, o personagem escolhe **duas Disciplinas do Cla**: **2 pontos em uma e 1 ponto na outra** (3 pontos no total) (Core p. 136).
 
-- Pode colocar 2 pontos em uma unica Disciplina (obtendo um poder de nivel 1 e um de nivel 2).
-- Pode colocar 1 ponto em duas Disciplinas diferentes (obtendo um poder de nivel 1 em cada).
-- O Tipo de Predador pode conceder +1 ponto adicional em uma Disciplina especifica.
+- Caitiff: quaisquer duas Disciplinas, tambem 2 + 1.
+- Sangue Ralo: sem Disciplinas proprias.
+- O Tipo de Predador concede +1 ponto adicional em uma das Disciplinas listadas no tipo.
 
 ### Disciplinas por Cla (Resumo)
 
@@ -388,14 +382,16 @@ A Geracao indica quao distante o vampiro esta de Caine (o Primeiro Vampiro).
 
 A Potencia do Sangue define varias capacidades vampiricas:
 
-| Potencia | Bonus de Dano (poderes) | Mend Amount | Rouse Re-Roll | Bane Severity | Feeding Penalty |
+| Potencia | Bonus de Disciplina | Mend Amount | Rouse Re-Roll | Bane Severity | Feeding Penalty |
 |---|---|---|---|---|---|
 | 0 | 0 | 1 Superficial | Nenhum | 0 | Nenhum |
-| 1 | 0 | 1 Superficial | Nivel 1 | 2 | Nenhum |
-| 2 | +1 | 2 Superficial | Nivel 1 | 2 | Sangue animal nao sustenta |
-| 3 | +1 | 2 Superficial | Nivel 2 | 3 | Sangue animal nao sustenta |
-| 4 | +2 | 3 Superficial | Nivel 2 | 4 | Sangue animal e bolsas nao sustentam |
-| 5 | +2 | 3 Superficial | Nivel 3 | 5 | Precisa drenar completamente |
+| 1 | 0 | 1 Superficial | Nivel 1 | 1 | Nenhum |
+| 2 | +1 | 2 Superficial | Nivel 1 | 1 | Animal e bolsa saciam metade |
+| 3 | +1 | 2 Superficial | Nivel 2 | 2 | Animal e bolsa nao saciam |
+| 4 | +2 | 3 Superficial | Nivel 2 | 2 | Idem; humano sacia 1 a menos |
+| 5 | +2 | 3 Superficial | Nivel 3 | 3 | Idem; humano sacia 1 a menos; so matando abaixo de Fome 2 |
+
+Fonte: Core p. 216. Tabela completa em `08_Potencia_de_Sangue.md`.
 
 ---
 
@@ -493,10 +489,10 @@ Apos completar todos os passos, calcule:
 [ ] 1. Conceito (quem era, como foi o Abraco, motivacao)
 [ ] 2. Cla (escolha e anote fraqueza do cla)
 [ ] 3. Ambicao e Desejo
-[ ] 4. Atributos (priorize 4/3/2, distribua, base 1)
+[ ] 4. Atributos (um 4, tres 3, quatro 2, um 1)
 [ ] 5. Habilidades (escolha Jack/Equilibrado/Especialista)
 [ ] 6. Tipo de Predador (aplique bonus)
-[ ] 7. Disciplinas (2 pontos + bonus do Predator Type)
+[ ] 7. Disciplinas (2 numa de cla + 1 noutra de cla, + 1 do Predator Type)
 [ ] 8. Geracao e Potencia do Sangue
 [ ] 9. Vantagens (7 pontos) e Defeitos (2 pontos)
 [ ] 10. Conviccoes (1-3) e Ancoras (1 por Conviccao)

@@ -22,16 +22,16 @@ A escala vai de **0 a 10**:
 
 | Humanidade | Estado | Efeitos |
 |---|---|---|
-| **10** | Santo | Parece completamente humano. Pode permanecer acordado brevemente apos o nascer do sol. Dano solar reduzido. Praticamente impossivel de manter como vampiro. |
+| **10** | Santo | Parece completamente humano. Dano solar reduzido a metade (Core p. 236). Praticamente impossivel de manter como vampiro. |
 | **9** | Compassivo | Aparencia totalmente humana. Muito sensivel a violencia e crueldade. Facil de se passar por mortal. |
-| **8** | Cuidadoso | Aparencia humana convincente. Poucas dicas de sobrenaturalidade. Resiste ao sol levemente melhor. |
+| **8** | Cuidadoso | Aparencia humana convincente. Poucas dicas de sobrenaturalidade. |
 | **7** | Normal (Padrao) | Nivel inicial. Aparencia humana normal. Padrao moral de uma pessoa comum. |
-| **6** | Distante | Comeca a parecer ligeiramente "errado". Pessoas sentem desconforto sutil. -1 dado em testes Sociais prolongados com mortais. |
-| **5** | Frio | Visivelmente estranho. Mil-Yard Stare. Dificuldade em se relacionar com mortais. -1 dado em testes Sociais com mortais. |
-| **4** | Desumano | Aparencia perturbadora. Criancas e animais fogem. -2 dados em testes Sociais com mortais (exceto Intimidacao). Torpor mais longo. |
-| **3** | Monstruoso | Emocoes humanas quase inexistentes. Apenas instinto e calculo. -2 dados Sociais com mortais. Dificuldade em despertar. |
-| **2** | Bestial | Mal consegue formar pensamentos complexos que nao envolvam predacao. -3 dados Sociais com mortais. Torpor extremamente longo. |
-| **1** | Limiar | A beira de se tornar Wight. Penalidades severas em tudo que envolve interacao humana. Um passo da perdicao. |
+| **6** | Distante | Comeca a parecer ligeiramente "errado". Pessoas sentem desconforto sutil. Sem penalidade social. |
+| **5** | Frio | Visivelmente estranho. Mil-Yard Stare. Dificuldade em se relacionar com mortais. -1 dado em interacoes com humanos. |
+| **4** | Desumano | Aparencia perturbadora. -2 dados em interacoes com humanos. Torpor mais longo. |
+| **3** | Monstruoso | Emocoes humanas quase inexistentes. Apenas instinto e calculo. -4 dados em interacoes com humanos. |
+| **2** | Bestial | Mal consegue formar pensamentos complexos que nao envolvam predacao. -6 dados em interacoes com humanos (-4 com Blush of Life). Torpor extremamente longo. |
+| **1** | Limiar | A beira de se tornar Wight. -8 dados em interacoes com humanos (-5 com Blush of Life). Um passo da perdicao. |
 | **0** | **Wight** | A Besta venceu. O personagem se torna um NPC — um monstro puro, sem razao, sem piedade, sem retorno. |
 
 ---
@@ -40,26 +40,21 @@ A escala vai de **0 a 10**:
 
 ### Aparencia e Interacao Social
 
+Penalidade nas rolagens para interagir com humanos — vale para a maioria das paradas Sociais (Core p. 237-239):
+
 | Humanidade | Modificador Social com Mortais |
 |---|---|
-| 8-10 | Nenhuma penalidade; aparencia completamente humana |
-| 7 | Nenhuma penalidade |
-| 6 | -1 dado em testes Sociais prolongados com mortais |
-| 5 | -1 dado em testes Sociais com mortais |
-| 4 | -2 dados em testes Sociais com mortais (exceto Intimidacao) |
-| 3 | -2 dados em testes Sociais com mortais; Intimidacao pode ter bonus |
-| 2 | -3 dados em testes Sociais com mortais |
-| 1 | -4 dados em testes Sociais com mortais |
+| 7-10 | Nenhuma penalidade |
+| 6 | Nenhuma penalidade |
+| 5 | -1 dado |
+| 4 | -2 dados |
+| 3 | -4 dados |
+| 2 | -6 dados (-4 com Blush of Life) |
+| 1 | -8 dados (-5 com Blush of Life) |
 
 ### Resistencia ao Sol
 
-| Humanidade | Efeito contra Luz Solar |
-|---|---|
-| 8-10 | Pode resistir brevemente a exposicao indireta. Primeiro turno sem dano (sol parcial). |
-| 6-7 | Regras normais de dano solar |
-| 4-5 | +1 dano solar por turno |
-| 2-3 | +2 dano solar por turno |
-| 1 | +3 dano solar por turno |
+A Humanidade nao aumenta o dano solar. O sol direto causa Agravado igual a **Severidade da Perdicao** por turno, em qualquer Humanidade (Core p. 221). A unica excecao: **Humanidade 10** reduz o dano solar a metade (Core p. 236).
 
 ### Torpor
 
@@ -217,9 +212,9 @@ Manchas representam acoes que mancham a alma do vampiro e corroem sua Humanidade
 
 ### Acumulacao
 
-As Manchas sao marcadas no tracker de Humanidade, nas caixas vazias entre o nivel atual de Humanidade e 0. Cada Mancha ocupa uma dessas caixas.
+O tracker de Humanidade tem **10 casas**. A Humanidade e marcada da esquerda para a direita; as Manchas, da direita para a esquerda, nas casas que sobram (Core p. 239).
 
-**Exemplo:** Um vampiro com Humanidade 7 tem 7 caixas vazias (de 0 a 6) onde Manchas podem ser colocadas. Se receber 3 Manchas, 3 dessas caixas sao marcadas.
+**Exemplo:** Um vampiro com Humanidade 7 tem 3 casas livres (10 − 7). Se receber 3 Manchas, as 3 casas ficam marcadas. Mancha que nao cabe nas casas livres provoca Degeneracao (ver secao 9).
 
 ---
 
@@ -234,26 +229,27 @@ O Teste de Remorso determina se o vampiro **realmente se arrepende** de suas aco
 
 ### Como Funciona
 
-1. **Conte as caixas vazias** no tracker de Humanidade (entre o nivel atual e 0) que **nao** estao marcadas com Manchas.
-2. Role **esse numero de dados** (d10).
+1. **Conte as casas** do tracker de 10 que nao tem ponto de Humanidade nem Mancha: **10 − Humanidade − Manchas** (Core p. 239).
+2. Role **esse numero de dados** (d10), com **minimo de 1 dado**.
 3. Se **pelo menos 1 dado** mostrar resultado de **6+**: o vampiro sente remorso. A Humanidade **nao cai**. Todas as Manchas sao removidas.
 4. Se **nenhum dado** mostrar 6+: a Humanidade **cai em 1 ponto**. Todas as Manchas sao removidas.
 
 ### Exemplo Detalhado
 
-Vampiro com **Humanidade 7**, recebeu **3 Manchas** durante a sessao.
+Vampiro com **Humanidade 6**, recebeu **2 Manchas** durante a sessao (exemplo do Core p. 239).
 
-- Caixas de 0 a 6 = 7 caixas.
-- 3 caixas estao marcadas com Manchas.
-- Restam **4 caixas livres**.
-- O jogador rola **4d10**.
-- Se qualquer dado mostrar 6+: remorso sentido, Humanidade permanece 7.
-- Se nenhum dado mostrar 6+: Humanidade cai para **6**.
-- Em ambos os casos, as 3 Manchas sao apagadas.
+- Tracker de 10 casas: 6 com Humanidade, 2 com Manchas.
+- Restam **2 casas livres**.
+- O jogador rola **2d10**.
+- Se qualquer dado mostrar 6+: remorso sentido, Humanidade permanece 6.
+- Se nenhum dado mostrar 6+: Humanidade cai para **5**.
+- Em ambos os casos, as 2 Manchas sao apagadas.
 
-### Zero Dados
+Com **Humanidade 7 e 3 Manchas**, nao sobra casa livre (10 − 7 − 3 = 0): o jogador rola **1 dado**.
 
-Se o numero de caixas livres for **0** (todas as caixas abaixo da Humanidade estao com Manchas), o jogador nao rola nenhum dado. A Humanidade **cai automaticamente em 1**. Isso representa uma espiral de degeneracao — quanto mais o vampiro peca, menos caixas livres tem, menos dados rola, mais provavel a queda.
+### Minimo de 1 Dado
+
+Mesmo com o tracker todo preenchido, o jogador **sempre rola pelo menos 1 dado** — nao ha queda automatica (Core p. 239). A espiral existe porque, quanto maior a Humanidade e mais Manchas, menos dados sobram.
 
 ---
 
@@ -265,12 +261,11 @@ Se o numero de caixas livres for **0** (todas as caixas abaixo da Humanidade est
 Acao imoral → Mancha → Teste de Remorso → Falha → Humanidade -1 → Mais difícil se arrepender
 ```
 
-A degeneracao e um ciclo vicioso:
-1. Humanidade cai.
-2. Menos caixas vazias para absorver Manchas.
-3. Menos dados no Teste de Remorso.
-4. Maior chance de falhar no remorso.
-5. Humanidade cai novamente.
+Pela conta do Core (dados = 10 − Humanidade − Manchas, p. 239), o Remorso fica **mais facil** quando a Humanidade cai, porque sobram mais casas livres. O perigo esta do outro lado:
+1. Humanidade alta deixa poucas casas livres.
+2. Poucas Manchas ja bastam para encher o tracker; a Mancha que nao cabe causa Degeneracao (Prejudicado e dano Agravado na Forca de Vontade).
+3. Com poucos dados, a chance de falhar no Remorso e alta.
+4. Cada queda pesa nas penalidades sociais e no torpor.
 
 ### Impacto Narrativo da Degeneracao
 
@@ -335,16 +330,18 @@ Aumentar a Humanidade e **extremamente dificil** no V5.
 
 | Humanidade | Aparencia | Mod. Social | Torpor | Resistencia Solar | Notas |
 |---|---|---|---|---|---|
-| 10 | Perfeitamente humano | Nenhum | 1 dia | Reduzida | Quase impossivel de manter |
-| 9 | Completamente humano | Nenhum | 3 dias | Levemente reduzida | — |
-| 8 | Muito humano | Nenhum | 1 semana | Levemente reduzida | — |
+| 10 | Perfeitamente humano | Nenhum | 1 dia | Dano a metade | Quase impossivel de manter |
+| 9 | Completamente humano | Nenhum | 3 dias | Normal | — |
+| 8 | Muito humano | Nenhum | 1 semana | Normal | — |
 | 7 | Normal | Nenhum | 2 semanas | Normal | Nivel inicial padrao |
-| 6 | Ligeiramente estranho | -1 (prolongado) | 1 mes | Normal | — |
+| 6 | Ligeiramente estranho | Nenhum | 1 mes | Normal | — |
 | 5 | Visivelmente estranho | -1 | 1 ano | Normal | — |
-| 4 | Perturbador | -2 | 1 decada | +1 dano solar | — |
-| 3 | Monstruoso | -2 | 50 anos | +2 dano solar | — |
-| 2 | Quase animal | -3 | 1 seculo | +2 dano solar | — |
-| 1 | Besta em forma humana | -4 | 5 seculos | +3 dano solar | Ultimo aviso |
+| 4 | Perturbador | -2 | 1 decada | Normal | — |
+| 3 | Monstruoso | -4 | 50 anos | Normal | — |
+| 2 | Quase animal | -6 | 1 seculo | Normal | — |
+| 1 | Besta em forma humana | -8 | 5 seculos | Normal | Ultimo aviso |
+
+Mod. Social: Core p. 237-239. Sol "Normal" = Severidade da Perdicao em Agravado por turno (Core p. 221, 236). A coluna Torpor ainda nao foi conferida com a p. 241.
 | 0 | **Wight** | N/A | Indefinido | N/A | Personagem perdido |
 
 ---
@@ -370,14 +367,14 @@ MANCHAS:
 - Conviccao pode PROTEGER contra Manchas se justificavel
 
 TESTE DE REMORSO:
-- Role dados = caixas de Humanidade vazias (sem Manchas)
+- Role dados = 10 - Humanidade - Manchas (minimo 1)
 - 1+ dado com 6+ = Remorso sentido, Humanidade nao cai
 - Nenhum 6+ = Humanidade -1
-- Zero dados = Queda automatica
+- Nunca ha queda automatica: o minimo e 1 dado
 
 DEGENERACAO:
 - Quanto menor a Humanidade, mais facil cair mais
-- Penalidades sociais, torpor longo, dano solar aumentado
+- Penalidades sociais e torpor longo (o dano solar nao muda com a Humanidade)
 - Humanidade 0 = Wight = personagem perdido para sempre
 
 ANCORAS:

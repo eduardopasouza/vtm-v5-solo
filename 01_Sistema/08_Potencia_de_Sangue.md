@@ -14,25 +14,29 @@ A Potencia de Sangue determina:
 - **Bonus em Disciplinas:** bonus passivo a pools de Disciplinas
 - **Severidade da Maldicao:** quao forte a Bane do cla se manifesta
 - **Penalidade Alimentar:** restricoes sobre de quem/como o vampiro pode se alimentar
-- **Reforco de Dado (Power Bonus):** bonus ao re-rolar dados de Disciplina
+- **Re-rolagem do Rouse de Disciplina:** até que nível de poder o Rouse Check de Disciplina rola 2 dados e fica com o maior (Core p. 216, 219)
 
 ---
 
 ## Tabela Completa de Potencia de Sangue
 
-| Nivel | Surto de Sangue | Dano Curado/Turno | Bonus Disciplina | Severidade Maldicao | Penalidade Alimentar | Reforco |
-|-------|-----------------|---------------------|-------------------|----------------------|----------------------|---------|
-| 0 | +1 dado | 1 Superficial | +0 | 0 | Nenhuma | +0 |
-| 1 | +2 dados | 1 Superficial | +0 | 1 | Nenhuma | +0 |
-| 2 | +2 dados | 2 Superficial | +1 | 1 | Nenhuma | +0 |
-| 3 | +3 dados | 2 Superficial | +1 | 2 | Sangue animal e embalado causa nausea | +0 |
-| 4 | +3 dados | 3 Superficial | +2 | 2 | Sangue animal e embalado nao sustenta | +0 |
-| 5 | +4 dados | 3 Superficial | +2 | 3 | Sangue animal e embalado nao sustenta; deve drenar e matar | +1 |
-| 6 | +4 dados | 3 Superficial + 1 Agravado | +3 | 3 | Apenas Vitae vampirica sustenta | +1 |
-| 7 | +5 dados | 3 Superficial + 2 Agravado | +3 | 4 | Apenas Vitae vampirica sustenta | +2 |
-| 8 | +5 dados | 4 Superficial + 2 Agravado | +4 | 4 | Apenas Vitae vampirica sustenta | +2 |
-| 9 | +6 dados | 4 Superficial + 3 Agravado | +4 | 5 | Apenas Vitae vampirica sustenta | +3 |
-| 10 | +6 dados | 5 Superficial + 3 Agravado | +5 | 5 | Apenas Vitae vampirica sustenta | +3 |
+Fonte: Core p. 216. Nas linhas 6-7 e 8-9 a coluna de alimentação do livro é uma célula só para as duas linhas.
+
+| Nível | Surto de Sangue | Cura por Rouse | Bônus de Disciplina | Re-rolagem do Rouse de Disciplina | Severidade da Perdição | Penalidade Alimentar |
+|-------|-----------------|----------------|---------------------|-----------------------------------|------------------------|----------------------|
+| 0 | Nenhum | 1 Superficial | Nenhum | Nenhuma | 0 | Nenhuma |
+| 1 | +1 dado | 1 Superficial | Nenhum | Nível 1 | 1 | Nenhuma |
+| 2 | +1 dado | 2 Superficiais | +1 dado | Nível 1 | 1 | Animal e bolsa saciam metade da Fome |
+| 3 | +2 dados | 2 Superficiais | +1 dado | Nível 2 ou menos | 2 | Animal e bolsa não saciam |
+| 4 | +2 dados | 3 Superficiais | +2 dados | Nível 2 ou menos | 2 | Animal e bolsa não saciam; humano sacia 1 a menos |
+| 5 | +3 dados | 3 Superficiais | +2 dados | Nível 3 ou menos | 3 | Animal e bolsa não saciam; humano sacia 1 a menos; só matando cai abaixo de Fome 2 |
+| 6 | +3 dados | 3 Superficiais | +3 dados | Nível 3 ou menos | 3 | Animal e bolsa não saciam; humano sacia 2 a menos; só matando cai abaixo de Fome 2 |
+| 7 | +4 dados | 3 Superficiais | +3 dados | Nível 4 ou menos | 4 | Igual ao nível 6 |
+| 8 | +4 dados | 4 Superficiais | +4 dados | Nível 4 ou menos | 4 | Animal e bolsa não saciam; humano sacia 2 a menos; só matando cai abaixo de Fome 3 |
+| 9 | +5 dados | 4 Superficiais | +4 dados | Nível 5 ou menos | 5 | Igual ao nível 8 |
+| 10 | +5 dados | 5 Superficiais | +5 dados | Nível 5 ou menos | 5 | Animal e bolsa não saciam; humano sacia 3 a menos; só matando cai abaixo de Fome 3 |
+
+A tabela só traz cura de dano **Superficial**. Dano Agravado segue a regra geral, em qualquer Potência (ver abaixo).
 
 ---
 
@@ -40,27 +44,36 @@ A Potencia de Sangue determina:
 
 ### Surto de Sangue (Blood Surge)
 
-O Surto de Sangue permite ao vampiro **gastar um Rouse Check** para adicionar dados extras a uma unica rolagem de Atributo (nao Habilidades, nao Disciplinas). E ativado declarando o Surto **antes** da rolagem.
+Com 1 Rouse Check, o vampiro soma dados a uma parada que inclua **qualquer Atributo** — Físico, Social ou Mental (Core p. 218). Regras:
 
-- **Potencia 0 (Sangue Ralo):** +1 dado — mal perceptivel
-- **Potencia 1-2 (Neonato tipico):** +2 dados — util mas modesto
-- **Potencia 3-4 (Ancillae):** +3 dados — vantagem significativa
-- **Potencia 5-6 (Anciao):** +4 dados — poder esmagador
-- **Potencia 7+ (Matusalem):** +5 a +6 dados — sobrehumano
+- Uma vez por rolagem; vale só para aquela rolagem (os dados somados continuam se o jogador re-rolar com Força de Vontade).
+- Não vale em testes de Força de Vontade ou Humanidade, em rolagens que cubram mais de uma cena, no combate de rolagem única ou quando o Narrador vetar.
+- Rolagem com Surto não usa vitória automática nem "Tomar Metade".
 
-**Nota:** O Surto de Sangue custa 1 Rouse Check. Se a Fome subir para 5, o vampiro entra em Frenesi de Fome imediatamente.
+Dados por Potência (Core p. 216):
+
+- **Potência 0 (Sangue Ralo):** sem Surto
+- **Potência 1-2:** +1 dado
+- **Potência 3-4:** +2 dados
+- **Potência 5-6:** +3 dados
+- **Potência 7-8:** +4 dados
+- **Potência 9-10:** +5 dados
+
+**Nota:** o Surto custa 1 Rouse Check. Chegar a Fome 5 não provoca frenesi por si só; o teste de frenesi de fome vem quando um Rouse Check **falha** com a Fome já em 5 (Core p. 220).
 
 ---
 
 ### Dano Curado por Turno
 
-Quantidade de dano que o vampiro cura gastando 1 Rouse Check por turno:
+Dano **Superficial** curado com 1 Rouse Check; no máximo um Rouse de cura por turno (Core p. 216, 218):
 
-- **Niveis 0-2:** Apenas dano Superficial (1-2 pontos). Cura basica — ferimentos leves cicatrizam rapidamente.
-- **Niveis 3-5:** Mais dano Superficial (2-3 pontos). Maior resiliencia mas ainda vulneravel a dano Agravado.
-- **Niveis 6+:** Cura dano Superficial **e Agravado** simultaneamente. Este e o marco que separa ancioes de neonatos — a capacidade de curar dano Agravado (fogo, luz solar, garras de lobisomem) por turno e devastadoramente poderosa.
+- **Níveis 0-1:** 1 ponto
+- **Níveis 2-3:** 2 pontos
+- **Níveis 4-7:** 3 pontos
+- **Níveis 8-9:** 4 pontos
+- **Nível 10:** 5 pontos
 
-**Importante:** Cada turno de cura custa 1 Rouse Check separado. Curar dano Agravado tambem exige que o vampiro gaste um turno inteiro concentrado na cura (nao pode agir normalmente).
+**Dano Agravado não entra nessa tabela**, em nenhuma Potência. Para curá-lo, o vampiro espera o anoitecer seguinte e faz 3 Rouse Checks, além do Rouse de despertar; isso cura 1 ponto de Agravado (e um ferimento incapacitante), e só 1 ponto por noite. Se esses Rouses levariam a Fome acima de 5, o vampiro cai em torpor em vez de testar frenesi (Core p. 218-219).
 
 ---
 
@@ -104,33 +117,36 @@ A Maldicao do cla (Bane) se intensifica com a Potencia de Sangue:
 
 A restricao mais importante mecanicamente — determina de **quem** o vampiro pode se alimentar:
 
-**Nivel 0-2: Sem restricao**
-Qualquer sangue serve — humano, animal, embalado. Neonatos tem a maior liberdade alimentar.
+As penalidades se acumulam conforme a Potência sobe (Core p. 216). Sangue humano **continua saciando em todos os níveis**; o que muda é quanto.
 
-**Nivel 3: Sangue animal e embalado causa nausea**
-Consumir sangue animal ou de bolsa exige teste de Compostura (Composure + Resolve) DD 3 para nao regurgitar. Se falhar, perde o sangue e nao reduz Fome.
+**Níveis 0-1: sem penalidade.** Humano, animal e bolsa saciam normalmente.
 
-**Nivel 4: Sangue animal e embalado nao sustenta**
-Nao importa quanto beba, sangue animal ou embalado **nao reduz Fome**. O vampiro PRECISA de sangue humano vivo.
+**Nível 2: animal e bolsa saciam metade.**
 
-**Nivel 5: Deve drenar e matar**
-Alem de exigir sangue humano, o vampiro precisa **drenar completamente** a vitima (mata-la) para reduzir Fome abaixo de certo ponto. Alimentacao parcial e insuficiente para saciar totalmente. Cada alimentacao e um assassinato.
+**Níveis 3+: animal e bolsa não saciam nada.** Daqui para cima, só sangue humano (ou de vampiro) reduz a Fome.
 
-**Nivel 6+: Apenas Vitae vampirica sustenta**
-Sangue humano nao basta — apenas o sangue de **outros vampiros** pode saciar a Fome. Isso torna ancioes extremamente perigosos e e uma das razoes pelas quais entram em torpor voluntario: a alternativa e cacar seus proprios pares constantemente.
+**Níveis 4-5: cada humano sacia 1 a menos.**
+
+**Níveis 6-9: cada humano sacia 2 a menos.**
+
+**Nível 10: cada humano sacia 3 a menos.**
+
+**Piso de Fome sem matar.** A partir do nível 5, só drenando e matando um humano a Fome cai abaixo de 2; a partir do nível 8, abaixo de 3.
+
+Bolsa de sangue não processado sacia 1 de Fome nas Potências em que ainda sacia; sangue processado (fracionado, com aditivos) não sustenta sem o Mérito Iron Gullet (Core p. 212).
 
 ---
 
-### Reforco de Dado (Power Bonus)
+### Re-rolagem do Rouse de Disciplina
 
-Bonus ao numero de dados que podem ser re-rolados em testes de Disciplina:
+Ao ativar um poder de Disciplina, o jogador rola **2 dados no Rouse Check e fica com o maior**, desde que o nível do poder esteja dentro do limite da sua Potência (Core p. 216, 219). Não tem relação com Força de Vontade.
 
-- **+0 (Niveis 0-4):** Sem reforco adicional
-- **+1 (Niveis 5-6):** Re-rola 1 dado extra em falhas de Disciplina
-- **+2 (Niveis 7-8):** Re-rola 2 dados extras
-- **+3 (Niveis 9-10):** Re-rola 3 dados extras
-
-**Nota:** Este bonus se aplica quando o vampiro usa Forca de Vontade para re-rolar dados em testes de Disciplina.
+- **Nível 0:** nenhum poder
+- **Níveis 1-2:** poderes de nível 1
+- **Níveis 3-4:** poderes de nível 2 ou menos
+- **Níveis 5-6:** nível 3 ou menos
+- **Níveis 7-8:** nível 4 ou menos
+- **Níveis 9-10:** nível 5 ou menos
 
 ---
 
@@ -187,7 +203,7 @@ Vampiros de 14a-16a Geracao. Caracteristicas unicas:
 4. A progressao natural em uma cronica longa e ganhar 1 ponto a cada arco significativo
 
 ### Para o Jogador
-1. **Surto de Sangue e sua arma secreta** — 2-3 dados extras numa rolagem critica pode salvar sua nao-vida
+1. **Surto de Sangue e sua arma secreta** — 1 a 2 dados extras (neonato/ancilla) numa rolagem critica podem salvar sua nao-vida
 2. **Vigie a Fome** — cada Surto e cada cura custa um Rouse Check
 3. **Planeje a alimentacao** — se sua Potencia sobe, suas opcoes de alimentacao diminuem
 4. **Bonus de Disciplina** e passivo e gratuito — quanto maior sua Potencia, mais poderosas suas Disciplinas automaticamente

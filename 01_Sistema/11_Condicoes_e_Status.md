@@ -26,23 +26,23 @@ Todo personagem tem duas tracks de saude baseadas em seus Atributos:
 | Superficial | / | Socos, quedas, armas de fogo (para vampiros) | 1 Rouse Check cura conforme Potencia |
 | Agravado | X | Fogo, luz solar, garras de lobisomem, fome extrema | Requer Rouse Check + tempo ou Potencia alta |
 
-**Conversao:** Quando toda a track esta preenchida com dano Superficial e mais dano Superficial e aplicado, cada 2 pontos de Superficial excedente convertem 1 Superficial em Agravado.
+**Conversao:** Com a track ja cheia (Prejudicado), **cada ponto de dano sofrido**, de qualquer tipo, converte 1 Superficial ja marcado em Agravado, um por um. O dano Superficial e dividido por 2 antes de converter (Core p. 127).
 
 ---
 
 ### Incapacitacao (Impaired)
 
-**Trigger:** Quando a track de Saude OU Forca de Vontade tem **metade ou mais** de suas caixas preenchidas com **qualquer** tipo de dano (Superficial ou Agravado).
+**Trigger:** Quando a track de Saude OU Forca de Vontade fica **inteiramente** preenchida, com **qualquer** tipo de dano (Superficial, Agravado ou mistura) (Core p. 126).
 
 **Efeito mecanico:**
 - **-2 dados** em TODAS as pools que usem o track afetado
-- Saude cheia pela metade: -2 dados em pools fisicas
-- Forca de Vontade cheia pela metade: -2 dados em pools sociais e mentais
-- Se AMBAS as tracks estiverem pela metade: -2 dados em TUDO (nao acumula para -4)
+- Saude cheia: -2 dados em pools fisicas
+- Forca de Vontade cheia: -2 dados em pools sociais e mentais
+- Se AMBAS as tracks estiverem cheias: -2 dados em TUDO (nao acumula para -4)
 
-**Duracao:** Ate que o dano seja curado abaixo da metade da track.
+**Duracao:** Ate que pelo menos uma caixa da track seja curada.
 
-**Exemplo:** Um vampiro com Vigor 3 tem Health track de 6 caixas. Com 3 caixas preenchidas (qualquer tipo), ele esta Incapacitado — -2 dados em tudo fisico.
+**Exemplo:** Um vampiro com Vigor 3 tem Health track de 6 caixas. Com as 6 caixas preenchidas (qualquer tipo), ele esta Incapacitado — -2 dados em tudo fisico. Com 3 caixas, ainda nao ha penalidade.
 
 **Nota importante:** Incapacitacao e automatica e nao pode ser ignorada. E a unica penalidade de dano no V5 — nao ha niveis graduais como em edicoes anteriores.
 
@@ -136,7 +136,7 @@ O Frenesi e a manifestacao da Besta assumindo controle do vampiro. Durante o Fre
 
 **Trigger:** Provocacao extrema, humilhacao, dano fisico, ameaca a entes queridos, frustração intensa.
 
-**Teste para resistir:** Compostura (Composure) + Determinacao (Resolve) vs. DD variavel (geralmente 3-5)
+**Teste para resistir:** Forca de Vontade atual (caixas sem dano) + Humanidade ÷ 3 (para baixo) vs. DD variavel (Core p. 219)
 
 **Comportamento durante:** O vampiro ataca a fonte da raiva com violencia maxima. Usa garras, presas, Disciplinas fisicas — tudo para destruir o alvo. Se o alvo for eliminado ou fugir, o vampiro pode virar-se contra o proximo alvo disponivel.
 
@@ -156,7 +156,7 @@ O Frenesi e a manifestacao da Besta assumindo controle do vampiro. Durante o Fre
 
 **Trigger:** Fome alta (especialmente 4-5), exposicao a sangue fresco, Rouse Check que elevaria Fome acima de 5.
 
-**Teste para resistir:** Compostura (Composure) + Determinacao (Resolve) vs. DD variavel
+**Teste para resistir:** Forca de Vontade atual (caixas sem dano) + Humanidade ÷ 3 (para baixo) vs. DD variavel (Core p. 219)
 
 **Comportamento durante:** O vampiro busca sangue a qualquer custo. Ataca a fonte de sangue mais proxima — mortal, animal, ate outro vampiro. Nao se preocupa com a Mascara, com aliados, com nada. Drena completamente se nao for parado.
 
@@ -176,7 +176,7 @@ O Frenesi e a manifestacao da Besta assumindo controle do vampiro. Durante o Fre
 
 **Trigger:** Fogo, luz solar, dano agravado, ameacas verdadeiramente sobrenaturais.
 
-**Teste para resistir:** Compostura (Composure) + Determinacao (Resolve) vs. DD variavel
+**Teste para resistir:** Forca de Vontade atual (caixas sem dano) + Humanidade ÷ 3 (para baixo) vs. DD variavel (Core p. 219)
 
 **Comportamento durante:** O vampiro **foge**. Nao ataca — corre. Atravessa paredes, janelas, multidoes, qualquer coisa para escapar da fonte do terror. Pode usar Celeridade e Proteanismo instintivamente para fugir. Ignora aliados, Mascara, tudo.
 
@@ -280,15 +280,15 @@ Roubar a Morte e para momentos cinematicos: o vampiro agonizante que sussurra o 
 Uma estaca de madeira cravada no coracao **nao mata** o vampiro — o **paralisa completamente**.
 
 ### Mecanica
-- Requer ataque direcionado ao coracao: -2 dados na pool de ataque E DD 5 (ou teste contestado)
-- Se bem-sucedido, o vampiro fica paralisado: consciente mas incapaz de agir, falar ou usar Disciplinas
-- O vampiro pode ouvir e ver tudo ao redor, mas nao pode reagir
+- Em combate: tiro dirigido ao coracao com **-2 dados**, causando **5 ou mais de dano** de qualquer tipo (antes de dividir); estaca tem valor de arma +0 (Core p. 221, 302-304). Ou cravar a estaca no vampiro enquanto ele dorme.
+- Se bem-sucedido, o vampiro fica paralisado: consciente, mas so consegue movimentos minimos (mexer um dedo, abrir os olhos)
+- Ainda pode usar **Disciplinas mentais** (Auspicios, Presenca, Dominacao), mas so da ordens se puder se comunicar telepaticamente (Core p. 223)
 - Remover a estaca liberta o vampiro imediatamente
 
 ### Duracao
 - Indefinida enquanto a estaca permanece
-- O vampiro nao precisa se alimentar enquanto estacado (metabolismo parado)
-- Fome nao aumenta durante paralisia
+- O vampiro estacado **continua fazendo o Rouse Check de despertar a cada por do sol**; cedo ou tarde a Fome o leva ao torpor (Core p. 223, 219)
+- Em torpor e estacado, so desperta depois que a estaca for removida
 
 ### Uso Tatico
 - Estaca + exposicao ao sol = Morte Final lenta e agonizante
@@ -299,12 +299,13 @@ Uma estaca de madeira cravada no coracao **nao mata** o vampiro — o **paralisa
 
 ## Dano por Luz Solar
 
-| Exposicao | Dano por Turno | Tipo |
+| Exposicao (Core p. 221) | Dano | Tipo |
 |-----------|---------------|------|
-| Luz indireta (dia nublado, vidro grosso) | 1 | Superficial |
-| Luz direta parcial (sombra, coberto) | 1-2 | Agravado |
-| Luz solar direta | 3+ | Agravado |
-| Exposicao total (meio-dia, sem protecao) | 5+ | Agravado |
+| Luz solar direta | Severidade da Perdicao, por turno | Agravado |
+| Obscurecida (cortina, dia muito nublado) ou corpo coberto | O mesmo, a cada dois turnos ou menos | Agravado |
+| Sangue Ralo, luz direta | 1 por turno | Superficial |
+
+Humanidade 10 reduz o dano solar a metade (Core p. 236).
 
 **Fortitude** pode reduzir dano solar. Cada ponto de Fortitude pode absorver 1 ponto de dano solar por turno.
 

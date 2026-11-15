@@ -76,21 +76,21 @@ Cada personagem tem **uma acao principal** por turno. Acoes menores (falar, saca
 ### Ataque Desarmado
 
 - **Parada:** Forca + Briga
-- **Dano base:** Forca em dano **Superficial**
+- **Dano:** a margem de sucesso, em dano **Superficial** (a Forca nao soma ao dano)
 - **Contra:** Teste oposto vs Forca + Briga (contra-ataque) ou Destreza + Atletismo (esquiva)
 
 ### Ataque com Arma Branca
 
 - **Parada:** Destreza + Armas Brancas (ou Forca + Armas Brancas para armas pesadas)
-- **Dano base:** Forca + bonus da arma
+- **Dano:** margem de sucesso + valor da arma (Forca nao entra)
 - **Tipo de dano:** Geralmente **Superficial** contra vampiros; veja excecoes
 
 ### Resolucao
 
 1. Atacante e defensor fazem testes opostos.
-2. **Margem de sucesso** do atacante (se vencer) = dano adicional.
-3. Dano total = **Dano base + Margem de sucesso**
-4. Defensor aplica dano ao tracker de Saude.
+2. O vencedor aplica a **margem de sucesso** como dano.
+3. Dano total = **Margem de sucesso + valor da arma** (se usou arma) (Core p. 126, 304)
+4. Defensor aplica dano ao tracker de Saude (Superficial dividido por 2, para cima).
 
 ### Esquiva vs Contra-ataque
 
@@ -104,25 +104,26 @@ Cada personagem tem **uma acao principal** por turno. Acoes menores (falar, saca
 ### Ataque a Distancia
 
 - **Parada:** Compostura + Armas de Fogo
-- **Dano base:** Conforme a arma (veja tabela)
-- **Contra:** Geralmente nao ha teste oposto — o Narrador define a DD baseada na distancia e cobertura.
+- **Dano:** margem de sucesso + valor da arma (veja tabela)
+- **Contra:** Teste contestado contra a defesa do alvo, normalmente **Destreza + Atletismo** (Core p. 125, 301). Dois atiradores trocando tiros podem resolver como conflito de dois lados.
 
-### Tabela de Dificuldades por Distancia
+### Distancia
 
-| Distancia | DD | Descricao |
-|---|---|---|
-| Curta (< 5m) | 2 | Queima-roupa |
-| Media (5-20m) | 3 | Distancia tipica |
-| Longa (20-50m) | 4 | Precisa mirar |
-| Extrema (50m+) | 5-6 | Tiro de sniper |
+Nao ha tabela de DD por distancia. Atirar alem do **alcance efetivo** da arma custa **-2 dados** (Core p. 301).
 
 ### Cobertura
 
-| Tipo | Modificador |
+A cobertura modifica a **parada de defesa** do alvo, nao a do atirador (Core p. 125, 302):
+
+| Cobertura do alvo | Modificador na defesa |
 |---|---|
-| Parcial (muro baixo, carro) | +2 DD para acertar |
-| Substancial (trincheira, pilar) | +4 DD para acertar |
-| Total (parede completa) | Impossivel acertar (deve contornar) |
+| Nenhuma | -2 dados |
+| So ocultacao (arbustos, arvore fina contra fuzil) | -1 dado |
+| Dura (bloco do motor de um carro, quina de concreto) | 0 |
+| Trincheira (sacos de areia, bunker) | +1 dado |
+| Seteira | +2 dados |
+
+Alvo parado nao tem parada de defesa: o atirador rola contra DD fixa 1 (Core p. 302).
 
 ### Mirar
 
@@ -204,15 +205,14 @@ Vampiros sao resistentes a maioria das formas de dano, mas possuem vulnerabilida
 
 ### Luz Solar
 
-| Exposicao | Dano por Turno |
+| Exposicao | Dano (Core p. 221) |
 |---|---|
-| Indireta (dia nublado, janela coberta) | 1 Agravado |
-| Parcial (sombra com raios) | 2 Agravado |
-| Direta (sol pleno) | 3+ Agravado |
+| Direta | Agravado igual a **Severidade da Perdicao**, por turno |
+| Obscurecida (cortinas, dia muito nublado) ou corpo coberto (casaco, luvas, mascara, chapeu, oculos) | O mesmo dano, mas a cada dois turnos ou menos |
+| Sangue Ralo, sol direto | 1 Superficial por turno |
 
 - Causa Frenesi de Terror automatico.
-- Vampiros de baixa Humanidade sofrem mais facilmente com o sol (Humanidade < 4 = dano adicional ou efeitos piores).
-- Vampiros de alta Humanidade podem resistir brevemente a exposicao indireta.
+- A Humanidade nao aumenta o dano solar. So **Humanidade 10** reduz o dano a metade (Core p. 236).
 
 ### Estaca no Coracao
 
@@ -264,18 +264,16 @@ Vampiros sao resistentes a maioria das formas de dano, mas possuem vulnerabilida
 
 ## 10. Armadura
 
-| Tipo | Reducao de Dano | Notas |
-|---|---|---|
-| Jaqueta de couro | 1 (corpo) | Discreta |
-| Colete a prova de balas (leve) | 2 (corpo) | Ocultavel sob roupas |
-| Colete tatico | 4 (corpo) | Visivel, militar |
-| Armadura pesada / riot gear | 6 (corpo + cabeca) | Impede movimento, muito visivel |
-| Capacete | +1-2 (cabeca) | Protege contra ataques na cabeca |
-| Escudo | +2 (adicional) | Requer uma mao |
+| Tipo (Core p. 304) | Valor |
+|---|---|
+| Roupa reforcada / couro pesado | 2 (zero contra balas) |
+| Tecido balistico | 2 |
+| Colete Kevlar / flak jacket | 4 |
+| Armadura tatica SWAT/militar | 6 (-1 dado em rolagens de Destreza) |
 
-- Armadura reduz o **dano Superficial** antes de ser aplicado ao tracker.
-- **Nao reduz** dano Agravado (fogo, garras sobrenaturais, etc.) a menos que especificamente indicado.
-- Armadura se degrada: apos absorver certo dano acumulado, pode ser destruida (criterio do Narrador).
+- Cada ponto de armadura **converte 1 ponto de dano Agravado de perfuracao ou corte em Superficial** (por rolagem de dano), que depois e dividido como sempre (Core p. 304).
+- Armadura **nao reduz** dano Superficial.
+- Por isso, serve quase so a mortais e Sangue Ralo: para vampiros, balas e laminas ja causam Superficial.
 
 ---
 
@@ -349,7 +347,7 @@ Alem de Saude, personagens possuem um tracker de **Forca de Vontade** (Compostur
 | 4 | 3 Superficial |
 | 5 | 3 Superficial |
 
-- **Dano Agravado** cura muito mais lentamente: 1 ponto por noite de repouso completo, tambem requerendo um Rouse Check.
+- **Dano Agravado** cura muito mais lentamente: ao anoitecer, 3 Rouse Checks (alem do Rouse de despertar) curam 1 ponto; no maximo 1 ponto por noite (Core p. 218-219).
 - **Curar em combate:** Pode gastar um Rouse Check como acao para curar dano Superficial.
 
 ### Mortais
@@ -371,7 +369,7 @@ Alem de Saude, personagens possuem um tracker de **Forca de Vontade** (Compostur
 
 ### Resistir ao Frenesi
 
-- **Teste:** Forca de Vontade (Compostura + Determinacao) vs DD definida pelo Narrador.
+- **Teste:** Forca de Vontade **atual** (caixas sem dano) + Humanidade ÷ 3 (para baixo) vs DD definida pelo Narrador (Core p. 219). Vitoria = resiste, mas gasta o turno; critico = resiste sem perder o turno.
 
 | Situacao | DD |
 |---|---|
@@ -391,11 +389,10 @@ Alem de Saude, personagens possuem um tracker de **Forca de Vontade** (Compostur
 
 ### Cavalgando a Onda (Riding the Wave)
 
-Em vez de resistir ao Frenesi, o vampiro pode **tentar direciona-lo**.
+Em vez de resistir, o vampiro pode **ceder de proposito** ao Frenesi, **sem teste** (Core p. 219-220).
 
-- Teste: Forca de Vontade vs DD 4.
-- **Sucesso:** O vampiro entra em Frenesi, mas mantem alguma direcao — pode escolher alvos e evitar aliados.
-- **Falha:** Frenesi total, sem controle.
+- Valem as regras normais do Frenesi.
+- O jogador conduz o proprio Frenesi (escolhe alvos, de quem se alimenta primeiro), em vez de o Narrador assumir o personagem.
 
 ---
 
@@ -453,14 +450,14 @@ INICIO DO TURNO:
 
 ATAQUE:
 - Corpo a corpo: Forca+Briga / Destreza+Armas Brancas vs Defesa
-- Distancia: Compostura+Armas de Fogo vs DD
-- Dano = Base + Margem de Sucesso
+- Distancia: Compostura+Armas de Fogo vs Destreza+Atletismo do alvo
+- Dano = Margem de Sucesso + valor da arma (Forca nao entra)
 - Vampiros: Superficial mundano / 2 (arredondado para cima)
 
 DEFESA:
 - Esquiva: Destreza + Atletismo
 - Contra-ataque: Forca + Briga / Destreza + Armas Brancas
-- Armadura reduz dano Superficial
+- Armadura converte Agravado de corte/perfuracao em Superficial
 
 DANO CRITICO:
 - Fogo = Agravado + Frenesi Terror
@@ -470,8 +467,8 @@ DANO CRITICO:
 - Tracker cheio Agravado = Torpor (vampiro) / Morte (mortal)
 
 FRENESI:
-- Resistir: FdV (Compostura + Determinacao) vs DD
-- Cavalgar a Onda: FdV vs DD 4
+- Resistir: FdV atual + Humanidade/3 vs DD
+- Cavalgar a Onda: sem teste; o jogador conduz o frenesi
 ```
 
 ---

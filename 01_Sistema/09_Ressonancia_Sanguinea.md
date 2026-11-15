@@ -24,7 +24,7 @@ O V5 utiliza o sistema classico dos Quatro Temperamentos (baseado na teoria dos 
 
 **Disciplinas favorecidas:**
 - **Presenca** (emocoes de atracao, desejo, influencia social positiva)
-- **Celeridade** (energia, vitalidade, vivacidade)
+- **Feiticaria do Sangue** (Core p. 227)
 
 **Onde encontrar sangue Sanguineo:**
 - Festas e celebracoes
@@ -108,7 +108,7 @@ O V5 utiliza o sistema classico dos Quatro Temperamentos (baseado na teoria dos 
 
 | Temperamento | Emocao Central | Disciplinas | Locais Tipicos | Cor |
 |-------------|---------------|-------------|----------------|-----|
-| Sanguineo | Alegria/Desejo | Presenca, Celeridade | Festas, encontros | Vermelho |
+| Sanguineo | Alegria/Desejo | Presenca, Feiticaria do Sangue | Festas, encontros | Vermelho |
 | Colerico | Raiva/Furia | Potencia, Celeridade | Brigas, protestos | Amarelo |
 | Melancolico | Tristeza/Medo | Fortitude, Ofuscacao | Hospitais, funerais | Preto |
 | Fleumatico | Calma/Controle | Auspicios, Dominacao | Bibliotecas, labs | Branco |
@@ -121,7 +121,7 @@ O V5 utiliza o sistema classico dos Quatro Temperamentos (baseado na teoria dos 
 |-----------|---------------------|----------------------|
 | Animalismo | Nenhuma especifica (sangue animal) | Colerico |
 | Auspicios | Fleumatico | — |
-| Celeridade | Colerico ou Sanguineo | — |
+| Celeridade | Colerico (Core p. 227) | — |
 | Dominacao | Fleumatico | — |
 | Fortitude | Melancolico | — |
 | Feiticaria de Sangue | Sanguineo | Fleumatico |
@@ -155,7 +155,7 @@ Nem todo sangue tem a mesma forca emocional. A intensidade da Ressonancia depend
 
 **Efeito mecanico:** **+1 dado** em pools de Disciplinas associadas aquela Ressonancia ate a proxima alimentacao ou ate o fim da sessao (o que vier primeiro).
 
-**Exemplo:** Um homem em furia apos descobrir traicao (Colerico intenso — +1 dado em Potencia e Celeridade). Uma mulher em extase durante orgasmo (Sanguineo intenso — +1 dado em Presenca e Celeridade).
+**Exemplo:** Um homem em furia apos descobrir traicao (Colerico intenso — +1 dado em Potencia e Celeridade). Uma mulher em extase durante orgasmo (Sanguineo intenso — +1 dado em Presenca e Feiticaria do Sangue).
 
 **Relevancia:** Sangue Intenso e o que vampiros estrategicos buscam. Requer caca direcionada — encontrar vitimas no auge emocional.
 
@@ -230,7 +230,7 @@ O metodo de caca influencia a Ressonancia disponivel:
 | Saqueador de Tumulos | Nenhuma (sangue morto) | Pessimo para avanco |
 | Osiris | Sanguineo (fas excitados) | Otimo para Presenca |
 | Sandman | Fleumatico (vitimas dormindo — calmas) | Bom para Auspicios/Dominacao |
-| Rainha da Cena | Sanguineo (festeiros felizes) | Bom para Presenca/Celeridade |
+| Rainha da Cena | Sanguineo (festeiros felizes) | Bom para Presenca/Feiticaria do Sangue |
 | Sirene | Sanguineo (amantes excitados) | Otimo para Presenca |
 | Extorsionista | Colerico ou Melancolico (vitimas com raiva ou medo) | Versatil |
 

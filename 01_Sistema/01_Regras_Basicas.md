@@ -108,7 +108,7 @@ Quando dois personagens agem diretamente um contra o outro.
 1. Cada participante monta sua parada de dados apropriada.
 2. Ambos rolam simultaneamente.
 3. Quem obtiver mais sucessos vence.
-4. Em caso de empate, o **defensor** vence (ou a situacao permanece inalterada).
+4. Em caso de empate, vence **quem age** (o personagem que tomou a iniciativa da acao), pois basta igualar os sucessos do oponente (Core p. 123). Em conflito de dois lados, o empate faz os dois sofrerem dano de margem 1 (Core p. 125).
 5. A margem de sucesso (diferenca entre os resultados) pode determinar a intensidade do efeito.
 
 **Exemplo:** Um vampiro tenta mentir (Manipulacao + Subterfugio) para outro que tenta perceber a mentira (Raciocinio + Intuicao). O mentiroso rola 6 dados e obtem 3 sucessos; o detector rola 5 dados e obtem 2 sucessos. A mentira funciona com margem 1.

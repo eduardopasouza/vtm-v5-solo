@@ -221,13 +221,7 @@ Aprender uma Disciplina que nao pertence ao cla do vampiro exige:
 
 ### Forca de Vontade (Willpower)
 
-| Compra | Custo em XP |
-|---|---|
-| +1 ponto de Forca de Vontade | **10 XP** |
-
-> A Forca de Vontade maxima permanece igual a **Compostura + Determinacao**. Este custo aumenta o tracker permanente (se estiver abaixo do maximo por algum motivo narrativo, como perda permanente). Normalmente, FdV aumenta quando os Atributos subjacentes aumentam.
-
-> **Nota alternativa:** Em algumas mesas, a FdV nao e comprada separadamente — ela aumenta automaticamente quando Compostura ou Determinacao aumentam.
+**Nao se compra Forca de Vontade com XP**, nem na criacao. A Forca de Vontade maxima e sempre **Compostura + Determinacao**; para aumenta-la, compre pontos nesses Atributos (Core p. 157).
 
 ---
 
@@ -255,15 +249,15 @@ Aprender uma Disciplina que nao pertence ao cla do vampiro exige:
 
 | Compra | Custo em XP |
 |---|---|
-| Novo nivel de Vantagem | **Nivel desejado x 3** |
+| Cada ponto de Vantagem | **3 XP por ponto**, fixo (Core p. 137, 151) |
 
 | De → Para | Custo |
 |---|---|
 | 0 → 1 | 3 XP |
-| 1 → 2 | 6 XP |
-| 2 → 3 | 9 XP |
-| 3 → 4 | 12 XP |
-| 4 → 5 | 15 XP |
+| 1 → 2 | 3 XP |
+| 2 → 3 | 3 XP |
+| 3 → 4 | 3 XP |
+| 4 → 5 | 3 XP |
 
 > **Nota:** Vantagens sociais (Allies, Contacts, Herd, Status, etc.) geralmente requerem investimento narrativo alem do custo de XP — o jogador deve justificar como cultivou esses recursos.
 
@@ -302,9 +296,9 @@ Ao ganhar um novo nivel em uma Disciplina, o jogador escolhe **um poder** daquel
 | Poder Alternativo (Out-of-Clan) | Nivel x 4 |
 | Ritual / Formula | Nivel x 3 |
 | Potencia do Sangue | Nivel x 10 |
-| Forca de Vontade | 10 XP (fixo) |
+| Forca de Vontade | Nao se compra (sobe com Compostura/Determinacao) |
 | Humanidade | Nivel x 10 |
-| Vantagem / Background | Nivel x 3 |
+| Vantagem / Background | 3 por ponto |
 
 ---
 
@@ -440,9 +434,9 @@ CUSTOS PRINCIPAIS:
 - Caitiff Disciplina: Nivel x 6
 - Ritual:             Nivel x 3
 - Potencia Sangue:    Nivel x 10
-- Forca de Vontade:   10 XP
+- Forca de Vontade:   nao se compra
 - Humanidade:         Nivel x 10
-- Vantagem:           Nivel x 3
+- Vantagem:           3 por ponto
 
 DISCIPLINA OUT-OF-CLAN REQUER:
 - Professor com a Disciplina

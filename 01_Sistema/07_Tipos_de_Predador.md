@@ -12,14 +12,16 @@ O Tipo de Predador define **como** o vampiro se alimenta. Escolhido durante a cr
 
 ## Tabela Resumo
 
-| Tipo | Disciplina Bonus | Habilidades Bonus | Vantagens | Desvantagens |
+> **Regra (Core p. 136, 175-178):** cada tipo da **uma especialidade** (escolhida entre as do tipo), **1 ponto em uma das Disciplinas listadas** e as **Vantagens/Defeitos** do tipo. **Nao da pontos de Habilidade.** A coluna "Habilidades da especialidade" abaixo indica so onde fica a especialidade.
+
+| Tipo | Disciplina Bonus | Habilidades da especialidade | Vantagens | Desvantagens |
 |------|------------------|-------------------|-----------|--------------|
 | Gato de Beco (Alleycat) | Celeridade ou Potencia | Intimidacao, Combate ou Briga | Contato criminal | -1 Humanidade |
 | Ensacador (Bagger) | Feitic. Sangue ou Oblivio | Manha, Medicina | Contato medico, Iron Gullet | — |
-| Sanguessuga (Blood Leech) | Celeridade ou Proteanismo | Briga, Furtividade | — | -1 Humanidade, Dark Secret, Outcast |
+| Sanguessuga (Blood Leech) | Celeridade ou Proteanismo | Briga, Furtividade | +1 Potencia do Sangue | -1 Humanidade, Dark Secret (Diablerista) ou Shunned (••), Prey Exclusion: mortais (••) |
 | Faca (Cleaver) | Animalismo ou Dominacao | Manha, Subterfugio | Rebanho 2 | Dark Secret (familia) |
 | Consensual (Consensualist) | Auspicios ou Fortitude | Medicina, Persuasao | +1 Humanidade | Dark Secret |
-| Fazendeiro (Farmer) | Animalismo ou Proteanismo | Sobrevivencia, Trato c/ Animais | +1 Humanidade | Fome nunca abaixo de 2 |
+| Fazendeiro (Farmer) | Animalismo ou Proteanismo | Sobrevivencia, Trato c/ Animais | +1 Humanidade | Defeito Vegan (••) |
 | Saqueador de Tumulos (Graverobber) | Fortitude ou Oblivio | Medicina, Ocultismo | Contato necrologico, Iron Gullet | — |
 | Osiris | Presenca ou Proteanismo | Performance, Subterfugio | Fama 2 ou Culto de Sangue | Adversario |
 | Sandman | Auspicios ou Ofuscacao | Medicina, Furtividade | Recursos 1 | — |
@@ -39,7 +41,7 @@ O Tipo de Predador define **como** o vampiro se alimenta. Escolhido durante a cr
 
 **Mecanicas:**
 - **Disciplina:** +1 ponto em Celeridade **ou** Potencia
-- **Habilidades:** +1 Intimidacao, +1 Combate Corpo a Corpo **ou** Briga
+- **Especialidade (uma):** Intimidacao (Assaltos) **ou** Briga (Agarrar) (Core p. 176)
 - **Vantagens:** Contato criminal (traficante, receptador, membro de gangue)
 - **Desvantagens:** -1 Humanidade (comeca em 6 em vez de 7)
 
@@ -56,7 +58,7 @@ O Gato de Beco vive no fio da navalha. Cada caca e um ato de violencia, e a Best
 
 **Mecanicas:**
 - **Disciplina:** +1 ponto em Feiticaria de Sangue **ou** Oblivio
-- **Habilidades:** +1 Manha, +1 Medicina
+- **Especialidade (uma):** Furto (Arrombamento) **ou** Manha (Mercado Negro) (Core p. 176); sem ponto de Habilidade
 - **Vantagens:** Contato na area medica (enfermeiro, tecnico de laboratorio, funcionario de banco de sangue), merito Iron Gullet (Estomago de Ferro — permite consumir sangue velho/processado sem penalidade)
 - **Desvantagens:** Nenhuma mecanica direta
 
@@ -75,9 +77,10 @@ O Ensacador mantem distancia emocional da caca, o que protege sua Humanidade mas
 
 **Mecanicas:**
 - **Disciplina:** +1 ponto em Celeridade **ou** Proteanismo
-- **Habilidades:** +1 Briga, +1 Furtividade
-- **Vantagens:** Nenhuma
-- **Desvantagens:** -1 Humanidade (comeca em 6), Dark Secret (alimenta-se de vampiros — se descoberto, e sentenca de Morte Final na maioria dos dominios), Outcast (as Presas do personagem sao vampiros, nao mortais)
+- **Especialidade (uma):** Briga (Kindred) **ou** Furtividade (contra Kindred)
+- **Vantagens:** +1 Potencia do Sangue
+- **Desvantagens:** -1 Humanidade (comeca em 6); Dark Secret: Diablerista (••) **ou** Shunned (••); Defeito de alimentacao Prey Exclusion: mortais (••)
+- Fonte: Core p. 176
 
 **Implicacoes Narrativas:**
 Alimentar-se de outro vampiro (diablerie excluida) e tolerado por poucos e compreendido por menos ainda. A Sanguessuga vive sob constante ameaca de exposicao. Se a Camarilla descobre, a punicao e severa. Porem, Vitae vampirica e mais potente e pode reduzir Fome de forma mais eficaz dependendo da Potencia de Sangue da vitima.
@@ -94,7 +97,7 @@ Alimentar-se de outro vampiro (diablerie excluida) e tolerado por poucos e compr
 
 **Mecanicas:**
 - **Disciplina:** +1 ponto em Animalismo **ou** Dominacao
-- **Habilidades:** +1 Manha, +1 Subterfugio
+- **Especialidade (uma):** Persuasao (Gaslighting) **ou** Subterfugio (Acobertamento) (Core p. 177); sem ponto de Habilidade
 - **Vantagens:** Rebanho 2 (a familia funciona como fonte confiavel de sangue)
 - **Desvantagens:** Dark Secret (mantem familia mortal — violacao da Mascara em potencial, e a maioria dos vampiros desaprova fortemente)
 
@@ -113,9 +116,10 @@ A Faca e talvez o tipo mais emocionalmente complexo. A familia e genuinamente am
 
 **Mecanicas:**
 - **Disciplina:** +1 ponto em Auspicios **ou** Fortitude
-- **Habilidades:** +1 Medicina, +1 Persuasao
+- **Especialidade (uma):** Medicina (Flebotomia) **ou** Persuasao (Vitimas)
 - **Vantagens:** +1 Humanidade (comeca em 8)
-- **Desvantagens:** Dark Secret (os metodos usados para obter "consentimento" podem nao ser tao eticos quanto parecem — Dominacao, drogas, meias-verdades)
+- **Desvantagens:** Dark Secret: Masquerade Breacher (•); Defeito de alimentacao Prey Exclusion: quem nao consente (•)
+- Fonte: Core p. 177
 
 **Implicacoes Narrativas:**
 O Consensualista carrega a ilusao de moralidade superior, mas a realidade e mais turva. O consentimento e verdadeiramente informado? A vitima sabe que esta alimentando um morto-vivo? Frequentemente nao. Esse tipo de predador vive uma tensao constante entre o ideal e a pratica, o que pode gerar otimo drama.
@@ -130,12 +134,14 @@ O Consensualista carrega a ilusao de moralidade superior, mas a realidade e mais
 
 **Mecanicas:**
 - **Disciplina:** +1 ponto em Animalismo **ou** Proteanismo
-- **Habilidades:** +1 Sobrevivencia, +1 Trato com Animais
+- **Especialidade (uma):** Trato com Animais (animal especifico) **ou** Sobrevivencia (Caca)
 - **Vantagens:** +1 Humanidade (comeca em 8)
-- **Desvantagens:** **Fome nunca pode ser reduzida abaixo de 2** usando sangue animal. Para chegar a Fome 1 ou 0, precisa de sangue humano.
+- **Desvantagens:** Defeito de alimentacao **Vegan (••)**: so se alimenta de animais; para beber sangue humano precisa gastar 2 pontos de Forca de Vontade (Core p. 181)
+- **Restricoes:** Ventrue nao pode escolher; quem tem Potencia do Sangue 3 ou mais tambem nao
+- Fonte: Core p. 177, 181
 
 **Implicacoes Narrativas:**
-A restricao de Fome e brutal. Fome 2 significa que o vampiro **sempre** rola pelo menos 2 dados de Fome, aumentando significativamente o risco de Bestial Failure e Compulsoes. O Fazendeiro e moralmente admiravel mas mecanicamente fragilizado — e em momentos de crise, a tentacao de sangue humano e avassaladora.
+Nao ha piso de Fome 2: o limite do sangue animal vem da Potencia do Sangue (metade na Potencia 2, nada a partir da 3; Core p. 216). O custo real e a Forca de Vontade para quebrar a regra e o risco de a Potencia subir e o sangue animal deixar de sustentar. Em momentos de crise, a tentacao de sangue humano e avassaladora.
 
 **Nota sobre Sangue Animal:** Sangue animal nao possui Ressonancia e nao permite avanco em Disciplinas que exigem Ressonancia especifica. E um beco sem saida evolutivo.
 
@@ -149,7 +155,7 @@ A restricao de Fome e brutal. Fome 2 significa que o vampiro **sempre** rola pel
 
 **Mecanicas:**
 - **Disciplina:** +1 ponto em Fortitude **ou** Oblivio
-- **Habilidades:** +1 Medicina, +1 Ocultismo
+- **Especialidade:** em Medicina ou Ocultismo (tipo de *Cults of the Blood Gods*, nao conferido); sem ponto de Habilidade, pela regra geral do Core p. 136
 - **Vantagens:** Contato necrologico (coveiro, funcionario de funeraria, legista), merito Iron Gullet
 - **Desvantagens:** Nenhuma mecanica direta
 
@@ -168,7 +174,7 @@ O Saqueador vive na fronteira entre os vivos e os mortos — literalmente. O che
 
 **Mecanicas:**
 - **Disciplina:** +1 ponto em Presenca **ou** Proteanismo
-- **Habilidades:** +1 Performance, +1 Subterfugio
+- **Especialidade (uma):** Ocultismo (tradicao especifica) **ou** Atuacao (ramo especifico) (Core p. 177); sem ponto de Habilidade
 - **Vantagens:** Fama 2 **ou** Culto de Sangue (grupo de devotos que oferecem sangue voluntariamente)
 - **Desvantagens:** Adversario (rival, fanatico perigoso, investigador, ou outro vampiro que inveja sua posicao)
 
@@ -187,7 +193,7 @@ Ser famoso e uma faca de dois gumes para um vampiro. A Fama facilita a alimentac
 
 **Mecanicas:**
 - **Disciplina:** +1 ponto em Auspicios **ou** Ofuscacao
-- **Habilidades:** +1 Medicina, +1 Furtividade
+- **Especialidade (uma):** Medicina (Anestesicos) **ou** Furtividade (Invasao) (Core p. 177); sem ponto de Habilidade
 - **Vantagens:** Recursos 1 (renda modesta — talvez de furtos menores durante as invasoes)
 - **Desvantagens:** Nenhuma mecanica direta
 
@@ -206,7 +212,7 @@ O Sandman e discreto e eficiente, mas arriscado. Se a vitima acordar, a situacao
 
 **Mecanicas:**
 - **Disciplina:** +1 ponto em Dominacao **ou** Presenca
-- **Habilidades:** +1 Etiqueta, +1 Lideranca
+- **Especialidade (uma):** Etiqueta, Lideranca ou Manha (cena especifica) (Core p. 178); sem ponto de Habilidade
 - **Vantagens:** Fama 1 (conhecida no circuito social local), Contato social (promoter, organizador de eventos, socialite)
 - **Desvantagens:** Adversario social (rival na cena social — outro vampiro ou mortal influente que compete pelo mesmo espaco)
 
@@ -223,7 +229,7 @@ A Rainha da Cena prospera em ambientes onde a Mascara e facil de manter — mult
 
 **Mecanicas:**
 - **Disciplina:** +1 ponto em Fortitude **ou** Presenca
-- **Habilidades:** +1 Persuasao, +1 Subterfugio
+- **Especialidade (uma):** Persuasao (Seducao) **ou** Subterfugio (Seducao) (Core p. 178); sem ponto de Habilidade
 - **Vantagens:** Aparencia Bonita 2 (Beautiful — +2 dados em pools sociais onde atracao fisica e relevante)
 - **Desvantagens:** Nenhuma mecanica direta
 
@@ -242,7 +248,7 @@ A Sirene e eficiente e discreta — a vitima frequentemente agradece a experienc
 
 **Mecanicas:**
 - **Disciplina:** +1 ponto em Dominacao **ou** Potencia
-- **Habilidades:** +1 Intimidacao, +1 Investigacao
+- **Especialidade:** em Intimidacao ou Investigacao (tipo de *Cults of the Blood Gods*, nao conferido); sem ponto de Habilidade, pela regra geral do Core p. 136
 - **Vantagens:** Contato policial (detetive corrupto, oficial de patrulha, funcionario do judiciario)
 - **Desvantagens:** Nenhuma mecanica direta (mas o estilo de caca gera inimigos naturalmente)
 
@@ -269,7 +275,7 @@ RAW (Rules as Written), o Tipo de Predador e fixo. Porem, narrativamente, um vam
 ### Tipos Customizados
 O Narrador pode criar novos Tipos de Predador seguindo o padrao:
 1. Escolha de 1 entre 2 Disciplinas (+1 ponto)
-2. +1 em 2 Habilidades relevantes
+2. Uma especialidade, escolhida entre 2 opcoes (sem ponto de Habilidade, como os tipos do Core)
 3. Uma vantagem menor (Contato, merito de 1-2 pontos, ou +1 Humanidade)
 4. Uma desvantagem proporcional (Dark Secret, -1 Humanidade, Adversario, restricao mecanica)
 
