@@ -1,0 +1,328 @@
+# Plano revisado do plugin — VtM V5 Solo
+
+> Redigido em **2026-11-14**. Só documento, nada implementado.
+> Substitui como plano de trabalho o design de `docs/2026-03-07-vtm-plugin-design.md` e a `_retomada/PROPOSTA-DEV-2026-10-31.md` (que ficam como histórico).
+> Escopo confirmado pelo Eduardo em 2026-11-14: o plugin, não a campanha. Dez frentes.
+> Cada afirmação cita `arquivo:linha` ou fonte. O que não foi conferido está marcado **[a verificar]**.
+
+---
+
+## 0. Restrições que valem para todo o plano
+
+### 0.1 A trava G1 do IUS bloqueia o desenvolvimento e o jogo nesta pasta
+
+Lido em `C:\Users\eduar\.claude\plugins\marketplaces\local-desktop-app-uploads\ius\hooks\`:
+
+- O hook `PreToolUse` do IUS intercepta `Write`, `Edit`, `MultiEdit`, `NotebookEdit`, `Bash`, `PowerShell`, as ferramentas de escrita e processo do Desktop Commander e ferramentas de envio (`hooks.json:12`).
+- A G1 só libera três janelas: `C:\Cowork` (ou `CLAUDE_PLUGIN_OPTION_COWORK_ROOT`), `C:\dev\ius-nucleo` (fixo no código) e a pasta temporária do sistema, além da auto-memória do Claude (`pretooluse.py:25`, `:38-40`, `:138-149`).
+- Efeito em `C:\dev\vtm-v5-solo`: não dá para escrever arquivo nem rodar terminal. **Uma sessão de jogo não conseguiria rolar dados** pelo `vtm_dice.py`, porque a rolagem passa pelo Bash.
+- Ferramentas MCP que não estão na lista do `matcher` passam (`hooks.json:12`). Leitura (`Read`, `Grep`, `Glob`) passa.
+
+- O narrador também grava os arquivos da campanha a cada cena. Tirar só as rolagens do Bash não resolve: a escrita continuaria bloqueada.
+- O hook `SessionStart` do IUS injeta prazos, valores e nomes de clientes em toda sessão, inclusive numa sessão de jogo.
+- O IUS não aparece em `enabledPlugins` de `~/.claude/settings.json` (`:535-540`); a mensagem do hook o identifica como `ius@inline`. A forma de desativá-lo só neste projeto **[a verificar no teste]**.
+
+**Passo 0 (decisão do Eduardo, não mexo no IUS):** liberar esta pasta. Opções na decisão P2 (seção 3).
+
+### 0.2 Acervo localizado
+
+`D:\Downloads-ES101026\BibliotecaElfica\` — **175 PDFs** (inventário por Glob em 2026-11-14):
+
+| Pasta | Conteúdo relevante |
+|-------|--------------------|
+| `Vampiro a Máscara/` (~76) | **V5 em inglês:** Core (`Vampire the Masquerade.pdf`), Camarilla, Anarch, Chicago by Night, The Fall of London, Cults of the Blood Gods, V5 Companion, fichas de mecânica básica. **Edições anteriores em PT-BR:** Módulo Básico 1ª/2ª e 3ª ed., V20, Guia dos Jogadores, Guia da Camarilla, Guia do Sabá, Livro de Nod, Revelações da Mãe Sombria, Gehenna, ~20 Livros de Clã, Carniçais, Tempo do Sangue Fraco, Vampiros do Oriente etc. Três clanbooks Revised em inglês. |
+| `Vampiro a Idade das Trevas/` | Idade das Trevas (PT-BR) |
+| `Lobisomem o Apocalipse/` (~47) | Módulo Básico 2ª ed. e Revised, 17 Livros de Tribo, 6 Raças Metamórficas, Umbra, Livros da Wyrm/Weaver/Wyld etc. (PT-BR). Fichas de mecânica básica. **Sem W5.** |
+| `Mago a Ascensão/` (~26) | Módulo Básico 2ª e 3ª ed., 9 Tradições, Tecnocracia, Iteração X etc. (PT-BR). **Sem M20.** |
+| `Hunter_ The Reckoning/` | Só as fichas de mecânica básica do H5. **Sem o livro de regras.** |
+| `Vampiro o Réquiem/`, `Mago o Despertar/`, `Lobisomem os Destituídos/` | Crônicas das Trevas (CofD) — outro universo, não o WoD clássico. |
+
+Lacunas para "todos os elementos do WoD": **Wraith, Changeling, Demon, Mummy, Hunter (livro), Kindred of the East** não estão no acervo, salvo `Vampiros do Oriente` (VtM Revised). Ver decisão P9.
+
+Alguns PDFs pedem OCR (o nome do arquivo diz "passar OCR", ex.: `Livro de Clã - Tremere (passar OCR)`).
+
+**Nada desse acervo foi lido ainda.** Teste em 2026-11-14: a leitura de uma página do V5 Core e de um livro marcado "passar OCR" falhou nos dois casos, porque falta o `pdftoppm` (Poppler) neste computador. Hoje o Claude não consegue ler nenhum desses PDFs. A frente 8 resolve isso com um extrator próprio.
+
+### 0.3 O repositório é público
+
+- `github.com/eduardopasouza/vtm-v5-solo` é público. Texto extraído dos PDFs é conteúdo de terceiros: o índice do acervo mora em `${CLAUDE_PLUGIN_DATA}` ou na pasta do acervo, **nunca no repositório**.
+- Os 126 resumos de `12_Resumos_dos_Livros/` já estão públicos e derivam de livros comerciais e de traduções de fã. Decisão P3.
+
+### 0.4 O que a documentação do Claude Code confirma (lida em 2026-11-14)
+
+Fonte: subagente `claude-code-guide`, páginas de manifesto, skills, subagentes, hooks e instalação em `code.claude.com/docs`.
+
+- `${CLAUDE_PLUGIN_ROOT}` e `${CLAUDE_SKILL_DIR}` são substituídos no corpo de skills, comandos e agentes. Também em hooks e no `.mcp.json`. O Bash **não** recebe essas variáveis no ambiente: a skill escreve o caminho no texto.
+- `userConfig` no manifesto: tipos `string`, `number`, `boolean`, `directory`, `file`. As skills leem por `${user_config.CHAVE}`. Isso **substitui o `.local.md`** criado na D6 da Onda 0.
+- `${CLAUDE_PLUGIN_DATA}`: pasta persistente entre atualizações do plugin. Lugar do índice, do cache e de logs.
+- Agentes de plugin aceitam `tools`, `disallowedTools`, `model`, `skills`, `maxTurns`, entre outros.
+- Skills de plugin aparecem como `/plugin:skill`. **Não há documentação** sobre como o disparo automático se resolve entre plugins (confiança baixa).
+- Hook `SessionStart` pode injetar texto no contexto.
+- Instalação pessoal: `claude --plugin-dir <pasta>` para testar; persistente por `marketplace.json` local ou repositório GitHub.
+- **[a verificar no teste da Onda 1]:** links relativos dentro da skill, Python no PATH para MCP no Windows, colisão de disparo.
+
+### 0.5 Três sistemas de memória já rodam
+
+- O **IUS** injeta contexto jurídico no início de toda sessão (hook `SessionStart`).
+- O **ai-memory** captura observações de sessão.
+- A **auto-memória** do Claude fica em `~/.claude/projects/C--dev-vtm-v5-solo/memory/`.
+- Regra do plano: **os arquivos da campanha são a única fonte de verdade do jogo.** O plugin não grava estado de jogo no ai-memory nem na auto-memória. O hook do plugin injeta só um resumo curto da campanha ativa.
+
+---
+
+## 1. Arquitetura-alvo
+
+Três camadas:
+
+| Camada | O que é | Onde mora | Vai pro git público? |
+|--------|---------|-----------|----------------------|
+| **Motor** | Skills, agentes, hooks, scripts Python, referência V5 própria, templates | Pasta do plugin (`${CLAUDE_PLUGIN_ROOT}`) | Sim |
+| **Campanha** | Uma pasta por jogo (`Edward Bello/` etc.) | `${user_config.pasta_campanhas}` | Decisão P3/P8 |
+| **Acervo** | PDFs + índice com texto por página | `${user_config.pasta_acervo}` + índice em `${CLAUDE_PLUGIN_DATA}` | Nunca |
+
+Layout proposto do plugin:
+
+```
+vtm-v5/
+├── .claude-plugin/
+│   ├── plugin.json          # nome, versão, userConfig
+│   └── marketplace.json     # instalação pessoal ("source": "./")
+├── skills/
+│   ├── narrar/      SKILL.md + references/{combate,alimentacao,cacada,frenesi,politica,disciplinas}.md
+│   ├── criar/       SKILL.md + references/
+│   ├── personagem/  SKILL.md
+│   ├── npcs/        SKILL.md
+│   ├── gerenciar/   SKILL.md
+│   └── pesquisar/   SKILL.md            # nova (frente 7)
+├── agents/
+│   ├── guardiao-regras.md
+│   ├── arquivista.md
+│   ├── continuidade.md
+│   ├── pesquisador-historico.md
+│   ├── agenda-npcs.md
+│   └── cronista-wod.md
+├── hooks/hooks.json          # SessionStart: resumo da campanha ativa
+├── scripts/
+│   ├── vtm_dice.py           # motor de rolagens (frente 6)
+│   ├── efemerides.py         # sol e lua por data e cidade (frente 7)
+│   ├── acervo_indexar.py     # PDF → texto por página → SQLite FTS5 (frente 8)
+│   ├── acervo_buscar.py
+│   └── campanha_auditar.py   # consistência (frente 3)
+├── tests/
+├── reference/                # hoje 01_Sistema … 05_Cenario, 10_Ferramentas
+└── templates/                # hoje 08_Templates
+```
+
+`userConfig` proposto:
+
+| Chave | Tipo | Uso |
+|-------|------|-----|
+| `pasta_campanhas` | directory | Onde ficam as pastas de jogo |
+| `campanha_ativa` | string | Nome da pasta da campanha em jogo |
+| `pasta_acervo` | directory | `D:\Downloads-ES101026\BibliotecaElfica` |
+| `mostrar_dados` | boolean | D5 da Onda 0 (padrão: true) |
+| `python` | file | Caminho do Python (o IUS usa `C:/Users/eduar/AppData/Local/Python/pythoncore-3.14-64/python.exe`, `hooks.json:6`) |
+
+---
+
+## 2. As dez frentes
+
+Formato fixo: estado atual · alvo · componente · dependências · aceite · esforço · decisões.
+
+### Frente 1 — Planejamento
+
+- **Estado:** design de 07/03 (`docs/2026-03-07-vtm-plugin-design.md`, 5 skills) e proposta de 31/10 (6 ondas, `_retomada/`). Ambos anteriores à confirmação de `userConfig` e à descoberta da G1.
+- **Alvo:** este plano vira `docs/PLANO-PLUGIN.md` no repositório do plugin, com registro de decisões (`docs/decisoes.md`, uma linha por decisão: data, opção, motivo).
+- **Componente:** documento.
+- **Dependências:** P1 (onde fica o plugin).
+- **Aceite:** Eduardo aprova o plano; cada decisão P1-P9 registrada com data.
+- **Esforço:** 1 h depois das decisões.
+- **Decisões:** nenhuma própria.
+
+### Frente 2 — Estrutura de plugin
+
+- **Estado:** 5 skills soltas em `.claude/skills/`; sem manifesto, agentes, hooks ou MCP. Settings em `.claude/vtm.local.md.example` (Onda 0, D6).
+- **Alvo:** layout da seção 1, instalável por `marketplace.json`, `userConfig` no lugar do `.local.md` (um mecanismo só), descrições das skills ancoradas em "vampiro/VtM".
+- **Componente:** manifesto, reorganização de pastas.
+- **Dependências:** P1, P2, P4.
+- **Aceite (teste com `claude --plugin-dir`):**
+  1. `/vtm:narrar` e as demais aparecem;
+  2. `${CLAUDE_PLUGIN_ROOT}` e `${user_config.pasta_campanhas}` chegam substituídos no corpo da skill;
+  3. uma rolagem real roda pelo `vtm_dice.py`;
+  4. a G1 não bloqueia (depois do passo 0);
+  5. numa sessão em `C:\Cowork`, "continuar a sessão" não dispara a skill de narrar.
+- **Esforço:** 4-6 h.
+- **Decisões:** P1, P2, P4, P5.
+
+### Frente 3 — Memória da campanha
+
+- **Estado:** arquivos `.md` em `07_Jogos/Edward Bello/`. Defasagens reais:
+  - `timeline.md` para na Sessão 7 (`timeline.md:139-165`, rodapé "Sessão 7"); sessões 8-15 não estão lá;
+  - `objetivos.md` e `personagem.md` param na Sessão 14 (`objetivos.md:187`, `personagem.md:417`), enquanto `contexto.md` está na 15 (`contexto.md:11`);
+  - `09_Preferencias.md` ainda cita `objetivos_ativos.md` e `direcao_narrador_SEGREDOS.md` (`:58`, `:122`) e caminhos do OneDrive que não existem (`:171-172`).
+  - Nada audita essas diferenças.
+- **Alvo:**
+  - `estado.json` por campanha com o que é número (Fome, FdV, Saúde, Humanidade, Manchas, XP, BP, data ficcional, local, hora da noite). Os `.md` ficam para narrativa.
+  - `campanha_auditar.py`: aponta NPC citado sem ficha, sessão fora da linha do tempo, número divergente entre `estado.json` e `personagem.md`, rodapé de "atualizado em" defasado.
+  - Hook `SessionStart`: se a sessão estiver na pasta de campanhas, injeta 10-15 linhas de `contexto.md` + `estado.json`. Só leitura.
+  - Agente `arquivista` no fim da sessão propõe as atualizações; o narrador aplica.
+  - `direcao.md` continua secreto por convenção (o jogador pode abrir o arquivo; o narrador não revela).
+- **Componente:** script, hook, agente, template.
+- **Dependências:** frente 2.
+- **Aceite:** auditoria roda no Edward Bello e lista as defasagens acima; depois do conserto, volta vazia.
+- **Esforço:** 4-6 h.
+- **Decisões:** P8.
+
+### Frente 4 — Agentes especializados
+
+Regra: nenhum agente grava na campanha; propõem, o narrador decide e aplica. Modelo final escolhido no teste.
+
+O frontmatter libera ou nega uma ferramenta inteira: não dá para dar a um agente "Bash só para um script". Por isso a busca no acervo e as rolagens viram **ferramentas MCP só de leitura** do plugin (P5), que os agentes recebem sem ganhar o terminal. Se os hooks do IUS também valem para subagentes **[a verificar]**, isso evita que a G1 trave os agentes.
+
+| Agente | Função | Ferramentas | Modelo proposto |
+|--------|--------|-------------|-----------------|
+| `guardiao-regras` | Responde dúvida de regra com citação (livro, página) do índice do acervo e da `reference/`. Sem fonte, diz "não sei". | Read, Grep, MCP `vtm_acervo_buscar` | sonnet |
+| `arquivista` | Lê o log da sessão e lista o que muda em cada arquivo da campanha | Read, Grep | sonnet |
+| `continuidade` | Procura contradições entre sessões, fichas, linha do tempo e `direcao.md` | Read, Grep | sonnet |
+| `pesquisador-historico` | Fatos reais para a data e cidade da campanha, com URL e data de acesso | WebSearch, WebFetch, Read | sonnet |
+| `agenda-npcs` | Entre sessões, propõe o que cada NPC Maior fez fora de cena, conforme a ficha | Read, Grep | inherit |
+| `cronista-wod` | Lore das outras criaturas (Garou, magos, caçadores…) com citação, e como interagem com vampiros | Read, Grep, MCP `vtm_acervo_buscar` | sonnet |
+
+- **Dependências:** frente 2; `guardiao-regras` e `cronista-wod` dependem da frente 8.
+- **Aceite:** cada agente roda uma tarefa de teste com saída citada; nenhum escreve arquivo.
+- **Esforço:** 3-4 h.
+- **Decisões:** P5 (o `Bash` restrito cai se o motor virar MCP).
+
+### Frente 5 — Skills do narrador
+
+- **Estado:** 5 skills com descrições genéricas ("jogar, continuar, sessão…", `.claude/skills/vtm-narrar/SKILL.md:2`). Combate, alimentação e frenesi espalhados dentro da `vtm-narrar` em poucas linhas (`:133-173`).
+- **Alvo:** manter as 5, criar **uma** nova (`pesquisar`), e mover o detalhe para `references/` dentro de `narrar/`: combate, alimentação e ressonância, caçada por tipo de predador, frenesi e Rötschreck, política e favores (boons), uso de disciplinas. Cada referência aponta para a página do livro via índice. Cada skill nova é mais uma chance de colisão de disparo: só onde o fluxo é outro.
+- **Componente:** skills e referências.
+- **Dependências:** frente 2; o conteúdo das referências depende da frente 8.
+- **Aceite:** em jogo de teste, uma cena de combate e uma de alimentação seguem as referências e citam a regra.
+- **Esforço:** 4-6 h.
+- **Decisões:** P4.
+
+### Frente 6 — Motor de dados em Python
+
+- **Estado:** `scripts/vtm_dice.py` faz `roll`, `rouse`, `remorse`, `frenzy` (`:17-143`). Lacunas:
+  - Rouse sem o re-roll por Potência de Sangue (`01_Sistema/04_Fome_e_Bestia.md:73-86`);
+  - sem re-rolagem por Força de Vontade (até 3 dados normais, `vtm-narrar/SKILL.md:148-149`);
+  - sem teste resistido (Compelir contra resistência), Blood Surge (`04_Fome_e_Bestia.md:96-112`), cura (`:60-62`), alimentação com restrição por BP (`:143-153`) e ressonância (`01_Sistema/09_Ressonancia_Sanguinea.md`), combate e dano;
+  - `frenzy` não aplica os modificadores (`04_Fome_e_Bestia.md:272-279`);
+  - nenhum teste automatizado, nenhum registro das rolagens.
+- **Alvo:** todas as rolagens do V5, cada função com a regra citada no código; registro de cada rolagem em `rolagens.jsonl` da campanha; testes com semente fixa conferindo as tabelas de referência.
+- **Componente:** script (ou servidor MCP, decisão P5).
+- **Dependências:** passo 0; P5; P6 (fonte canônica das regras).
+- **Aceite:** testes verdes; cada caso das tabelas de `01_Sistema/04` e `05` reproduzido.
+- **Esforço:** 6-8 h.
+- **Decisões:** P5, P6.
+
+### Frente 7 — Busca para simetria com a realidade
+
+- **Estado:** os 9 arquivos de `cenario/` do Edward Bello foram escritos à mão, sem fonte, misturando fato e ficção (ex.: `cenario/geografia.md`). Sem calendário, sem sol e lua. A regra "tempo narrativo rígido" (`09_Preferencias.md:97`) não tem número por trás.
+- **Alvo:**
+  - `efemerides.py`: pôr e nascer do sol, duração da noite e fase da lua por cidade e data, calculados localmente (algoritmo da NOAA em Python puro, sem dependência). Alimenta o relógio da noite no `estado.json`.
+  - Skill `pesquisar` + agente `pesquisador-historico`: na sessão zero e antes de cada sessão, pesquisa a semana ficcional (política, economia, sociedade, cultura, religião, clima, eventos datados, figuras públicas).
+  - Marcação de proveniência por bloco: `<!-- @historico fonte=URL acesso=AAAA-MM-DD -->` ou `<!-- @ficcao -->`.
+  - Arquivo `calendario.md` por campanha.
+- **Componente:** script, skill, agente.
+- **Dependências:** frente 2; frente 3 (data ficcional no estado).
+- **Aceite:** para Londres, dezembro de 1836: pôr do sol e lua das noites 77-90, e pelo menos 5 fatos datados da quinzena, cada um com URL.
+- **Esforço:** 5-7 h.
+- **Decisões:** nenhuma própria.
+
+### Frente 8 — Regras e livros com citação
+
+- **Estado:** acervo achado (0.2), nunca lido. Os 126 resumos foram gerados por IA em março e não foram conferidos contra os livros. A `reference/` própria (`01_Sistema` etc.) não cita página.
+- **Alvo:**
+  - `acervo_indexar.py`: extrai o texto de cada PDF por página; OCR nos que pedem; grava em SQLite FTS5 em `${CLAUDE_PLUGIN_DATA}` (livro, edição, linha, idioma, página, trecho).
+  - `acervo_buscar.py`: busca por termo e devolve livro + página + trecho curto.
+  - Regra do narrador: regra só com citação; sem citação, "não sei".
+  - Conferência dos resumos e da `reference/` contra o índice, marcando divergências.
+- **Componente:** scripts, agente `guardiao-regras`.
+- **Dependências:** passo 0; P6; biblioteca Python para ler PDF (`pypdf` ou `pymupdf`), OCR (`tesseract`) e suporte a FTS5 no `sqlite3` do Python do Windows — os três **[a verificar no computador]**. O leitor de PDF do Claude não funciona aqui (falta `pdftoppm`, seção 0.2).
+- **Aceite:** busca por "Blood Surge", "Rouse Check" e "Ventrue bane" devolve a página certa do V5 Core; PDFs com OCR legíveis.
+- **Esforço:** 6-10 h (OCR pesa).
+- **Decisões:** P3, P6.
+
+### Frente 9 — Nuances de Vampiro
+
+- **Estado:** 16 clãs, 12 disciplinas, 5 seitas, 6 textos de cenário, 12 de sistema. Cobertura de linhagens, Tradições, prestação de favores (boons), domínio e coterie, diablerie, Golconda, torpor, Laço de Sangue e rituais **[a verificar no inventário]**.
+- **Alvo:** inventário de temas cruzado com o índice do acervo; para cada tema, uma ficha em `reference/` com a regra resumida e a citação; lista de lacunas.
+- **Componente:** referência + agente `guardiao-regras`.
+- **Dependências:** frente 8.
+- **Aceite:** checklist de temas com fonte para cada item; lacunas listadas.
+- **Esforço:** 8-12 h, incremental.
+- **Decisões:** P6.
+
+### Frente 10 — Integração com o resto do WoD
+
+- **Estado:** um texto geral (`05_Cenario/04_Seres_Sobrenaturais.md`, Garou e outros). Acervo com Lobisomem e Mago em edições antigas (PT-BR), fichas do Hunter 5, CofD (outro universo). Sem Wraith, Changeling, Demon, Mummy.
+- **Alvo:**
+  - `reference/wod/<linha>/`: sociedade, poderes, como cada criatura vê e trata vampiros, onde aparece em Londres vitoriana e em outras eras;
+  - fichas de NPC das outras criaturas em termos do V5 (para o narrador rolar contra);
+  - agente `cronista-wod`.
+- **Componente:** referência, agente, template de NPC por criatura.
+- **Dependências:** frente 8; P7; P9.
+- **Aceite:** um Garou e um mago Hermético prontos como NPC de Londres 1836, com citação do livro da linha.
+- **Esforço:** 10-15 h para Lobisomem e Mago; mais por linha.
+- **Decisões:** P7, P9.
+
+---
+
+## 3. Decisões pendentes, em ordem de dependência
+
+| # | Decisão | Opções | Destrava |
+|---|---------|--------|----------|
+| **P2** | Passo 0: liberar esta pasta da G1 | (a) desativar o IUS só nas sessões deste projeto (forma exata **[a verificar]**, o plugin carrega como `ius@inline`) · (b) alterar o código do IUS para incluir a pasta nas janelas (`pretooluse.py:25`, mudança versionada no projeto do IUS) | Qualquer implementação, até copiar este plano para o repositório |
+| **P1** | Onde fica o plugin | (a) neste repositório, reorganizado · (b) repositório novo `vtm-v5`, e este vira só a campanha. Um repositório novo também fica em `C:\dev` e depende da P2 | Frente 2, Onda 1 |
+| **P3** | Repositório público e resumos | (a) tornar o repositório privado · (b) manter público e tirar os resumos para a camada do acervo · (c) manter como está | Frentes 2, 8 |
+| **P4** | Disparo das skills | (a) automático, com descrições ancoradas · (b) só por comando `/vtm:...` (`disable-model-invocation`) | Frentes 2, 5 |
+| **P5** | Motor de dados | (a) script chamado pelo Bash · (b) servidor MCP em Python | Frentes 4, 6 |
+| **P6** | Fonte canônica de regra | (a) V5 em inglês (Core e suplementos) prevalece, PT-BR só para termos · (b) outra | Frentes 6, 8, 9 |
+| **P7** | Cruzamento com outras linhas | (a) só ambientação, NPCs com estatísticas V5 · (b) converter regras de cada linha | Frente 10 |
+| **P8** | Estado da campanha | (a) `.md` + `estado.json` · (b) só `.md` | Frente 3 |
+| **P9** | Linhas do WoD e edições | Quais linhas entram (Lobisomem, Mago, Caçador, Wraith, Changeling, Demon, Múmia, Kindred of the East), se CofD entra, e o que precisa ser adquirido | Frente 10 |
+
+---
+
+## 4. Ondas revisadas
+
+| Onda | Escopo | Pré-requisito | Esforço |
+|------|--------|---------------|---------|
+| 0 | Consolidação — **feita** (`c200210`, 2026-10-31) | — | — |
+| 1 | Esqueleto do plugin + teste `--plugin-dir` (aceite da frente 2) + migrar `.local.md` → `userConfig` | P2, P1, P4, P5 | 4-6 h |
+| 2 | Motor de dados completo e testado (frente 6) | Onda 1, P6 | 6-8 h |
+| 3 | Memória da campanha: `estado.json`, auditoria, hook, arquivista, continuidade; consertar as defasagens do Edward Bello (frente 3) | Onda 1, P8 | 4-6 h |
+| 4 | Acervo indexado + guardião de regras (frente 8) | Onda 1, P3, P6 | 6-10 h |
+| 5 | Realidade: efemérides, skill `pesquisar`, pesquisador, proveniência (frente 7) | Onda 3 | 5-7 h |
+| 6 | Skills e referências do narrador; nuances de Vampiro (frentes 5 e 9) | Onda 4 | 12-18 h |
+| 7 | Integração com o WoD (frente 10) | Onda 4, P7, P9 | 10-15 h |
+| 8 | Validação: sessão zero de uma campanha nova, de ponta a ponta | Ondas 1-6 | 1 sessão |
+
+Total: **~50-75 h**, em 12-18 sessões. As estimativas são de ordem de grandeza.
+
+---
+
+*Plano redigido na pasta temporária da sessão por causa da trava G1; copiado para o repositório em 2026-11-14, depois do passo 0.*
+
+---
+
+## 5. Registro de decisões
+
+| Data | Decisão | Opção | Motivo |
+|------|---------|-------|--------|
+| 2026-11-14 | P2 | (a) IUS desligado só neste projeto (`.claude/settings.local.json`) | Confirmado: terminal e escrita rodam sem "[IUS G1]" |
+| 2026-11-14 | P1 | (a) plugin neste repositório | Histórico e referências juntos, nada a migrar |
+| 2026-11-14 | P4 | (a) disparo automático, descrições ancoradas em VtM/vampiro/campanha | Mantém a linguagem natural; colisão conferida em teste |
+| 2026-11-14 | P5 | Núcleo Python + servidor MCP do plugin + `vtm_dice.py` como CLI | Agentes rolam sem ganhar o Bash; um servidor para motor e acervo |
+| 2026-11-14 | Escopo da Onda 1 | Pastas `01_Sistema`…`10_Ferramentas` ficam onde estão; `reference/` e `templates/` numa onda futura | Evita quebrar 49+ referências internas; nenhum aceite da Onda 1 depende disso |
+
+## 6. Andamento da Onda 1 (2026-11-14)
+
+- Feito: `.claude-plugin/plugin.json` (nome `vtm`, `userConfig` com `pasta_campanhas`, `campanha_ativa`, `pasta_acervo`, `mostrar_dados`, `python`) e `marketplace.json` (`vtm-local`, `"source": "."`); `claude plugin validate` passa. Skills movidas de `.claude/skills/vtm-*` para `skills/*`, descrições ancoradas, caminhos por `${CLAUDE_PLUGIN_ROOT}` e `${user_config.*}`, com regra de reserva para valor não preenchido. `vtm.local.md.example` removido. A chave `atributo_composure` do `.local.md` não foi migrada (nenhuma skill a lia).
+- Documentação (2026-11-14): marketplace local de tipo `directory` carrega o plugin no lugar, sem cópia em cache; valores de `userConfig` ficam em `pluginConfigs` do settings do usuário; o comportamento de `${user_config.X}` sem valor **não é documentado**.
+- Aceite 1 ✓ (as 5 skills aparecem como `/vtm:*` com `--plugin-dir`). Aceite 3 parcial (o script roda pelo caminho absoluto, de fora do repositório).
+- Ativação (2026-11-14): só escrever `extraKnownMarketplaces` + `enabledPlugins` no `.claude/settings.local.json` **não instala**; o CLI não enxergou o marketplace. Funcionou com `claude plugin marketplace add C:/dev/vtm-v5-solo --scope local` e depois `claude plugin install vtm@vtm-local --scope local --config pasta_campanhas=... --config campanha_ativa=...`. O status ficou `enabled` (escopo local), e os valores foram para `pluginConfigs."vtm@vtm-local".options` em `~/.claude/settings.json`. `pasta_acervo` ficou vazia até a frente 8.
+- Pendente: aceites 2 e 3 numa sessão nova aberta nesta pasta; aceite 5 com o Claude aninhado (precisa renovar o login do `claude` no terminal).

@@ -8,7 +8,9 @@ O jogador decide. O narrador apresenta mundo, consequências e oportunidades.
 
 ## ESTRUTURA DO REPOSITÓRIO
 ```
-.claude/skills/     → 5 skills de jogo (narrar, criar, personagem, npcs, gerenciar)
+.claude-plugin/     → manifesto do plugin `vtm` (plugin.json + marketplace.json local)
+skills/             → 5 skills de jogo: /vtm:narrar, /vtm:criar, /vtm:personagem, /vtm:npcs, /vtm:gerenciar
+docs/PLANO-PLUGIN.md → plano do plugin (frentes, decisões, ondas)
 01_Sistema/         → Regras e mecânicas
 02_Clas/            → Clãs e linhagens
 03_Disciplinas/     → Poderes vampíricos
@@ -25,7 +27,9 @@ scripts/            → Script Python de dados (vtm_dice.py)
 
 ## COMO JOGAR
 - Diga "quero jogar VtM" ou "iniciar sessão" para começar
-- As skills são detectadas automaticamente
+- As skills vêm do plugin `vtm` (testar com `claude --plugin-dir .`; instalar pelo marketplace local `vtm-local`)
+- Disparo automático só quando o pedido menciona VtM, vampiro ou a campanha
+- Configuração (pasta das campanhas, campanha ativa, acervo, Python, mostrar dados) fica no `userConfig` do plugin
 - Use linguagem natural — o narrador entende o contexto
 
 ## REGRAS UNIVERSAIS

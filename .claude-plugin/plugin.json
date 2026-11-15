@@ -1,0 +1,40 @@
+{
+  "name": "vtm",
+  "version": "0.1.0",
+  "description": "Narrador de RPG solo para Vampiro: A Máscara V5 — skills de narração, criação, personagem, NPCs e gestão de campanha, com rolagens reais em Python.",
+  "author": {
+    "name": "Eduardo Souza"
+  },
+  "repository": "https://github.com/eduardopasouza/vtm-v5-solo",
+  "keywords": ["vampiro", "vtm", "v5", "rpg", "solo"],
+  "userConfig": {
+    "pasta_campanhas": {
+      "type": "directory",
+      "title": "Pasta das campanhas",
+      "description": "Pasta onde ficam as campanhas (uma subpasta por jogo). Use caminho absoluto. Vazio = 07_Jogos dentro do plugin."
+    },
+    "campanha_ativa": {
+      "type": "string",
+      "title": "Campanha ativa",
+      "description": "Nome da subpasta da campanha em jogo. Vazio = perguntar quando houver mais de uma.",
+      "default": ""
+    },
+    "pasta_acervo": {
+      "type": "directory",
+      "title": "Pasta do acervo de PDFs",
+      "description": "Pasta com os PDFs integrais dos livros (opcional, fora do repositório). Vazio = usar só os resumos."
+    },
+    "mostrar_dados": {
+      "type": "boolean",
+      "title": "Mostrar dados individuais",
+      "description": "Exibir ao jogador o resultado de cada dado nas rolagens.",
+      "default": true
+    },
+    "python": {
+      "type": "string",
+      "title": "Comando do Python",
+      "description": "Comando ou caminho do Python usado nas rolagens.",
+      "default": "python"
+    }
+  }
+}

@@ -1,5 +1,5 @@
 ---
-description: "vtm criar, criar jogo, novo jogo, nova partida, nova história, nova aventura, sessão zero, criar campanha, novo cenário, vampiro criação rpg"
+description: "Cria a estrutura narrativa de uma campanha solo de Vampiro: A Máscara V5 (VtM): novo jogo, partida, história ou aventura de VtM, sessão zero de vampiro, cenário da crônica. Usar só quando o pedido mencionar VtM, vampiro ou a campanha de RPG; não usar para criar projetos, documentos ou casos fora do jogo."
 model: opus
 ---
 
@@ -16,15 +16,14 @@ Criar e estruturar todos os níveis narrativos: Jogo, Partida, História, Aventu
 
 | Recurso | Caminho |
 |---------|---------|
-| Base VtM | `./` |
-| Settings do jogador | `[Base]/.claude/vtm.local.md` (opcional; template em `vtm.local.md.example`) |
-| Jogos | `[Base]/07_Jogos/` (ou `pasta_jogos` do `.local.md`) |
+| Base VtM | `${CLAUDE_PLUGIN_ROOT}` (só leitura: referências, templates, scripts) |
+| Jogos | `${user_config.pasta_campanhas}` |
 | Resumos | `[Base]/12_Resumos_dos_Livros/` |
-| PDFs integrais | `pasta_acervo` do `.local.md` (opcional). Se vazio ou pasta não existir, usar só resumos. |
+| PDFs integrais | `${user_config.pasta_acervo}` (opcional) |
 | Templates | `[Base]/08_Templates/` |
 | Preferências | `[Base]/09_Preferencias/01_Preferencias_de_Jogo.md` |
 
-Ler `.claude/vtm.local.md` antes de criar jogo novo.
+**Configuração não preenchida.** Se um valor acima aparecer vazio ou ainda como `${user_config...}` literal: Jogos = `[Base]/07_Jogos/`; PDFs = usar só os resumos. O jogo novo é criado dentro da pasta de Jogos.
 
 ## Hierarquia Narrativa
 
@@ -39,7 +38,7 @@ Ler `.claude/vtm.local.md` antes de criar jogo novo.
 ## Estrutura de Pastas
 
 ```
-07_Jogos/[Nome do PC]/
+[Jogos]/[Nome do PC]/
 ├── contexto.md              # Estado atual global
 ├── personagem.md            # Ficha do PC
 ├── direcao.md               # Segredos do narrador (NUNCA mostrar)
@@ -113,7 +112,7 @@ Criar fichas mínimas dos NPCs principais em `npcs/` (usar trigger "criar NPC" p
 
 ### Etapa 4 — Personagem
 
-Delegar criação ao jogador via skill `vtm-personagem` (trigger: "criar personagem").
+Delegar criação ao jogador via skill `/vtm:personagem` (trigger: "criar personagem de VtM").
 Garantir que o personagem se integra ao cenário criado.
 
 ### Etapa 5 — Primeira Partida

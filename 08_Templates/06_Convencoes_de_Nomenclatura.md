@@ -160,4 +160,4 @@ Resumo visual:
 
 ---
 
-*Convenções canonizadas em 2026-10-31 — decisão D2 da Onda 0 de consolidação. Casa com a prática real da campanha Edward Bello e com a skill `vtm-criar`.*
+*Convenções canonizadas em 2026-10-31 — decisão D2 da Onda 0 de consolidação. Casa com a prática real da campanha Edward Bello e com a skill `/vtm:criar`.*

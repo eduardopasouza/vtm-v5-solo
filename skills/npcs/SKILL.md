@@ -1,5 +1,5 @@
 ---
-description: "vtm npcs, criar NPC, novo NPC, editar NPC, atualizar NPCs, ficha NPC, relações, vampiro NPC rpg"
+description: "Cria e mantém NPCs de uma campanha solo de Vampiro: A Máscara V5 (VtM): novo NPC vampiro ou mortal, ficha de NPC em V5, relações entre NPCs da crônica. Usar quando o pedido falar de NPC no contexto de VtM, vampiro ou da campanha de RPG."
 model: opus
 ---
 
@@ -12,14 +12,14 @@ Skill de criação e manutenção de NPCs para VtM V5 solo em Português BR.
 
 | Recurso | Caminho |
 |---------|---------|
-| Base VtM | `./` |
-| Settings do jogador | `[Base]/.claude/vtm.local.md` (opcional; template em `vtm.local.md.example`) |
-| Jogos | `[Base]/07_Jogos/` (ou `pasta_jogos` do `.local.md`) |
-| PDFs integrais | `pasta_acervo` do `.local.md` (opcional). Se vazio ou pasta não existir, usar só resumos. |
+| Base VtM | `${CLAUDE_PLUGIN_ROOT}` (só leitura: referências, templates, scripts) |
+| Jogos | `${user_config.pasta_campanhas}` |
+| Campanha ativa | `${user_config.campanha_ativa}` |
+| PDFs integrais | `${user_config.pasta_acervo}` (opcional) |
 | Resumos | `[Base]/12_Resumos_dos_Livros/` |
 | Referências | `[Base]/01_Sistema/` |
 
-Ler `.claude/vtm.local.md` antes de criar NPC.
+**Configuração não preenchida.** Se um valor acima aparecer vazio ou ainda como `${user_config...}` literal: Jogos = `[Base]/07_Jogos/`; Campanha ativa = perguntar se houver mais de uma; PDFs = usar só os resumos.
 
 ## Três Níveis de Profundidade
 
@@ -120,7 +120,7 @@ NPCs Menores ficam listados no `indice.md`, não em arquivos individuais.
 4. Apresentar proposta com opções (prós/contras em texto, labels curtos no widget)
 5. Gerar ficha conforme template do nível
 6. Calcular paradas coerentes com o papel narrativo (stats realistas)
-7. Salvar em `07_Jogos/[PC]/npcs/[nome].md`
+7. Salvar em `[Jogos]/[PC]/npcs/[nome].md`
 8. Atualizar `npcs/indice.md` e `npcs/relacoes.md`
 
 **Stats realistas:** NPC neófito não tem Disciplinas 5. Ancião não tem Atributos 1. Mortal não tem Disciplinas. Proporção de poder coerente com geração e idade.

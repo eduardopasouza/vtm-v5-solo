@@ -1,7 +1,7 @@
 # Estrutura de Pastas — Campanha VtM V5
 
 <!-- Referencia canônica para criar a árvore de diretórios ao iniciar uma nova campanha -->
-<!-- Esta estrutura é a usada pela skill vtm-criar e pela campanha Edward Bello -->
+<!-- Esta estrutura é a usada pela skill /vtm:criar e pela campanha Edward Bello -->
 <!-- Decisão D1 — 2026-10-31 -->
 
 ---
@@ -79,4 +79,4 @@ Ver `06_Convencoes_de_Nomenclatura.md` para a regra completa.
 
 ---
 
-*Template canonizado em 2026-10-31 — decisão D1 da Onda 0 de consolidação. Esta é a estrutura usada pela skill `vtm-criar` e pela campanha Edward Bello.*
+*Template canonizado em 2026-10-31 — decisão D1 da Onda 0 de consolidação. Esta é a estrutura usada pela skill `/vtm:criar` e pela campanha Edward Bello.*

@@ -1,0 +1,14 @@
+{
+  "name": "vtm-local",
+  "description": "Marketplace local do plugin VtM V5 Solo (instalação pessoal a partir deste repositório).",
+  "owner": {
+    "name": "Eduardo Souza"
+  },
+  "plugins": [
+    {
+      "name": "vtm",
+      "source": ".",
+      "description": "Narrador de RPG solo para Vampiro: A Máscara V5."
+    }
+  ]
+}

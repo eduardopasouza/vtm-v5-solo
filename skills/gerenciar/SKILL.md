@@ -1,5 +1,5 @@
 ---
-description: "vtm gerenciar, revisar campanha, entre sessões, planejar, objetivos, tracker, arco narrativo, gestão, agenda NPCs, vampiro gestão rpg"
+description: "Gestão entre sessões de uma campanha solo de Vampiro: A Máscara V5 (VtM): revisar a crônica, objetivos do personagem vampiro, arcos narrativos, agenda dos NPCs da campanha. Usar só quando o pedido mencionar VtM, vampiro ou a campanha de RPG; não usar para planejamento, objetivos ou trackers de trabalho."
 model: opus
 ---
 
@@ -16,13 +16,13 @@ Gestão macro: rastrear objetivos em 4 níveis, avançar agendas de NPCs, manter
 
 | Recurso | Caminho |
 |---------|---------|
-| Base VtM | `./` |
-| Settings do jogador | `[Base]/.claude/vtm.local.md` (opcional; template em `vtm.local.md.example`) |
-| Jogos | `[Base]/07_Jogos/` (ou `pasta_jogos` do `.local.md`) |
-| PDFs integrais | `pasta_acervo` do `.local.md` (opcional). Se vazio ou pasta não existir, usar só resumos. |
+| Base VtM | `${CLAUDE_PLUGIN_ROOT}` (só leitura: referências, templates, scripts) |
+| Jogos | `${user_config.pasta_campanhas}` |
+| Campanha ativa | `${user_config.campanha_ativa}` |
+| PDFs integrais | `${user_config.pasta_acervo}` (opcional) |
 | Resumos | `[Base]/12_Resumos_dos_Livros/` |
 
-Ler `.claude/vtm.local.md` antes de revisar campanha.
+**Configuração não preenchida.** Se um valor acima aparecer vazio ou ainda como `${user_config...}` literal: Jogos = `[Base]/07_Jogos/`; Campanha ativa = perguntar se houver mais de uma; PDFs = usar só os resumos.
 
 ## Sistema de Objetivos — 4 Níveis
 

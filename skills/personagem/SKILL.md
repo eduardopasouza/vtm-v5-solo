@@ -1,5 +1,5 @@
 ---
-description: "vtm personagem, criar personagem, ficha, evoluir, gastar XP, atributos, habilidades, disciplinas, vantagens, defeitos, clã, vampiro ficha rpg"
+description: "Cria e evolui o personagem jogador de Vampiro: A Máscara V5 (VtM): ficha do vampiro, clã, atributos, habilidades, disciplinas, vantagens e defeitos, gastar XP. Usar só quando o pedido mencionar VtM, vampiro ou a campanha de RPG; 'ficha' ou 'personagem' sozinhos não bastam."
 model: opus
 ---
 
@@ -12,14 +12,14 @@ Skill de criação e evolução de personagens para VtM V5 solo em Português BR
 
 | Recurso | Caminho |
 |---------|---------|
-| Base VtM | `./` |
-| Settings do jogador | `[Base]/.claude/vtm.local.md` (opcional; template em `vtm.local.md.example`) |
-| Jogos | `[Base]/07_Jogos/` (ou `pasta_jogos` do `.local.md`) |
+| Base VtM | `${CLAUDE_PLUGIN_ROOT}` (só leitura: referências, templates, scripts) |
+| Jogos | `${user_config.pasta_campanhas}` |
+| Campanha ativa | `${user_config.campanha_ativa}` |
 | Resumos | `[Base]/12_Resumos_dos_Livros/` |
-| PDFs integrais | `pasta_acervo` do `.local.md` (opcional). Se vazio ou pasta não existir, usar só resumos. |
+| PDFs integrais | `${user_config.pasta_acervo}` (opcional) |
 | Referências V5 | `[Base]/01_Sistema/` |
 
-Ler `.claude/vtm.local.md` antes de criar ou evoluir ficha.
+**Configuração não preenchida.** Se um valor acima aparecer vazio ou ainda como `${user_config...}` literal: Jogos = `[Base]/07_Jogos/`; Campanha ativa = perguntar se houver mais de uma; PDFs = usar só os resumos.
 
 ## Criação de Personagem — Fluxo V5
 
@@ -104,7 +104,7 @@ Definir com o jogador:
 
 ### Etapa 9 — Documentação
 
-Salvar ficha completa em `07_Jogos/[PC]/personagem.md` com formato:
+Salvar ficha completa em `[Jogos]/[PC]/personagem.md` com formato:
 
 ```markdown
 # [Nome do PC]
