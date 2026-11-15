@@ -405,4 +405,17 @@ Total: **~50-75 h**, em 12-18 sessões. As estimativas são de ordem de grandeza
   - `userConfig`: `pasta_campanhas = C:/dev/vtm-campanhas`, `pasta_resumos = C:/dev/vtm-campanhas/_resumos`, `pasta_acervo = D:/Downloads-ES101026/BibliotecaElfica`. Gravado com `claude plugin configure --values-stdin` pelo `cmd` (no PowerShell o wrapper `.ps1` do `claude` estraga o stdin).
   - Histórico do público reescrito no lugar com `--invert-paths`: nenhum commit tem mais `07_Jogos` ou `12_Resumos_dos_Livros`. Todos os SHAs mudaram, e o commit só de campanha (Sessão 15) caiu. A pasta `07_Jogos/` ficou só com subpastas vazias, ignoradas.
 - **MCP pelo plugin ✓ (2026-11-15):** numa sessão com o plugin recarregado, `auditar_campanha` e `buscar_acervo` responderam com o `userConfig` substituído. Achado: o `.mcp.json` na raiz era lido também como MCP **do projeto** (o repo do plugin é a pasta da sessão), sem `${CLAUDE_PLUGIN_ROOT}` substituído, e falhava. O servidor foi para `mcpServers` do `plugin.json` e o `.mcp.json` saiu.
-- **Pendente:** resultado do OCR; conferência da `01_Sistema`; force push do histórico reescrito; pedir ao suporte do GitHub a limpeza dos commits antigos em cache (cabe ao Eduardo).
+- **Force push (2026-11-15):** o GitHub público está em `a6cffd9`, com 11 commits; `07_Jogos`, `12_Resumos_dos_Livros` e `.mcp.json` dão 404 pela API.
+- **Conferência da `01_Sistema` (2026-11-15, subagente + amostragem):** há divergências com o Core em **todos os 12 arquivos**, cerca de 165 itens, umas 30 de gravidade alta. Exemplos de alta:
+  - frenesi com Compostura + Determinação (o certo é FdV atual + Humanidade ÷ 3, p. 119/219);
+  - Cavalgar a Onda com teste;
+  - tabelas de Surge, Severidade da Perdição e alimentação por Potência erradas (p. 216);
+  - Remorso contando as caixas ao contrário (p. 239);
+  - penalidade social por Humanidade (p. 237-239);
+  - dano somando Força (p. 126);
+  - distribuição de Atributos e Habilidades na criação (p. 136);
+  - Tipos de Predador dando Habilidade (p. 176-178);
+  - custo de Vantagens e compra de FdV com XP.
+
+  Conferidos à mão no índice: Atributos p. 136 ✓, tabela de DD do frenesi p. 220 ✓. O subagente apontou o `CLAUDE.md` com a fórmula antiga do Remorso, mas ela já estava corrigida desde a Onda 2. Relatório completo fora do git, em `_retomada/CONFERENCIA-01_SISTEMA-2026-11-15.md`. **Nada foi corrigido**: isso é a decisão seguinte (frente 9).
+- **Pendente:** resultado do OCR (em andamento); correção da `01_Sistema`; pedir ao suporte do GitHub a limpeza dos commits antigos em cache (cabe ao Eduardo).
