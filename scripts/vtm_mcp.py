@@ -15,9 +15,12 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import vtm_motor as m  # noqa: E402
 
-from mcp.server.fastmcp import FastMCP  # noqa: E402
+try:  # mcp 2.x: FastMCP passou a se chamar MCPServer
+    from mcp.server.mcpserver import MCPServer  # noqa: E402
+except ImportError:  # mcp 1.x (ainda instalado em algumas máquinas)
+    from mcp.server.fastmcp import FastMCP as MCPServer  # noqa: E402
 
-mcp = FastMCP("vtm")
+mcp = MCPServer("vtm")
 
 
 def _pasta_campanha() -> Path | None:
