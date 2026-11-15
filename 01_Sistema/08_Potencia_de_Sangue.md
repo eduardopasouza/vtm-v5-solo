@@ -106,10 +106,12 @@ A Maldicao do cla (Bane) se intensifica com a Potencia de Sangue:
 | Cla | Severidade 1 | Severidade 3 | Severidade 5 |
 |-----|-------------|-------------|-------------|
 | Brujah | -1d em testes para evitar Frenesi | -3d para evitar Frenesi | -5d para evitar Frenesi |
-| Nosferatu | Falha automatica em testes de aparencia | Presenca fisica causa desconforto sobrenatural | Mortais fogem em panico |
-| Ventrue | Exigente com sangue (1 restricao) | Restricao severa (poucos tipos servem) | Quase impossivel encontrar sangue aceitavel |
-| Tremere | Incapaz de criar Lacos de Sangue | Idem + sangue causa dor em outros | Sangue e veneno para outros vampiros |
-| Malkavian | Perturbacao mental ativa | Perturbacao domina em momentos de estresse | Perturbacao e constante e debilitante |
+| Nosferatu | -1d para se passar por humano (alem de Repulsivo) | -3d | -5d (Core p. 85) |
+| Ventrue | 1 FdV para beber fora da preferencia | 3 FdV | 5 FdV (Core p. 102) |
+| Tremere | Mortal precisa beber 1 vez a mais para o Laco | 3 vezes a mais | 5 vezes a mais (Core p. 97) |
+| Malkavian | -1d numa categoria de paradas na cena, apos falha bestial ou Compulsao | -3d | -5d (Core p. 79) |
+
+Em todos os clas do Core, a Perdicao escala pela Severidade, como acima; a natureza dela nao muda.
 
 ---
 
@@ -154,21 +156,23 @@ Ao ativar um poder de Disciplina, o jogador rola **2 dados no Rouse Check e fica
 
 A Geracao determina o **teto maximo** de Potencia de Sangue que um vampiro pode alcancar:
 
-| Geracao | Potencia Maxima | Classificacao |
-|---------|----------------|---------------|
-| 16a-14a | 0 | Sangue Ralo (Thin-Blood) |
-| 13a | 1 | Neonato fraco |
-| 12a | 2 | Neonato |
-| 11a | 3 | Neonato forte / Ancillae jovem |
-| 10a | 4 | Ancillae |
-| 9a | 5 | Ancillae forte |
-| 8a | 6 | Anciao |
-| 7a | 7 | Anciao poderoso |
-| 6a | 8 | Matusalem |
-| 5a | 9 | Matusalem antigo |
-| 4a | 10 | Antediluviano |
+Tabela do Core (p. 214):
 
-**Nota para personagens jogadores:** Na criacao, a maioria dos PCs e de 12a-13a Geracao e comeca com Potencia de Sangue 1. Ancillae podem comecar em 2-3.
+| Geracao | Potencia Minima | Potencia Maxima |
+|---------|----------------|----------------|
+| 14a-16a (Sangue Ralo) | 0 | 0 |
+| 12a-13a | 1 | 3 |
+| 10a-11a | 1 | 4 |
+| 9a | 2 | 5 |
+| 8a | 2 | 6 |
+| 7a | 3 | 7 |
+| 6a | 3 | 8 |
+| 5a (Matusalem) | 4 | 9 |
+| 4a (Matusalem) | 5 | 10 |
+
+A 3a Geracao sao os Antediluvianos (Core p. 214). Geracao nao indica idade: um anciao pode ter gerado alguem da 10a ha seculos, e um matusalem pode ter gerado alguem da 6a no ano passado (Core p. 214).
+
+**Nota para personagens jogadores:** na criacao, 12a-13a Geracao comeca com Potencia 1; 10a-11a, com Potencia 2 (Core p. 137). Um ancilla soma +1 ponto de Potencia (Core p. 151).
 
 ---
 

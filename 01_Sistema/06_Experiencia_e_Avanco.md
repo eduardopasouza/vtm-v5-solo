@@ -16,24 +16,16 @@ O sistema e projetado para progressao **lenta e significativa** — cada ponto d
 
 ### XP por Sessao
 
-O Narrador concede XP ao final de cada sessao de jogo. As recomendacoes padrao sao:
+> **Regra da casa RC-1 (aprovada em 2026-11-15):** as tabelas abaixo valem por cima do Core. O Core da 1 XP por sessao + 1 por historia, ou 2 por sessao em cronicas curtas (Core p. 130). Ver `09_Preferencias/02_Regras_da_Casa.md`.
+
+O Narrador concede XP ao final de cada sessao de jogo. As recomendacoes da casa sao:
 
 | Criterio | XP |
 |---|---|
-| Participacao na sessao | 1 XP (automatico por estar presente e participar) |
-| Roleplay significativo | +1 XP (interpretacao memoravel, momentos de personagem) |
-| Avanco da historia | +1 XP (contribuicao para o progresso da trama) |
-| Risco ou sacrificio | +1 XP (colocar o personagem em perigo genuino para a historia) |
-| Aprendizado ou crescimento | +1 XP (personagem evolui emocionalmente, aprende licoes) |
+| Base da sessao | 2-3 XP |
+| Marcos narrativos (roleplay significativo, avanco da historia, risco ou sacrificio, crescimento do personagem) | +1 por marco, ate +3 |
 
-### Total Tipico por Sessao
-
-| Tipo de Sessao | XP Esperado |
-|---|---|
-| Sessao curta (2-3 horas) | 1-2 XP |
-| Sessao padrao (3-4 horas) | 2-3 XP |
-| Sessao longa (5+ horas) | 3-4 XP |
-| Sessao culminante (final de arco) | 4-5 XP |
+Total por sessao: de 2 a 6 XP; o tipico e 3-4.
 
 ### XP por Conclusao de Arco
 
@@ -133,10 +125,11 @@ Aprender uma Disciplina que nao pertence ao cla do vampiro exige:
 
 | Requisito | Descricao |
 |---|---|
-| **Professor** | Um vampiro que possua a Disciplina deve ensinar (requer acesso e disposicao) |
-| **Sangue** | O aprendiz deve beber do sangue do professor (pelo menos uma vez) — risco de Laco de Sangue |
-| **Ressonancia** | Alternativamente, alimentar-se de mortais com a Ressonancia correta e Discrasia pode substituir o professor (mais lento) |
-| **Narrativa** | O Narrador deve aprovar — aprender fora do cla e sempre significativo |
+| **Ressonancia** | Vale para **qualquer** Disciplina, do cla ou nao: para justificar o gasto de XP, o personagem precisa se alimentar de sangue com a Ressonancia correspondente. A quantidade cresce com o nivel buscado (Core p. 231) |
+| **Sangue** | Fora do cla, **alem** da Ressonancia: provar o sangue de quem tem a Disciplina — risco de Laco de Sangue (Core p. 231) |
+| **Narrativa** | O Narrador aprova e pode exigir busca maior para niveis altos (Core p. 231) |
+
+O Core nao exige professor, e a Ressonancia nao substitui o sangue de quem tem a Disciplina: os dois requisitos se somam.
 
 ---
 
@@ -154,7 +147,7 @@ Aprender uma Disciplina que nao pertence ao cla do vampiro exige:
 | 3 → 4 | 24 XP |
 | 4 → 5 | 30 XP |
 
-> Caitiff nao possuem Disciplinas de cla — todas sao tratadas com custo intermediario entre in-clan e out-of-clan. Porem, nao precisam de professor para as Disciplinas que ja possuem desde a criacao.
+> Caitiff nao possuem Disciplinas de cla: qualquer uma custa 6 x o nivel, desde que tenham provado ao menos uma vez o sangue de quem a usa (Core p. 107). A Ressonancia correspondente continua exigida (Core p. 231).
 
 ---
 
@@ -204,16 +197,19 @@ Aprender uma Disciplina que nao pertence ao cla do vampiro exige:
 
 ### Limitacao por Geracao
 
-| Geracao | Potencia de Sangue Maxima |
+| Geracao | Potencia de Sangue Maxima (Core p. 214) |
 |---|---|
-| 16a-14a (Sangue Ralo) | 0 |
-| 13a | 1 |
-| 12a | 2 |
-| 11a | 3 |
-| 10a | 4 |
+| 14a-16a (Sangue Ralo) | 0 |
+| 12a-13a | 3 |
+| 10a-11a | 4 |
 | 9a | 5 |
 | 8a | 6 |
-| 7a ou inferior | 7+ |
+| 7a | 7 |
+| 6a | 8 |
+| 5a | 9 |
+| 4a | 10 |
+
+Minimos e detalhes em `08_Potencia_de_Sangue.md`.
 
 > A Geracao e um limite **rigido**. So pode ser reduzida atraves de **diablerie** (consumir a alma de outro vampiro — ato gravemente condenado).
 
@@ -390,15 +386,17 @@ Alguns Narradores concedem XP por **atividades de downtime** (periodos entre ses
 
 A **diablerie** (consumir a alma de outro vampiro) e o unico metodo de:
 - Reduzir a propria Geracao.
-- Aumentar a Potencia do Sangue alem do limite de Geracao.
-- Potencialmente aprender Disciplinas do vampiro consumido.
+- Comprar Potencia ate o nivel da vitima com o XP da diablerie (dentro do teto da nova Geracao; Core p. 214).
+- Comprar Disciplinas que o vampiro consumido conhecia.
 
-Consequencias:
-- **2-3 Manchas** automaticas (ou mais).
-- Possivel perda de Humanidade.
-- Veia negra nos olhos visivel a Auspicio (evidencia permanente).
-- Condenacao universal pela Camarilla (pena de Morte Final).
-- Risco de ser consumido pela personalidade da vitima (em caso de vitima mais poderosa).
+Mecanica e consequencias (Core p. 234-235):
+- Primeiro, incapacitar e drenar a vitima (em geral, uma cena inteira). Depois, vencer testes de **Forca + Determinacao (DD 3)** em numero igual a Potencia da vitima, um por turno; se um falhar, a alma morre sem ser consumida e nao ha diablerie de fato (Core p. 235).
+- Consumada, o diablerista perde **1 Humanidade direto** (nao sao Manchas).
+- Depois, disputa **Humanidade + Potencia** contra **Determinacao + Potencia** da vitima. Cada sucesso vale **5 XP** para gastar na hora em Potencia (ate a da vitima) ou em Disciplinas que a vitima conhecia.
+- Se perder a disputa, perde mais 1 Humanidade por sucesso que faltou. Se a Humanidade chegar a 0, a mente da vitima toma o corpo.
+- Se a vitima era de Geracao mais baixa, o diablerista desce **uma** Geracao.
+- **Veias negras** aparecem na aura: duram 1 ano, ou, se a Geracao da vitima era mais baixa, tantos anos quanto a diferenca original de Geracao. Nao sao permanentes.
+- Condenacao pela Camarilla (pena de Morte Final) e questao de ambientacao.
 
 ---
 
@@ -413,7 +411,7 @@ O V5 enfatiza que a progressao deve ser **narrativamente justificada**:
 | Atributo Mental | Estudo, pesquisa, experiencias de aprendizado |
 | Habilidade nova (0 → 1) | Treinamento especifico, mentor, aprendizado ativo |
 | Disciplina In-Clan | Pratica, experimentacao com o sangue |
-| Disciplina Out-of-Clan | Professor + sangue + tempo |
+| Disciplina Out-of-Clan | Ressonancia correspondente + provar o sangue de quem a tem (Core p. 231) |
 | Potencia do Sangue | Tempo de existencia significativo ou diablerie |
 | Humanidade | Arco de redencao, sacrificio genuino |
 
@@ -422,8 +420,9 @@ O V5 enfatiza que a progressao deve ser **narrativamente justificada**:
 ## 9. Resumo Rapido — XP
 
 ```
-XP POR SESSAO: 1-4 XP (tipico: 2-3)
+XP POR SESSAO (RC-1): base 2-3 + 1-3 por marcos
 XP POR ARCO: +1-5 XP bonus
+(Core p. 130: 1 por sessao + 1 por historia)
 
 CUSTOS PRINCIPAIS:
 - Atributo:           Nivel x 5
@@ -438,10 +437,10 @@ CUSTOS PRINCIPAIS:
 - Humanidade:         Nivel x 10
 - Vantagem:           3 por ponto
 
-DISCIPLINA OUT-OF-CLAN REQUER:
-- Professor com a Disciplina
-- Beber sangue do professor (risco de Blood Bond)
-- OU alimentacao com Ressonancia/Discrasia correta
+QUALQUER DISCIPLINA REQUER (Core p. 231):
+- Alimentar-se de sangue com a Ressonancia correspondente
+OUT-OF-CLAN REQUER TAMBEM:
+- Provar o sangue de quem tem a Disciplina (risco de Blood Bond)
 - Aprovacao do Narrador
 
 LIMITES:

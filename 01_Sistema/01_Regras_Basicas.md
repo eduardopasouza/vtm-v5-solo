@@ -44,8 +44,7 @@ Parada de Dados = Atributo + Habilidade
 | 4 | Desafiador | Rastrear alguem pela cidade |
 | 5 | Dificil | Falsificar um documento oficial |
 | 6 | Muito Dificil | Invadir um sistema de seguranca avancado |
-| 7 | Quase Impossivel | Convencer um Principe a mudar de decisao |
-| 8+ | Sobre-humano | Feitos verdadeiramente extraordinarios |
+| 7+ | Quase Impossivel | Convencer um Principe a mudar de decisao |
 
 ### Margem de Sucesso
 
@@ -89,8 +88,8 @@ Se pelo menos um dos 10s em um par critico for um **Dado de Fome**, o sucesso e 
 Quando um teste **falha** (sucessos < DD) E pelo menos um Dado de Fome mostra **1**, ocorre uma **Falha Bestial**.
 
 Consequencias possiveis:
-- O vampiro pode entrar em **Frenesi** (dependendo da situacao).
-- Perde um ponto de **Forca de Vontade** (se aplicavel).
+- Padrao: o personagem precisa encenar uma **Compulsao** (Core p. 207-208).
+- Alternativas, para iniciantes ou grupos que preferem menos impulsos: perder 1 ponto numa Vantagem; sofrer 1 ou mais de dano Agravado de Saude (sobretudo em testes de resistencia); se ninguem tiver ideia melhor, Fome +1, e se isso passar de 5, teste imediato de frenesi de fome DD 4 (Core p. 207).
 - A Besta se manifesta de forma narrativa — o vampiro pode rosnar, mostrar presas, reagir com violencia desproporcional.
 - O Narrador determina a gravidade da manifestacao bestial.
 - E sempre **pior** do que uma falha simples.
@@ -121,32 +120,23 @@ Quando varios personagens trabalham juntos em uma tarefa.
 
 ### Regras de Cooperacao
 
-1. Um personagem e designado como **lider** da acao.
-2. Cada personagem auxiliar faz um teste relevante contra DD 1.
-3. Cada auxiliar que obtiver sucesso **adiciona 1 dado** a parada do lider.
-4. O lider entao faz o teste com sua parada aumentada.
-5. Se um auxiliar tiver uma **Falha Bestial**, isso pode complicar toda a operacao.
+1. Rola-se **a maior parada** entre os participantes (Core p. 122).
+2. Cada auxiliar com **ao menos 1 ponto na Habilidade** envolvida soma **+1 dado** a essa parada. Os auxiliares **nao rolam**.
+3. Se nenhuma Habilidade estiver envolvida, qualquer um pode ajudar.
 
 ### Limitacoes
 
-- Nem toda acao permite cooperacao (o Narrador decide).
-- Auxiliares com 0 na Habilidade relevante nao podem ajudar.
-- O numero maximo de auxiliares e geralmente limitado pela situacao narrativa.
+- Nem toda acao permite cooperacao (o Narrador decide se trabalhar junto faz sentido).
+- O numero de auxiliares e limitado pela situacao narrativa.
 
 ---
 
 ## 8. Tomar Metade (Taking Half)
 
-Quando nao ha pressao ou urgencia, o personagem pode **Tomar Metade** em vez de rolar dados.
+Ferramenta do Narrador para **paradas de NPC** em disputas basicas: em vez de rolar, o NPC obtem sucessos iguais a **metade da parada**, arredondando para baixo (Core p. 120, 123). Ex.: guarda com 7 dados = 3 sucessos.
 
-### Como Funciona
-
-- O personagem automaticamente obtem um numero de sucessos igual a **metade de sua parada de dados** (arredondando para baixo).
-- **Nao e possivel** Tomar Metade se estiver sob estresse, em combate, ou sendo observado de forma hostil.
-- Dados de Fome **nao podem** gerar Falha Bestial ou Critico Confuso ao Tomar Metade (pois nao ha rolagem).
-- Util para tarefas mundanas onde o personagem tem competencia suficiente.
-
-**Exemplo:** Com uma parada de 7 dados, Tomar Metade garante 3 sucessos automaticos.
+- Para o PC, o equivalente e a **vitoria automatica**: se a parada for pelo menos o **dobro da DD**, o Narrador pode declarar vitoria sem rolar. Vale sobretudo fora de combate e em testes em que falhar seria tedioso; raramente vale sob estresse (Core p. 120).
+- Vitoria automatica e Tomar Metade **nunca** se aplicam a Checks, como o Rouse (Core p. 123).
 
 ---
 
@@ -166,22 +156,22 @@ Um jogador pode gastar **1 ponto de Forca de Vontade** para rerolar ate **3 dado
 
 ### Recuperando Forca de Vontade
 
-- Agir de acordo com o **Desejo** (Desire) do personagem pode recuperar 1 ponto de FdV.
-- Agir de acordo com uma **Conviccao** do personagem recupera 1 ponto de FdV.
-- Beneficiar uma **Ancora** (Touchstone) pode recuperar FdV.
-- Um descanso completo durante o dia recupera **1 ponto de Dano Superficial** a FdV.
+Dano **Superficial** (Core p. 158-159):
+- No **inicio de cada sessao**, apaga ate o maior valor entre Compostura e Determinacao (exceto se a sessao anterior terminou num gancho em que a FdV baixa da tensao).
+- A criterio do Narrador, 1 vez por sessao, satisfazer o **Desejo** recupera 1 ponto.
+- A criterio do Narrador, encenar um critico confuso ou uma falha bestial recupera 1 ou mais.
+
+Dano **Agravado** (Core p. 127, 159):
+- A criterio do Narrador, agir em beneficio significativo de uma **Ancora** ou manter uma **Conviccao** contra o proprio interesse recupera 1 ou mais.
+- Ter agido conforme a **Ambicao** recupera 1 no inicio da sessao seguinte.
 
 ---
 
 ## 10. Sucessos Automaticos
 
-Em algumas situacoes, o Narrador pode conceder **Sucessos Automaticos**:
-
-- Quando a tarefa esta claramente dentro das capacidades do personagem e nao ha pressao.
-- Quando uma Disciplina ou poder garante sucesso automatico.
-- Quando as circunstancias tornam o fracasso implausivel.
-
-Os sucessos automaticos sao adicionados **antes** da rolagem (quando ha rolagem) ou substituem a necessidade de rolar completamente.
+- **Vitoria automatica:** se a parada for pelo menos o **dobro da DD**, o Narrador pode declarar vitoria sem rolar. A margem e zero (Core p. 120-121). Ver §8.
+- Uma Disciplina ou poder pode garantir sucesso pela propria descricao.
+- O Narrador tambem pode dispensar a rolagem quando a ficcao torna o fracasso implausivel (Core p. 118).
 
 ---
 
@@ -199,7 +189,7 @@ O Narrador pode ajustar testes de diversas formas:
 
 ### Parada Minima
 
-Se modificadores reduzirem a parada a **zero ou menos**, o jogador nao pode tentar o teste (exceto se gastar Forca de Vontade, o que permitiria rolar 1 dado).
+Penalidades **nunca** reduzem a parada abaixo de **1 dado** (Core p. 120). O Core sugere limitar modificadores ad hoc do Narrador a +/-2 na DD ou 3 dados somados ou tirados; o limite nao vale para especialidades e regras especificas.
 
 ---
 
@@ -281,8 +271,8 @@ Algumas acoes complexas exigem multiplos testes ao longo do tempo.
 
 Se um personagem nao possui pontos na Habilidade necessaria:
 
-- **Habilidades Fisicas e Sociais:** Pode tentar, mas rola apenas o Atributo (sem dados de Habilidade). Em algumas situacoes, pode sofrer penalidade adicional de -1 dado.
-- **Habilidades Mentais:** Geralmente **nao pode tentar** sem pelo menos 1 ponto na Habilidade, salvo decisao do Narrador.
+- Rola **so o Atributo** da parada, **sem penalidade adicional**, em qualquer categoria (Core p. 118).
+- Algumas tarefas sao impossiveis sem o equipamento ou o conhecimento certo; isso e decisao do Narrador pela ficcao, nao regra por categoria de Habilidade.
 - Especialidades nunca se aplicam se nao ha pontos na Habilidade base.
 
 ---
@@ -295,7 +285,7 @@ Cada Habilidade pode ter uma ou mais **Especialidades** — areas de foco dentro
 - Cada personagem comeca com algumas Especialidades na criacao.
 - Novas Especialidades podem ser adquiridas com Experiencia.
 
-**Exemplo:** Um personagem com Briga 3 e a Especialidade "Boxe" rolaria 1 dado extra ao lutar usando tecnicas de boxe.
+**Exemplo:** Um personagem com Briga 3 e a Especialidade "Agarrar" rolaria 1 dado extra ao tentar imobilizar alguem. Estilos de arte marcial (boxe, muay thai) **nao valem** como especialidade de Briga, porque se aplicariam a quase todo uso da Habilidade (Core p. 159).
 
 ---
 

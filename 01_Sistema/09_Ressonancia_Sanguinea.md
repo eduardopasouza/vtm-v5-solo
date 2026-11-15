@@ -117,19 +117,22 @@ O V5 utiliza o sistema classico dos Quatro Temperamentos (baseado na teoria dos 
 
 ## Disciplinas e Ressonancia Associada
 
-| Disciplina | Ressonancia Primaria | Ressonancia Secundaria |
-|-----------|---------------------|----------------------|
-| Animalismo | Nenhuma especifica (sangue animal) | Colerico |
-| Auspicios | Fleumatico | — |
-| Celeridade | Colerico (Core p. 227) | — |
-| Dominacao | Fleumatico | — |
-| Fortitude | Melancolico | — |
-| Feiticaria de Sangue | Sanguineo | Fleumatico |
-| Ofuscacao | Melancolico | — |
-| Potencia | Colerico | — |
-| Presenca | Sanguineo | — |
-| Proteanismo | Nenhuma especifica (sangue animal) | Melancolico |
-| Oblivio | Melancolico | — |
+Tabela do Core (p. 227); cada Disciplina tem uma so Ressonancia:
+
+| Disciplina | Ressonancia |
+|-----------|-------------|
+| Animalismo | Sangue animal |
+| Auspicios | Fleumatico |
+| Celeridade | Colerico |
+| Dominacao | Fleumatico |
+| Fortitude | Melancolico |
+| Feiticaria do Sangue | Sanguineo |
+| Ofuscacao | Melancolico |
+| Potencia | Colerico |
+| Presenca | Sanguineo |
+| Proteanismo | Sangue animal |
+
+Oblivio nao tem regras no Core; a Ressonancia dela nao foi conferida.
 
 ---
 
@@ -153,7 +156,7 @@ Nem todo sangue tem a mesma forca emocional. A intensidade da Ressonancia depend
 
 **Intensidade:** Forte — a emocao domina o estado mental da vitima.
 
-**Efeito mecanico:** **+1 dado** em pools de Disciplinas associadas aquela Ressonancia ate a proxima alimentacao ou ate o fim da sessao (o que vier primeiro).
+**Efeito mecanico:** **+1 dado** em pools de Disciplinas associadas aquela Ressonancia ate a proxima alimentacao diluir o sangue ou ate a Fome chegar a 5 (Core p. 228).
 
 **Exemplo:** Um homem em furia apos descobrir traicao (Colerico intenso — +1 dado em Potencia e Celeridade). Uma mulher em extase durante orgasmo (Sanguineo intenso — +1 dado em Presenca e Feiticaria do Sangue).
 
@@ -165,10 +168,10 @@ Nem todo sangue tem a mesma forca emocional. A intensidade da Ressonancia depend
 
 **Intensidade:** Extrema — a emocao e tao intensa que marca o sangue de forma quase permanente. Isso e chamado de **Dyscrasia**.
 
-**Efeito mecanico:** Alem do bonus de +1 dado, sangue com Dyscrasia permite:
-1. **Avancar Disciplinas** associadas sem necessidade de professor (o sangue ensina)
-2. Em alguns casos, pode conceder bonus **permanentes** ou acesso a poderes especiais
-3. O Narrador pode permitir que o vampiro aprenda um ponto de Disciplina associada gastando XP, mesmo sem tutor
+**Efeito mecanico (Core p. 228):** o mesmo **+1 dado** da Ressonancia intensa, mais o efeito proprio da Discrasia, descrito em cada uma (Core p. 229-231).
+- Salvo indicacao em contrario, e preciso **matar e drenar** a vitima ou se alimentar dela ao longo de **tres noites** para obter o efeito.
+- O efeito costuma durar ate a proxima alimentacao ou ate a Fome chegar a 5.
+- Algumas Discrasias dao 1 XP gratuito para uma Disciplina e se consomem nisso; nenhuma dispensa os requisitos para aprender Disciplina fora do cla (Core p. 231).
 
 **Exemplo:** Um serial killer no auge de um assassinato (Colerico agudo — Dyscrasia). Uma vitima de tortura prolongada no limite do colapso mental (Melancolico agudo — Dyscrasia).
 
@@ -185,21 +188,21 @@ Nem todo sangue tem a mesma forca emocional. A intensidade da Ressonancia depend
 
 ## Tabela de Intensidade
 
-| Intensidade | Frequencia | Efeito Mecanico | Disciplinas |
-|------------|-----------|-----------------|-------------|
-| Fugaz | Comum (60-70%) | Nenhum bonus | Sabor apenas |
-| Intenso | Incomum (25-35%) | +1 dado na Disciplina associada | Ate proxima alimentacao |
-| Agudo (Dyscrasia) | Raro (5-10%) | +1 dado + pode aprender Disciplina sem tutor | Potencialmente permanente |
+| Intensidade | Efeito Mecanico | Duracao |
+|------------|-----------------|---------|
+| Sem Ressonancia (equilibrado) | Nenhum | — |
+| Fugaz | Nenhum bonus imediato; ja justifica gastar XP na Disciplina | — |
+| Intenso | +1 dado nas paradas da Disciplina associada | Ate a proxima alimentacao ou Fome 5 |
+| Agudo (Dyscrasia) | +1 dado + efeito proprio da Discrasia | Em geral, ate a proxima alimentacao ou Fome 5 |
+
+(Core p. 228)
 
 ---
 
 ## Ressonancia e Avanco de Disciplinas
 
 ### Regra Central
-Para comprar um novo ponto de Disciplina com XP, o vampiro **precisa** de uma das seguintes condicoes:
-1. **Tutor:** Outro vampiro que possua a Disciplina em nivel igual ou superior ensina
-2. **Ressonancia apropriada:** O vampiro se alimentou de sangue com Ressonancia Intensa ou Aguda correspondente a Disciplina recentemente
-3. **Dyscrasia:** Sangue com Dyscrasia permite aprendizado sem tutor
+Para gastar XP em **qualquer** Disciplina, o vampiro precisa ter se alimentado de sangue com a Ressonancia correspondente; ate a Ressonancia fugaz basta. A quantidade de sangue e de vitimas cresce com o nivel buscado. Uma Disciplina **fora do cla** exige **tambem** provar o sangue de quem a tem (Core p. 228, 231). O Core nao exige tutor.
 
 ### Implicacoes Praticas
 - Quer aprender **Potencia**? Cace vitimas furiosas (Colerico intenso)
@@ -207,11 +210,10 @@ Para comprar um novo ponto de Disciplina com XP, o vampiro **precisa** de uma da
 - Quer aprender **Dominacao**? Cace vitimas calmas e controladas (Fleumatico intenso)
 - Quer aprender **Fortitude**? Cace vitimas em sofrimento (Melancolico intenso)
 
-### Disciplinas sem Ressonancia Clara
-Algumas Disciplinas nao tem Ressonancia obvia:
-- **Animalismo:** Melhor aprendido com tutor ou sangue animal (ironicamente, sem Ressonancia)
-- **Proteanismo:** Similar ao Animalismo — sangue animal ou tutor
-- **Feiticaria de Sangue:** Sanguineo ou Fleumatico, dependendo da interpretacao do Narrador
+### Sangue Animal
+- **Animalismo** e **Proteanismo** usam a Ressonancia do sangue animal (Core p. 227).
+- Opcionalmente, o Narrador pode dar aos animais Ressonancias humorais pelo estado emocional ou pela natureza do bicho; o sangue animal e mais intenso depois de o animal matar ou durante o acasalamento. Animais nao tem Discrasia (Core p. 227).
+- **Feiticaria do Sangue:** Sanguineo (Core p. 227).
 
 ---
 
@@ -226,7 +228,7 @@ O metodo de caca influencia a Ressonancia disponivel:
 | Sanguessuga | Variavel (depende do vampiro-vitima) | Imprevisivel |
 | Faca | Variavel (depende do humor da familia) | Controlavel com manipulacao |
 | Consensual | Variavel (pode ser direcionado) | Flexivel se o doador cooperar |
-| Fazendeiro | Nenhuma (sangue animal) | Impossivel avancar via Ressonancia |
+| Fazendeiro | Sangue animal (Core p. 227) | Bom para Animalismo e Proteanismo; ruim para o resto |
 | Saqueador de Tumulos | Nenhuma (sangue morto) | Pessimo para avanco |
 | Osiris | Sanguineo (fas excitados) | Otimo para Presenca |
 | Sandman | Fleumatico (vitimas dormindo — calmas) | Bom para Auspicios/Dominacao |
@@ -238,11 +240,10 @@ O metodo de caca influencia a Ressonancia disponivel:
 
 ## Detectando Ressonancia
 
-### Poder de Disciplina: Sentir a Besta (Sense the Beast)
-Auspicios 1 permite ao vampiro **sentir** a Ressonancia de um mortal antes de se alimentar. O vampiro percebe a "cor" emocional da aura do mortal.
+### Pela observacao (Core p. 228)
+O roleplay ja deve dar boa ideia da Ressonancia. Depois de observar ou conversar com a vitima por uma cena, o Narrador pode permitir **Determinacao + Intuicao** para esclarecer. Provar o sangue tira qualquer duvida, e o Narrador pode dar pistas de uma Discrasia.
 
-### Sem Auspicios
-Sem Auspicios, o vampiro so descobre a Ressonancia **apos** se alimentar — pelo sabor do sangue. Isso torna a caca direcionada muito mais dificil para vampiros sem esse poder.
+> Sentir a Besta (Sense the Beast) e poder de **Animalismo** (Determinacao + Animalismo contra Compostura + Subterfugio) e revela a natureza, a fome e a hostilidade da Besta do alvo, nao a Ressonancia (Core p. 245). Poderes de Auspicios que leem emocoes podem ajudar a criterio do Narrador.
 
 ### Sabores
 - **Sanguineo:** Doce, quente, viciante — como vinho encorpado
@@ -283,10 +284,9 @@ Antes de uma cena de caca, decida a Ressonancia disponivel:
 1. **Onde** o vampiro esta cacando? (Local influencia emocoes disponiveis)
 2. **Quando?** (Horario importa — final de expediente = mais Colerico)
 3. **Quem** esta disponivel? (Tipo de pessoa no local)
-4. Role 1d10 ou escolha a intensidade:
-   - 1-6: Fugaz
-   - 7-9: Intenso
-   - 10: Agudo (Dyscrasia)
+4. Escolha, ou role na tabela aleatoria do Core (p. 228), ajustando pelo ambiente (boate favorece Sanguineo; igreja, talvez o contrario):
+   - **Temperamento (1d10):** 1-5 equilibrado, sem Ressonancia relevante; 6-8 Fugaz; 9-0 Intenso, possivelmente agudo: role outro d10, 1-8 Intenso, 9-0 Agudo (Discrasia).
+   - **Ressonancia (1d10, se o temperamento deu 6+):** 1-3 Fleumatico; 4-6 Melancolico; 7-8 Colerico; 9-0 Sanguineo.
 
 ### Tornando a Caca Interessante
 Nao trate a alimentacao como "rolagem rapida e pronto". Use a Ressonancia para criar cenas:

@@ -12,7 +12,7 @@ O combate no V5 e projetado para ser **rapido, letal e narrativo**. Diferente de
 
 ## 2. Estrutura do Turno de Combate
 
-Cada turno de combate (chamado de **round**) representa aproximadamente **3 segundos** de acao no mundo do jogo.
+Cada turno de combate (chamado de **round**) nao tem duracao fixa: dura o que a narrativa pedir (Core p. 124).
 
 ### Sequencia
 
@@ -31,19 +31,21 @@ O V5 utiliza um sistema simplificado de iniciativa.
 
 - Todos declaram suas acoes.
 - O Narrador determina a ordem com base na **situacao narrativa**.
-- Em geral: ataques a distancia resolvem antes de corpo a corpo; acoes defensivas antes de ofensivas.
+- Ordem do Core: primeiro o corpo a corpo ja engajado, depois os ataques a distancia, depois o corpo a corpo novo, depois o resto (Core p. 125).
 
-### Metodo Opcional (Rolagem)
+### Metodo Opcional (Iniciativa fixa)
 
-- Cada participante rola **Compostura + Consciencia (Awareness)**.
-- Maior resultado age primeiro.
-- Empates: Destreza mais alta age primeiro; se ainda empatado, acoes sao simultaneas.
+Regra opcional; o proprio Core avisa que deixa o combate bem mais lento (Core p. 300).
+
+- Cada personagem tem Iniciativa = **Compostura + Prontidao (Awareness)**, um valor fixo, **sem rolagem**. Num duelo formal, pode-se usar Destreza (ou Determinacao, num duelo muito formal) no lugar da Compostura.
+- O maior valor age primeiro; a Iniciativa nao muda durante o combate.
+- Empates: PCs antes de NPCs; depois, vampiros antes de mortais; depois, a maior Compostura; se ainda empatar, rolar um dado.
+- Quem passa a vez vai para o fim da ordem.
 
 ### Surpresa
 
-- Se um lado surpreende o outro, o lado surpreso **nao age no primeiro turno**.
-- Emboscadas geralmente concedem +2 dados ao ataque inicial.
-- Para detectar uma emboscada: **Raciocinio + Consciencia** vs **Destreza + Furtividade** do atacante.
+- Conseguir surpresa costuma exigir teste, como **Destreza + Furtividade** contra a melhor parada de **Raciocinio + Prontidao** dos oponentes; vale tambem para ataques vindos de Ofuscacao (Core p. 300).
+- O primeiro ataque com surpresa bem-sucedida e feito, em geral, contra **DD fixa 1** (Core p. 300).
 
 ---
 
@@ -55,7 +57,7 @@ Cada personagem tem **uma acao principal** por turno. Acoes menores (falar, saca
 
 | Acao | Parada de Dados |
 |---|---|
-| Ataque corpo a corpo | Forca + Briga (desarmado) ou Destreza + Armas Brancas (armado) |
+| Ataque corpo a corpo | Forca + Briga (desarmado); Destreza + Armas Brancas (arma de uma mao); Forca + Armas Brancas (arma de duas maos) (Core p. 301) |
 | Ataque a distancia | Compostura + Armas de Fogo |
 | Esquiva | Destreza + Atletismo |
 | Usar Disciplina | Varia conforme a Disciplina |
@@ -127,7 +129,7 @@ Alvo parado nao tem parada de defesa: o atirador rola contra DD fixa 1 (Core p. 
 
 ### Mirar
 
-Gastar um turno inteiro mirando concede **+2 dados** no proximo ataque a distancia.
+O Core nao traz bonus por gastar um turno mirando. Em vez disso, muda a parada: num tiro de precisao (franco-atirador, primeiro tiro mirado de uma emboscada), usar **Determinacao + Armas de Fogo**; num duelo de "meia-noite", **Destreza + Armas de Fogo** no primeiro tiro. Num tiroteio comum, a parada e **Compostura + Armas de Fogo** (Core p. 301).
 
 ---
 
@@ -188,7 +190,7 @@ Vampiros sao resistentes a maioria das formas de dano, mas possuem vulnerabilida
 | Luz solar | **Agravado** | Dano por turno de exposicao |
 | Dentes de vampiro | **Agravado** | Mordida em combate causa Agravado |
 | Disciplinas ofensivas | Varia | Conforme a descricao do poder |
-| Decapitacao | **Morte Final** | Automatico se bem-sucedido |
+| Decapitacao | **Morte Final** | Tiro dirigido -2 com arma de corte apropriada e 10+ de dano, contado antes de dividir (Core p. 221) |
 | Garras de Lobisomem | **Agravado** | Ignoram resistencia vampirica |
 
 ### Fogo
@@ -200,7 +202,7 @@ Vampiros sao resistentes a maioria das formas de dano, mas possuem vulnerabilida
 | Incendio | 3 Agravado |
 | Inferno | 4+ Agravado |
 
-- Fogo causa **Frenesi de Terror** automaticamente (DD 3-5 dependendo da intensidade).
+- Fogo exige **teste de Frenesi de Terror**, nao frenesi automatico: fogueira ou ser queimado DD 2; dentro de predio em chamas DD 3 (Core p. 220).
 - Vampiro em chamas sofre o dano **no inicio de cada turno** ate apagar.
 
 ### Luz Solar
@@ -211,15 +213,16 @@ Vampiros sao resistentes a maioria das formas de dano, mas possuem vulnerabilida
 | Obscurecida (cortinas, dia muito nublado) ou corpo coberto (casaco, luvas, mascara, chapeu, oculos) | O mesmo dano, mas a cada dois turnos ou menos |
 | Sangue Ralo, sol direto | 1 Superficial por turno |
 
-- Causa Frenesi de Terror automatico.
+- Exige teste de Frenesi de Terror: sol obscurecido DD 3, sol direto DD 4 (Core p. 220).
 - A Humanidade nao aumenta o dano solar. So **Humanidade 10** reduz o dano a metade (Core p. 236).
 
 ### Estaca no Coracao
 
-- Requer um ataque direcionado com DD +2 ao teste normal.
-- Parada: Destreza + Armas Brancas (ou Briga se empurrando a estaca a mao).
-- Se o dano penetrar (apos reducao), o vampiro fica **paralisado** — consciente mas completamente imobilizado.
-- Remover a estaca liberta o vampiro instantaneamente.
+- Em combate: tiro dirigido com **-2** e **5 ou mais de dano** de qualquer tipo, contado **antes** de dividir o Superficial (Core p. 221).
+- Parada corpo a corpo: **Forca + Armas Brancas**, com a estaca como arma. Tambem vale a distancia (besta com virotes de madeira, lanca-granadas). A estaca tem sempre modificador **+0** (Core p. 221, 304).
+- Contra alvo dormindo, basta crava-la.
+- O vampiro fica **paralisado**, a principio consciente. Com 1 FdV percebe o entorno e mexe os olhos; ainda usa Disciplinas mentais (Auspicios, Presenca, Dominacao), mas so da ordens se puder se comunicar por telepatia. Continua fazendo o Rouse a cada anoitecer (Core p. 222-223).
+- Se a Fome o levar ao torpor, ele fica em torpor enquanto a estaca estiver ali; retirada depois do prazo, ele desperta na hora ou naquela noite (Core p. 223).
 - Nao causa Morte Final por si so.
 
 ---
@@ -228,37 +231,34 @@ Vampiros sao resistentes a maioria das formas de dano, mas possuem vulnerabilida
 
 ### Armas Corpo a Corpo
 
-| Arma | Bonus de Dano | Tipo | Ocultavel | Notas |
-|---|---|---|---|---|
-| Punho (desarmado) | +0 | Superficial | — | Padrao |
-| Soco-ingles | +1 | Superficial | Sim | — |
-| Faca / Adaga | +1 | Superficial | Sim | Pode ser arremessada |
-| Espada curta / Machete | +2 | Superficial | Nao | — |
-| Espada longa / Katana | +3 | Superficial | Nao | — |
-| Machado / Martelo grande | +4 | Superficial | Nao | Arma pesada, usa Forca |
-| Bastao | +2 | Superficial | Nao | Alcance |
-| Estaca de madeira | +1 | Superficial | Sim | Efeito especial contra vampiros |
-| Motosserra | +3 | Superficial/Agravado | Nao | Potencial de decapitacao |
+Categorias e exemplos do Core (p. 304). Para outra arma, o Narrador escolhe a categoria mais proxima.
+
+| Categoria (exemplos do Core) | Bonus de Dano |
+|---|---|
+| Improvisada; estaca | +0 |
+| Impacto leve (soco-ingles) | +1 |
+| Impacto pesado (cassetete, porrete, chave de roda, taco de beisebol) | +2 |
+| Perfuracao leve (canivete, virote de besta) | +2 |
+| Corpo a corpo pesado (espada larga, machado de incendio) | +3 |
+| Corpo a corpo enorme (montante, viga de aco) | +4 |
+
+Contra vampiros, armas comuns causam dano Superficial (dividido por 2).
 
 ### Armas de Fogo
 
-| Arma | Dano | Tipo | Ocultavel | Notas |
-|---|---|---|---|---|
-| Pistola leve (.22, .25) | +2 | Superficial | Sim | — |
-| Pistola media (9mm) | +3 | Superficial | Sim | Mais comum |
-| Pistola pesada (.44, .45) | +4 | Superficial | Dificil | Alto recuo |
-| Escopeta (shotgun) | +4 | Superficial | Nao | Devastadora a curta distancia |
-| Submetralhadora (SMG) | +3 | Superficial | Parcial | Rajada |
-| Rifle | +4 | Superficial | Nao | Longo alcance |
-| Rifle de precisao (sniper) | +5 | Superficial | Nao | Requer preparacao |
+| Categoria (exemplos do Core, p. 304) | Dano |
+|---|---|
+| Tiro leve (pistola .22) | +2 |
+| Tiro medio (rifle .308 de tiro unico, pistola 9 mm, escopeta no alcance efetivo) | +3 |
+| Tiro pesado (escopeta calibre 12 so a curta distancia, .357 Magnum) | +4 |
+
+O Core nao traz arma de fogo acima de +4.
 
 > **Nota contra vampiros:** Todo dano de armas de fogo e Superficial e dividido por 2.
 
 ### Rajada (Burst Fire)
 
-- Armas automaticas podem disparar em rajada.
-- +2 dados ao ataque, mas usa mais municao.
-- Rajada completa: +3 dados, mas aplica penalidade na proxima acao.
+- Regra opcional: quem tem cadencia de tiro maior, ou aceita gastar mais municao, ganha **+1 dado** (Core p. 301). Exemplo do livro: submetralhadora contra pistola.
 
 ---
 
@@ -281,26 +281,21 @@ Vampiros sao resistentes a maioria das formas de dano, mas possuem vulnerabilida
 
 ### Iniciar Agarramento
 
-- **Teste:** Forca + Briga (oposto pelo defensor com Forca + Briga ou Destreza + Atletismo).
-- Se bem-sucedido, o atacante agarra o defensor.
+- **Teste:** Forca + Briga contra a defesa do alvo. Com mais sucessos, o atacante **nao causa dano**: segura o alvo, que nao pode se mover nem enfrentar outros oponentes, mas ainda age normalmente contra quem o agarrou (Core p. 301).
 
-### Acoes durante Agarramento
+### Turno seguinte
 
-O personagem que controla o agarramento pode, em turnos subsequentes:
+Disputa de **Forca + Briga**. Se quem agarrou vencer, escolhe uma opcao (Core p. 301):
 
-| Acao | Efeito |
+| Opcao | Efeito |
 |---|---|
-| Manter | Mantem o alvo preso, nenhum dos dois age ofensivamente |
-| Causar dano | Forca em dano Superficial por turno (esmagamento) |
-| Morder | Forca + Briga para morder: dano **Agravado** + possivel alimentacao |
-| Imobilizar | Testes adicionais para render completamente |
-| Usar como escudo | Alvo absorve ataques de terceiros |
-| Arremessar | Joga o alvo; causa dano de queda |
+| Ferir | Dano pela margem, como um ataque normal |
+| Morder (vampiro) | **2 Agravados**, sem a penalidade usual de mordida (Core p. 213, 301) |
+| Segurar | Mantem o alvo no lugar |
 
-### Escapar
+Se o agarrado vencer, escapa e se move livremente no turno seguinte (Core p. 301).
 
-- O personagem preso usa **Forca + Briga** (oposto) como sua acao para tentar escapar.
-- Se bem-sucedido, liberta-se e pode agir normalmente no proximo turno.
+O Core nao traz regras de usar o alvo como escudo nem de arremessa-lo.
 
 ---
 
@@ -308,14 +303,9 @@ O personagem que controla o agarramento pode, em turnos subsequentes:
 
 ### Enfrentando Varios Inimigos
 
-- O personagem deve dividir sua parada de dados entre os alvos **ou** focar em um e ficar vulneravel aos demais.
-- Cada atacante adicional alem do primeiro concede **-1 dado** a defesa do alvo contra todos os ataques.
-- Se cercado por 3 oponentes: -2 dados para se defender de cada ataque.
-
-### Limite
-
-- A penalidade maxima por multiplos oponentes e geralmente **-5 dados** (Narrador pode ajustar).
-- Disciplinas como Celeridade podem ajudar a lidar com multiplos inimigos.
+- Para atacar varios inimigos, o personagem divide a parada (Core p. 125).
+- Na defesa, perde **1 dado a cada oponente sucessivo** que o ataca, de forma cumulativa: contra tres guardas, defende com a parada cheia contra o 1º, -1 contra o 2º, -2 contra o 3º (Core p. 125).
+- O Core nao fixa teto para essa penalidade; a parada nunca cai abaixo de 1 dado (Core p. 119-120).
 
 ---
 
@@ -326,9 +316,14 @@ Alem de Saude, personagens possuem um tracker de **Forca de Vontade** (Compostur
 ### Como Funciona
 
 - Certos efeitos (Dominacao, derrotas sociais, Falhas Bestiais) causam dano ao tracker de FdV.
-- Dano Superficial a FdV: marcado com /. Recupera ao agir de acordo com Conviccoes/Ancoras.
-- Dano Agravado a FdV: marcado com X. Recupera mais lentamente (1 por noite de descanso ou cena significativa).
-- Se o tracker de FdV estiver **completamente preenchido**, o personagem sofre uma **quebra mental** — incapaz de agir efetivamente, vulneravel a coercao, ou entra em catatonia.
+- Dano Superficial a FdV (marcado com /), recuperacao (Core p. 158-159):
+  - no inicio de cada sessao, apaga ate o maior valor entre Compostura e Determinacao (exceto se a sessao anterior terminou num gancho em que a FdV baixa da tensao);
+  - a criterio do Narrador, 1 por sessao ao satisfazer o Desejo (Core p. 174);
+  - a criterio do Narrador, 1 ou mais ao encenar um critico confuso ou uma falha bestial.
+- Dano Agravado a FdV (marcado com X), recuperacao (Core p. 127, 159):
+  - a criterio do Narrador, 1 ou mais ao agir em beneficio significativo de uma Pedra de Toque ou manter uma Conviccao contra o proprio interesse;
+  - 1 no inicio da sessao seguinte, se o personagem agiu conforme sua Ambicao.
+- Tracker de FdV cheio = **Prejudicado** (-2 dados em testes Sociais e Mentais). Fora de um conflito social, nao ha outro efeito imediato; dentro dele, quem perde toda a FdV nao consegue mais se defender (Core p. 127, 158).
 
 ---
 
@@ -371,13 +366,7 @@ Alem de Saude, personagens possuem um tracker de **Forca de Vontade** (Compostur
 
 - **Teste:** Forca de Vontade **atual** (caixas sem dano) + Humanidade ÷ 3 (para baixo) vs DD definida pelo Narrador (Core p. 219). Vitoria = resiste, mas gasta o turno; critico = resiste sem perder o turno.
 
-| Situacao | DD |
-|---|---|
-| Provocacao leve | 2 |
-| Ameaca moderada | 3 |
-| Perigo grave | 4 |
-| Exposicao direta a fogo/sol | 4-5 |
-| Fome 5 + cheiro de sangue | 5 |
+Os exemplos do Core vao de DD 2 a 4 (Core p. 220): fogueira ou ser queimado 2; predio em chamas ou sol obscurecido 3; sol direto 4; falhar Rouse com Fome 5 = 4. Tabela completa em `04_Fome_e_Bestia.md` §8.
 
 ### Efeitos do Frenesi
 
@@ -385,7 +374,7 @@ Alem de Saude, personagens possuem um tracker de **Forca de Vontade** (Compostur
 - Em Frenesi de Furia: ataca com brutalidade maxima, sem se defender, ignorando ferimentos.
 - Em Frenesi de Fome: agarra a vitima mais proxima e drena sangue.
 - Em Frenesi de Terror: foge em panico, usando todas as capacidades para escapar (inclusive Disciplinas).
-- O Frenesi termina quando a fonte e eliminada, o perigo passa, ou o vampiro e fisicamente contido.
+- O frenesi dura ate o vampiro cumprir o objetivo ou a cena terminar: furia, teste de FdV DD 3 (5 com inimigos de pe) apos destruir o alvo; fome, ate Fome 1 ou menos; terror, ate nao perceber mais perigo (Core p. 220).
 
 ### Cavalgando a Onda (Riding the Wave)
 
@@ -400,32 +389,22 @@ Em vez de resistir, o vampiro pode **ceder de proposito** ao Frenesi, **sem test
 
 ### Ataques Direcionados
 
-Mirar em uma parte especifica do corpo:
+Mirar num ponto especifico, como o pneu de um carro, a taca na mao do anciao ou a perna de quem foge (Core p. 302-303):
 
-| Alvo | Penalidade | Efeito Especial |
-|---|---|---|
-| Cabeca | +2 DD | +1 dano |
-| Mao / Arma | +2 DD | Possivel desarme |
-| Pernas | +1 DD | Reduz mobilidade |
-| Coracao (estaca) | +2 DD | Paralisia vampirica |
-| Olhos | +3 DD | Cegueira temporaria |
+- Declarar o alvo antes de rolar.
+- Depois da rolagem, **subtrair sucessos**: normalmente **-2**. O Narrador ajusta de -1 (pneu) a -4 (linha de combustivel de um aviao decolando).
+- O efeito fica a criterio do Narrador, mas **nao deve ser mais dano**: dano maximo ja e o objetivo do ataque normal. O tiro dirigido serve para efeitos como incapacitar sem matar.
+- Tambem e usado na estaca no coracao e na decapitacao, ambas com -2 (Core p. 221).
 
-### Desarme
+### Opcoes do Core (p. 297-298)
 
-- **Teste:** Destreza + Armas Brancas ou Briga (oposto).
-- Se bem-sucedido, a arma do oponente cai ou e tomada.
-- Margem de 3+ permite pegar a arma para si.
+- **Manobra:** buscar posicao vantajosa (flanquear, ficar a sos com o alvo). Se der certo, rende, por exemplo, +1 a 3 dados na acao seguinte; as vezes e a manobra que permite atacar.
+- **Ataque total:** +1 de dano, mas o atacante nao se defende de nenhum ataque naquele turno.
+- **Defesa total:** +1 dado em todas as defesas do turno; nao faz mais nada alem, talvez, de uma acao menor.
 
-### Empurrar / Derrubar
+### Desarmar, derrubar e carga
 
-- **Teste:** Forca + Briga (oposto).
-- Se bem-sucedido, alvo e empurrado ou derrubado.
-- Alvo derrubado: -2 dados em defesa ate levantar (gastar acao).
-
-### Carga
-
-- Correr e atacar no mesmo turno.
-- +1 dado ao dano, mas -2 dados na defesa ate o proximo turno.
+O Core nao traz regras proprias para isso. O Narrador pode tratar desarmar como tiro dirigido (efeito no lugar de dano, Core p. 302-303) e derrubar ou carga como manobra.
 
 ---
 

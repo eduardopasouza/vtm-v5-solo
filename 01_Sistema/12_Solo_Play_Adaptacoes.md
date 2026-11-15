@@ -88,7 +88,7 @@ Em grupo, combate e distribuido entre varios PCs. Solo, o PC enfrenta todos os i
 2. A IA declara intencao dos oponentes
 3. Rolagem unica por round: Pool do PC vs. Pool do oponente (teste contestado)
 4. Margem de sucesso = dano infligido ou efeito alcancado
-5. Empate = ambos se ferem ou ninguem avanca
+5. Empate: em disputa simples, vence quem age; em conflito de dois lados, ambos sofrem dano como se a margem fosse 1 (Core p. 123, 125)
 
 ### Escala de Oponentes Solo
 
@@ -139,7 +139,7 @@ Se o PC falha em encontrar a pista necessaria para avancar:
 **O jogo nao deve parar porque uma rolagem falhou.** Falhas devem criar complicacoes, nao becos sem saida.
 
 ### Auspicios como Ferramenta de Investigacao
-- **Sentidos Aguçados (Heightened Senses):** Bonus automatico (+2 dados) em qualquer investigacao sensorial
+- **Sentidos Aguçados (Heightened Senses):** soma o nivel de Auspicios a todas as rolagens de percepcao; sensacao extrema (estrondo, clarao, cheiro avassalador) exige Raciocinio + Determinacao DD 3+ (Core p. 249)
 - **Premonição (Premonition):** A IA pode oferecer "flashes" de informacao via visoes
 - **Toque do Espirito (Spirit's Touch):** Psicometria — tocar objetos revela fragmentos do passado
 - **Telepatia (Telepathy):** Permite "ler" NPCs suspeitos diretamente
@@ -211,16 +211,19 @@ Peculiaridade: [um traco de personalidade marcante]
 
 ### DDs Ajustados
 
-Em jogo de grupo, DDs altos sao mitigados por multiplos PCs tentando. Solo, o PC e o unico a rolar. Considere reduzir DDs em 1 para compensar:
+Escala do Core (p. 119), que vale para grupo e para solo:
 
-| Situacao | DD Grupo | DD Solo |
-|---------|---------|---------|
-| Tarefa rotineira | 2 | 2 (sem mudanca) |
-| Tarefa simples | 3 | 2-3 |
-| Tarefa moderada | 4 | 3-4 |
-| Tarefa desafiadora | 5 | 4-5 |
-| Tarefa dificil | 6 | 5 |
-| Tarefa extrema | 7+ | 6 |
+| Situacao | DD |
+|---------|-----|
+| Rotineira | 1 |
+| Direta | 2 |
+| Moderada | 3 |
+| Desafiadora | 4 |
+| Dificil | 5 |
+| Muito dificil | 6 |
+| Quase impossivel | 7+ |
+
+> **Proposta, nao aprovada (P6):** a versao anterior deste arquivo sugeria reduzir as DDs em 1 no jogo solo, porque o PC e o unico a rolar. Isso so vale como regra da casa se o Eduardo aprovar por escrito. Ate la, usar a escala do Core.
 
 **Alternativa:** Em vez de reduzir DD, permita que o PC use mais frequentemente:
 - Teamwork bonus de Retainers (+1 a +2 dados)

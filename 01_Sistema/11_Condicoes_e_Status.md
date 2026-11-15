@@ -72,29 +72,30 @@ Torpor e o estado de inconsciencia profunda dos vampiros — um sono do qual nao
 
 A duracao do Torpor e baseada na **Humanidade** do vampiro:
 
-| Humanidade | Duracao Minima do Torpor |
-|-----------|-------------------------|
-| 10 | 1 dia |
-| 9 | 1 semana |
-| 8 | 2 semanas |
-| 7 | 1 mes |
-| 6 | 1 ano |
-| 5 | 5 anos |
-| 4 | 10 anos |
-| 3 | 50 anos |
-| 2 | 100 anos |
-| 1 | 500 anos |
-| 0 | Indefinido (possivelmente permanente) |
+Tabela do Core (p. 241):
+
+| Humanidade | Duracao do Torpor |
+|-----------|-------------------|
+| 9 | 3 dias |
+| 8 | 1 semana |
+| 7 | 2 semanas |
+| 6 | 1 mes |
+| 5 | 1 ano (o Core imprime "7" nesta linha, por erro; pela sequencia, e a Humanidade 5) |
+| 4 | 1 decada |
+| 3 | 5 decadas |
+| 2 | 1 seculo |
+| 1 | 5 seculos |
+
+A tabela do Core nao traz linha para Humanidade 10 nem 0.
 
 **Nota:** Quanto MENOR a Humanidade, MAIOR o Torpor. Vampiros monstruosos dormem por seculos; os mais humanos acordam em dias.
 
 ### Despertar do Torpor
 
 O vampiro pode despertar de Torpor:
-1. **Naturalmente:** Apos a duracao minima, com teste de Determinacao + Humanidade (DD variavel)
-2. **Alimentacao:** Se alguem oferece sangue ao vampiro adormecido, ele pode despertar prematuramente
-3. **Estimulo externo:** Dano, ameaca iminente, ou presenca de algo significativo pode trigger o despertar (teste)
-4. **Rouse Check:** Ao despertar, o vampiro comeca com Fome 4-5 (quase faminto)
+1. **Naturalmente:** depois do prazo, um vampiro em torpor sem estaca faz **Determinacao + Prontidao (DD 2)** sempre que uma possivel vitima chega perto; com sucesso, desperta o bastante para se alimentar (Core p. 223)
+2. **Estaca:** com estaca, fica em torpor enquanto ela estiver ali; retirada depois do prazo, desperta na hora ou naquela noite (Core p. 223)
+3. **Fome:** o vampiro sai do torpor com **Fome 5** (Core p. 223)
 
 ### Efeitos do Torpor Prolongado
 - **Potencia de Sangue:** Reduz 1 ponto a cada 50 anos em Torpor (minimo 1 para vampiros normais)
@@ -141,32 +142,37 @@ O Frenesi e a manifestacao da Besta assumindo controle do vampiro. Durante o Fre
 **Comportamento durante:** O vampiro ataca a fonte da raiva com violencia maxima. Usa garras, presas, Disciplinas fisicas — tudo para destruir o alvo. Se o alvo for eliminado ou fugir, o vampiro pode virar-se contra o proximo alvo disponivel.
 
 **DD por situacao:**
+Exemplos do Core (p. 220); para outro gatilho, o Narrador escolhe a DD por analogia.
+
 | Provocacao | DD |
 |-----------|-----|
-| Insulto leve | 2 |
-| Humilhacao publica | 3 |
-| Dano fisico significativo | 3 |
-| Ameaca a Touchstone | 4 |
-| Tortura ou dor extrema | 4 |
-| Objeto de odio antigo (Adversario) | 5 |
+| Amigo morto | 2 |
+| Provocacao ou assedio fisico | 2 |
+| Insulto de um inferior | 2 |
+| Humilhacao publica | 2 |
+| Amante ou Pedra de Toque ferido | 3 |
+| Amante ou Pedra de Toque morto | 4 |
 
 ---
 
 #### Frenesi de Fome (Hunger Frenzy)
 
-**Trigger:** Fome alta (especialmente 4-5), exposicao a sangue fresco, Rouse Check que elevaria Fome acima de 5.
+**Trigger:** Fome 4+ diante de sangue; falhar um Rouse com Fome 5 (Core p. 220).
 
 **Teste para resistir:** Forca de Vontade atual (caixas sem dano) + Humanidade ÷ 3 (para baixo) vs. DD variavel (Core p. 219)
 
 **Comportamento durante:** O vampiro busca sangue a qualquer custo. Ataca a fonte de sangue mais proxima — mortal, animal, ate outro vampiro. Nao se preocupa com a Mascara, com aliados, com nada. Drena completamente se nao for parado.
 
 **DD por situacao:**
+Exemplos do Core (p. 220):
+
 | Situacao | DD |
 |---------|-----|
-| Fome 4, vê sangue fresco | 3 |
-| Fome 5, qualquer estimulo | 4 |
-| Rouse Check falhado com Fome 5 | 5 (automatico se falhar) |
-| Ferido + Fome alta | 4 |
+| Ver ferida aberta ou sentir cheiro forte de sangue com Fome 4+ | 2 |
+| Provar sangue com Fome 4+ | 3 |
+| Falhar um Rouse com Fome 5 (teste a cada falha) | 4 |
+
+O frenesi de fome acaba quando a Fome chega a 1 ou menos (Core p. 220).
 
 **Perigo de Diablerie:** Se um vampiro em Frenesi de Fome ataca outro vampiro e drena completamente, comete Diablerie — crime capital na Camarilla e ato que mancha a alma permanentemente.
 
@@ -181,25 +187,28 @@ O Frenesi e a manifestacao da Besta assumindo controle do vampiro. Durante o Fre
 **Comportamento durante:** O vampiro **foge**. Nao ataca — corre. Atravessa paredes, janelas, multidoes, qualquer coisa para escapar da fonte do terror. Pode usar Celeridade e Proteanismo instintivamente para fugir. Ignora aliados, Mascara, tudo.
 
 **DD por situacao:**
+Exemplos do Core (p. 220); para outra ameaca, o Narrador escolhe a DD por analogia.
+
 | Ameaca | DD |
 |--------|-----|
-| Vela ou fosforo | 2 |
-| Tocha ou fogueira proxima | 3 |
-| Incendio no predio | 4 |
-| Luz solar direta | 5 |
-| Coberto em chamas | 5 |
-| Lobisomem em forma de guerra | 4 |
+| Fogueira | 2 |
+| Ser queimado | 2 |
+| Dentro de predio em chamas | 3 |
+| Sol obscurecido (janela etc.) | 3 |
+| Totalmente exposto ao sol direto | 4 |
+
+O frenesi de terror acaba quando o vampiro deixa de perceber perigo ou quando a cena termina (Core p. 220).
 
 ---
 
 ### Duracao do Frenesi
 
-O Frenesi dura ate que:
-1. A fonte do trigger seja eliminada (alvo destruido, fogo apagado, sangue obtido)
-2. O vampiro seja fisicamente contido (acorrentado, imobilizado)
-3. O vampiro caia em Torpor por dano
-4. A cena termine naturalmente (Narrador decide)
-5. Outro vampiro use Disciplina para acalmar (Presenca: Majestade, Dominacao: Comando)
+O frenesi dura ate o vampiro cumprir o objetivo do tipo de frenesi ou ate a cena terminar (Core p. 220):
+1. **Furia:** depois de destruir o alvo, teste de FdV DD 3 (DD 5 se ainda houver inimigos de pe); falha = continua matando quem estiver perto, salvo se for contido
+2. **Fome:** ate a Fome chegar a 1 ou menos
+3. **Terror:** ate deixar de perceber perigo
+
+Durante o frenesi, o vampiro resiste a Disciplinas mentais com +3 dados (ou +2 na DD de quem usa uma sem parada de resistencia), entao acalma-lo com Presenca ou Dominacao e dificil (Core p. 220). Cair em torpor tambem encerra o frenesi, pela propria natureza do torpor.
 
 ### Consequencias do Frenesi
 - **Humanidade:** Acoes durante Frenesi podem causar Manchas (Stains) que levam a perda de Humanidade
@@ -211,7 +220,7 @@ O Frenesi dura ate que:
 
 ## Compulsoes
 
-Compulsoes sao impulsos irresistiveis gerados pela Besta quando dados de Fome mostram resultado critico (1 em dado de Fome que contribui para uma falha, ou 10 em dado de Fome que contribui para um sucesso messy/bestial).
+Compulsoes sao impulsos gerados pela Besta. O gatilho e a **falha bestial**: teste falho com ao menos um 1 em dado de Fome (Core p. 207-208). O 10 em dado de Fome num critico gera **critico confuso**, que tem consequencias proprias, mas nao e o gatilho padrao da Compulsao.
 
 ### Compulsao Universal: Fome
 
@@ -315,12 +324,12 @@ Humanidade 10 reduz o dano solar a metade (Core p. 236).
 
 | Exposicao | Dano por Turno | Tipo |
 |-----------|---------------|------|
-| Queimadura leve (vela, fosforo) | 1 | Superficial |
+| Queimadura leve (vela, fosforo) | 1 | Agravado |
 | Chamas moderadas (tocha) | 1-2 | Agravado |
 | Incendio (predio em chamas) | 2-3 | Agravado |
 | Coberto em chamas | 3-5 | Agravado |
 
-**Fogo e Rotschreck:** Qualquer exposicao a fogo exige teste para evitar Terror Frenzy (Rotschreck).
+**Fogo e Rotschreck:** fogo nao causa frenesi automatico; exige teste de Frenesi de Terror (fogueira ou ser queimado DD 2, predio em chamas DD 3; Core p. 220). O dano de fogo a vampiros e sempre Agravado, na quantidade que o Narrador definir pela parte do corpo exposta: a mao numa chama, cerca de 1; envolto num incendio, 3 ou mais por turno (Core p. 221).
 
 ---
 

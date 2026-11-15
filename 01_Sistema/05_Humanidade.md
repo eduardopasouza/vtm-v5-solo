@@ -76,12 +76,9 @@ Quando um vampiro entra em Torpor (seja voluntario ou por dano), a duracao depen
 
 ### Dificuldade para Despertar
 
-| Humanidade | Despertar ao Anoitecer |
-|---|---|
-| 7-10 | Automatico |
-| 5-6 | Automatico, mas lento (leva minutos extras) |
-| 3-4 | Requer Rouse Check; falha = dorme mais 1 hora |
-| 1-2 | Requer Rouse Check com DD 2; falha = permanece dormindo |
+O despertar ao anoitecer **nao depende da Humanidade**: todo vampiro faz 1 Rouse ao despertar, todas as noites. Se a falha levaria a Fome acima de 5, o vampiro entra em torpor em vez de testar frenesi de fome (Core p. 219).
+
+A Humanidade entra em outro caso: acordar **durante o dia** e continuar acordado exigem testes de Humanidade, e de dia a parada maxima e igual a Humanidade (Core p. 219; ver `04_Fome_e_Bestia.md`).
 
 ---
 
@@ -125,9 +122,9 @@ Conviccoes sao principios morais **pessoais** que o vampiro carrega de sua vida 
 
 - Cada personagem possui **1 a 3 Conviccoes** na criacao.
 - Sao declaracoes simples e diretas.
-- Agir **de acordo** com uma Conviccao pode recuperar **Forca de Vontade**.
+- Manter uma Conviccao contra o proprio interesse pode recuperar dano **Agravado** de **Forca de Vontade**, a criterio do Narrador (Core p. 159).
 - Agir **contra** uma Conviccao (ou violar um Principio da Cronica) gera **Manchas**.
-- Conviccoes **protegem** contra Manchas: se o personagem viola um Principio mas esta agindo de acordo com uma Conviccao, **nao recebe Manchas**.
+- Conviccoes **atenuam** as Manchas: se o personagem viola um Principio a servico de uma Conviccao, as Manchas recebidas caem em **uma ou mais** (Core p. 239).
 
 ### Exemplos de Conviccoes
 
@@ -144,9 +141,9 @@ Conviccoes sao principios morais **pessoais** que o vampiro carrega de sua vida 
 
 ### Regra da Protecao
 
-Se uma acao viola um Principio da Cronica, mas o personagem esta agindo para proteger ou apoiar uma **Conviccao**, a violacao **nao gera Manchas**.
+Se uma acao viola um Principio da Cronica a servico de uma **Conviccao**, as Manchas caem em **uma ou mais**, a criterio do Narrador (Core p. 239).
 
-**Exemplo:** O Principio da Cronica e "Nao mataremos mortais". A Conviccao do vampiro e "Protegerei criancas a qualquer custo". Se o vampiro mata um mortal que estava atacando criancas, a Conviccao o protege de receber Manchas.
+**Exemplo:** O Principio da Cronica e "Nao mataremos mortais". A Conviccao do vampiro e "Protegerei criancas a qualquer custo". Se o vampiro mata um mortal que estava atacando criancas, recebe menos Manchas do que receberia pela morte sozinha, mas pode ainda receber alguma.
 
 ---
 
@@ -167,18 +164,21 @@ Ancoras sao **pessoas mortais reais** que representam as Conviccoes do vampiro n
 
 Se uma Ancora **morre, desaparece ou e perdida**:
 
-| Consequencia | Efeito |
+Manchas por dano a Ancora (Core p. 239-240):
+
+| Consequencia | Manchas |
 |---|---|
-| Ancora morre de causas naturais | A Conviccao associada fica enfraquecida. O vampiro recebe **1 Mancha** automatica e deve encontrar uma nova Ancora ou arriscar perder a Conviccao. |
-| Ancora e morta pelo vampiro | A Conviccao associada e **perdida permanentemente**. O vampiro recebe **2 ou mais Manchas**. Teste de Remorso automatico. |
-| Ancora e morta por culpa indireta do vampiro | A Conviccao pode ser perdida. **1-2 Manchas**. Teste de Remorso. |
-| Ancora se afasta voluntariamente | A Conviccao enfraquece. Deve encontrar substituto. |
+| Ancora **danificada** (algo ruim lhe acontece, ou ela muda de um jeito que o vampiro desaprova) | +1 |
+| Ancora danificada **pelas acoes do vampiro** | +2 |
+| Ancora **destruida** (trai a Conviccao que representa, e morta violentamente, e Abracada, ou sofre algo desastroso) | +2 |
+| Ancora destruida **pelas acoes do vampiro** | +3 |
+
+Essas Manchas somam-se as do proprio ato: no exemplo do Core, envenenar a propria Ancora rende 2 pelo assassinato + 3 pela Ancora destruida = 5 (Core p. 240).
 
 ### Substituindo Ancoras
 
-- E possivel encontrar novas Ancoras, mas requer tempo e investimento narrativo.
-- O Narrador pode exigir testes de Humanidade ou cenas de roleplay significativas.
-- A nova Ancora deve representar genuinamente a mesma Conviccao.
+- Se a Ancora morre em paz ou pelo curso normal das coisas, o vampiro pode transferir a fixacao para outro humano ligado a ela (filho, irmao, sucessor no cargo): teste de Humanidade DD 4 ao encontra-lo ou observa-lo, e provavelmente mais acao narrativa (Core p. 240).
+- Sem essa transferencia, a Conviccao ligada a Ancora destruida **e perdida** (Core p. 173, 240).
 
 ---
 
@@ -199,15 +199,16 @@ Manchas representam acoes que mancham a alma do vampiro e corroem sua Humanidade
 | Causar sofrimento desnecessario | 1 |
 | Violar a Mascara deliberadamente | 1 |
 | Abandonar uma Ancora em perigo | 1 |
-| Criar um ghoul ou Abracar sem consentimento | 1-2 |
-| Participar de diablerie | 2-3 |
+| Lacar um mortal pelo Sangue | +1 (Core p. 240) |
+| Abracar um mortal | +2 (Core p. 240) |
+| Cometer diablerie | Nao gera Mancha: perde **1 Humanidade direto**, e mais 1 por sucesso que faltar na disputa contra a alma da vitima (Core p. 235) |
 | Assistir passivamente a atrocidade | 1 |
 
 ### Regras das Manchas
 
 - Manchas se acumulam ao longo da sessao/historia.
 - Ao final da sessao (ou em momento narrativo apropriado), o jogador faz um **Teste de Remorso**.
-- Conviccoes podem **proteger** contra Manchas (se a violacao serve a uma Conviccao, nao ha Mancha).
+- Conviccoes **atenuam** Manchas: se a violacao serve a uma Conviccao, as Manchas caem em uma ou mais (Core p. 239).
 - O **Narrador atribui** Manchas — nao o jogador. A discussao e bem-vinda, mas a decisao final e do Narrador.
 
 ### Acumulacao
@@ -364,7 +365,7 @@ Golconda e um estado mitico de transcendencia onde o vampiro faz paz com a Besta
 MANCHAS:
 - Violar Principio da Cronica = Manchas
 - Violar Conviccao pessoal = Manchas
-- Conviccao pode PROTEGER contra Manchas se justificavel
+- Conviccao REDUZ as Manchas em uma ou mais (Core p. 239)
 
 TESTE DE REMORSO:
 - Role dados = 10 - Humanidade - Manchas (minimo 1)

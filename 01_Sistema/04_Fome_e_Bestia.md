@@ -62,7 +62,7 @@ O Rouse Check e o mecanismo que pode **aumentar** a Fome.
 | Curar dano Agravado (ao anoitecer, 1 ponto por noite) | 3, alem do Rouse de despertar (Core p. 218-219) |
 | Somar dados a uma parada com Atributo (Blood Surge) | 1 (Core p. 218) |
 | Manter aparencia humana (Blush of Life) | 1 |
-| Manter-se acordado durante o dia | 1 por hora |
+| Manter-se acordado durante o dia | Nenhum: e teste de **Humanidade**, nao Rouse. Acordar de dia: Humanidade com DD pela crise (incendio ou perigo de vida = 3). Acordado, age por uma cena; cada cena extra exige Humanidade DD 3 (critico = fica acordado quanto precisar). De dia, a parada maxima e igual a Humanidade (Core p. 219) |
 
 ### Como Funciona
 
@@ -169,14 +169,9 @@ Ocorre quando o teste **falha** E pelo menos um Dado de Fome mostra **1**.
 
 O Narrador escolhe um ou mais efeitos apropriados a situacao:
 
-| Efeito | Descricao |
-|---|---|
-| Manifestacao fisica | Presas se estendem, olhos brilham, rosna involuntariamente |
-| Compulsao | O vampiro age de acordo com uma compulsao de cla (veja abaixo) |
-| Frenesi breve | Lampejos de Frenesi — destruicao local, violencia momentanea |
-| Perda de FdV | Perde 1 ponto de Forca de Vontade (dano Superficial) |
-| Reacao exagerada | Responde a situacao de forma extremamente desproporcional |
-| Revelacao | A natureza vampirica e brevemente visivel para observadores |
+Resultado padrao do Core: o personagem encena uma **Compulsao** (Core p. 207). Para iniciantes ou grupos que preferem menos impulsos, o Core da alternativas: perder 1 ponto numa Vantagem; sofrer 1 ou mais de dano Agravado de Saude (sobretudo em testes de resistencia); se ninguem tiver ideia melhor, Fome +1, e se isso passar de 5, teste imediato de frenesi de fome DD 4 (Core p. 207).
+
+A descricao narrativa (presas, olhos, rosnado, reacao desproporcional) acompanha o resultado mecanico; nao o substitui.
 
 ### Compulsoes de Cla
 
@@ -236,20 +231,20 @@ O Frenesi ocorre quando a Besta assume o controle do vampiro. E uma das experien
 |---|---|
 | Alvo | A fonte da raiva — pessoa, objeto, situacao |
 | Comportamento | Ataca com violencia maxima, sem defesa, sem estrategia |
-| Bonus | Ignora penalidades por dano; +1 dado em ataques corpo a corpo |
-| Limitacao | Nao pode usar Disciplinas que requerem concentracao |
-| Duracao | Ate a fonte ser destruida, o vampiro ser contido, ou a cena terminar |
+| Bonus | Imune a penalidades de Saude (salvo mutilacao); +3 dados para resistir a Disciplinas mentais, ou +2 na DD de quem usa uma sem parada de resistencia (Core p. 220) |
+| Limitacao | So usa Disciplinas fisicas (Celeridade, Fortitude, Potencia). Pode gastar 1 FdV para controlar o personagem por um turno, mas nao re-rola dados com FdV (Core p. 220) |
+| Duracao | Ate destruir a causa da provocacao ou a cena terminar. Depois de destruir o alvo, teste de FdV DD 3 (DD 5 se ainda houver inimigos de pe); falha = continua matando quem estiver perto (Core p. 220) |
 
 #### Frenesi de Fome (Hunger Frenzy)
 
-**Gatilhos:** Fome 4-5, cheiro de sangue fresco, visao de ferida aberta, Rouse Check falhado com Fome 5.
+**Gatilhos:** com Fome 4+, cheiro forte de sangue, ferida aberta ou provar sangue; falhar um Rouse com Fome 5 (teste obrigatorio a cada falha) (Core p. 220).
 
 | Efeito | Descricao |
 |---|---|
 | Alvo | A fonte de sangue mais proxima e acessivel |
 | Comportamento | Agarra e drena a vitima mais proxima sem qualquer cuidado |
 | Perigo | Pode matar a vitima, pode atacar aliados, pode violar a Mascara |
-| Duracao | Ate a Fome ser reduzida significativamente (geralmente a 2 ou menos) |
+| Duracao | Ate a Fome chegar a 1 ou menos (Core p. 220) |
 | Fim alternativo | Se contido fisicamente (amarrado, imobilizado) |
 
 #### Frenesi de Terror / Rotschreck
@@ -268,13 +263,19 @@ O Frenesi ocorre quando a Besta assume o controle do vampiro. E uma das experien
 
 **Teste:** Forca de Vontade **atual** (caixas sem dano no tracker, nao a soma de Compostura + Determinacao) + 1/3 da Humanidade (arredondado para baixo) vs Dificuldade (Core p. 219). Vitoria normal = resiste, mas gasta o turno contendo a Besta; critico = resiste sem perder o turno.
 
-| Situacao | DD |
-|---|---|
-| Provocacao menor, cheiro de sangue distante | 2 |
-| Insulto direto, sangue a vista, ferimento medio | 3 |
-| Humilhacao publica, sangue fresco proximo, dano grave | 4 |
-| Fogo proximo, sol direto, Fome 5 + sangue | 5 |
-| Fogo direto com dano, Fome 5 + vitima sangrando | 6+ |
+Exemplos de DD do Core (p. 220). Sao exemplos: para outro gatilho, o Narrador escolhe a DD por analogia.
+
+| Tipo | Gatilho | DD |
+|---|---|---|
+| Furia | Amigo morto; provocacao ou assedio fisico; insulto de um inferior; humilhacao publica | 2 |
+| Furia | Amante ou Pedra de Toque ferido | 3 |
+| Furia | Amante ou Pedra de Toque morto | 4 |
+| Fome | Ver ferida aberta ou sentir cheiro forte de sangue com Fome 4+ | 2 |
+| Fome | Provar sangue com Fome 4+ | 3 |
+| Fome | Falhar um Rouse com Fome 5 (teste obrigatorio a cada falha) | 4 |
+| Terror | Fogueira; ser queimado | 2 |
+| Terror | Dentro de predio em chamas; sol obscurecido (janela etc.) | 3 |
+| Terror | Totalmente exposto ao sol direto | 4 |
 
 **Modificadores:**
 
@@ -333,26 +334,19 @@ A "Severidade da Maldicao" indica quao forte e a fraqueza do cla. Quanto maior a
 
 ### Como Funciona
 
-Beber o sangue de outro vampiro cria um **Laco de Sangue** progressivo.
+Quem bebe o sangue de um vampiro, mortal ou vampiro, se apega cada vez mais ao doador (o **regente**); o lacado e o **servo**. O Laco se completa depois de beber em **tres noites diferentes**, sem passar mais de um ano entre uma e outra (Core p. 233).
 
-| Nivel | Numero de Vezes | Efeito |
-|---|---|---|
-| 1 | Bebeu 1 vez | Atracao leve, pensamentos frequentes sobre o domitor |
-| 2 | Bebeu 2 vezes | Atracao forte, dificil negar pedidos do domitor |
-| 3 | Bebeu 3+ vezes | Laco completo — devocao intensa, quase impossivel desobedecer |
+### Regras Mecanicas (Core p. 234)
 
-### Regras Mecanicas
+- **Forca do Laco** = numero de vezes que o servo bebeu do regente, **ate 6**. Cai **1 por mes** sem beber.
+- Para agir contra a vontade do regente: disputa de **Determinacao + Inteligencia** contra a Forca do Laco. Na presenca do regente, uma vez por turno; fora da percepcao dele, uma vez por cena.
+- Um regente tem no maximo tantos servos vampiros quanto seus pontos de Potencia. Um servo so tem um regente e fica imune a outros Lacos enquanto lacado. Passando do limite, o Laco mais antigo se desfaz ao longo de uma semana.
+- Um recem-Abracado fica, no primeiro ano, um terco lacado ao senhor (Core p. 233).
 
-- **Nivel 1:** -1 dado em testes para agir contra o domitor.
-- **Nivel 2:** -2 dados em testes para agir contra o domitor.
-- **Nivel 3:** -3 dados em testes para agir contra o domitor; precisa de Forca de Vontade + Determinacao DD 5 para qualquer acao contraria.
+### Quebrando o Laco (Core p. 234)
 
-### Quebrando o Laco
-
-- Nao beber do domitor por um periodo prolongado (geralmente meses) enfraquece gradualmente.
-- Cada nivel exige aproximadamente **30 noites** sem contato com o sangue do domitor para enfraquecer um nivel.
-- Certos rituais e Disciplinas podem acelerar o processo.
-- O Laco de Sangue Tremere e mecanicamente diferente no V5 (mais fraco devido a queda da piramide).
+- Reduzir a Forca a 0 evitando o regente por muito tempo, com um teste de desafio bem-sucedido por sessao.
+- Tremere nao criam Laco em outros vampiros, mas podem ser lacados (Perdicao, Core p. 97).
 
 ---
 
@@ -374,14 +368,17 @@ O sangue mortal carrega **emocoes** que influenciam o vampiro que se alimenta de
 
 | Nivel | Nome | Efeito |
 |---|---|---|
-| Fugaz | Ressonancia Fugaz | Nenhum efeito mecanico significativo |
-| Intenso | Ressonancia Intensa | +1 dado em testes da Disciplina associada ate o fim da sessao |
-| Agudo (Dyscrasia) | Discrasia | Efeitos poderosos especiais (veja abaixo) |
+| Fugaz | Ressonancia Fugaz | Sem efeito mecanico imediato, mas ja justifica gastar XP na Disciplina associada (Core p. 228, 231) |
+| Intenso | Ressonancia Intensa | +1 dado nas paradas da Disciplina associada, ate a proxima alimentacao diluir o sangue ou ate a Fome chegar a 5 (Core p. 228) |
+| Agudo | Discrasia | O mesmo +1 da intensa, mais o efeito proprio da Discrasia (veja abaixo) (Core p. 228) |
+
+O sangue **animal** tem a Ressonancia de Animalismo e Proteanismo (Core p. 227).
 
 ### Como Determinar a Ressonancia
 
-1. O Narrador define a Ressonancia da vitima com base em seu estado emocional.
-2. Alternativamente, o jogador pode tentar **selecionar** vitimas com Ressonancia especifica (requer teste de Consciencia + Determinacao ou Intuicao para identificar).
+1. O Narrador define a Ressonancia da vitima pelo estado emocional e pelo roleplay.
+2. Depois de observar ou conversar por uma cena, o Narrador pode permitir **Determinacao + Intuicao** para esclarecer. Provar o sangue tira qualquer duvida (Core p. 228).
+3. Tabela aleatoria em `09_Ressonancia_Sanguinea.md`.
 
 ---
 
@@ -391,25 +388,20 @@ Uma **Discrasia** e sangue de Ressonancia extremamente intensa — um mortal cuj
 
 ### Efeitos Gerais
 
-- Alimentar-se de uma Discrasia concede beneficios poderosos e temporarios.
-- Pode conceder +2 dados em Disciplinas associadas.
-- Pode permitir o aprendizado de Disciplinas que nao sao do cla do vampiro (com XP).
-- Discrasias sao **raras** — a maioria dos mortais nao possui Ressonancia forte o suficiente.
+- Da o mesmo **+1 dado** da Ressonancia intensa, mais um efeito proprio de cada Discrasia (Core p. 228).
+- Salvo indicacao em contrario, para obter o efeito o vampiro precisa **matar e drenar** a vitima ou se alimentar dela ao longo de **tres noites**. Algumas so podem ser aproveitadas uma vez; outras persistem (Core p. 228).
+- O efeito costuma durar ate a proxima alimentacao ou ate a Fome chegar a 5 (Core p. 228).
+- Discrasia nao dispensa os requisitos para aprender Disciplina fora do cla (Core p. 231). Algumas da Core dao 1 XP gratuito para uma Disciplina especifica e se consomem nisso.
+- Animais nao tem Discrasia (Core p. 227).
 
 ### Encontrando Discrasias
 
-- Requer busca ativa e identificacao.
-- Teste: **Determinacao + Consciencia** vs DD 4 para identificar um mortal com Discrasia.
+- Mesma identificacao da Ressonancia: roleplay, **Determinacao + Intuicao** apos uma cena, ou provar o sangue; o Narrador pode dar pistas da Discrasia (Core p. 228).
 - Alguns vampiros cultivam Discrasias, manipulando as emocoes de mortais para intensificar sua Ressonancia.
 
 ### Exemplos de Discrasias
 
-| Ressonancia | Mortal Exemplo | Efeito da Discrasia |
-|---|---|---|
-| Sanguinea Aguda | Artista em estado de euforia criativa | +2 em Presenca por uma noite |
-| Colerica Aguda | Soldado em furia de combate | +2 em Potencia por uma noite |
-| Melancolica Aguda | Enlutado em desespero profundo | +2 em Obfuscacao por uma noite |
-| Fleumatica Aguda | Monge em meditacao profunda | +2 em Auspicio por uma noite |
+As Discrasias do Core estao nas p. 229-231, cada uma com efeito proprio (nao um bonus generico de +2). Consultar a pagina ao usar uma.
 
 ---
 

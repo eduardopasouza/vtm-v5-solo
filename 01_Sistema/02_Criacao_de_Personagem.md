@@ -29,21 +29,23 @@ O cla define a linhagem vampirica e influencia Disciplinas, fraquezas e cultura.
 
 | Cla | Alcunha | Disciplinas do Cla | Fraqueza (Bane) |
 |---|---|---|---|
-| **Brujah** | Rebeldes | Celeridade, Potencia, Presenca | Fraqueza do cla: -2 dados para resistir ao Frenesi de Furia. Precisam de 1 sucesso extra em testes para resistir a provocacoes. |
-| **Gangrel** | Animais | Animalismo, Fortitude, Proteanismo | Ao entrar em Frenesi, ganham caracteristicas animais (orelhas, cauda, pelos, olhos). Cada caracteristica soma +1 DD a testes Sociais com humanos. Desaparecem apos noites = Humanidade. |
+| **Brujah** | Rebeldes | Celeridade, Potencia, Presenca | Perdem dados iguais a Severidade da Perdicao em qualquer teste para resistir ao Frenesi de Furia, sem baixar a parada de 1 dado (Core p. 67). |
+| **Gangrel** | Animais | Animalismo, Fortitude, Proteanismo | No frenesi, ganham tracos animais (fisicos, cheiro, tique) em numero igual a Severidade da Perdicao; cada traco reduz 1 Atributo em 1 ponto (na duvida, Inteligencia ou Manipulacao). Duram mais uma noite apos o frenesi. Cavalgando a Onda, manifestam so um (Core p. 73). |
 | **Hecata** | Necromantes | Auspicio, Fortitude, Oblivion | Mordida causa dor agonizante em vez de prazer. Vitimas resistem ativamente. Nao podem fazer Kiss agradavel. |
 | **Lasombra** | Magistrados | Dominacao, Oblivion, Potencia | Reflexo distorcido/ausente em espelhos, cameras, etc. +1 DD em testes para se misturar entre humanos em situacoes onde reflexos importam. |
-| **Malkavian** | Lunáticos | Auspicio, Dominacao, Ofuscacao | Possuem uma condicao mental sobrenatural persistente. Nao pode ser curada. Define aspectos do comportamento e percepcao. |
-| **Nosferatu** | Ratos de Esgoto | Animalismo, Obfuscacao, Potencia | Aparencia repulsiva e sobrenatural. Falha automatica em testes Sociais baseados em aparencia. Violam a Mascara apenas por serem vistos. |
+| **Malkavian** | Lunáticos | Auspicio, Dominacao, Ofuscacao | Ao menos um disturbio mental, definido na criacao. Numa falha bestial ou Compulsao, sofrem penalidade igual a Severidade da Perdicao numa categoria de paradas (Fisica, Social ou Mental) pela cena toda, alem das penalidades da Compulsao (Core p. 79). |
+| **Nosferatu** | Ratos de Esgoto | Animalismo, Obfuscacao, Potencia | Contam como tendo o Defeito Repulsivo (-2) e nunca sobem a Vantagem Aparencia (Looks). Ao se disfarcar de humano, inclusive com Mascara das Mil Faces e Disfarce do Impostor, perdem dados iguais a Severidade da Perdicao (Core p. 85). |
 | **Ravnos** | Vagabundos | Animalismo, Obfuscacao, Presenca | Maldicao do Viajante: sofrem dano Agravado se permanecerem dormindo no mesmo lugar por mais de uma noite consecutiva. Devem mudar de refúgio. |
 | **Salubri** | Ciclopes | Auspicio, Dominacao, Fortitude | Terceiro olho na testa que chora lagrimas de sangue quando usam Disciplinas. Impossivel de esconder. Outros vampiros sentem compulsao de caca-los. |
 | **Ministry** | Serpentes | Obfuscacao, Presenca, Proteanismo | Vulnerabilidade a luz intensa (nao apenas solar). Sofrem penalidades em ambientes muito iluminados. |
-| **Toreador** | Artistas | Auspicio, Celeridade, Presenca | Ficam enfeiticados por beleza ou arte. Ao falharem em um teste de Compostura + Determinacao (DD varia), ficam paralisados contemplando por uma cena. |
-| **Tremere** | Feiticeiros | Auspicio, Dominacao, Feiticaria do Sangue | Nao podem criar Lacos de Sangue em outros. Seus proprios Lacos sao enfraquecidos. Hierarquia do cla quebrada desde a Queda de Viena. |
+| **Toreador** | Artistas | Auspicio, Celeridade, Presenca | Em ambiente pouco belo (lugar, roupas, companhia), perdem dados iguais a Severidade da Perdicao nas paradas de Disciplina; o Narrador decide pela estetica do personagem. Falhas bestiais costumam virar transe extasiado (Compulsao, Core p. 208) (Core p. 91). |
+| **Tremere** | Feiticeiros | Auspicio, Dominacao, Feiticaria do Sangue | Desde a queda de Viena, nao criam Laco de Sangue em outros vampiros, mas podem ser lacados por vampiros de outros clas. Lacam mortais e carnicais, mas o sangue precisa ser bebido mais vezes, iguais a Severidade da Perdicao (Core p. 97). |
 | **Tzimisce** | Dragoes | Animalismo, Dominacao, Proteanismo | Devem dormir cercados por terra de um lugar significativo de sua vida mortal ou Abraco. Sem isso, sofrem penalidades severas. |
-| **Ventrue** | Sangue Azul | Dominacao, Fortitude, Presenca | Paladar restrito: so podem se alimentar de um tipo especifico de mortal (definido na criacao). Sangue de outros causa nausea e nao sustenta. |
-| **Caitiff** | Sem Cla | Qualquer (escolha 2-3) | Sem fraqueza de cla especifica, mas sofrem estigma social. Disciplinas custam mais XP. Nao tem apoio de cla. |
+| **Ventrue** | Sangue Azul | Dominacao, Fortitude, Presenca | Paladar restrito a um tipo de mortal (definido na criacao). Para beber de outro, gastam FdV igual a Severidade da Perdicao; senao, vomitam o sangue. Determinacao + Prontidao (DD 4+) revela se um mortal tem o sangue certo (Core p. 102). |
+| **Caitiff** | Sem Cla | Qualquer (escolha 2-3) | Sem Perdicao de cla. Comecam com o Defeito Suspeito (•) e nao compram Status positivo na criacao; o Narrador pode impor -1 ou -2 em testes Sociais contra vampiros que sabem que sao Caitiff. Nenhuma Disciplina e do cla: qualquer uma custa 6 x o nivel em XP, desde que tenham provado o sangue de quem a usa (Core p. 107). |
 | **Sangue Ralo** | Duskborn | Fina Alquimia do Sangue | Nao sao vampiros "completos". Geracao 14-16. Podem comer, andar ao sol brevemente. Poderes fracos. Desprezados por todos. |
+
+> Hecata, Lasombra, Ravnos, Salubri, Ministry e Tzimisce nao tem regras de jogo no Core (aparecem so na ambientacao). As Perdicoes dessas linhas nao foram conferidas; valem como referencia ate a conferencia nos suplementos.
 
 ---
 
@@ -147,7 +149,12 @@ Focado em poucas areas com alto nivel.
 
 ### Especialidades Iniciais
 
-O personagem comeca com uma **Especialidade** gratuita para cada Habilidade com **1 ponto ou mais** (por padrao; pode variar por mesa). Especialidades adicionais podem ser adquiridas com XP.
+Especialidades gratuitas na criacao (Core p. 136, 159):
+- uma em cada uma destas, se tiver ponto nelas: **Academicos, Oficio, Atuacao e Ciencia**;
+- **mais uma**, livre, em qualquer Habilidade;
+- **mais a do Tipo de Predador**.
+
+Na maioria das Habilidades, o limite e uma especialidade por ponto na Habilidade. So uma especialidade vale por rolagem (+1 dado). Novas especialidades custam 3 XP cada (Core p. 159).
 
 ---
 
@@ -180,11 +187,13 @@ O Tipo de Predador define **como** o vampiro se alimenta habitualmente. Cada tip
 
 | Bonus | Detalhe |
 |---|---|
-| +1 Disciplina | Feiticaria do Sangue ou Obfuscacao |
-| Especialidade | Manha (Mercado Negro) |
+| +1 Disciplina | Feiticaria do Sangue (so Tremere) ou Ofuscacao |
+| Especialidade | Furto (Arrombamento) ou Manha (Mercado Negro) |
 | Humanidade | Nenhuma alteracao |
-| Vantagens | +2 Iron Gullet (Merit) — pode tolerar sangue frio/embalado |
-| Desvantagem | +1 Enemy (defeito) — alguem que suspeita dos roubos |
+| Vantagens | Iron Gullet (•••) — sangue frio, rancoso, plasma |
+| Desvantagem | Enemy (••) — alguem acha que voce deve algo, ou outro motivo para evitar as ruas |
+
+Ventrue nao pode ser Bagger (Iron Gullet e vedado a eles; Core p. 176, 182). (Core p. 176)
 
 ---
 
@@ -210,11 +219,13 @@ Fonte: Core p. 176.
 
 | Bonus | Detalhe |
 |---|---|
-| +1 Disciplina | Animalismo ou Dominacao |
-| Especialidade | Persuasao (Sedução) ou Subterfugio (Mentiras Convincentes) |
+| +1 Disciplina | Dominacao ou Animalismo |
+| Especialidade | Persuasao (Gaslighting) ou Subterfugio (Acobertamento) |
 | Humanidade | Nenhuma alteracao |
-| Vantagens | +1 Herd (Merit) — grupo de mortais disponiveis |
-| Desvantagem | Dark Secret (Mascara comprometida pelo envolvimento com mortais) |
+| Vantagens | Herd (••) |
+| Desvantagem | Dark Secret (•): Cleaver |
+
+A familia entra no Mapa de Relacoes. A Camarilla proibe tomar uma familia humana assim (Core p. 177).
 
 ---
 
@@ -269,11 +280,13 @@ Fonte: Core p. 177, 181. Nao ha piso de Fome 2 para sangue animal; o limite e o 
 
 | Bonus | Detalhe |
 |---|---|
-| +1 Disciplina | Presenca ou Feiticaria do Sangue |
-| Especialidade | Atuacao (Oratoria) ou Subterfugio (Personalidade Publica) |
+| +1 Disciplina | Feiticaria do Sangue (so Tremere) ou Presenca |
+| Especialidade | Ocultismo (tradicao especifica) ou Atuacao (campo de entretenimento especifico) |
 | Humanidade | Nenhuma alteracao |
-| Vantagens | +3 pontos em Fame ou Herd ou Allies (seguidores devotos) |
-| Desvantagem | +2 Enemies ou Stalkers — rivais, descrentes, ou ex-seguidores |
+| Vantagens | 3 pontos divididos entre Fame e Herd |
+| Desvantagem | 2 pontos divididos entre os Defeitos Enemies e Mythic |
+
+(Core p. 177)
 
 ---
 
@@ -297,11 +310,13 @@ Fonte: Core p. 177, 181. Nao ha piso de Fome 2 para sangue animal; o limite e o 
 
 | Bonus | Detalhe |
 |---|---|
-| +1 Disciplina | Dominacao ou Presenca |
-| Especialidade | Etiqueta (Festas) ou Lideranca (Vida Noturna) |
+| +1 Disciplina | Dominacao ou Potencia |
+| Especialidade | Etiqueta, Lideranca ou Manha (cena especifica) |
 | Humanidade | Nenhuma alteracao |
-| Vantagens | +2 pontos em Fame ou Contacts ou Influence (conexoes na cena social) |
-| Desvantagem | +2 pontos de defeitos (Enemy na cena ou Adversary) |
+| Vantagens | Fame (•) e Contact (•) |
+| Desvantagem | Influence Flaw: Disliked (•) fora da sua subcultura, ou Feeding Flaw: Prey Exclusion (•) de outra subcultura |
+
+(Core p. 178)
 
 ---
 
@@ -312,14 +327,18 @@ Fonte: Core p. 177, 181. Nao ha piso de Fome 2 para sangue animal; o limite e o 
 | Bonus | Detalhe |
 |---|---|
 | +1 Disciplina | Fortitude ou Presenca |
-| Especialidade | Persuasao (Seducao) |
+| Especialidade | Persuasao (Seducao) ou Subterfugio (Seducao) |
 | Humanidade | Nenhuma alteracao |
-| Vantagens | +2 Looks (Merit) — beleza sobrenatural |
-| Desvantagem | +1 Enemy (amante obsessivo, ex, ou alguem que sabe demais) |
+| Vantagens | Looks: Beautiful (••) |
+| Desvantagem | Enemy (•) — amante rejeitado ou parceiro ciumento |
+
+(Core p. 178-179)
 
 ---
 
-#### Spider (Aranha)
+#### Spider (Aranha) — fora do Core
+
+> O Core lista 10 Tipos de Predador (Alleycat a Siren, p. 175-179) e **Spider nao e um deles**. Nao achei a origem deste tipo; trate-o como tipo personalizado, que so vale como regra da casa aprovada.
 
 **Estilo:** Usa redes de contatos, internet, redes sociais e manipulacao para atrair vitimas ate si sem sair de casa.
 
@@ -368,15 +387,13 @@ Na criacao, o personagem escolhe **duas Disciplinas do Cla**: **2 pontos em uma 
 
 A Geracao indica quao distante o vampiro esta de Caine (o Primeiro Vampiro).
 
-| Geracao | Descricao | Potencia de Sangue Inicial |
+| Geracao | Descricao | Potencia de Sangue Inicial (Core p. 137) |
 |---|---|---|
-| 16a-14a | Sangue Ralo (Thin-Bloods) | 0 |
-| 13a | Neonato jovem | 0 |
-| 12a | Neonato | 1 |
-| 11a | Neonato experiente | 1 |
-| 10a | Ancilla jovem | 1-2 |
+| 14a-16a | Sangue Ralo (Thin-Bloods) | 0 |
+| 12a-13a | Neonato | 1 |
+| 10a-11a | Neonato ou ancilla | 2 |
 
-> A maioria dos personagens jogadores comeca na **12a ou 13a Geracao** com Potencia de Sangue 1.
+> Um ancilla soma ainda +1 ponto de Potencia, +2 pontos de Vantagens, +2 de Defeitos, -1 Humanidade e 35 XP para gastar (Core p. 151). Teto de Potencia por Geracao em `08_Potencia_de_Sangue.md`.
 
 ### Potencia do Sangue (Blood Potency)
 
@@ -416,7 +433,7 @@ Personagens recebem **7 pontos** para distribuir em Vantagens (Merits) e devem p
 | Resources | 1-5 | Riqueza material |
 | Retainers | 1-3 | Servos ghoul ou mortais |
 | Status (Camarilla/Anarquista) | 1-5 | Posicao na seita |
-| Iron Gullet | 2 | Pode ingerir sangue frio/velho sem penalidade |
+| Iron Gullet | 3 | Pode se alimentar de sangue frio, rancoso e plasma fracionado, sem Ressonancia; Ventrue nao pode ter (Core p. 182) |
 
 ### Defeitos Comuns
 
@@ -440,7 +457,7 @@ Principios pessoais que protegem a Humanidade do vampiro.
 
 - Cada personagem comeca com **1 a 3 Conviccoes**.
 - Sao declaracoes simples e claras: "Nunca matarei um inocente", "Protegerei criancas", "Nunca mentirei para quem amo".
-- Agir **de acordo** com uma Conviccao pode recuperar Forca de Vontade.
+- Manter uma Conviccao contra o proprio interesse pode recuperar dano **Agravado** de Forca de Vontade, a criterio do Narrador (Core p. 159).
 - Agir **contra** uma Conviccao pode gerar **Manchas** (Stains) na Humanidade.
 
 ### Ancoras (Touchstones)
@@ -449,7 +466,7 @@ Pessoas mortais que representam as Conviccoes do vampiro no mundo real.
 
 - **Cada Conviccao** deve ter **pelo menos uma Ancora** associada.
 - Ancoras sao NPCs mortais (nunca vampiros ou criaturas sobrenaturais).
-- Se uma Ancora morrer ou for perdida, a Conviccao associada fica enfraquecida — o vampiro pode perder um ponto de Humanidade permanentemente.
+- Ancora danificada rende +1 Mancha (+2 se pelo vampiro); destruida, +2 (+3 se pelo vampiro). Sem transferir a fixacao para outra pessoa (so se a Ancora morreu em paz; Humanidade DD 4), a Conviccao ligada a ela **e perdida** (Core p. 173, 239-240). Detalhes em `05_Humanidade.md` §6.
 - Ancoras sao alvos potenciais para inimigos do vampiro — protege-las e crucial.
 
 **Exemplo:**

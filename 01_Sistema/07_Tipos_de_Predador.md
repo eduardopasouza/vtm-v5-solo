@@ -17,16 +17,16 @@ O Tipo de Predador define **como** o vampiro se alimenta. Escolhido durante a cr
 | Tipo | Disciplina Bonus | Habilidades da especialidade | Vantagens | Desvantagens |
 |------|------------------|-------------------|-----------|--------------|
 | Gato de Beco (Alleycat) | Celeridade ou Potencia | Intimidacao, Combate ou Briga | Contato criminal | -1 Humanidade |
-| Ensacador (Bagger) | Feitic. Sangue ou Oblivio | Manha, Medicina | Contato medico, Iron Gullet | — |
+| Ensacador (Bagger) | Feitic. Sangue (so Tremere) ou Ofuscacao | Furto, Manha | Iron Gullet (•••) | Enemy (••); Ventrue nao pode |
 | Sanguessuga (Blood Leech) | Celeridade ou Proteanismo | Briga, Furtividade | +1 Potencia do Sangue | -1 Humanidade, Dark Secret (Diablerista) ou Shunned (••), Prey Exclusion: mortais (••) |
-| Faca (Cleaver) | Animalismo ou Dominacao | Manha, Subterfugio | Rebanho 2 | Dark Secret (familia) |
+| Faca (Cleaver) | Dominacao ou Animalismo | Persuasao, Subterfugio | Rebanho (••) | Dark Secret (•): Cleaver |
 | Consensual (Consensualist) | Auspicios ou Fortitude | Medicina, Persuasao | +1 Humanidade | Dark Secret |
 | Fazendeiro (Farmer) | Animalismo ou Proteanismo | Sobrevivencia, Trato c/ Animais | +1 Humanidade | Defeito Vegan (••) |
 | Saqueador de Tumulos (Graverobber) | Fortitude ou Oblivio | Medicina, Ocultismo | Contato necrologico, Iron Gullet | — |
-| Osiris | Presenca ou Proteanismo | Performance, Subterfugio | Fama 2 ou Culto de Sangue | Adversario |
+| Osiris | Feitic. Sangue (so Tremere) ou Presenca | Ocultismo, Atuacao | 3 pontos entre Fama e Rebanho | 2 pontos entre Enemies e Mythic |
 | Sandman | Auspicios ou Ofuscacao | Medicina, Furtividade | Recursos 1 | — |
-| Rainha da Cena (Scene Queen) | Dominacao ou Presenca | Etiqueta, Lideranca | Fama 1, Contato social | Adversario social |
-| Sirene (Siren) | Fortitude ou Presenca | Persuasao, Subterfugio | Aparencia Bonita 2 | — |
+| Rainha da Cena (Scene Queen) | Dominacao ou Potencia | Etiqueta, Lideranca, Manha | Fama (•), Contato (•) | Disliked (•) ou Prey Exclusion (•) |
+| Sirene (Siren) | Fortitude ou Presenca | Persuasao, Subterfugio | Looks: Beautiful (••) | Enemy (•) |
 | Extorsionista (Extortionist) | Dominacao ou Potencia | Intimidacao, Investigacao | Contato policial | — |
 
 ---
@@ -57,10 +57,12 @@ O Gato de Beco vive no fio da navalha. Cada caca e um ato de violencia, e a Best
 **Conceito:** O Ensacador evita contato direto com vitimas vivas. Obtém sangue por meios "clinicos" — bolsas de sangue roubadas de hospitais, compradas no mercado negro, ou fornecidas por contatos na area medica. O sangue e frio, velho e frequentemente insosso, mas serve.
 
 **Mecanicas:**
-- **Disciplina:** +1 ponto em Feiticaria de Sangue **ou** Oblivio
+- **Disciplina:** +1 ponto em Feiticaria do Sangue (so Tremere) **ou** Ofuscacao (Core p. 176)
 - **Especialidade (uma):** Furto (Arrombamento) **ou** Manha (Mercado Negro) (Core p. 176); sem ponto de Habilidade
-- **Vantagens:** Contato na area medica (enfermeiro, tecnico de laboratorio, funcionario de banco de sangue), merito Iron Gullet (Estomago de Ferro — permite consumir sangue velho/processado sem penalidade)
-- **Desvantagens:** Nenhuma mecanica direta
+- **Vantagens:** Iron Gullet (•••) — sangue frio, rancoso e plasma, sem Ressonancia (Core p. 176, 182)
+- **Desvantagens:** Enemy (••) — alguem acha que voce lhe deve algo, ou outro motivo para evitar as ruas (Core p. 176)
+- **Restricao:** Ventrue nao pode escolher este tipo (Core p. 176)
+- O contato na area medica e opcao narrativa, nao beneficio do tipo.
 
 **Implicacoes Narrativas:**
 O Ensacador mantem distancia emocional da caca, o que protege sua Humanidade mas pode criar dependencia de fontes frageis. Se o contato medico for comprometido, o vampiro fica sem fonte. Sangue embalado nunca tem Ressonancia forte, limitando avanco em certas Disciplinas.
@@ -98,8 +100,8 @@ Alimentar-se de outro vampiro (diablerie excluida) e tolerado por poucos e compr
 **Mecanicas:**
 - **Disciplina:** +1 ponto em Animalismo **ou** Dominacao
 - **Especialidade (uma):** Persuasao (Gaslighting) **ou** Subterfugio (Acobertamento) (Core p. 177); sem ponto de Habilidade
-- **Vantagens:** Rebanho 2 (a familia funciona como fonte confiavel de sangue)
-- **Desvantagens:** Dark Secret (mantem familia mortal — violacao da Mascara em potencial, e a maioria dos vampiros desaprova fortemente)
+- **Vantagens:** Rebanho (••) (Core p. 177)
+- **Desvantagens:** Dark Secret (•): Cleaver. A familia entra no Mapa de Relacoes; a Camarilla proibe tomar uma familia humana assim (Core p. 177)
 
 **Implicacoes Narrativas:**
 A Faca e talvez o tipo mais emocionalmente complexo. A familia e genuinamente amada, mas tambem e recurso. O vampiro deve equilibrar afeto com necessidade, e cada alimentacao e um ato de traicao velada. Se a Camarilla descobre a familia, pode exigir que sejam eliminados. Se a familia descobre a verdade, o trauma pode ser irreversivel.
@@ -143,7 +145,7 @@ O Consensualista carrega a ilusao de moralidade superior, mas a realidade e mais
 **Implicacoes Narrativas:**
 Nao ha piso de Fome 2: o limite do sangue animal vem da Potencia do Sangue (metade na Potencia 2, nada a partir da 3; Core p. 216). O custo real e a Forca de Vontade para quebrar a regra e o risco de a Potencia subir e o sangue animal deixar de sustentar. Em momentos de crise, a tentacao de sangue humano e avassaladora.
 
-**Nota sobre Sangue Animal:** Sangue animal nao possui Ressonancia e nao permite avanco em Disciplinas que exigem Ressonancia especifica. E um beco sem saida evolutivo.
+**Nota sobre Sangue Animal:** sangue animal e a Ressonancia de **Animalismo e Proteanismo**, e so dessas duas (Core p. 227). Para as demais Disciplinas, o Fazendeiro precisa de sangue humano com a Ressonancia certa.
 
 **Ideal para:** Gangrel, Nosferatu, personagens rurais ou com forte codigo moral.
 
@@ -173,10 +175,10 @@ O Saqueador vive na fronteira entre os vivos e os mortos — literalmente. O che
 **Conceito:** O Osiris e uma celebridade — cantor, pregador, lider de culto, influenciador, artista de palco. Usa sua fama e carisma para atrair fas, seguidores ou devotos, alimentando-se deles em contextos de adoracao, espetaculo ou fervor religioso.
 
 **Mecanicas:**
-- **Disciplina:** +1 ponto em Presenca **ou** Proteanismo
+- **Disciplina:** +1 ponto em Feiticaria do Sangue (so Tremere) **ou** Presenca (Core p. 177)
 - **Especialidade (uma):** Ocultismo (tradicao especifica) **ou** Atuacao (ramo especifico) (Core p. 177); sem ponto de Habilidade
-- **Vantagens:** Fama 2 **ou** Culto de Sangue (grupo de devotos que oferecem sangue voluntariamente)
-- **Desvantagens:** Adversario (rival, fanatico perigoso, investigador, ou outro vampiro que inveja sua posicao)
+- **Vantagens:** 3 pontos divididos entre Fama e Rebanho (Core p. 177)
+- **Desvantagens:** 2 pontos divididos entre os Defeitos Enemies e Mythic (Core p. 177)
 
 **Implicacoes Narrativas:**
 Ser famoso e uma faca de dois gumes para um vampiro. A Fama facilita a alimentacao e abre portas sociais, mas tambem atrai atencao — tanto mortal quanto cainita. O Adversario e uma ameaca constante, e a Mascara esta sempre em risco quando se e uma figura publica.
@@ -211,10 +213,10 @@ O Sandman e discreto e eficiente, mas arriscado. Se a vitima acordar, a situacao
 **Conceito:** A Rainha da Cena domina o circuito social — festas, baladas, eventos, galerias, lancamentos. Alimenta-se em ambientes sociais movimentados, onde o contato fisico e normal e a desinibicao facilita a caca. E o centro das atencoes e usa isso como ferramenta.
 
 **Mecanicas:**
-- **Disciplina:** +1 ponto em Dominacao **ou** Presenca
+- **Disciplina:** +1 ponto em Dominacao **ou** Potencia (Core p. 178)
 - **Especialidade (uma):** Etiqueta, Lideranca ou Manha (cena especifica) (Core p. 178); sem ponto de Habilidade
-- **Vantagens:** Fama 1 (conhecida no circuito social local), Contato social (promoter, organizador de eventos, socialite)
-- **Desvantagens:** Adversario social (rival na cena social — outro vampiro ou mortal influente que compete pelo mesmo espaco)
+- **Vantagens:** Fama (•) e Contato (•) (Core p. 178)
+- **Desvantagens:** Influence Flaw: Disliked (•) fora da sua subcultura, **ou** Feeding Flaw: Prey Exclusion (•) de outra subcultura (Core p. 178)
 
 **Implicacoes Narrativas:**
 A Rainha da Cena prospera em ambientes onde a Mascara e facil de manter — multidoes, musica alta, alcool. Mas a competicao social e feroz, e o Adversario esta sempre tentando minar sua posicao. Perder relevancia social significa perder acesso ao territorio de caca.
@@ -230,8 +232,8 @@ A Rainha da Cena prospera em ambientes onde a Mascara e facil de manter — mult
 **Mecanicas:**
 - **Disciplina:** +1 ponto em Fortitude **ou** Presenca
 - **Especialidade (uma):** Persuasao (Seducao) **ou** Subterfugio (Seducao) (Core p. 178); sem ponto de Habilidade
-- **Vantagens:** Aparencia Bonita 2 (Beautiful — +2 dados em pools sociais onde atracao fisica e relevante)
-- **Desvantagens:** Nenhuma mecanica direta
+- **Vantagens:** Looks: Beautiful (••) — +1 dado nas paradas Sociais apropriadas; Stunning (••••) daria +2 (Core p. 178-179)
+- **Desvantagens:** Enemy (•) — amante rejeitado ou parceiro ciumento (Core p. 179)
 
 **Implicacoes Narrativas:**
 A Sirene e eficiente e discreta — a vitima frequentemente agradece a experiencia. Mas o metodo pode gerar dependencia emocional nas vitimas, stalkers, e complicacoes romanticas. Em eras historicas, a seducao tem regras sociais muito mais rigidas, tornando o metodo mais arriscado e subversivo.
@@ -265,7 +267,7 @@ O Extorsionista e temido e desprezado — ate por outros vampiros. Suas vitimas 
 O metodo de caca influencia diretamente a Ressonancia disponivel:
 - **Gato de Beco:** Frequentemente Colerico (vitimas assustadas/raivosas)
 - **Sirene:** Frequentemente Sanguineo (vitimas excitadas/felizes)
-- **Fazendeiro:** Sem Ressonancia (sangue animal)
+- **Fazendeiro:** Sangue animal, que e a Ressonancia de Animalismo e Proteanismo (Core p. 227)
 - **Ensacador/Saqueador:** Sem Ressonancia confiavel (sangue processado/morto)
 - **Consensual:** Variavel (depende da relacao com o doador)
 
