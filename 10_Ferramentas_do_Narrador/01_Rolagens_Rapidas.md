@@ -171,8 +171,7 @@ Para criar NPCs rapidamente sem ficha completa, use estas categorias:
 |---------|-------------|-----|
 | Resistir provocacao leve | Compostura + Determinacao | 2 |
 | Manter compostura sob pressao social | Compostura + Etiqueta | 3 |
-| Resistir Frenesi (trigger moderado) | Compostura + Determinacao | 3-4 |
-| Resistir Frenesi (trigger severo) | Compostura + Determinacao | 5 |
+| Resistir Frenesi | Forca de Vontade intacta + Humanidade ÷ 3 (Core p. 219) | 2-4 (exemplos na Core p. 220) |
 | Manter-se calmo sob tortura | Determinacao + Fortitude | 5-6 |
 | Resistir compulsao sobrenatural | Compostura + Determinacao | Variavel (vs. poder) |
 
@@ -185,11 +184,11 @@ Para criar NPCs rapidamente sem ficha completa, use estas categorias:
 | Preparacao detalhada | +1 a +2 dados | Estudou o alvo, planejou a abordagem |
 | Ferramenta/equipamento adequado | +1 dado | Ganzua para arrombamento, arma boa |
 | Ferramenta/equipamento excelente | +2 dados | Equipamento profissional especializado |
-| Superioridade numerica | +1 dado por aliado (max +3) | 3 contra 1 |
-| Surpresa | +2 dados (atacante) | Emboscada bem-sucedida |
+| Trabalho em equipe | +1 dado por ajudante com ponto na Habilidade (Core p. 122) | Tres investigando a mesma cena |
+| Surpresa | Primeiro ataque contra DD fixa 1 (Core p. 300) | Emboscada bem-sucedida |
 | Escuridao (para mortais) | -1 a -3 dados | Beco sem iluminacao |
-| Escuridao (para vampiros c/ Sentidos Aguçados) | +1 dado | Visao noturna sobrenatural |
-| Ferido (Incapacitado) | -2 dados | Metade da track de saude preenchida |
+| Sentidos Aguçados (Auspicios) | + nivel de Auspicios em percepcao (Core p. 249) | Visao no escuro total |
+| Prejudicado (Saude) | -2 dados em testes Fisicos (Core p. 126) | Track de Saude cheia |
 | Distração significativa | -1 a -2 dados | Multidao, barulho, urgencia |
 | Condicoes climaticas adversas | -1 dado | Chuva forte, nevoa densa |
 | Alcool/drogas | -1 a -3 dados | Embriaguez da vitima (ou do vampiro via sangue) |

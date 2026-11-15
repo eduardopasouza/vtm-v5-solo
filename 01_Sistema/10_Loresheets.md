@@ -27,10 +27,11 @@ Cada Loresheet tem **5 niveis** (1 a 5 pontos), com beneficios crescentes:
 - **Na criacao:** Pontos de Loresheet sao comprados com os mesmos pontos de Vantagens/Backgrounds
 - **Com XP:** Podem ser compradas durante o jogo, mas exigem justificativa narrativa (o personagem precisa **descobrir** ou **desenvolver** a conexao em jogo)
 - **Restricoes:** Algumas Loresheets sao exclusivas de certos clas, seitas ou periodos historicos
-- **Niveis nao-sequenciais:** O jogador pode comprar qualquer nivel sem ter os anteriores (ex: comprar nivel 3 sem ter 1 e 2), mas cada nivel custa seus pontos
+- **Niveis independentes:** cada nivel e autonomo e se compra separado; comprar um nivel nao da os "inferiores" (Core p. 190)
+- Algumas Loresheets, sobretudo as "Descendant of...", exigem um cla especifico (Core p. 190)
 
 ### Unicidade
-Em geral, apenas **um personagem por cronica** pode ter a mesma Loresheet no mesmo nivel. Dois PCs podem ter a mesma Loresheet, mas em niveis diferentes, representando conexoes de intensidades distintas.
+> Nao conferido: o Core nao traz, nas paginas lidas, a regra de "um personagem por nivel por cronica". Usar so como criterio do Narrador.
 
 ---
 
@@ -38,7 +39,7 @@ Em geral, apenas **um personagem por cronica** pode ter a mesma Loresheet no mes
 
 ### Descendant of Montano
 
-**Fonte:** Livro base V5
+**Fonte:** nao encontrada. Nao esta entre as Loresheets do Core (p. 382-398), e a busca por "Montano" no acervo nao achou nada. Os niveis abaixo nao foram conferidos.
 
 **Contexto:** Montano e um dos childer mais antigos e poderosos de Lasombra [Antediluviano]. Diferente de muitos Lasombra que aderiram ao Sabbat, Montano e um dos poucos que permaneceu alinhado com a Camarilla — um anciao solitario, melancolico e incrivelmente perigoso.
 
@@ -53,7 +54,7 @@ Em geral, apenas **um personagem por cronica** pode ter a mesma Loresheet no mes
 
 ### Descendant of Helena
 
-**Fonte:** Chicago by Night
+**Fonte:** Core p. 391 (os niveis abaixo nao foram conferidos com a pagina)
 
 **Contexto:** Helena e uma Toreador antediluviana (ou quase) de beleza lendaria. Sua rivalidade com Menelaus e suas manipulacoes atravessam milenios. Ser descendente de Helena e pertencer a uma linhagem de beleza, arte e intriga sobrenatural.
 
@@ -68,7 +69,7 @@ Em geral, apenas **um personagem por cronica** pode ter a mesma Loresheet no mes
 
 ### The Cobweb (A Teia)
 
-**Fonte:** Livro base V5
+**Fonte:** no Core, a Teia aparece so no texto do cla Malkaviano (p. 76), **nao como Loresheet** (as Loresheets do Core estao nas p. 382-398). Os niveis abaixo nao tem fonte conferida; valem so como regra da casa, se aprovados.
 
 **Contexto:** A Teia e a rede psiquica compartilhada por todos os Malkavians — a Madness Network. Atraves dela, insights, visoes e fragmentos de loucura fluem entre membros do cla. Loresheets da Teia representam conexao mais profunda com esta rede.
 
@@ -85,16 +86,16 @@ Em geral, apenas **um personagem por cronica** pode ter a mesma Loresheet no mes
 
 ### The Bahari
 
-**Fonte:** Cults of the Blood Gods
+**Fonte:** Core p. 382
 
-**Contexto:** Os Bahari sao cultistas que veneram Lilith, a Primeira Mulher, como a verdadeira criadora dos vampiros (em oposicao a narrativa de Caim). O culto pratica rituais de dor, transformacao e transcendencia.
+**Contexto:** Os Bahari (Lilin, Lilitu) seguem o Caminho de Lilith e a veneram como a primeira vampira, usurpada por Caim. O culto pratica rituais de dor, transformacao e transcendencia.
 
-**Niveis resumidos:**
-1. **Conhecimento Proibido:** O personagem conhece os textos basicos dos Bahari e a teologia de Lilith
-2. **Iniciado:** Acesso a rituais menores e contatos dentro do culto
-3. **Sacerdote/Sacerdotisa:** Pode conduzir rituais Bahari e recebe bonus em Ocultismo
-4. **Portador da Dor:** Capacidade de transformar dor em poder — mecanica especifica de cura ou bonus
-5. **Voz de Lilith:** Experiencia mistica direta — visoes de Lilith, poder excepcional com custo pessoal
+**Niveis (Core p. 382, parafraseados):**
+1. **Reputacao Perigosa:** uma vez por historia, +2 dados de Intimidacao contra adoradores de Caim que conhecam sua lealdade
+2. **Escarificacao Ritual:** uma vez por sessao, sofrer 1 de dano Agravado para recuperar 1 nivel de dano de Forca de Vontade (Superficial ou Agravado)
+3. **Sacrificar os Filhos:** ao diablerizar o proprio cria, +3 dados na parada para absorver Disciplinas
+4. **O Sangue do Ventre:** uma vez por historia, apos beber sangue do utero, +2 em Vigor ou Determinacao ate o amanhecer
+5. **Primeira Amaldicoada:** mantem a Perdicao do cla, mas pode andar na primeira hora do dia e na ultima do crepusculo e ter relacoes sem Rouse; em troca, equivale ao Defeito Obvious Predator, entre outros custos (ver a pagina)
 
 **Nota:** Os Bahari nao sao exclusivos de nenhum cla, mas sao mais comuns entre Gangrel, Ministry e Hecata.
 
@@ -102,30 +103,29 @@ Em geral, apenas **um personagem por cronica** pode ter a mesma Loresheet no mes
 
 ### The Trinity (A Trindade)
 
-**Fonte:** Livro base V5
+**Fonte:** Core p. 393
 
-**Contexto:** A Trindade refere-se aos tres vampiros mais poderosos da Camarilla moderna — os Justicars e seus agentes. Conexao com a Trindade significa acesso ao mais alto escalao da politica cainita.
+**Contexto:** A Trindade e Michael (Toreador), o Dracon (Tzimisce) e Antonius (Ventrue), que mantiveram a utopia vampirica de Constantinopla. Cruzadas, a loucura de um Matusalem e a corrupcao setita desfizeram o grupo e o Sonho de Constantinopla. Ha quem ainda busque reviver o sonho. Nao tem relacao com os Justicars da Camarilla moderna.
 
 ---
 
 ### Golconda
 
-**Fonte:** Livro base V5
+**Fonte:** Core p. 389
 
-**Contexto:** Golconda e o estado mitico de paz interior que poucos vampiros alcancam — reconciliacao com a Besta, transcendencia da maldicao. E o "nirvana" vampirico.
+**Contexto:** estado lendario de equilibrio perfeito entre Humanidade e Besta, supostamente descoberto por Saulot. Diz-se que acalma a Besta, domina a Fome e ate permite ficar ao sol, mas o Core trata isso como boato, nao como regra. Ha quem diga que Golconda transforma o vampiro num predador frio, e nao num redimido. O Mestre dos Corvos quer desmascarar o mito.
 
-**Niveis resumidos:**
-1. **Sussurros de Paz:** O personagem ouviu falar de Golconda e busca ativamente
-2. **O Caminho:** Conhece um metodo (incerto) para buscar Golconda
-3. **Guia:** Tem um mentor que alega ter alcancado ou quase alcancado Golconda
-4. **Vislumbre:** Experiencia momentanea de Golconda — bonus temporario em Humanidade
-5. **Limiar:** O personagem esta no limiar de Golconda — mecanicas especiais de Humanidade e Besta
+**Niveis (Core p. 389, parafraseados; so os tres primeiros conferidos):**
+1. **Sementes de Golconda:** uma vez por historia, perguntar ao Narrador se uma acao poe em risco a busca por Golconda
+2. **O Unico Caminho Verdadeiro:** tem o tratado do Mestre dos Corvos; uma vez por historia, +3 dados num teste Social sobre a natureza de Golconda
+3. **Discipulo de Saulot:** segue os ensinamentos de Saulot (efeito na pagina)
+4-5. Ver a pagina
 
 ---
 
 ### Descendant of Tyler
 
-**Fonte:** Chicago by Night / Anarch sourcebook
+**Fonte:** Core p. 397
 
 **Contexto:** Tyler e a lendaria Brujah que supostamente destroiu o primeiro Principe Brujah e iniciou a revolta que levou a fundacao do movimento Anarquista.
 
@@ -133,15 +133,15 @@ Em geral, apenas **um personagem por cronica** pode ter a mesma Loresheet no mes
 
 ### The Church of Caine (Igreja de Caim)
 
-**Fonte:** Cults of the Blood Gods
+**Fonte:** nao conferida (atribuida a Cults of the Blood Gods; o Core so a cita no texto dos Bahari, p. 382)
 
 **Contexto:** A Igreja de Caim venera o Primeiro Vampiro como figura divina, acreditando que a Maldicao e uma dificuldade (blessing in disguise). Praticam rituais baseados na narrativa biblica de Caim.
 
 ---
 
-### Week of Nightmares Survivor
+### Week of Nightmares
 
-**Fonte:** Livro base V5
+**Fonte:** Core p. 395
 
 **Contexto:** A Semana dos Pesadelos (1999) foi quando o Antediluviano Ravnos despertou na India, causando destruicao apocaliptica antes de ser destruido por armas nucleares e magia. Sobreviventes carregam traumas e conhecimentos unicos.
 
@@ -151,18 +151,14 @@ Em geral, apenas **um personagem por cronica** pode ter a mesma Loresheet no mes
 
 | Loresheet | Fonte | Cla/Restricao |
 |-----------|-------|---------------|
-| Descendant of Montano | Core | Lasombra preferido |
-| Descendant of Helena | Chicago by Night | Toreador preferido |
-| The Cobweb | Core | Malkavian exclusivo |
-| The Bahari | Cults of Blood Gods | Qualquer cla |
-| Golconda | Core | Qualquer cla |
-| Descendant of Tyler | Chicago/Anarch | Brujah preferido |
-| Church of Caine | Cults of Blood Gods | Qualquer cla |
-| Week of Nightmares | Core | Qualquer cla |
-| The Circulatory System | Core | Qualquer cla |
-| High Clan | Core | Ventrue, Toreador, Lasombra, Tremere |
-| Low Clan | Core | Nosferatu, Gangrel, Malkavian, Brujah |
-| The Sect War Veteran | Camarilla/Anarch | Qualquer cla |
+Loresheets do Core (p. 382-398): The Bahari (382), Theo Bell (383), Cainite Heresy (384), Carna (385), The Circulatory System (386), Convention of Thorns (387), The First Inquisition (388), Golconda (389), Descendant of Hardestadt (390), Descendant of Helena (391), Sect War Veteran (392), The Trinity (393), Jeanette/Therese Voerman (394), Week of Nightmares (395), Rudi (396), Descendant of Tyler (397) e uma Loresheet sobre Zelios, o arquiteto Nosferatu (398; nome exato nao conferido). As restricoes de cla de cada uma estao nas paginas.
+
+| Loresheet | Fonte | Observacao |
+|-----------|-------|---------------|
+| Descendant of Montano | Nao encontrada | Fora do Core |
+| The Cobweb | Nao e Loresheet no Core (texto do cla, p. 76) | Regra da casa, se aprovada |
+| Church of Caine | Nao conferida | Citada no texto dos Bahari (Core p. 382) |
+| High Clan / Low Clan | Nao conferida | Nao estao na lista do Core |
 
 ---
 

@@ -158,13 +158,13 @@ Exemplo (Vigor 3 = 6 caixas de Saude):
 [ ][ ][ ][ ][ ][ ]   - Intacto
 [/][/][ ][ ][ ][ ]   - 2 dano Superficial
 [/][/][/][X][ ][ ]   - 3 Superficial, 1 Agravado
-[X][X][X][X][X][X]   - Incapacitado (todo Agravado = Morte/Torpor Final)
+[X][X][X][X][X][X]   - Todo Agravado: mortal morre; vampiro entra em torpor
 ```
 
 ### Incapacitacao
 
 - **Mortais:** Quando todo o tracker esta preenchido com dano Agravado, o mortal morre.
-- **Vampiros:** Quando todo o tracker esta preenchido com dano Agravado, o vampiro entra em **Torpor**. Se o dano Agravado exceder o total do tracker, o vampiro sofre **Morte Final**.
+- **Vampiros:** Quando todo o tracker esta preenchido com dano Agravado, o vampiro entra em **Torpor**. Em torpor, dano Agravado adicional **de fogo ou sol** causa **Morte Final**, assim como decapitacao ou destruicao total do corpo (Core p. 223). Outro dano alem da track nao mata por si so.
 
 ---
 
@@ -184,7 +184,7 @@ Vampiros sao resistentes a maioria das formas de dano, mas possuem vulnerabilida
 | Socos e chutes | Superficial (halved) | Dividido por 2 |
 | Armas brancas | Superficial (halved) | Dividido por 2 |
 | Armas de fogo | Superficial (halved) | Dividido por 2 |
-| Garras sobrenaturais | Superficial (full) | Nao dividido |
+| Garras e presas de certos sobrenaturais | **Agravado** | Normalmente, so fogo, sol e garras ou dentes de algumas criaturas sobrenaturais causam Agravado a vampiros (Core p. 126). Garras de Disciplina seguem a descricao do poder |
 | Estaca no coracao | Especial | Paralisa, nao mata (veja abaixo) |
 | Fogo | **Agravado** | Causa panico e possivel Frenesi de Terror |
 | Luz solar | **Agravado** | Dano por turno de exposicao |
@@ -347,8 +347,8 @@ Alem de Saude, personagens possuem um tracker de **Forca de Vontade** (Compostur
 
 ### Mortais
 
-- Mortais curam naturalmente ao longo de dias/semanas (Narrador determina).
-- Primeiros socorros (Inteligencia + Medicina) podem curar 1-2 pontos de dano Superficial imediatamente.
+- **Superficial:** no inicio de cada sessao, o mortal apaga dano Superficial ate o seu Vigor (Core p. 127).
+- **Agravado:** alguem com Medicina converte Agravado em Superficial com Inteligencia + Medicina, DD = total de Agravado do paciente (+1 se tratar a si mesmo). Converte no maximo metade da Medicina (para cima), ao longo da noite. O resto pode exigir outro dia de tratamento ou hospital (Core p. 127).
 
 ---
 

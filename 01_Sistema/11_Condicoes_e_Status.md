@@ -109,21 +109,19 @@ O vampiro pode despertar de Torpor:
 
 ### Quando Ocorre
 O vampiro sofre Morte Final quando:
-1. **Dano Agravado preenche toda a track de Saude** e mais dano Agravado e aplicado
-2. **Exposicao prolongada a luz solar** (dependendo da Fortitude e protecao)
-3. **Decapitacao** (Morte Final instantanea, sem resistencia)
-4. **Estaca no coracao + exposicao ao sol** (classico)
-5. **Fogo** que consome completamente o corpo
+1. **Em torpor por dano** (track cheia de Agravado), recebe mais dano Agravado **de fogo ou sol** (Core p. 223)
+2. **Decapitacao**: tiro dirigido -2 com arma de corte apropriada e 10+ de dano (Core p. 221, 223)
+3. **Destruicao total do corpo** (Core p. 223)
+
+Na pratica, sol e fogo matam porque o dano Agravado leva ao torpor e o dano seguinte, em torpor, causa a Morte Final.
 
 ### O Que Acontece
-- O corpo do vampiro se desintegra rapidamente — em segundos, decadas de envelhecimento se manifestam
-- Vampiros muito antigos se tornam po instantaneamente
-- Neonatos podem parecer cadaveres normais por algum tempo antes de deteriorar
+- O corpo volta a um cadaver da idade real: com menos de um ano de vampiro, um cadaver em decomposicao; mais velhos, esqueleto ou po (Core p. 223)
 - A alma (se houver) e perdida — nao ha ressurreicao para vampiros (com excecoes extremamente raras na lore)
 
 ### Distinção: Torpor vs. Morte Final
-- **Torpor:** Track de Saude totalmente preenchida com Agravado, mas nao excedida. O vampiro pode ser salvo.
-- **Morte Final:** Track totalmente preenchida E mais dano Agravado aplicado. Irrecuperavel.
+- **Torpor:** Track de Saude totalmente preenchida com Agravado. O vampiro pode ser salvo.
+- **Morte Final:** em torpor, mais dano Agravado de fogo ou sol, decapitacao ou destruicao do corpo (Core p. 223). Irrecuperavel.
 
 ---
 
@@ -236,13 +234,13 @@ Cada cla tem uma Compulsao unica que pode ser trigada em vez da Compulsao de Fom
 
 | Cla | Compulsao | Resumo |
 |-----|-----------|--------|
-| Brujah | Rebeliao | Deve resistir ou se opor a autoridade/regras na cena |
-| Gangrel | Feralidade | Age como animal — comunica-se com grunhidos, instintos dominam |
-| Malkavian | Delirio | Perturbacao mental se manifesta intensamente — visoes, paranoia, obsessao |
-| Nosferatu | Criptofilia | Necessidade compulsiva de descobrir um segredo na cena |
-| Toreador | Obsessao | Fica fixado em algo belo ou interessante — nao consegue desviar atencao |
-| Tremere | Perfeccionismo | Deve refazer ou corrigir algo ate atingir perfeicao impossivel |
-| Ventrue | Dominio | Deve assumir controle da situacao — nao aceita ser subordinado |
+| Brujah | Rebeliao | Precisa ir contra o status quo da situacao (lider, ordem, tarefa); -2 dados em tudo ate conseguir (Core p. 210) |
+| Gangrel | Impulsos Ferais | Por uma cena, -3 dados em rolagens com Manipulacao e Inteligencia; so fala em frases de uma palavra (Core p. 210) |
+| Malkavian | Delirio | Por uma cena, -2 dados em Destreza, Manipulacao, Compostura, Raciocinio e para resistir a frenesi de terror (Core p. 210) |
+| Nosferatu | Criptofilia | -2 dados em toda acao que nao busque descobrir um segredo, ate descobrir um (Core p. 210) |
+| Toreador | Obsessao | Fixa-se numa coisa bela; -2 dados em outras acoes enquanto durar (Core p. 210) |
+| Tremere | Perfeccionismo | -2 dados em todas as paradas ate um critico numa rolagem de Habilidade ou o fim da cena; -1 ao repetir a acao (Core p. 210) |
+| Ventrue | Arrogancia | Alguem precisa obedecer a uma ordem dele, sem coercao sobrenatural; -2 dados em acoes que nao sejam de lideranca ate isso (Core p. 211) |
 | Banu Haqim | Julgamento | Deve punir ou julgar alguem por transgressao percebida |
 | Hecata | Morbidez | Fixacao em morte, decomposicao, mortalidade — comportamento perturbador |
 | Lasombra | Crueldade | Deve humilhar, degradar ou causar sofrimento em alguem |

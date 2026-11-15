@@ -191,7 +191,7 @@ Cada cla possui uma compulsao especifica que pode ser ativada por Falha Bestial:
 | Toreador | Obsessao | Fica fixado em algo belo/fascinante, incapaz de agir |
 | Tremere | Perfeccionismo | Deve realizar a tarefa perfeitamente ou nao realizar |
 | Tzimisce | Coercao | Deve fazer alguem obedecer ou se submeter |
-| Ventrue | Arrogancia | Recusa a comprometer, age com superioridade destrutiva |
+| Ventrue | Arrogancia | Alguem precisa obedecer a uma ordem dele, sem coercao sobrenatural; -2 dados em acoes que nao sejam de lideranca ate isso (Core p. 211) |
 
 ---
 
@@ -411,17 +411,15 @@ O vampiro pode gastar **1 Rouse Check** para simular sinais vitais humanos tempo
 
 ### Efeitos
 
-- Pele fica quente ao toque.
-- Coracao bate (lentamente).
-- Pode ingerir comida e bebida (sem beneficio).
-- Pode ter relacoes sexuais.
-- Pode chorar lagrimas normais (em vez de sangue).
-- Engana exames medicos superficiais.
+- Batimento, temperatura e respiracao humanos; passa num exame medico superficial, mas nao em exames mais invasivos (Core p. 218).
+- Permite usar telas de toque sem ajuda (Core p. 218).
+- Tolera comida e bebida, sem vomitar, por ate 1 hora; sem o Rubor, Compostura + Vigor DD 3 para chegar a tempo ao banheiro (Core p. 218).
+- Sexo fingido ou ate prazeroso, conforme a Humanidade (Core p. 218, 236).
 
 ### Duracao
 
-- Uma cena ou ate o vampiro decidir encerrar.
-- Humanidade alta torna o Rubor mais convincente; Humanidade baixa pode mostrar imperfeicoes (pele palida demais, pupilas estranhas).
+- **A noite toda** (Core p. 218).
+- A Humanidade muda o que o Rubor consegue; ver a tabela de Humanidade no `05_Humanidade.md` (Core p. 236).
 
 ---
 

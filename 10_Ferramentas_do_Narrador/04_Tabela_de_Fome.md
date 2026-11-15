@@ -21,7 +21,7 @@ A Fome e a mecanica central do V5. Substituiu o sistema de "pontos de sangue" da
 | **2** | **Faminto** | 2 dados de Fome | Fome noticeable. O vampiro comeca a notar mortais como "comida" em vez de pessoas. 2 dados vermelhos. Risco moderado de Compulsao. |
 | **3** | **Muito faminto** | 3 dados de Fome | Fome constante e intrusiva. Dificuldade em se concentrar em qualquer coisa que nao seja sangue. 3 dados vermelhos. Risco significativo de Compulsao e Messy Critical. |
 | **4** | **Desesperado** | 4 dados de Fome | A Besta esta roncando. O vampiro olha para aliados e ve refeicoes. Cada interacao social e uma luta para nao atacar. 4 dados vermelhos. Risco alto de Frenesi de Fome ao ver sangue. |
-| **5** | **Famélico** | 5 dados de Fome | **PERIGO MAXIMO.** A Besta esta no controle parcial. Qualquer Rouse Check que falhe = Frenesi de Fome automatico. 5 dados vermelhos — quase todas as pools sao dominadas pela Fome. O vampiro e uma bomba-relogio. |
+| **5** | **Famélico** | 5 dados de Fome | **PERIGO MAXIMO.** A Besta esta no controle parcial. Nao pode despertar o sangue de proposito; Rouse forcado que falhe = teste de frenesi DD 4 (Core p. 211, 220). 5 dados vermelhos — quase todas as pools sao dominadas pela Fome. O vampiro e uma bomba-relogio. |
 
 ---
 
@@ -135,21 +135,19 @@ Fome 5 e o ponto de nao-retorno:
 
 ### O Que Acontece
 1. **5 dados de Fome** em TODA pool — a maioria das rolagens e dominada pela Besta
-2. **Qualquer Rouse Check falhado** = Frenesi de Fome **automatico e imediato**
-3. O vampiro **nao pode usar Disciplinas** que exijam Rouse Check (pois falharia para Frenesi)
-4. **Teste de Frenesi de Fome** ao ver sangue fresco, sentir pulso de mortal, ou qualquer estimulo
+2. Nao se desperta o sangue **de proposito** com Fome 5: nada de Disciplina, Surto ou cura que exija Rouse (Core p. 211)
+3. Um Rouse **forcado** que falhe (por exemplo, por efeito externo) exige **teste** de frenesi de fome DD 4 — nao e automatico (Core p. 211, 220)
+4. Com Fome 4+, ver ferida aberta ou sentir cheiro forte de sangue = teste DD 2; provar sangue = DD 3 (Core p. 220)
+5. Rouse ao despertar ou para curar Agravado que passaria a Fome de 5 leva ao **torpor**, nao ao frenesi (Core p. 219)
 
 ### Saindo de Fome 5
-- **Unica opcao:** Alimentar-se imediatamente
-- Se nao conseguir se alimentar, o vampiro entra em Frenesi de Fome e ataca o ser vivo mais proximo
-- Se o Frenesi nao resultar em alimentacao (contido, sem vitimas), o vampiro pode cair em Torpor por inanicao
+- Alimentar-se. Sem isso, cada estimulo vira um teste de frenesi, e o despertar da noite seguinte pode levar ao torpor.
 
-### Frenesi de Fome em Fome 5
-- Nao ha teste para resistir — e **automatico**
-- O vampiro ataca indiscriminadamente
-- Pode drenar vitimas ate a morte
-- Se atacar outro vampiro, risco de Diablerie acidental
-- Dura ate se alimentar ou ser fisicamente contido
+### Frenesi de Fome
+- Resiste-se com Forca de Vontade intacta + Humanidade ÷ 3 (Core p. 219)
+- Em frenesi, o vampiro busca sangue humano fresco da fonte mais proxima
+- Pode drenar vitimas ate a morte; se atacar outro vampiro, risco de diablerie
+- Dura ate a Fome chegar a 1 ou menos, ou ate a cena terminar (Core p. 220)
 
 ---
 

@@ -216,11 +216,10 @@ Vampiros de 14a-16a Geracao. Caracteristicas unicas:
 
 ## Interacao com Lacos de Sangue
 
-A Potencia de Sangue influencia Lacos de Sangue (Blood Bonds):
-- Vampiros de **maior** Potencia criam Lacos mais fortes
-- Vampiros de **menor** Potencia sao mais facilmente Lacados
-- Diferenca de 2+ niveis de Potencia torna o Laco quase irresistivel
-- Tremere pos-V5 nao podem criar Lacos (Bane de cla)
+No Core, a Potencia **nao muda a forca do Laco**; a Forca do Laco depende so de quantas vezes o servo bebeu (Core p. 234). O que a Potencia faz (Core p. 234):
+- Limita o numero de servos vampiros: no maximo um por ponto de Potencia do regente. Passando disso, o Laco mais antigo se desfaz em uma semana.
+- Nada impede lacar um vampiro de sangue mais potente.
+- Tremere nao criam Laco em outros vampiros (Perdicao, Core p. 97).
 
 ---
 
