@@ -141,6 +141,10 @@ def test_tabela_potencia_pontos_de_referencia():
     assert m.potencia(1).surto == 1 and m.potencia(1).severidade_perdicao == 1
     assert m.potencia(5).cura_superficial == 3 and m.potencia(5).rouse_dois_dados_ate == 3
     assert m.potencia(10).bonus_disciplina == 5
+    # Células de alimentação compartilhadas no Core p. 216: 6-7 e 8-9.
+    assert m.potencia(7).sacia_menos_humano == m.potencia(6).sacia_menos_humano == 2
+    assert m.potencia(9).sacia_menos_humano == m.potencia(8).sacia_menos_humano == 2
+    assert m.potencia(9).fome_minima_sem_matar == 3
     with pytest.raises(ValueError):
         m.potencia(11)
 

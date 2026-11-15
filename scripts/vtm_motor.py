@@ -51,7 +51,7 @@ POTENCIA = {
     6: LinhaPotencia(3, 3, 3, 3, 3, "nada", 2, 2),
     7: LinhaPotencia(4, 3, 3, 4, 4, "nada", 2, 2),
     8: LinhaPotencia(4, 4, 4, 4, 4, "nada", 2, 3),
-    9: LinhaPotencia(5, 4, 4, 5, 5, "nada", 3, 3),
+    9: LinhaPotencia(5, 4, 4, 5, 5, "nada", 2, 3),  # célula de alimentação compartilhada com o nível 8
     10: LinhaPotencia(5, 5, 5, 5, 5, "nada", 3, 3),
 }
 
