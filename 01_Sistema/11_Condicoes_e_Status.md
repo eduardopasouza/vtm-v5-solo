@@ -241,13 +241,13 @@ Cada cla tem uma Compulsao unica que pode ser trigada em vez da Compulsao de Fom
 | Toreador | Obsessao | Fixa-se numa coisa bela; -2 dados em outras acoes enquanto durar (Core p. 210) |
 | Tremere | Perfeccionismo | -2 dados em todas as paradas ate um critico numa rolagem de Habilidade ou o fim da cena; -1 ao repetir a acao (Core p. 210) |
 | Ventrue | Arrogancia | Alguem precisa obedecer a uma ordem dele, sem coercao sobrenatural; -2 dados em acoes que nao sejam de lideranca ate isso (Core p. 211) |
-| Banu Haqim | Julgamento | Deve punir ou julgar alguem por transgressao percebida |
-| Hecata | Morbidez | Fixacao em morte, decomposicao, mortalidade — comportamento perturbador |
-| Lasombra | Crueldade | Deve humilhar, degradar ou causar sofrimento em alguem |
-| Ministry | Tentacao | Deve tentar alguem — oferecer algo que a pessoa deseja mas nao deveria aceitar |
-| Ravnos | Cobiça | Deve roubar, trapacear ou enganar alguem na cena |
-| Salubri | Compaixao Aflitiva | Deve ajudar alguem em sofrimento, mesmo a custo proprio |
-| Tzimisce | Possessividade | Algo ou alguem na cena e "seu" — defende com ferocidade irracional |
+| Banu Haqim | Julgamento | Por uma cena, precisa saciar ao menos 1 de Fome de quem agir contra uma Conviccao dele; senao, -3 dados em tudo ate satisfazer ou a cena acabar (Camarilla p. 167-168) |
+| Hecata | Morbidez | -3 dados nas outras rolagens ate prever uma morte sem meios sobrenaturais ou resolver a causa de uma morte no lugar, ou a cena acabar (Cults of the Blood Gods p. 202-203) |
+| Lasombra | Impiedade | Na proxima falha em qualquer acao, -2 dados em todas as rolagens ate uma nova tentativa da mesma acao dar certo; a penalidade vale nas novas tentativas (Chicago by Night p. 292) |
+| Ministry | Transgressao | -2 dados em tudo que nao sirva para induzir alguem (ou a si) a quebrar um Principio da Cronica ou uma Conviccao; acaba quando isso causa ao menos uma Mancha (Anarch p. 185) |
+| Ravnos | Tentar o Destino | No proximo problema, -2 dados em toda tentativa que nao seja a mais ousada ou perigosa; dura ate resolver o problema (Companion p. 9) |
+| Salubri | Empatia Afetiva | -2 dados em toda acao que nao alivie o problema pessoal de alguem na cena; dura ate aliviar, surgir crise maior ou a cena acabar (Companion p. 15) |
+| Tzimisce | Cobica | -2 dados em toda acao que nao sirva para possuir algo ou alguem da cena; dura ate a posse ou ate o desejado ficar inalcancavel (Companion p. 19) |
 | Caitiff | Nenhuma especifica | Usa a Compulsao de Fome universal |
 | Sangue Ralo | Nenhuma especifica | Usa a Compulsao de Fome universal |
 
