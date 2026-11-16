@@ -14,3 +14,14 @@
 **Substitui:** Core p. 130. O Core dá 1 XP por sessão e mais 1 ao fim de cada história. Em crônicas curtas ou de avanço rápido, permite 2 por sessão.
 
 **Motivo:** mantém o ritmo de avanço já usado na campanha solo.
+
+
+## RC-2 — Recuperação do Rebanho
+
+**Aprovada em:** 2026-11-16.
+
+**Regra:** cada fonte do Rebanho volta a estar disponível 7 noites depois de uma alimentação segura. Uma alimentação arriscada (dano Agravado na vítima) deixa a fonte indisponível até ela se curar, a critério do Narrador.
+
+**Substitui:** o costume da campanha Edward Bello (desde a Sessão 5) de tratar a fonte como esgotada por cerca de duas semanas. Não substitui regra escrita do Core; o acervo não estava indexado para conferir se o Core fixa algum prazo.
+
+**Motivo:** com Potência de Sangue 4 cada humano sacia 1 a menos (Core p. 216), e o despertar sobe a Fome em média 0,5 por noite (Core p. 219). Com recuperação de duas semanas, o Rebanho não acompanhava a Fome.

@@ -51,16 +51,16 @@ Alem da resistencia fisica, Fortitude tambem protege a mente e o espirito. Poder
 **Amalgama:** Nenhum
 **Custo:** Gratis
 **Parada de Dados:** Nenhuma (passivo)
-**Sistema:** O vampiro adiciona seu nivel de Fortitude como dados extras a todas as paradas de dados para absorver dano Superficial. Este bonus se aplica a dano contundente, perfurante e cortante — basicamente qualquer dano fisico nao-agravado.
+**Sistema:** O vampiro soma seu nivel de Fortitude ao tracker de Saude (Vitalidade extra), de forma permanente. O V5 nao tem rolagem de absorcao de dano.
+
+> Corrigido em 2026-11-16: a versao anterior descrevia "dados extras para absorver dano", mecanica que o V5 nao tem. Conferir a pagina no Core quando o acervo estiver indexado.
 
 **Duracao:** Passivo (permanente)
 
 **Notas:**
-- E o equivalente defensivo de Fleetness (Celeridade 2).
 - Funciona automaticamente em todas as situacoes — nao requer ativacao.
-- Contra armas de fogo, o vampiro ja reduz dano pela metade (como todos os vampiros); Resiliencia adiciona mais absorpcao ainda.
 - Nao protege contra dano Agravado (fogo, luz solar, garras/presas sobrenaturais).
-- Um Gangrel com Fortitude 3 absorve 3 dados extras de dano Superficial em TODA situacao.
+- Um Gangrel com Fortitude 3 tem 3 caixas de Saude a mais.
 
 ---
 
