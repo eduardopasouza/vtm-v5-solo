@@ -1,0 +1,47 @@
+MIT License
+
+Copyright (c) 2026 Eduardo Souza
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+SCOPE OF THIS LICENSE
+
+"The Software" above means only the original code and configuration of this
+project: the folders scripts/, tests/, hooks/, skills/, agents/ and the
+manifests in .claude-plugin/.
+
+This license does NOT cover:
+
+1. The reference material in the numbered folders (01_ to 10_). It is
+   unofficial fan content about the World of Darkness, published under the
+   Dark Pack Agreement of Paradox Interactive AB, for non-commercial use only.
+
+2. Any trademark, setting, rules text or other intellectual property of
+   Paradox Interactive AB. Vampire: The Masquerade and World of Darkness are
+   trademarks of Paradox Interactive AB.
+
+3. The Dark Pack logo in assets/, which belongs to Paradox Interactive AB.
+
+Portions of the materials are the copyrights and trademarks of Paradox
+Interactive AB, and are used with permission. All rights reserved. For more
+information please visit worldofdarkness.com.
+
+This project is not official World of Darkness material.

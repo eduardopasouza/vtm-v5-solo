@@ -1,0 +1,67 @@
+{
+  "name": "vtm",
+  "version": "0.3.0",
+  "description": "Narrador de RPG solo para Vampiro: A Máscara V5, em português: skills de narração, criação, personagem, NPCs e gestão de campanha, com rolagens reais em Python. Material de fã, não oficial.",
+  "author": {
+    "name": "Eduardo Souza"
+  },
+  "repository": "https://github.com/eduardopasouza/vtm-v5-solo",
+  "license": "MIT",
+  "keywords": [
+    "vampiro",
+    "vtm",
+    "v5",
+    "rpg",
+    "solo"
+  ],
+  "mcpServers": {
+    "dados": {
+      "command": "${user_config.python}",
+      "args": [
+        "${CLAUDE_PLUGIN_ROOT}/scripts/vtm_mcp.py"
+      ],
+      "env": {
+        "PYTHONIOENCODING": "utf-8",
+        "VTM_PASTA_CAMPANHAS": "${user_config.pasta_campanhas}",
+        "VTM_CAMPANHA_ATIVA": "${user_config.campanha_ativa}",
+        "VTM_PASTA_ACERVO": "${user_config.pasta_acervo}"
+      }
+    }
+  },
+  "userConfig": {
+    "pasta_campanhas": {
+      "type": "directory",
+      "title": "Pasta das campanhas",
+      "description": "Pasta sua onde ficam as campanhas (uma subpasta por jogo). Use caminho absoluto e nunca a pasta do plugin. Vazio = o narrador pergunta."
+    },
+    "pasta_resumos": {
+      "type": "directory",
+      "title": "Pasta dos resumos dos livros",
+      "description": "Opcional. Pasta com resumos seus dos livros. Vazio = não usar."
+    },
+    "campanha_ativa": {
+      "type": "string",
+      "title": "Campanha ativa",
+      "description": "Nome da subpasta da campanha em jogo. Vazio = usa a única campanha da pasta, ou pergunta quando houver mais de uma.",
+      "default": ""
+    },
+    "pasta_acervo": {
+      "type": "directory",
+      "title": "Pasta do acervo de PDFs",
+      "description": "Opcional. Pasta com os PDFs dos livros que você tem, para busca com página. Vazio = usar as referências do plugin."
+    },
+    "mostrar_dados": {
+      "type": "boolean",
+      "title": "Mostrar dados individuais",
+      "description": "Exibir ao jogador o resultado de cada dado nas rolagens.",
+      "default": true
+    },
+    "python": {
+      "type": "string",
+      "title": "Comando do Python",
+      "description": "Comando ou caminho do Python 3.10+ usado nas rolagens e no servidor de dados (ex.: python, python3).",
+      "default": "python"
+    }
+  },
+  "homepage": "https://github.com/eduardopasouza/vtm-v5-solo#readme"
+}

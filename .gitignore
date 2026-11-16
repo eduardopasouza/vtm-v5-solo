@@ -1,0 +1,35 @@
+# Node
+node_modules/
+package-lock.json
+
+# PDFs (muito grandes para GitHub)
+*.pdf
+
+# Downloads oficiais (pesados)
+11_Downloads_Oficiais/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temp
+*.tmp
+*.bak
+~$*
+temp_vtm_caca.txt
+extract_pdf.py
+
+# Python
+__pycache__/
+.pytest_cache/
+
+# Campanha e resumos ficam no repositório privado vtm-campanhas (P3, 2026-11-15)
+07_Jogos/
+12_Resumos_dos_Livros/
+
+# Settings locais do plugin (nao commitar)
+.claude/*.local.md
+
+# Documentos de retomada e proposta (fora do versionamento)
+_retomada/

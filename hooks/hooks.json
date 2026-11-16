@@ -1,0 +1,20 @@
+{
+  "description": "VtM: injeta um resumo curto da campanha ativa quando a sessão abre na pasta de campanhas (ou numa pasta que a contém). Só leitura; nunca lê direcao.md.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${user_config.python}",
+            "timeout": 15,
+            "args": [
+              "${CLAUDE_PLUGIN_ROOT}/scripts/campanha.py",
+              "hook"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
