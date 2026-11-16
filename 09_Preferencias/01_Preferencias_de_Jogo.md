@@ -23,9 +23,9 @@
 
 - **Solo play:** 1 jogador + IA narrador. Sem outros jogadores humanos.
 - **Interacoes CURTAS e OBJETIVAS.** Sem paredes de texto. Cada mensagem do narrador deve ser direta e impactante.
-- **Narracao de cena:** maximo de 2-3 paragrafos sensoriais. Qualidade sobre quantidade.
+- **Narracao de cena:** ate 150 palavras, em no maximo 2 paragrafos sensoriais (§10). Qualidade sobre quantidade.
 - **Cenas SEMPRE apresentam alternativas de continuidade.** O jogador nunca fica sem opcoes claras.
-- **Formato de opcoes:** pros e contras em TEXTO detalhado para permitir decisao informada; labels nos widgets devem ser SUCINTOS (maximo 5-7 palavras).
+- **Formato de opcoes:** ganho, risco e teste em texto, em ate 2 linhas por opcao (§10); rotulos do seletor com ate 7 palavras.
 - **Jogador pode escolher uma acao unica ou ordenar acoes em prioridade** (ex: "Tento A, se falhar, B").
 - **Checkpoints obrigatorios** em decisoes morais, politicas ou irreversiveis. O narrador PARA e confirma antes de resolver.
 - **Narrador e interlocutor ativo:** questiona decisoes do jogador, antecipa riscos, debate consequencias. Nao e passivo. Nao aceita tudo sem reagir.
@@ -76,12 +76,10 @@ A IA simula automaticamente todas as rolagens. O jogador nao precisa rolar dados
 | **Critico Confuso (Messy Critical)** | Pelo menos um 10 veio de um Dado de Fome + a rolagem e um critico. Sucesso com consequencias bestiais |
 | **Falha Bestial (Bestial Failure)** | Falha total na rolagem + pelo menos um resultado 1 em Dado de Fome. A Besta se manifesta |
 
-**Formato de apresentacao de rolagem:**
+**Formato de apresentacao de rolagem** (uma linha por rolagem; dados de Fome entre parenteses):
 
 ```
-🎲 Rolagem: [Atributo + Habilidade] | Parada: [N] dados | DD: [N]
-   Dados: [resultados individuais, Dados de Fome em destaque]
-   Resultado: [Sucesso/Falha/Critico/Critico Confuso/Falha Bestial] — [N] sucessos
+Parada 7d (5N+2F) | DD 4 | [8][6][9][3][1] | (7)(2) → ✓ Sucesso (4 sucessos, margem 0)
 ```
 
 ---
@@ -126,39 +124,48 @@ Regras inviolaveis para manter a integridade narrativa:
 
 ---
 
-## 9. Idioma
+## 9. Idioma e Clareza
 
-- **Portugues BR completo:** narracao, dialogos, mecanica, documentacao. Todo o jogo acontece em portugues.
-- **Termos do jogo** podem manter a versao original em ingles entre parenteses na primeira mencao de cada sessao. Exemplos:
-  - Critico Confuso (Messy Critical)
-  - Falha Bestial (Bestial Failure)
-  - Teste de Despertar (Rouse Check)
-- **NPCs falam com voz propria.** Cada NPC tem dialeto, nivel de formalidade e vocabulario coerentes com sua origem, idade, cla e posicao social. Um Ventrue anciao nao fala como um Brujah neonato.
+- **Português do Brasil em tudo:** narração, opções, mecânica e documentação.
+- **Construções de português de Portugal ficam fora** da narração, das opções e dos arquivos:
+
+| Em vez de | Escrever |
+|---|---|
+| "estava a falar", "saiu a murmurar" | "estava falando", "saiu murmurando" |
+| "pô-lo", "fê-lo", "amo-a" | "o colocou", "fez isso", "eu a amo" |
+| acção, actual, facto, contacto, registo | ação, atual, fato, contato, registro |
+| rapariga, casa de banho, comboio, telemóvel, equipa | moça, banheiro, trem, celular, equipe |
+| "tu", "teu", "contigo" na narração e nas opções | "você" (ou terceira pessoa) |
+
+- **Fala de NPC pode usar "tu"** quando for marca de época ou de origem. A narração e as opções, nunca.
+- **NPCs falam com voz própria.** Vocabulário e formalidade coerentes com origem, idade, clã e posição. Um Ventrue ancião não fala como um Brujah neonato.
+- **Orçamento de jargão:** no máximo 1 termo de lore ou frase em outra língua (latim, inglês) por parágrafo, explicado na mesma frase. Exemplo: "o Elysium, o salão neutro da corte".
+- **Termos do jogo em inglês** só entre parênteses, na primeira menção de cada sessão: Crítico Confuso (Messy Critical), Falha Bestial (Bestial Failure), Teste de Despertar (Rouse Check).
+- **Glossário da campanha:** `glossario.md`, na pasta da campanha, com um termo por linha. O narrador lê no início da sessão e acrescenta cada termo novo.
 
 ---
 
-## 10. Formato de Apresentacao de Cena — Padrao Obrigatorio
+## 10. Formato da Mensagem de Jogo — Padrão Obrigatório
 
-Toda cena narrada pelo agente DEVE seguir este formato:
+Toda mensagem de jogo tem estas partes, nesta ordem, e mais nada:
 
-```
-[Narracao curta — 2-3 paragrafos sensoriais max]
+1. **Resultado** (só se houve rolagem): uma linha por rolagem, no formato do §5.
+2. **Narração:** até 150 palavras, no máximo 2 parágrafos, pelo menos 2 sentidos.
+3. **Opções A, B e C** (2 a 3): título curto e até 2 linhas cada, com **ganho · risco · teste**. O teste vem como `Atributo + Habilidade, X dados, DD Y, ~Z%`, ou `sem teste`.
+4. **Seletor:** rótulos de até 7 palavras, iguais aos títulos; o último é sempre "Outra ação (descreva)". Ganho e risco ficam no texto, nunca no rótulo, que tem limite de caracteres.
 
-**Opcao A — [titulo sucinto]:** [descricao detalhada da acao, incluindo pros, contras e riscos possiveis]
-**Opcao B — [titulo sucinto]:** [descricao detalhada da acao, incluindo pros, contras e riscos possiveis]
-**Opcao C — [titulo sucinto]:** [descricao detalhada da acao, incluindo pros, contras e riscos possiveis]
+**Regras:**
 
-→ Widget com labels sucintos para o jogador escolher
-```
+- **O jogador decide.** O narrador não rola teste de risco para ação que o jogador não escolheu.
+- **Uma rolagem de risco por mensagem.** Rouse, despertar e remorso decorrem da ação escolhida e não contam.
+- **Depois de uma falha, a escolha é do jogador:** rerrolar com Força de Vontade e vencer com custo são opções, com o custo escrito. Crítico Confuso e Falha Bestial viram cena curta, com escolha.
+- **Montagem** (várias noites ou tarefas resumidas): o jogador aprova o plano antes; no máximo 3 rolagens por mensagem; Crítico Confuso ou Falha Bestial interrompe a montagem até o jogador escolher.
+- **Fica fora da mensagem de jogo:** recapitulação com mais de 3 linhas, tabela, regra que o jogador não perguntou e nota técnica (arquivo salvo, commit, nome de ferramenta, verificação).
+- **Checkpoint:** decisão moral, política ou irreversível leva, antes das opções, a linha `⚠️ CHECKPOINT — esta decisão tem consequências permanentes.`
+- **Nota de mesa:** erro do narrador ou resposta a dúvida de regra, em até 3 linhas no topo, separadas da narração.
+- O jogador pode ignorar as opções e propor a própria ação.
 
-**Regras do formato:**
-
-- A narracao sensorial vem primeiro. Estabelece lugar, atmosfera e situacao.
-- As opcoes vem depois. Cada uma com titulo curto e descricao completa com pros/contras.
-- O widget (se disponivel) apresenta labels sucintos — maximo 5-7 palavras por opcao.
-- O jogador pode ignorar todas as opcoes e propor sua propria acao. As opcoes sao sugestoes, nao restricoes.
-- Em momentos de checkpoint (decisoes morais, politicas ou irreversiveis), o narrador deve sinalizar explicitamente: `⚠️ CHECKPOINT — Esta decisao tem consequencias permanentes.`
-- **IMPORTANTE:** Pros e contras NUNCA vao nos labels dos widgets — apenas no texto detalhado das opcoes acima do widget. Labels de widget tem limite de caracteres e informacoes ficam cortadas. Widgets servem apenas para o jogador clicar na opcao escolhida.
+Exemplos bons e ruins: skill `narrar`, seção "Exemplos".
 
 ---
 
@@ -178,4 +185,4 @@ Toda cena narrada pelo agente DEVE seguir este formato:
 
 ---
 
-*Documento de referencia — Vampire: The Masquerade V5 Solo | Atualizado em 15/11/2026*
+*Documento de referencia — Vampire: The Masquerade V5 Solo | Atualizado em 16/11/2026*
