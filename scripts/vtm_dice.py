@@ -120,6 +120,9 @@ def parser() -> argparse.ArgumentParser:
     a.add_argument("dano", type=int); a.add_argument("natureza", choices=["superficial", "agravado"])
     a.add_argument("--gasto", action="store_true")
 
+    a = s.add_parser("chance", help="chance de vitória de um teste (não rola)")
+    a.add_argument("parada", type=int); a.add_argument("fome", type=int); a.add_argument("dificuldade", type=int)
+
     a = s.add_parser("feed", help="alimentação")
     a.add_argument("fonte", choices=sorted(list(m.FONTES) + ["humano_arriscado"]))
     a.add_argument("fome", type=int); a.add_argument("bp", type=int)
@@ -159,6 +162,8 @@ def executar(args: argparse.Namespace) -> dict:
                           args.dois_lados, args.arma_a, args.arma_b, rng)
     if c == "damage":
         return m.aplicar_dano(args.dano, args.natureza, por_gasto=args.gasto)
+    if c == "chance":
+        return m.chance(args.parada, args.fome, args.dificuldade)
     if c == "feed":
         return m.alimentar(args.fonte, args.fome, args.bp, args.quantidade)
     raise SystemExit(f"Comando desconhecido: {c}")
@@ -173,7 +178,8 @@ def main(argv: list[str] | None = None) -> int:
         print(f"Erro: {e}")
         return 2
     print(formatar(args.cmd, resultado))
-    m.registrar(args.campanha, " ".join(argv), resultado)
+    if args.cmd != "chance":  # conta, não rolagem
+        m.registrar(args.campanha, " ".join(argv), resultado)
     print(f"\n---JSON---\n{json.dumps(resultado, ensure_ascii=False)}")
     return 0
 

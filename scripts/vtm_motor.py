@@ -470,6 +470,118 @@ def alimentar(fonte: str, fome_atual: int, bp: int, quantidade_arriscada: int = 
 
 
 # --------------------------------------------------------------------------
+# Chance de um teste — contas exatas sobre as regras de avaliar()
+# --------------------------------------------------------------------------
+
+
+def _distribuicao(n: int, com_um: bool) -> dict[tuple[int, int, bool], float]:
+    """Probabilidade de (dez, outros sucessos, algum 1) em n dados."""
+    dist: dict[tuple[int, int, bool], float] = {(0, 0, False): 1.0}
+    faces = [((1, 0, False), 0.1), ((0, 1, False), 0.4), ((0, 0, False), 0.4), ((0, 0, True), 0.1)]
+    for _ in range(n):
+        nova: dict[tuple[int, int, bool], float] = {}
+        for (dez, suc, um), p in dist.items():
+            for (d, s_, u), pf in faces:
+                chave = (dez + d, suc + s_, (um or u) if com_um else False)
+                nova[chave] = nova.get(chave, 0.0) + p * pf
+        dist = nova
+    return dist
+
+
+def chance(parada: int, fome: int, dificuldade: int) -> dict:
+    """Probabilidade de cada desfecho de um teste comum, pelas mesmas regras
+    de `avaliar` (Core p. 120, 207): vitória com sucessos >= dificuldade, par
+    de 10 vale 4, crítico confuso com 10 em dado de Fome, falha bestial com 1
+    em dado de Fome. Percentuais inteiros, para a linha de opção do narrador."""
+    if dificuldade < 0:
+        raise ValueError("dificuldade não pode ser negativa")
+    n_normais, n_fome = dividir_parada(parada, fome)
+    vit = crit = confuso = bestial = 0.0
+    for (dn, sn, _), pn in _distribuicao(n_normais, False).items():
+        for (df, sf, um), pf in _distribuicao(n_fome, True).items():
+            p = pn * pf
+            dez = dn + df
+            sucessos = dez + sn + sf + 2 * (dez // 2)
+            if sucessos >= dificuldade:
+                vit += p
+                if dez >= 2:
+                    crit += p
+                    if df >= 1:
+                        confuso += p
+            elif um:
+                bestial += p
+    pct = lambda x: int(round(x * 100))  # noqa: E731
+    return {"tipo": "CHANCE", "parada": n_normais + n_fome, "dados_normais": n_normais,
+            "dados_fome": n_fome, "dificuldade": dificuldade,
+            "vitoria": pct(vit), "critico": pct(crit), "critico_confuso": pct(confuso),
+            "falha_bestial": pct(bestial), "texto": f"~{pct(vit)}%",
+            "fonte": "Core p. 120, 207"}
+
+
+# --------------------------------------------------------------------------
+# Montagem: despertares de várias noites com alimentações na ordem
+# --------------------------------------------------------------------------
+
+
+def montagem(fome_atual: int, bp: int, noites: int, eventos: list[str] | None = None,
+             parar_com_fome: int = 5, rng: random.Random | None = None) -> dict:
+    """Passa `noites` noites em sequência. Em cada uma: o Rouse de despertar
+    (Core p. 219) e, depois dele, as alimentações daquela noite, na ordem em
+    que vieram. Cada evento é "noite:fonte" ou "noite:humano_arriscado:N"
+    (noite 1 = o próximo despertar). Para antes do fim em torpor, ou quando a
+    Fome chega a `parar_com_fome` com noites ainda por vir, para o narrador
+    devolver a decisão ao jogador."""
+    rng = rng or random.Random()
+    if not 1 <= noites <= 60:
+        raise ValueError("noites deve ficar entre 1 e 60")
+    por_noite: dict[int, list[tuple[str, int]]] = {}
+    for ev in eventos or []:
+        partes = [x.strip() for x in str(ev).split(":")]
+        if len(partes) not in (2, 3) or not partes[0].isdigit():
+            raise ValueError(f"evento inválido: '{ev}'. Use \"noite:fonte\" ou \"noite:humano_arriscado:N\"")
+        n = int(partes[0])
+        if not 1 <= n <= noites:
+            raise ValueError(f"evento '{ev}': a noite deve ficar entre 1 e {noites}")
+        fonte = partes[1]
+        if fonte != "humano_arriscado" and fonte not in FONTES:
+            raise ValueError(f"evento '{ev}': fonte desconhecida")
+        qtd = int(partes[2]) if len(partes) == 3 and partes[2].isdigit() else 0
+        if fonte == "humano_arriscado" and not 1 <= qtd <= 4:
+            raise ValueError(f"evento '{ev}': humano_arriscado precisa de quantidade de 1 a 4")
+        por_noite.setdefault(n, []).append((fonte, qtd))
+
+    fome = fome_atual
+    registro = []
+    interrompida = None
+    for n in range(1, noites + 1):
+        d = despertar(fome, bp, rng)
+        fome = d["fome_depois"]
+        linha = {"noite": n, "despertar": d["dado"], "sucesso": d["sucesso"],
+                 "fome_ao_acordar": fome, "alimentacoes": []}
+        registro.append(linha)
+        if d["torpor"]:
+            linha["fome_ao_fim"] = fome
+            interrompida = f"torpor na noite {n}: falha no despertar com Fome 5 (Core p. 219)"
+            break
+        for fonte, qtd in por_noite.get(n, []):
+            a = alimentar(fonte, fome, bp, qtd)
+            linha["alimentacoes"].append({"fonte": fonte, "fome_antes": a["fome_antes"],
+                                          "fome_depois": a["fome_depois"], "notas": a["notas"]})
+            fome = a["fome_depois"]
+        linha["fome_ao_fim"] = fome
+        if fome >= parar_com_fome and n < noites:
+            interrompida = (f"Fome {fome} na noite {n}: montagem parada para o jogador decidir "
+                            f"(faltam {noites - n} noites)")
+            break
+    out = {"tipo": "MONTAGEM", "fome_antes": fome_atual, "fome_depois": fome,
+           "noites_pedidas": noites, "noites_feitas": len(registro), "noites": registro,
+           "fonte": "Core p. 211-212, 216, 219"}
+    if interrompida:
+        out["interrompida"] = interrompida
+    return out
+
+
+# --------------------------------------------------------------------------
 # Registro
 # --------------------------------------------------------------------------
 

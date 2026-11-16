@@ -21,11 +21,11 @@ skills/             → 5 skills de jogo: /vtm:narrar, /vtm:criar, /vtm:personag
 09_Preferencias/    → Preferências e regras da casa padrão do plugin
 10_Ferramentas_do_Narrador/ → Tabelas e ferramentas
 (resumos, acervo)  → fora daqui e opcionais: userConfig pasta_resumos e pasta_acervo; o plugin não distribui livros
-scripts/            → Motor de dados: vtm_motor.py (regras, com página do Core), vtm_dice.py (CLI), vtm_mcp.py (servidor MCP; roda só com a biblioteca padrão, usa o pacote `mcp` se existir)
+scripts/            → Motor de dados: vtm_motor.py (regras, com página do Core), vtm_dice.py (CLI, sem estado), vtm_mcp.py (servidor MCP com estado; roda só com a biblioteca padrão, usa o pacote `mcp` se existir), vtm_estado.py (lê e grava estado.json, confere números, lê a ficha)
 scripts/campanha.py → Memória da campanha: auditar, validar, resumo, hook (regras em vtm_campanha.py)
 tests/              → Testes (python -m pytest tests)
 LICENSE, assets/    → MIT só para o código; material de referência sob o Dark Pack Agreement da Paradox (logo em assets/)
-.claude-plugin/plugin.json → também declara o servidor MCP `dados` (rolagens, auditar_campanha, buscar_acervo). Não usar `.mcp.json` na raiz: aqui ele seria lido também como MCP do projeto, sem `${CLAUDE_PLUGIN_ROOT}`
+.claude-plugin/plugin.json → também declara o servidor MCP `dados` (rolagens com estado, parada, chance, montagem, auditar_campanha, buscar_acervo). Não usar `.mcp.json` na raiz: aqui ele seria lido também como MCP do projeto, sem `${CLAUDE_PLUGIN_ROOT}`
 hooks/hooks.json    → SessionStart: resumo da campanha ativa (só no repositório ou na pasta de campanhas)
 agents/             → arquivista (fim de sessão), continuidade (entre sessões) e guardiao-regras (dúvida de regra); só propõem, não gravam
 ```
@@ -39,7 +39,7 @@ agents/             → arquivista (fim de sessão), continuidade (entre sessõe
 
 ## REGRAS UNIVERSAIS
 1. **Consultar referências** — Sempre verificar nos arquivos .md antes de inventar regras
-2. **Dados reais** — Usar o motor (ferramentas MCP do plugin ou `vtm_dice.py`) para todas as rolagens
+2. **Dados reais** — Usar o motor (ferramentas MCP do plugin ou `vtm_dice.py`) para todas as rolagens. No MCP, Fome e demais números vêm do `estado.json`: não informar à mão
 2b. **Fonte de regra (P6)** — regras da casa aprovadas > V5 Core (inglês) > suplementos V5 > `01_Sistema/` e resumos > edições antigas (só lore)
 3. **Jogador decide** — Warn + Obey: avisar consequências, mas respeitar a decisão
 4. **Não inventar regras** — Se não souber, buscar no acervo (buscar_acervo / guardiao-regras) e citar página. Sem acervo, valem `01_Sistema/`, `03_Disciplinas/` e `10_Ferramentas_do_Narrador/` (conferidos com o Core e os suplementos V5, com página) e as seções Perdição, Compulsão e Disciplinas de `02_Clas/`. O lore de `02_Clas/`, `04_Seitas_e_Politica/` e `05_Cenario/` tem, no fim de cada arquivo, a tabela "Conferência do Lore": só o que está marcado V5 vale como fato da 5ª edição
@@ -54,6 +54,7 @@ python scripts/vtm_dice.py roll <parada_total> <fome> [dif]     # a Fome substit
 python scripts/vtm_dice.py rouse <fome> [--bp N] [--nivel N]
 python scripts/vtm_dice.py remorse <humanidade> <manchas>         # dados = 10 - humanidade - manchas, mínimo 1
 python scripts/vtm_dice.py frenzy <fdv_intacta> <humanidade> <dif>
+python scripts/vtm_dice.py chance <parada_total> <fome> <dif>     # probabilidade, não rola
 python scripts/vtm_dice.py --help                                 # demais: reroll, tracker, surge, mend, conflict, damage, feed
 ```
 

@@ -25,8 +25,8 @@ Vale para **toda mensagem de jogo**, da primeira à última da sessão, inclusiv
 5. **O jogador decide.** Nunca falar nem agir pelo personagem. Nunca rolar teste de risco para uma ação que o jogador não escolheu.
 6. **Uma rolagem de risco por mensagem.** Rolou, mostrou o resultado, devolveu a decisão. Rouse, despertar e remorso decorrem da ação escolhida e não contam nesse limite.
 7. **Depois de uma falha, quem escolhe é o jogador.** Rerrolar com Força de Vontade e vencer com custo (Core p. 121) entram como opções, com o custo escrito; o narrador nunca os aplica sozinho. Crítico Confuso e Falha Bestial viram uma cena curta: a Besta age, e o jogador escolhe entre 2 ou 3 formas de pagar (Core p. 207-208).
-8. **Montagem** (várias noites ou tarefas resumidas): o jogador aprova o plano antes. No máximo 3 rolagens por mensagem. Crítico Confuso ou Falha Bestial interrompe a montagem até o jogador escolher (regra 7).
-9. **Números vêm dos arquivos, nunca da memória.** Fome e Força de Vontade: reler `estado.json` antes de cada rolagem (um Rouse pode ter mudado a Fome). Parada: somar pela ficha (`personagem.md`). Chance (~Z%): só pela ferramenta `chance`; sem ela, omitir a porcentagem em vez de estimar.
+8. **Montagem** (várias noites ou tarefas resumidas): o jogador aprova o plano antes. Os despertares e as alimentações das noites vão pela ferramenta `montagem`, nunca por Rouses em lote. No máximo 3 rolagens de risco por mensagem. Crítico Confuso, Falha Bestial ou montagem interrompida pela Fome devolvem a decisão ao jogador (regra 7).
+9. **Números vêm das ferramentas, nunca da memória.** Não informar Fome, Potência, Humanidade nem Manchas nas rolagens: o motor lê do `estado.json` e grava o que mudou; se recusar a chamada por número divergente, vale o do estado. Parada: ferramenta `parada`. Chance (~Z%): ferramenta `chance`; sem ela, omitir a porcentagem em vez de estimar. Qualquer número citado ao jogador: `ler_estado`.
 10. **Fica fora da mensagem de jogo:** recapitulação com mais de 3 linhas, tabela, regra que o jogador não perguntou, e qualquer nota técnica (arquivo salvo, commit, nome de ferramenta, verificação, aviso do sistema). Documentar é em silêncio.
 11. **Português do Brasil**, na narração, nas opções e nos arquivos:
     - gerúndio: "estava falando", "saiu murmurando"; não "estava a falar", "saiu a murmurar";
@@ -154,12 +154,23 @@ Se não existe jogo: informar e sugerir criar um ("criar jogo").
 
 Só rolar se houver chance de falha e depois que o jogador escolheu a ação. Dados decidem: falha é falha, sucesso é sucesso. Nunca manipular nem inventar resultado.
 
-**Como rolar.** Ferramentas MCP do plugin (`mcp__plugin_vtm_dados__*`): `rolar`, `rerolar_fdv`, `teste_tracker`, `rouse`, `despertar`, `surto_de_sangue`, `curar`, `curar_agravado`, `frenesi`, `remorso`, `conflito`, `aplicar_dano`, `alimentar`, `tabela_potencia`. Elas gravam cada rolagem em `rolagens.jsonl`. **Passar sempre `campanha`** = nome da pasta do jogo desta sessão; se o resultado voltar com `aviso`, a rolagem não foi registrada: corrigir o nome. Sem as ferramentas, usar o CLI: `python "${CLAUDE_PLUGIN_ROOT}/scripts/vtm_dice.py" --campanha "<pasta de Jogos>/<campanha>" <comando>` (`--help` lista os comandos; `python` = valor da tabela Caminhos). Regras e páginas do Core: `scripts/vtm_motor.py`.
+**Como rolar.** Ferramentas MCP do plugin (`mcp__plugin_vtm_dados__*`). **Passar sempre `campanha`** = nome da pasta do jogo desta sessão; se o resultado voltar com `aviso`, a rolagem não foi registrada: corrigir o nome.
 
-**Montar a parada** (Contrato, regra 9):
-- Parada = Atributo + Habilidade + bônus − penalidades (Prejudicado: −2). Bônus de +1 ou +2 por vantagem na situação; penalidade só com desvantagem objetiva.
-- Passar a parada **total** e a Fome atual: o motor troca dados normais por dados de Fome (Core p. 205).
-- Dificuldade: 2 fácil (padrão), 3 moderada, 4 ou mais difícil; ou `oponente` = sucessos do adversário.
+| Para | Ferramenta |
+|---|---|
+| Números atuais; parada pela ficha; chance de um teste | `ler_estado`, `parada`, `chance` |
+| Teste comum; rerrolagem com Força de Vontade | `rolar`, `rerolar_fdv` |
+| Fome | `rouse`, `despertar`, `alimentar`, `montagem` |
+| Sangue e cura | `surto_de_sangue`, `curar`, `curar_agravado`, `tabela_potencia` |
+| Conflito e dano | `conflito`, `aplicar_dano` (com `alvo` para marcar no personagem) |
+| Trackers, frenesi, remorso | `teste_tracker`, `frenesi`, `remorso` |
+
+- **O motor guarda o estado.** Ele lê Fome, Potência, Humanidade, Manchas e trackers do `estado.json` e grava ali Fome, dano, Força de Vontade gasta e Humanidade. Não regravar esses números à mão depois de uma ferramenta; conferir pelo campo `estado` da resposta.
+- **Parada:** `parada` soma Atributo + Habilidade (+ Disciplina, + bônus) pela ficha. Bônus de +1 ou +2 por vantagem na situação; penalidade só com desvantagem objetiva (Prejudicado: −2).
+- **Dificuldade:** 2 fácil (padrão), 3 moderada, 4 ou mais difícil; ou `oponente` = sucessos do adversário. Parada de NPC: `rolar` com `npc=true`.
+- **Sem as ferramentas** (ou em campanha sem `estado.json`): CLI `python "${CLAUDE_PLUGIN_ROOT}/scripts/vtm_dice.py" --campanha "<pasta de Jogos>/<campanha>" <comando>` (`--help` lista os comandos; `python` = valor da tabela Caminhos). O CLI não guarda estado: reler `estado.json` antes de cada rolagem, informar a Fome e gravar o resultado à mão.
+
+Apresentar o resultado na linha do Contrato (parte 1). Depois de uma falha, valem as regras 6 e 7. Regras e páginas do Core: `scripts/vtm_motor.py`.
 
 ### Documentar (em silêncio)
 
@@ -167,7 +178,7 @@ Atualizar logo depois das consequências, antes da próxima cena:
 
 | Sempre | Se aplicável |
 |--------|-------------|
-| `estado.json` — todo número que mudou (Fome, dano, Força de Vontade, Manchas, XP, noite, hora, local). Campanha sem `estado.json`: gravar na tabela de estado do `contexto.md`; não criar o `estado.json` no meio do jogo | `ramificacoes.md` (na partida) — decisão com impacto |
+| `estado.json` — o que o motor não grava: Manchas ganhas, XP, sessão, noite, hora, local. Campanha sem `estado.json`: todos os números na tabela de estado do `contexto.md`; não criar o `estado.json` no meio do jogo | `ramificacoes.md` (na partida) — decisão com impacto |
 | `contexto.md` — situação, localização, pendências (sem números) | `historia.md` — pista ou arco avançou |
 | Sessão ativa (`sessao_XX.md`) — log da cena | `personagem.md` — ficha mudou (XP gasto, disciplina nova) — números de estado não |
 | | `npcs/[nome].md` — NPC novo ou atitude mudou |

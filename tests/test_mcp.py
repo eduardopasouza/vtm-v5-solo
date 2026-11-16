@@ -24,7 +24,9 @@ async def _chamar(env, chamadas):
             saidas = []
             for nome, args in chamadas:
                 res = await s.call_tool(nome, args)
-                saidas.append(json.loads(res.content[0].text))
+                txt = res.content[0].text
+                erro = getattr(res, "is_error", getattr(res, "isError", False))
+                saidas.append({"erro_ferramenta": txt} if erro else json.loads(txt))
             return nomes, saidas
 
 
@@ -84,3 +86,23 @@ def test_sem_campanha_nao_grava(tmp_path):
     env = dict(os.environ, VTM_PASTA_CAMPANHAS="${user_config.pasta_campanhas}", VTM_CAMPANHA_ATIVA="")
     _, (r,) = asyncio.run(_chamar(env, [("remorso", {"humanidade": 7, "manchas": 1})]))
     assert r["registrado_em"] is None
+
+
+def test_recusa_chega_ao_cliente_com_a_mensagem(tmp_path):
+    """No pacote `mcp`, o texto do erro de regra precisa chegar ao narrador."""
+    camp = tmp_path / "Teste"
+    camp.mkdir()
+    modelo = Path(__file__).resolve().parents[1] / "08_Templates" / "07_estado.json"
+    estado = json.loads(modelo.read_text(encoding="utf-8"))
+    estado["personagem"]["fome"] = 3
+    (camp / "estado.json").write_text(json.dumps(estado), encoding="utf-8")
+    env = dict(os.environ, VTM_PASTA_CAMPANHAS=str(tmp_path), VTM_CAMPANHA_ATIVA="Teste")
+    nomes, (recusada, certa, lote) = asyncio.run(_chamar(env, [
+        ("rolar", {"parada": 6, "fome": 2, "dificuldade": 3}),
+        ("rolar", {"parada": 6, "dificuldade": 3}),
+        ("rouse", {"quantidade": 10}),
+    ]))
+    assert {"parada", "chance", "montagem", "ler_estado"} <= nomes
+    assert "Fome informada (2) difere do estado.json (3)" in recusada["erro_ferramenta"]
+    assert len(certa["dados_fome"]) == 3 and certa["estado"]["fome"] == 3
+    assert "montagem" in lote["erro_ferramenta"]
