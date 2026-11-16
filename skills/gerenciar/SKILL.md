@@ -17,7 +17,7 @@ Gestão macro: rastrear objetivos em 4 níveis, avançar agendas de NPCs, manter
 |---------|---------|
 | Base VtM | `${CLAUDE_PLUGIN_ROOT}` (só leitura: referências, templates, scripts) |
 | Jogos | `${user_config.pasta_campanhas}` |
-| Campanha ativa | `${user_config.campanha_ativa}` |
+| Campanha ativa | `${user_config.campanha_ativa}` (o jogo que o jogador nomear vale por cima; vazio e várias campanhas = perguntar qual e passar o nome em `campanha` nas ferramentas de dados) |
 | PDFs integrais | `${user_config.pasta_acervo}` (opcional) |
 | Livros (busca) | Ferramenta MCP `buscar_acervo` ou agente `guardiao-regras`: índice local dos PDFs com livro + página. CLI: `python "${CLAUDE_PLUGIN_ROOT}/scripts/acervo.py" buscar "termo"`. Regra citada só com página. Sem acervo indexado, valem os arquivos `01_Sistema/` do plugin (ver "Configuração não preenchida"); sem fonte nenhuma, "não sei". Hierarquia P6: regras da casa > V5 Core > suplementos V5 > `01_Sistema`/resumos > edições antigas (só lore) |
 | Resumos | `${user_config.pasta_resumos}` (opcional; visão geral, não fonte final) |
@@ -142,7 +142,7 @@ Se algum item está fraco → propor ações corretivas.
    ```bash
    python "${CLAUDE_PLUGIN_ROOT}/scripts/campanha.py" auditar "<pasta da campanha>"
    ```
-   (ou a ferramenta MCP `auditar_campanha`). Aponta: `estado.json` ausente ou inválido; número divergente entre `estado.json` e os `.md` (ou entre `contexto.md` e `personagem.md` sem estado); número repetido nos `.md` (pela P8 fica só no `estado.json`); Potência declarada x tabela do Core p. 216; sessões fora da `timeline.md`; rodapés "atualizado em" defasados; NPCs nas relações sem ficha; fichas fora do `indice.md`.
+   (ou a ferramenta MCP `auditar_campanha`, com `campanha` = nome da pasta do jogo). Aponta: `estado.json` ausente ou inválido; número divergente entre `estado.json` e os `.md` (ou entre `contexto.md` e `personagem.md` sem estado); número repetido nos `.md` (pela P8 fica só no `estado.json`); Potência declarada x tabela do Core p. 216; sessões fora da `timeline.md`; rodapés "atualizado em" defasados; NPCs nas relações sem ficha; fichas fora do `indice.md`.
 2. **Continuidade narrativa:** pedir ao agente `continuidade` as contradições entre sessões, fichas, linha do tempo e `direcao.md`.
 3. Conferir também:
    - `relacoes.md` reflete interações recentes?

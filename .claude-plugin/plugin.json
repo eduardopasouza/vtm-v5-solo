@@ -1,6 +1,6 @@
 {
   "name": "vtm",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Narrador de RPG solo para Vampiro: A Máscara V5, em português: skills de narração, criação, personagem, NPCs e gestão de campanha, com rolagens reais em Python. Material de fã, não oficial.",
   "author": {
     "name": "Eduardo Souza"
@@ -42,7 +42,7 @@
     "campanha_ativa": {
       "type": "string",
       "title": "Campanha ativa",
-      "description": "Nome da subpasta da campanha em jogo. Vazio = usa a única campanha da pasta, ou pergunta quando houver mais de uma.",
+      "description": "Nome da subpasta da campanha padrão. Vazio = usa a única campanha da pasta, ou pergunta qual jogar quando houver mais de uma (para alternar entre campanhas em paralelo, deixe vazio).",
       "default": ""
     },
     "pasta_acervo": {

@@ -162,6 +162,42 @@ def test_hook_so_dentro_da_pasta(tmp_path):
     assert cli.modo_hook(com_bom, env)
 
 
+# --- várias campanhas em paralelo -------------------------------------------------
+
+def montar_duas(tmp_path):
+    a = montar(tmp_path, estado=estado_base(fome=3))
+    b = tmp_path / "Outro Jogo"
+    b.mkdir()
+    e = estado_base(fome=1)
+    e["campanha"] = e["personagem"]["nome"] = "Outro Jogo"
+    (b / "estado.json").write_text(json.dumps(e), encoding="utf-8")
+    (tmp_path / "_resumos").mkdir()
+    return a, b
+
+
+def test_pasta_ativa_com_campanha_explicita(tmp_path):
+    a, b = montar_duas(tmp_path)
+    assert [p.name for p in c.listar_jogos(str(tmp_path))] == ["Mara Voss", "Outro Jogo"]
+    assert c.pasta_ativa(str(tmp_path), "") is None  # duas e nenhuma fixada
+    assert c.pasta_ativa(str(tmp_path), "Mara Voss") == a
+    assert c.pasta_ativa(str(tmp_path), "Mara Voss", "Outro Jogo") == b  # chamada vence a configuração
+    assert c.pasta_ativa(str(tmp_path), "Mara Voss", "Nao Existe") is None  # não cai na configurada
+    for ruim in ("..", "../x", "Mara Voss/npcs", "_resumos", ".git", "${user_config.x}"):
+        assert c.pasta_jogo(str(tmp_path), ruim) is None
+
+
+def test_hook_com_duas_campanhas_lista_as_duas(tmp_path):
+    a, b = montar_duas(tmp_path)
+    env = {"CLAUDE_PLUGIN_OPTION_PASTA_CAMPANHAS": str(tmp_path),
+           "CLAUDE_PLUGIN_OPTION_CAMPANHA_ATIVA": ""}
+    txt = json.loads(cli.modo_hook(json.dumps({"cwd": str(tmp_path)}), env))["hookSpecificOutput"]["additionalContext"]
+    assert "Mara Voss" in txt and "Outro Jogo" in txt and "campanha" in txt
+    assert "SEGREDO" not in txt and "_resumos" not in txt
+    # aberta dentro da pasta de um jogo: só ele
+    txt = json.loads(cli.modo_hook(json.dumps({"cwd": str(b)}), env))["hookSpecificOutput"]["additionalContext"]
+    assert "Outro Jogo" in txt and "Mara Voss" not in txt
+
+
 def test_cli_auditar_codigo_de_saida(tmp_path):
     camp = montar(tmp_path, ficha_fome=4)
     p = subprocess.run([sys.executable, str(RAIZ / "scripts" / "campanha.py"), "auditar", str(camp), "--json"],

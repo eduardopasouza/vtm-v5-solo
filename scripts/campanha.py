@@ -46,8 +46,8 @@ def modo_hook(stdin_txt: str, env: dict) -> str:
         return ""
     cwd = Path(dados["cwd"]).resolve()
     base_txt = env.get("CLAUDE_PLUGIN_OPTION_PASTA_CAMPANHAS", "")
-    pasta = c.pasta_ativa(base_txt, env.get("CLAUDE_PLUGIN_OPTION_CAMPANHA_ATIVA", ""))
-    if pasta is None:
+    jogos = c.listar_jogos(base_txt)
+    if not jogos:
         return ""
     base = Path(base_txt).resolve()
     # Dentro da pasta de campanhas, ou na pasta logo acima dela quando essa é o
@@ -56,8 +56,17 @@ def modo_hook(stdin_txt: str, env: dict) -> str:
     eh_repo_plugin = cwd == base.parent and (cwd / ".claude-plugin" / "plugin.json").is_file()
     if not (_dentro(cwd, base) or eh_repo_plugin):
         return ""
+    # Sessão aberta dentro da pasta de um jogo: esse jogo, qualquer que seja a configuração.
+    proprio = next((j for j in jogos if _dentro(cwd, j)), None)
+    pasta = proprio or c.pasta_ativa(base_txt, env.get("CLAUDE_PLUGIN_OPTION_CAMPANHA_ATIVA", ""))
+    if pasta is not None:
+        texto = c.resumo(pasta)
+    elif len(jogos) > 1:
+        texto = c.resumo_varios(jogos)
+    else:
+        return ""
     return json.dumps({"hookSpecificOutput": {"hookEventName": "SessionStart",
-                                              "additionalContext": c.resumo(pasta)}},
+                                              "additionalContext": texto}},
                       ensure_ascii=False)
 
 

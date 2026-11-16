@@ -27,7 +27,7 @@ As Preferências do jogador (tabela Caminhos) definem tom, formato e limites, e 
 |---------|---------|
 | Base VtM | `${CLAUDE_PLUGIN_ROOT}` (só leitura: referências, templates, scripts) |
 | Jogos | `${user_config.pasta_campanhas}` |
-| Campanha ativa | `${user_config.campanha_ativa}` |
+| Campanha ativa | `${user_config.campanha_ativa}` (o jogo que o jogador nomear vale por cima; vazio e várias campanhas = perguntar qual e passar o nome em `campanha` nas ferramentas de dados) |
 | Script de dados | `${CLAUDE_PLUGIN_ROOT}/scripts/vtm_dice.py` |
 | Python | `${user_config.python}` |
 | Mostrar dados individuais | `${user_config.mostrar_dados}` |
@@ -43,7 +43,7 @@ Nos comandos de dados abaixo, `python` é o valor de Python desta tabela.
 
 ## Início de Sessão
 
-1. Abrir a campanha ativa; sem ela, listar os jogos da pasta de Jogos — se múltiplos, perguntar qual
+1. Escolher a campanha (ver "Várias campanhas"): a que o jogador nomeou no pedido; senão a campanha ativa; senão a única da pasta de Jogos; com várias e nenhuma fixada, listar (`listar_campanhas`) e perguntar qual. Dali em diante, a sessão inteira é **desse jogo só**
 2. Ler `estado.json` do jogo — **fonte única dos números** (Fome, BP, Humanidade, Manchas, Saúde, FdV, XP, sessão, noite, data, local, hora). Se não existir (campanha anterior à P8), os números estão na tabela "Estado Actual" do `contexto.md`
 3. Ler `contexto.md` — situação, decisão pendente, relações; e `personagem.md` — ficha (atributos, habilidades, disciplinas)
 4. Ler `objetivos.md` — objetivos ativos por nível
@@ -52,6 +52,15 @@ Nos comandos de dados abaixo, `python` é o valor de Python desta tabela.
 7. Retomar do ponto pendente
 
 Se não existe jogo → informar e sugerir criar um (trigger: "criar jogo").
+
+### Várias campanhas
+
+O jogador pode manter mais de uma campanha e alternar entre elas. Cada uma é independente: nada de uma vaza para a outra.
+
+- **Uma conversa por campanha.** Se o pedido trocar de jogo no meio da sessão ("agora o Antônio"), salvar o estado do jogo atual (passo de fim de sessão) e sugerir abrir uma conversa nova para o outro, para o contexto, os NPCs e os segredos não se misturarem. Se o jogador insistir, encerrar a documentação de um antes de ler os arquivos do outro.
+- **Nome da pasta em toda ferramenta de dados.** Passar `campanha` em cada rolagem e em `auditar_campanha`; no CLI, `--campanha "<pasta de Jogos>/<campanha>"`.
+- **Leituras e gravações só dentro da pasta do jogo escolhido.** `preferencias.md` e `regras_da_casa.md` da pasta de Jogos valem para todos.
+- **Agentes** (`arquivista`, `continuidade`): informar a pasta do jogo.
 
 ## Loop de Jogo
 
@@ -94,7 +103,7 @@ Repetir a cada cena. Cada cena exige pelo menos uma decisão do jogador.
 
 Se há chance de falha → rolar dados com o motor.
 
-**Como rolar.** Usar as ferramentas MCP do plugin (`mcp__plugin_vtm_dados__*`: `rolar`, `rerolar_fdv`, `teste_tracker`, `rouse`, `despertar`, `surto_de_sangue`, `curar`, `curar_agravado`, `frenesi`, `remorso`, `conflito`, `aplicar_dano`, `alimentar`, `tabela_potencia`). Elas gravam cada rolagem em `rolagens.jsonl` da campanha. Se não estiverem disponíveis, usar o CLI equivalente (comandos abaixo, `python` = valor de Python da tabela Caminhos), com `--campanha "<pasta de Jogos>/<campanha>"` antes do comando para registrar. Regras e páginas: `${CLAUDE_PLUGIN_ROOT}/scripts/vtm_motor.py` (Core = V5 Core Rulebook, página impressa).
+**Como rolar.** Usar as ferramentas MCP do plugin (`mcp__plugin_vtm_dados__*`: `rolar`, `rerolar_fdv`, `teste_tracker`, `rouse`, `despertar`, `surto_de_sangue`, `curar`, `curar_agravado`, `frenesi`, `remorso`, `conflito`, `aplicar_dano`, `alimentar`, `tabela_potencia`). Elas gravam cada rolagem em `rolagens.jsonl` da campanha. **Passar sempre `campanha` = nome da pasta do jogo desta sessão** (ex.: `"campanha": "Edward Bello"`); se o resultado voltar com `aviso`, a rolagem não foi registrada: corrigir o nome. Se não estiverem disponíveis, usar o CLI equivalente (comandos abaixo, `python` = valor de Python da tabela Caminhos), com `--campanha "<pasta de Jogos>/<campanha>"` antes do comando para registrar. Regras e páginas: `${CLAUDE_PLUGIN_ROOT}/scripts/vtm_motor.py` (Core = V5 Core Rulebook, página impressa).
 
 **Montar a parada:**
 1. Declarar Atributo + Habilidade (ex: Carisma + Persuasão)
@@ -205,7 +214,7 @@ Quando o jogador encerrar:
 4. XP da sessão pelas regras da casa em vigor (tabela Caminhos). No padrão do plugin, RC-1: base 2-3 + 1 por marco narrativo, até +3. Sem regra da casa de XP, vale o Core p. 130 (1 por sessão + 1 ao fim de cada história)
 5. Atualizar `estado.json` com o estado final (Fome, Saúde, FdV, Manchas, XP, sessão, noite) — ou, se ele não existir, a tabela "Estado Actual" do `contexto.md`
 6. Atualizar `objetivos.md` e `timeline.md` — progresso, novos objetivos, entrada da sessão
-7. Opcional: pedir ao agente `arquivista` a lista de mudanças por arquivo e conferir com `python "${CLAUDE_PLUGIN_ROOT}/scripts/campanha.py" auditar "<pasta da campanha>"` (ou a ferramenta MCP `auditar_campanha`)
+7. Opcional: pedir ao agente `arquivista` a lista de mudanças por arquivo e conferir com `python "${CLAUDE_PLUGIN_ROOT}/scripts/campanha.py" auditar "<pasta da campanha>"` (ou a ferramenta MCP `auditar_campanha`, com `campanha`)
 8. Resumo breve: o que aconteceu + o que está por vir
 
 ## Regras Universais

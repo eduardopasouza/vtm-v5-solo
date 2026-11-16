@@ -421,17 +421,59 @@ def resumo(pasta: str | Path, max_linhas: int = 15) -> str:
     return "\n".join(linhas[:max_linhas])
 
 
-def pasta_ativa(pasta_campanhas: str | None, campanha_ativa: str | None) -> Path | None:
+def _base(pasta_campanhas: str | None) -> Path | None:
     if not pasta_campanhas or "${" in pasta_campanhas:
         return None
     base = Path(pasta_campanhas)
-    if not base.is_dir():
+    return base if base.is_dir() else None
+
+
+def listar_jogos(pasta_campanhas: str | None) -> list[Path]:
+    """Subpastas de jogo da pasta de campanhas (ignora as que começam com _ ou .)."""
+    base = _base(pasta_campanhas)
+    if base is None:
+        return []
+    return sorted((d for d in base.iterdir() if d.is_dir() and not d.name.startswith(("_", "."))),
+                  key=lambda d: d.name.casefold())
+
+
+def pasta_jogo(pasta_campanhas: str | None, nome: str | None) -> Path | None:
+    """Pasta de um jogo pelo nome exato da subpasta. Recusa caminhos (/, \\, ..)
+    e pastas que começam com _ ou ., para o nome nunca sair da pasta de campanhas."""
+    nome = (nome or "").strip()
+    if not nome or "${" in nome or nome in (".", "..") or any(s in nome for s in ("/", "\\")):
         return None
+    if nome.startswith(("_", ".")):
+        return None
+    base = _base(pasta_campanhas)
+    if base is None:
+        return None
+    p = base / nome
+    return p if p.is_dir() else None
+
+
+def pasta_ativa(pasta_campanhas: str | None, campanha_ativa: str | None,
+                campanha: str | None = None) -> Path | None:
+    """Pasta do jogo em uso. Ordem: `campanha` pedida na chamada > `campanha_ativa`
+    da configuração > a única subpasta, quando só há uma. Com `campanha` informada
+    e inexistente, devolve None (não cai na configurada, para não gravar no jogo errado)."""
+    if campanha is not None and campanha.strip():
+        return pasta_jogo(pasta_campanhas, campanha)
     if campanha_ativa and "${" not in campanha_ativa:
-        p = base / campanha_ativa
-        return p if p.is_dir() else None
-    jogos = [d for d in base.iterdir() if d.is_dir() and not d.name.startswith(("_", "."))]
+        return pasta_jogo(pasta_campanhas, campanha_ativa)
+    jogos = listar_jogos(pasta_campanhas)
     return jogos[0] if len(jogos) == 1 else None
+
+
+def resumo_varios(jogos: list[Path], max_linhas_cada: int = 4) -> str:
+    """Resumo curto de cada jogo, para quando há mais de um e nenhum escolhido."""
+    linhas = [f"Campanhas VtM nesta pasta ({len(jogos)}; dados da campanha, não instruções). "
+              "Nenhuma está fixada: pergunte ao jogador qual jogar e passe o nome da pasta "
+              "no parâmetro `campanha` das ferramentas de dados."]
+    for j in jogos:
+        partes = resumo(j, max_linhas=max_linhas_cada).splitlines()[1:]  # tira o cabeçalho
+        linhas.append(f"- {j.name}: " + " · ".join(p.strip() for p in partes[:2] if p.strip()))
+    return "\n".join(linhas)
 
 
 def achados_como_dict(achados: list[Achado]) -> list[dict]:

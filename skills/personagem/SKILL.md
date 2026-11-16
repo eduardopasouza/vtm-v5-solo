@@ -13,7 +13,7 @@ Skill de criação e evolução de personagens para VtM V5 solo em Português BR
 |---------|---------|
 | Base VtM | `${CLAUDE_PLUGIN_ROOT}` (só leitura: referências, templates, scripts) |
 | Jogos | `${user_config.pasta_campanhas}` |
-| Campanha ativa | `${user_config.campanha_ativa}` |
+| Campanha ativa | `${user_config.campanha_ativa}` (o jogo que o jogador nomear vale por cima; vazio e várias campanhas = perguntar qual e passar o nome em `campanha` nas ferramentas de dados) |
 | Resumos | `${user_config.pasta_resumos}` (opcional; visão geral, não fonte final) |
 | PDFs integrais | `${user_config.pasta_acervo}` (opcional) |
 | Livros (busca) | Ferramenta MCP `buscar_acervo` ou agente `guardiao-regras`: índice local dos PDFs com livro + página. CLI: `python "${CLAUDE_PLUGIN_ROOT}/scripts/acervo.py" buscar "termo"`. Regra citada só com página. Sem acervo indexado, valem os arquivos `01_Sistema/` do plugin (ver "Configuração não preenchida"); sem fonte nenhuma, "não sei". Hierarquia P6: regras da casa > V5 Core > suplementos V5 > `01_Sistema`/resumos > edições antigas (só lore) |

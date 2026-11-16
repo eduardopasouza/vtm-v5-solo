@@ -29,7 +29,7 @@ Uma seção por arquivo, só os que mudam:
 - **npcs/** — NPC novo sem ficha (nome, papel, primeira aparição) ou mudança de atitude/relação.
 - **Rodapés** — "atualizado em" que precisam passar para a sessão nova.
 
-No fim, chame `auditar_campanha` (se disponível) e acrescente o que ele aponta que sua lista não cobre.
+No fim, chame `auditar_campanha` (se disponível), com `campanha` = nome da pasta do jogo, e acrescente o que ele aponta que sua lista não cobre.
 
 ## Regras
 

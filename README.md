@@ -47,7 +47,7 @@ Ao ativar, o Claude Code pede as opções do plugin. Só a primeira importa para
 | Opção | O que colocar |
 |---|---|
 | Pasta das campanhas | Uma pasta **sua**, vazia, em qualquer lugar (ex.: `Documentos/vtm-campanhas`). Tudo que é seu fica nela. Nunca use a pasta do plugin |
-| Campanha ativa | Pode deixar vazio. Com uma campanha só, ela é usada sozinha |
+| Campanha ativa | Pode deixar vazio. Com uma campanha só, ela é usada sozinha; com várias, o narrador pergunta qual jogar |
 | Pasta do acervo de PDFs | Opcional. Veja "Seus livros" abaixo |
 | Pasta dos resumos | Opcional. Resumos seus dos livros, se tiver |
 | Mostrar dados individuais | Mostra cada dado rolado. Padrão: sim |
@@ -65,6 +65,15 @@ Abra o Claude Code na sua pasta de campanhas e fale em linguagem natural:
 4. **"Revisar a campanha de VtM."** Entre sessões: agendas dos NPCs, objetivos, auditoria.
 
 As skills só disparam quando o pedido fala de VtM, vampiro ou da campanha.
+
+### Várias campanhas ao mesmo tempo
+
+Cada personagem tem a sua subpasta, e as campanhas são independentes. Para alternar entre elas:
+
+- Deixe **Campanha ativa** vazia.
+- Abra **uma conversa por campanha** e diga qual quer jogar: "quero jogar VtM com o Edward". Sem nome, o narrador lista as campanhas e pergunta.
+- Cada rolagem vai para o `rolagens.jsonl` da campanha certa, porque o narrador passa o nome dela ao motor de dados.
+- Ao abrir o Claude Code na pasta de campanhas, o resumo inicial mostra uma linha de cada campanha. Aberto dentro da pasta de um personagem, mostra só aquela.
 
 ## O que é seu e onde fica
 
