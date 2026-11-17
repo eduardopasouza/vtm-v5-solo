@@ -17,7 +17,7 @@ skills/             → 5 skills de jogo: /vtm:narrar, /vtm:criar, /vtm:personag
 05_Cenario/         → Cenários e ambientações
 06_Livros_e_Suplementos/ → Referências dos livros
 (campanhas)        → fora daqui: pasta de cada jogador (userConfig pasta_campanhas); ali também ficam preferencias.md e regras_da_casa.md próprios, opcionais
-08_Templates/       → Templates de sessão, personagem, NPC
+08_Templates/       → Templates de sessão, aventura, NPC, estado.json, arcos.md, objetivos.md, direcao.md e glossario.md
 09_Preferencias/    → Preferências e regras da casa padrão do plugin
 10_Ferramentas_do_Narrador/ → Tabelas e ferramentas
 (resumos, acervo)  → fora daqui e opcionais: userConfig pasta_resumos e pasta_acervo; o plugin não distribui livros

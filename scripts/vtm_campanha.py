@@ -358,6 +358,9 @@ def auditar(pasta: str | Path) -> list[Achado]:
             if tokens and not any(t in texto for t in tokens):
                 achados.append(Achado("aviso", "NPC_FORA_DO_INDICE", _rel(pasta, f), None,
                                       "ficha não aparece em npcs/indice.md"))
+
+    # 7. ritmo e planejamento: objetivos, arcos, orçamento da aventura, direção
+    achados.extend(_auditar_ritmo(pasta))
     return achados
 
 
@@ -415,6 +418,7 @@ def resumo(pasta: str | Path, max_linhas: int = 15) -> str:
         if nums:
             linhas.append("Estado (contexto.md, sem estado.json): "
                           + " · ".join(f"{k} {v[0]}" for k, v in sorted(nums.items())))
+    linhas.extend(abertura(pasta))
     ctx = pasta / "contexto.md"
     if ctx.exists():
         passos = _secao(ctx.read_text(encoding="utf-8"), "proximos passos", max_linhas - len(linhas) - 1)
@@ -422,6 +426,164 @@ def resumo(pasta: str | Path, max_linhas: int = 15) -> str:
             linhas.append("Próximos passos:")
             linhas.extend("  " + x for x in passos)
     return "\n".join(linhas[:max_linhas])
+
+
+# --------------------------------------------------------------------------
+# Arcos, objetivos e direção (F6): mapa público, ritmo e notas em tópicos
+# --------------------------------------------------------------------------
+
+NIVEIS_ARCO = ("partida", "historia", "aventura")
+MAX_OBJETIVOS_ATIVOS = 8
+MAX_SESSOES_AVENTURA = 3
+TOPICOS_DIRECAO = ("arco", "proxima cena", "ganchos", "decisoes em aberto")
+_CAMPO_ARCO = re.compile(r"^[-*]\s*\*\*([^*:]+):?\*\*:?\s*(.*)$")
+
+
+def ler_arcos(pasta: str | Path) -> dict[str, dict]:
+    """Lê `arcos.md`: uma seção por nível ativo (Partida, História, Aventura),
+    com nome e campos (objetivo, fecha quando, sessões, ponto atual, falta para
+    fechar). Devolve {} se o arquivo não existe."""
+    arq = Path(pasta) / "arcos.md"
+    if not arq.exists():
+        return {}
+    arcos: dict[str, dict] = {}
+    atual = None
+    for linha in arq.read_text(encoding="utf-8").splitlines():
+        t = linha.strip()
+        if t.startswith("## "):
+            titulo = t[3:].strip()
+            nivel = _normalizar(titulo).split(" ")[0] if _normalizar(titulo) else ""
+            atual = None
+            if nivel in NIVEIS_ARCO:
+                nome = re.split(r"\s+[—–-]\s+|:\s*", titulo, maxsplit=1)
+                atual = arcos.setdefault(nivel, {"nome": nome[1].strip() if len(nome) > 1 else "", "campos": {}})
+            continue
+        m = _CAMPO_ARCO.match(t)
+        if atual is not None and m:
+            atual["campos"][_normalizar(m.group(1))] = m.group(2).strip()
+    for arco in arcos.values():
+        sess = arco["campos"].get("sessoes", "")
+        prev = re.search(r"previstas?\s*(\d+)", sess)
+        jog = re.search(r"jogadas?\s*(\d+)", sess)
+        arco["previstas"] = int(prev.group(1)) if prev else None
+        arco["jogadas"] = int(jog.group(1)) if jog else None
+    return arcos
+
+
+def sessoes_da_aventura(pasta: str | Path, nome: str | None = None) -> tuple[str | None, int]:
+    """Nome da pasta e número de sessões da aventura em curso: a de nome
+    `nome` (como em arcos.md) ou, sem nome, a que contém a sessão mais recente."""
+    melhor: tuple[int, Path] | None = None
+    por_pasta: dict[Path, int] = {}
+    for f in Path(pasta).rglob("sessao_*.md"):
+        m = re.match(r"sessao_(\d+)(?:_[^.]*)?\.md$", f.name)
+        if not m:
+            continue
+        por_pasta[f.parent] = por_pasta.get(f.parent, 0) + 1
+        if melhor is None or int(m.group(1)) > melhor[0]:
+            melhor = (int(m.group(1)), f.parent)
+    if nome:
+        alvo = _normalizar(nome)
+        for d, n in por_pasta.items():
+            if _normalizar(d.name) == alvo:
+                return d.name, n
+        return None, 0
+    return (melhor[1].name, por_pasta[melhor[1]]) if melhor else (None, 0)
+
+
+def abertura(pasta: str | Path) -> list[str]:
+    """As 3 linhas de abertura da sessão: onde estamos na hierarquia, o que
+    falta para fechar a aventura e a decisão pendente. Só dados públicos
+    (arcos.md e mesa.json). Lista vazia se não há arcos.md."""
+    arcos = ler_arcos(pasta)
+    if not arcos:
+        return []
+    caminho = " > ".join(f"{rot} {arcos[n]['nome']}".strip()
+                         for n, rot in zip(NIVEIS_ARCO, ("Partida", "História", "Aventura")) if n in arcos)
+    av = arcos.get("aventura")
+    linhas = []
+    if av:
+        _, jogadas = sessoes_da_aventura(pasta, av["nome"])
+        jogadas = jogadas or av["jogadas"] or 0
+        prev = av["previstas"] or MAX_SESSOES_AVENTURA
+        linhas.append(f"Onde estamos: {caminho} (sessão {jogadas + 1} da aventura; previstas {prev}).")
+        falta = av["campos"].get("falta para fechar") or av["campos"].get("fecha quando") or "não registrado"
+        linhas.append(f"Falta para fechar a aventura: {falta}")
+        if jogadas >= MAX_SESSOES_AVENTURA:
+            linhas[-1] += (f" A aventura já tem {jogadas} sessões: propor um fecho nesta sessão "
+                           "(clímax ou corte).")
+    else:
+        linhas.append(f"Onde estamos: {caminho}. Sem aventura ativa: propor a próxima.")
+    mesa = ler_mesa(pasta)
+    linhas.append("Decisão pendente: " + (mesa["decisao_pendente"] if mesa and mesa.get("decisao_pendente")
+                                          else "nenhuma registrada."))
+    return linhas
+
+
+def _auditar_ritmo(pasta: Path) -> list[Achado]:
+    achados: list[Achado] = []
+    # objetivos.md: só os ativos, no máximo 8
+    obj = pasta / "objetivos.md"
+    if obj.exists():
+        linhas = obj.read_text(encoding="utf-8").splitlines()
+        ativos = sum(1 for x in linhas if re.match(r"\s*[-*]\s*\[ \]", x))
+        feitos = [n for n, x in enumerate(linhas, 1) if re.match(r"\s*[-*]\s*\[[xX✓]\]", x)]
+        if ativos > MAX_OBJETIVOS_ATIVOS:
+            achados.append(Achado("aviso", "OBJETIVOS", "objetivos.md", None,
+                                  f"{ativos} objetivos ativos; o limite é {MAX_OBJETIVOS_ATIVOS}. "
+                                  "Fechar, fundir ou arquivar com o jogador"))
+        if feitos:
+            achados.append(Achado("aviso", "OBJETIVOS", "objetivos.md", feitos[0],
+                                  f"{len(feitos)} objetivos concluídos ainda em objetivos.md; "
+                                  "mover para objetivos_arquivo.md"))
+    # arcos.md: mapa público e orçamento da aventura
+    tem_sessao = bool(sessoes_jogadas(pasta))
+    arcos = ler_arcos(pasta)
+    if not (pasta / "arcos.md").exists():
+        if tem_sessao:
+            achados.append(Achado("aviso", "ARCOS", "arcos.md", None,
+                                  "arcos.md ausente: o jogador não tem o mapa de Partida > História > Aventura "
+                                  "(modelo em 08_Templates/08_arcos.md)"))
+    else:
+        for nivel, rotulo in zip(NIVEIS_ARCO, ("Partida", "História", "Aventura")):
+            if nivel not in arcos:
+                if nivel != "aventura":
+                    achados.append(Achado("aviso", "ARCOS", "arcos.md", None, f"falta a seção de {rotulo}"))
+                continue
+            for campo in ("objetivo", "fecha quando", "ponto atual"):
+                if not arcos[nivel]["campos"].get(campo):
+                    achados.append(Achado("aviso", "ARCOS", "arcos.md", None,
+                                          f"{rotulo}: campo \"{campo}\" vazio"))
+    nome_av = arcos["aventura"]["nome"] if "aventura" in arcos else None
+    pasta_av, n = sessoes_da_aventura(pasta, nome_av)
+    if nome_av and pasta_av is None:
+        pasta_av, n = sessoes_da_aventura(pasta)
+        if pasta_av:
+            achados.append(Achado("aviso", "ARCOS", "arcos.md", None,
+                                  f"a aventura de arcos.md ({nome_av}) não é a pasta da última sessão ({pasta_av})"))
+    if pasta_av and n > MAX_SESSOES_AVENTURA:
+        achados.append(Achado("aviso", "RITMO", "arcos.md", None,
+                              f"a aventura {pasta_av} tem {n} sessões; o orçamento é de 1 a "
+                              f"{MAX_SESSOES_AVENTURA}. Propor um fecho (clímax ou corte)"))
+    elif pasta_av and n == MAX_SESSOES_AVENTURA:
+        achados.append(Achado("aviso", "RITMO", "arcos.md", None,
+                              f"a aventura {pasta_av} está na {n}ª sessão: fechar nesta ou abrir a próxima"))
+    # direcao.md: só a forma (tópicos fixos, sem texto corrido); o conteúdo nunca sai daqui
+    dire = pasta / "direcao.md"
+    if dire.exists():
+        linhas = dire.read_text(encoding="utf-8").splitlines()
+        titulos = [_normalizar(x.lstrip("#")) for x in linhas if x.startswith("## ")]
+        faltam = [t for t in TOPICOS_DIRECAO if not any(x.startswith(t) for x in titulos)]
+        if faltam:
+            achados.append(Achado("aviso", "DIRECAO", "direcao.md", None,
+                                  "faltam os tópicos fixos: " + ", ".join(faltam)
+                                  + " (modelo em 08_Templates/11_direcao.md)"))
+        corrido = [n for n, x in enumerate(linhas, 1)
+                   if x.strip() and not re.match(r"\s*([-*#>|]|\d+\.)", x) and len(x.split()) > 25]
+        if corrido:
+            achados.append(Achado("aviso", "DIRECAO", "direcao.md", corrido[0],
+                                  f"{len(corrido)} trechos de texto corrido; usar tópicos de uma linha"))
+    return achados
 
 
 # --------------------------------------------------------------------------

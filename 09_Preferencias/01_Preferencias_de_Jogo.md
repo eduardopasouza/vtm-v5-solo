@@ -57,7 +57,10 @@ A estrutura narrativa segue cinco niveis, do mais amplo ao mais granular:
 - Objetivos existem em **4 niveis:** jogo, partida, historia e aventura.
 - Cada nivel pode ter **objetivos principais** (obrigatorios para avanco) e **objetivos secundarios** (opcionais, mas enriquecedores).
 - Objetivos servem para **manter o engajamento e dar direcao ao jogador**, evitando que a narrativa perca foco.
-- Objetivos sao rastreados em arquivo separado: `objetivos.md`, na pasta da campanha.
+- Objetivos sao rastreados em arquivo separado: `objetivos.md`, na pasta da campanha. So os ativos, no maximo 8; os encerrados vao para `objetivos_arquivo.md`.
+- O mapa dos arcos fica em `arcos.md`: Partida > Historia > Aventura, com o objetivo de cada nivel, o que o fecha, as sessoes previstas e o ponto atual. So o que o personagem sabe.
+- Toda sessao abre com 3 linhas: onde estamos na hierarquia, o que falta para fechar a aventura e a decisao pendente.
+- Aventura tem orcamento de 1 a 3 sessoes. Na 3a, o narrador propoe um fecho (climax ou corte).
 - Atualizados ao final de cada sessao pelo narrador, com aprovacao do jogador.
 
 ---

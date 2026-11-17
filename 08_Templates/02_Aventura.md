@@ -13,6 +13,16 @@
 
 ---
 
+## Orçamento e Ponto de Chegada
+
+<!-- Uma aventura dura de 1 a 3 sessões. Na 3ª, o narrador propõe um fecho: clímax ou corte -->
+
+- **Sessões previstas:** [1 a 3]
+- **Fecha quando:** [o fato que encerra a aventura, com sucesso ou com fracasso]
+- **Se chegar à 3ª sessão sem fechar:** [clímax a antecipar, ou corte para a próxima aventura]
+
+---
+
 ## Objetivos
 
 <!-- O que o jogador deve tentar alcanccar nesta aventura -->
@@ -55,19 +65,19 @@
 
 #### Narracao de Abertura
 
-<!-- Texto para ler ou parafrasear ao jogador ao iniciar a cena. Maximo 2-3 paragrafos -->
+<!-- Texto para ler ou parafrasear ao jogador ao iniciar a cena. Até 150 palavras, no máximo 2 parágrafos -->
 
 [Primeiro paragrafo: o que o PC ve, ouve e sente ao chegar.]
 
-[Segundo paragrafo: detalhe que chama atencao ou cria tensao.]
+[Segundo paragrafo: detalhe que cria tensao e exige decisao.]
 
-[Terceiro paragrafo (opcional): elemento que exige decisao ou reacao.]
+#### Objetivo, Obstáculo e Risco
 
-#### Proposito Narrativo
+<!-- Os três são obrigatórios. Sem um deles não há cena: vira transição de uma linha -->
 
-<!-- Por que esta cena existe na aventura — o que ela avanca -->
-
-[Esta cena serve para: revelar informacao X / forcar escolha Y / estabelecer relacao com NPC Z / criar tensao sobre tema W.]
+- **Objetivo:** [o que o PC tenta conseguir nesta cena]
+- **Obstáculo:** [quem ou o que se opõe]
+- **Risco:** [o que ele perde se falhar]
 
 #### Elementos-Chave
 

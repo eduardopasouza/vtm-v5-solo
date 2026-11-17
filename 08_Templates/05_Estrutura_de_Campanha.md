@@ -13,9 +13,13 @@
 ├── estado.json              # Números da campanha (P8, 2026-11-15) — modelo em 08_Templates/07_estado.json
 ├── contexto.md              # Estado atual global do jogo (narrativa; sem números quando há estado.json)
 ├── personagem.md            # Ficha do PC
-├── direcao.md               # Segredos do narrador (NUNCA mostrar ao jogador)
+├── direcao.md               # Segredos do narrador (NUNCA mostrar ao jogador) — modelo 11_direcao.md
+├── arcos.md                 # Mapa público dos arcos — modelo 08_arcos.md
+├── objetivos_arquivo.md     # Objetivos encerrados — modelo 10_objetivos_arquivo.md
+├── glossario.md             # Termos de lore em uma linha — modelo 12_glossario.md
+├── mesa.json                # Cena em curso e decisão pendente (ferramenta registrar_mesa)
 ├── timeline.md              # Linha do tempo cronológica
-├── objetivos.md             # Tracker de objetivos (todos os níveis)
+├── objetivos.md             # Só objetivos ativos, até 8 — modelo 09_objetivos.md
 ├── npcs/
 │   ├── indice.md            # Lista resumida de todos os NPCs
 │   ├── relacoes.md          # Mapa de relações entre NPCs e PC
@@ -72,11 +76,11 @@ Ver `06_Convencoes_de_Nomenclatura.md` para a regra completa.
 
 ## Como Usar
 
-1. **Nova campanha:** Criar `[Campanhas]/[Nome do PC]/` e popular `estado.json` (do modelo `07_estado.json`), `contexto.md`, `personagem.md`, `direcao.md`, `timeline.md`, `objetivos.md`, pastas `npcs/` e `cenario/`.
+1. **Nova campanha:** Criar `[Campanhas]/[Nome do PC]/` e popular `estado.json` (do modelo `07_estado.json`), `contexto.md`, `personagem.md`, `direcao.md`, `arcos.md`, `timeline.md`, `objetivos.md`, `objetivos_arquivo.md`, `glossario.md`, pastas `npcs/` e `cenario/`.
 2. **Nova partida:** Criar pasta `partidas/[Nome da Partida]/` com `partida.md` e `ramificacoes.md`.
 3. **Nova história:** Criar pasta `[Nome da História]/` dentro da partida com `historia.md`.
-4. **Nova aventura:** Criar pasta `[Nome da Aventura]/` dentro da história com `aventura.md`.
-5. **Nova sessão:** Criar `sessao_NN.md` dentro da aventura e atualizar `contexto.md`, `timeline.md`, `objetivos.md`.
+4. **Nova aventura:** Criar pasta `[Nome da Aventura]/` dentro da história com `aventura.md` (1 a 3 sessões previstas e "fecha quando") e atualizar `arcos.md`.
+5. **Nova sessão:** Criar `sessao_NN.md` dentro da aventura e atualizar `contexto.md`, `arcos.md`, `timeline.md`, `objetivos.md`.
 
 ---
 

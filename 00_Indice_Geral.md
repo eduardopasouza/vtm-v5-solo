@@ -105,6 +105,11 @@ Esta pasta é o plugin `vtm` para o Claude Code: skills de narração, motor de 
 | `05_Estrutura_de_Campanha.md` | Arvore de pastas padrao |
 | `06_Convencoes_de_Nomenclatura.md` | Regras de nomes de arquivos |
 | `07_estado.json` | Modelo do `estado.json` (numeros da campanha) |
+| `08_arcos.md` | Mapa publico dos arcos: Partida > Historia > Aventura |
+| `09_objetivos.md` | Objetivos ativos (ate 8), por nivel |
+| `10_objetivos_arquivo.md` | Objetivos encerrados |
+| `11_direcao.md` | Notas secretas do narrador em topicos fixos |
+| `12_glossario.md` | Glossario da campanha, um termo por linha |
 
 ### 09_Preferencias/ — Configuracao de Jogo
 | Arquivo | Conteudo |

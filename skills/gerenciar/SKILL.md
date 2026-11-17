@@ -24,49 +24,37 @@ Gestão macro: rastrear objetivos em 4 níveis, avançar agendas de NPCs, manter
 
 **Configuração não preenchida.** Se um valor acima aparecer vazio ou ainda como `${user_config...}` literal: Resumos = não usar; Jogos = perguntar ao jogador onde ficam as campanhas e sugerir configurar `pasta_campanhas` (comando `/plugin`, plugin `vtm`, configurar opções); **nunca gravar campanha dentro de `[Base]`**, que é a pasta de instalação do plugin e é substituída a cada atualização; Campanha ativa = perguntar se houver mais de uma; PDFs e acervo = opcionais; sem eles (ou se `buscar_acervo` disser que não há índice), a fonte de regra são os arquivos `[Base]/01_Sistema/`, `[Base]/03_Disciplinas/` (poderes, Rituais e Cerimônias) e `[Base]/10_Ferramentas_do_Narrador/`, conferidos com o V5 Core e os suplementos V5 e com a página ao lado, mais o motor de dados. Em `[Base]/02_Clas/`, `[Base]/04_Seitas_e_Politica/` e `[Base]/05_Cenario/`, cada arquivo termina com a seção "Conferência do Lore", que diz ponto a ponto o que é **V5** (com página), o que é **Antigo** (edições anteriores), o que é **Sem fonte** (texto de fã) e o que é **História real**. Tratar como fato do jogo só o que está marcado V5; o resto serve de ambientação, com aviso ao jogador quando uma decisão depender dele. O que não estiver lá: dizer "não sei" ou propor ao jogador como regra da casa, sem inventar.
 
-## Sistema de Objetivos — 4 Níveis
+## Arcos visíveis — `arcos.md`
 
-Rastreados em `objetivos.md` na raiz do jogo:
+Mapa **público** da campanha, na raiz do jogo (modelo: `[Base]/08_Templates/08_arcos.md`). Uma seção por nível ativo (Partida, História, Aventura), sempre com: **Objetivo**, **Fecha quando**, **Sessões** (previstas · jogadas) e **Ponto atual**, uma frase cada. A Aventura tem também **Falta para fechar**.
 
-```markdown
-# Objetivos Ativos — [Nome do PC]
+- Só entra o que o personagem sabe. Segredo e plano ficam em `direcao.md`.
+- Atualizar no fim de cada sessão. Nível fechado vira uma linha em "Concluídos".
+- É daqui que sai a abertura da sessão em 3 linhas (skill `narrar`). Se o jogador perguntar "onde estamos?", a resposta é este arquivo.
 
-## Nível: Jogo
-### Principais
-- [ ] [Objetivo de vida do PC — ex: descobrir quem ordenou seu Abraço]
-### Secundários
-- [ ] [Objetivo opcional — ex: alcançar posição na Primogenitura]
+## Orçamento de aventura
 
-## Nível: Partida — [Nome da Partida Ativa]
-### Principais
-- [ ] [Objetivo do arco — ex: sobreviver à Queda do Príncipe]
-### Secundários
-- [x] [Objetivo concluído — ex: identificar o traidor] ✓ Sessão 04
+- Toda aventura nasce com **1 a 3 sessões previstas** e um **"fecha quando"** escrito.
+- Na **3ª sessão**, propor um fecho ao jogador: o clímax nesta sessão, ou um corte (a aventura termina como está e o que sobrou vira objetivo da próxima).
+- Passou de 3: não seguir sem o jogador escolher entre fechar agora ou dividir em duas aventuras, cada uma com seu ponto de chegada.
+- História: prever o número de aventuras (em geral 2 a 4). Partida: prever o número de histórias.
 
-## Nível: História — [Nome da História Ativa]
-### Principais
-- [ ] [Quest principal — ex: encontrar o refúgio do Methuselah]
-### Secundários
-- [ ] [Quest secundária — ex: recrutar aliado Nosferatu]
+## Objetivos — `objetivos.md` enxuto
 
-## Nível: Aventura — [Nome da Aventura Ativa]
-### Principais
-- [ ] [Objetivo específico — ex: infiltrar o Elísio do Príncipe]
-### Secundários
-- [ ] [Opcional — ex: roubar documento do cofre]
+Modelo: `[Base]/08_Templates/09_objetivos.md`.
 
-## Histórico de Conclusões
-| Objetivo | Nível | Sessão | Como |
-|----------|-------|--------|------|
-| [X] | História | S03 | [resultado] |
-```
+- Só objetivos **ativos**, no máximo **8** ao todo, agrupados por nível (Jogo, Partida, História, Aventura).
+- Uma linha cada, com identificador em ordem dentro do nível: J1, P1, H1, A1. Secundário leva "(secundário)". Não reaproveitar número.
+- Concluído ou abandonado sai do arquivo e vira uma linha em `objetivos_arquivo.md` (modelo `10_objetivos_arquivo.md`), com sessão e desfecho.
+- Atualizar no fim de cada sessão, com o jogador. Passou de 8: fechar, fundir ou arquivar antes de criar outro.
 
-### Regras de Objetivos
-- **Principais:** obrigatórios para avançar no nível
-- **Secundários:** opcionais, enriquecem a experiência
-- Objetivos completados: marcar com ✓ e registrar sessão
-- Novos objetivos podem surgir durante o jogo
-- Atualizar ao final de CADA sessão
+## Notas secretas — `direcao.md` em tópicos
+
+Modelo: `[Base]/08_Templates/11_direcao.md`. Quatro seções fixas, nesta ordem: **Arco**, **Próxima cena**, **Ganchos**, **Decisões em aberto**.
+
+- Só tópicos de uma linha (até 25 palavras). Texto corrido é proibido.
+- "Próxima cena" sempre declara **objetivo, obstáculo e risco**. Sem os três, não é cena: vira transição de uma linha na narração.
+- Cada gancho leva a sessão em que foi plantado e o prazo para ser cobrado. O que foi revelado ou perdeu a validade é apagado.
 
 ## Revisão Entre Sessões
 
@@ -77,6 +65,7 @@ Quando o jogador pedir "revisar campanha" ou "entre sessões":
 Ler e apresentar:
 - Estado do PC: Fome, FdV, Saúde, Humanidade, XP
 - Localização e situação atual
+- Onde estamos em `arcos.md` (Partida > História > Aventura) e quantas sessões a aventura já tem
 - Objetivos ativos por nível
 - Ameaças pendentes
 
@@ -96,8 +85,7 @@ Regras:
 ### 3. Passagem de Tempo
 
 Se tempo passou entre sessões (no jogo):
-- Rouse Check de despertar para cada noite
-- Alimentação rotineira (pode usar teste simplificado)
+- Despertares e alimentações das noites: ferramenta `montagem`, com o plano aprovado pelo jogador
 - Eventos do cenário (consultar `direcao.md`)
 - Atualizar `timeline.md`
 
@@ -117,7 +105,7 @@ Propor ao jogador:
 - Oportunidades narrativas baseadas nas ramificações
 - Ganchos para novas histórias ou quests secundárias
 
-Apresentar com prós/contras em texto, labels curtos no widget.
+Apresentar em opções com ganho e risco no texto e rótulos curtos no seletor.
 
 ## Saúde da Campanha
 
@@ -125,11 +113,11 @@ Checklist de saúde narrativa:
 
 | Item | Verificação |
 |------|------------|
-| Ritmo | A narrativa está avançando? Há estagnação? |
+| Ritmo | A aventura atual cabe em 1 a 3 sessões? Tem "fecha quando"? |
 | Variedade | Alternando intriga, ação, horror, investigação? |
 | Stakes | As decisões têm peso? As consequências são sentidas? |
 | NPCs | Estão vivos? Têm agendas próprias? Reagem ao PC? |
-| Objetivos | O jogador sabe o que perseguir? Há direção clara? |
+| Objetivos | `arcos.md` em dia? No máximo 8 objetivos ativos? |
 | Mundo | O cenário reage? Eventos externos ocorrem? |
 | Personagem | O PC está evoluindo? Humanidade em tensão? |
 | Documentação | Tudo registrado? Sem contradições? |
@@ -142,11 +130,11 @@ Se algum item está fraco → propor ações corretivas.
    ```bash
    python "${CLAUDE_PLUGIN_ROOT}/scripts/campanha.py" auditar "<pasta da campanha>"
    ```
-   (ou a ferramenta MCP `auditar_campanha`, com `campanha` = nome da pasta do jogo). Aponta: `estado.json` ausente ou inválido; número divergente entre `estado.json` e os `.md` (ou entre `contexto.md` e `personagem.md` sem estado); número repetido nos `.md` (pela P8 fica só no `estado.json`); Potência declarada x tabela do Core p. 216; sessões fora da `timeline.md`; rodapés "atualizado em" defasados; NPCs nas relações sem ficha; fichas fora do `indice.md`.
+   (ou a ferramenta MCP `auditar_campanha`, com `campanha` = nome da pasta do jogo). Aponta: `estado.json` ausente ou inválido; número divergente entre `estado.json` e os `.md` (ou entre `contexto.md` e `personagem.md` sem estado); número repetido nos `.md` (pela P8 fica só no `estado.json`); Potência declarada x tabela do Core p. 216; sessões fora da `timeline.md`; rodapés "atualizado em" defasados; NPCs nas relações sem ficha; fichas fora do `indice.md`; `arcos.md` ausente ou com campo vazio; aventura na 3ª sessão ou além dela; mais de 8 objetivos ativos ou concluídos ainda em `objetivos.md`; `direcao.md` sem os tópicos fixos ou com texto corrido.
 2. **Continuidade narrativa:** pedir ao agente `continuidade` as contradições entre sessões, fichas, linha do tempo e `direcao.md`.
 3. Conferir também:
    - `relacoes.md` reflete interações recentes?
-   - `objetivos.md` está atualizado?
+   - `arcos.md` e `objetivos.md` batem com o que aconteceu na última sessão?
 
 Corrigir as discrepâncias e rodar a auditoria de novo até voltar sem erros. Números do personagem vão para o `estado.json`, não para os `.md`.
 

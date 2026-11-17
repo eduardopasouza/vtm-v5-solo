@@ -25,7 +25,8 @@ Uma seção por arquivo, só os que mudam:
 - **estado.json** — cada campo que muda, com valor antigo → novo e a linha do log que justifica. Some XP, Manchas, dano, Fome, avanço da noite.
 - **timeline.md** — entrada nova da sessão (noite, data, local, fatos em 2-5 itens).
 - **contexto.md** — novo "Estado Actual" (sem números: eles ficam no estado.json), resumo da sessão, decisões pendentes, próximos passos, mudanças nas relações.
-- **objetivos.md** — objetivos cumpridos, novos ou alterados.
+- **objetivos.md** — objetivos cumpridos (saem para `objetivos_arquivo.md`), novos ou alterados; no máximo 8 ativos.
+- **arcos.md** — ponto atual, sessões jogadas e "falta para fechar" de cada nível; nível fechado vai para "Concluídos". Só o que o personagem sabe.
 - **npcs/** — NPC novo sem ficha (nome, papel, primeira aparição) ou mudança de atitude/relação.
 - **Rodapés** — "atualizado em" que precisam passar para a sessão nova.
 

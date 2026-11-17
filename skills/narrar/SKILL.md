@@ -134,10 +134,14 @@ Hierarquia de regra (P6): regras da casa > V5 Core > suplementos V5 > `01_Sistem
 
 1. Escolher a campanha: a que o jogador nomeou; senão a campanha ativa; senão a única da pasta de Jogos; com várias e nenhuma fixada, listar (`listar_campanhas`) e perguntar. Dali em diante, a sessão é **desse jogo só**.
 2. Ler `estado.json`, **fonte única dos números** (Fome, Potência, Humanidade, Manchas, Saúde, Força de Vontade, XP, sessão, noite, local, hora). Campanha antiga sem `estado.json`: os números estão na tabela de estado do `contexto.md`.
-3. Ler `contexto.md` (situação, relações), `personagem.md` (ficha), `objetivos.md` e `mesa.json` (decisão pendente e premissas, se existir).
+3. Ler `contexto.md` (situação, relações), `personagem.md` (ficha), `arcos.md`, `objetivos.md`, `direcao.md` e `mesa.json` (decisão pendente e premissas, se existir).
 4. Ler as regras da casa e `referencia.md` (tabela Caminhos). Cada RC entra no lugar da regra do Core que ela substitui.
 5. Ler `glossario.md` do jogo, se existir (Contrato, regra 12).
-6. Retomar em até 3 linhas ("Onde paramos: [situação]. [decisão pendente].") e seguir do ponto pendente, já no formato do Contrato.
+6. Abrir a sessão em **3 linhas**, tiradas de `arcos.md` e `mesa.json`, e seguir do ponto pendente, já no formato do Contrato:
+   - `Onde estamos:` Partida > História > Aventura, e a sessão da aventura (ex.: "2ª de 3 previstas").
+   - `Falta para fechar a aventura:` o próximo passo concreto.
+   - `Decisão pendente:` a escolha em aberto.
+   Sem `arcos.md`, criar o arquivo com o jogador antes da primeira cena (skill `gerenciar`).
 
 Se não existe jogo: informar e sugerir criar um ("criar jogo").
 
@@ -151,6 +155,12 @@ Se não existe jogo: informar e sugerir criar um ("criar jogo").
 ## Loop de Jogo
 
 **NARRAR → ESCOLHER → RESOLVER → DOCUMENTAR**, a cada cena. Narrar e apresentar escolhas seguem o Contrato de resposta. Consultar `cenario/` e as fichas de NPC para não contradizer o que já existe.
+
+### Cena e ritmo
+
+- **Critério de cena.** Antes de narrar, definir para si (em `direcao.md`, "Próxima cena"; nunca na mensagem) o **objetivo**, o **obstáculo** e o **risco**. Sem os três, não é cena: resumir em uma linha de transição e ir para a próxima que tenha os três.
+- **Cortar a cena** quando o objetivo foi alcançado ou perdido. Não esticar com testes repetidos sobre a mesma ação: a falha tem consequência e a cena muda; nova tentativa, só com outra abordagem.
+- **Orçamento de aventura: 1 a 3 sessões.** Na 3ª sessão, propor um fecho ao jogador logo na abertura: clímax nesta sessão, ou corte. Não abrir a 4ª sem ele escolher (skill `gerenciar`).
 
 ### Resolver a ação
 
@@ -186,8 +196,8 @@ Atualizar logo depois das consequências, antes da próxima cena:
 | `mesa.json`, pela ferramenta `registrar_mesa`, **a cada mensagem que termina em escolha**: cena, decisão pendente, opções oferecidas e premissas combinadas com o jogador. É o que traz a cena de volta depois da compactação |  |
 | Sessão ativa (`sessao_XX.md`) — log da cena | `personagem.md` — ficha mudou (XP gasto, disciplina nova) — números de estado não |
 | | `npcs/[nome].md` — NPC novo ou atitude mudou |
-| | `direcao.md` — planos do narrador mudaram |
-| | `objetivos.md` — objetivo completado ou novo |
+| | `direcao.md` — planos do narrador mudaram (só tópicos de uma linha) |
+| | `objetivos.md` e `arcos.md` — objetivo cumprido ou novo; ponto do arco mudou |
 
 Não pedir permissão nem avisar que gravou (Contrato, regra 10).
 
@@ -197,7 +207,7 @@ Quando o jogador encerrar:
 1. Se há Manchas, teste de Remorso. Depois, Rouse de despertar para a próxima noite.
 2. XP pelas regras da casa em vigor (no padrão do plugin, RC-1). Sem regra da casa de XP, vale o Core p. 130.
 3. Atualizar `estado.json` (ou a tabela de estado do `contexto.md`) com o estado final, e conferir que `contexto.md` reflete a situação exata.
-4. Atualizar `objetivos.md` e `timeline.md`.
+4. Atualizar `arcos.md` (ponto atual, sessões jogadas, falta para fechar), `objetivos.md` (concluídos vão para `objetivos_arquivo.md`), `direcao.md` (tópicos fixos) e `timeline.md`.
 5. Opcional: pedir ao agente `arquivista` a lista de mudanças por arquivo e conferir com a ferramenta `auditar_campanha` (ou `scripts/campanha.py auditar "<pasta da campanha>"`).
 6. Resumo em até 3 linhas: o que aconteceu e o que está por vir.
 

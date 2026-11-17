@@ -295,3 +295,95 @@ def test_contrato_curto_cabe_em_poucas_linhas():
     arq = Path(__file__).resolve().parents[1] / "skills" / "narrar" / "contrato_curto.md"
     linhas = [x for x in arq.read_text(encoding="utf-8").splitlines() if x.strip()]
     assert len(linhas) <= 11 and sum(len(x.split()) for x in linhas) <= 260
+
+
+# --- arcos, objetivos enxutos, orçamento de aventura, direção em tópicos (F6) ---
+
+ARCOS = """# Arcos — Mara
+
+## Partida — A Queda
+- **Objetivo:** tirar o Príncipe do trono
+- **Fecha quando:** o Príncipe cai ou Mara foge da cidade
+- **Sessões:** previstas 12 · jogadas 2
+- **Ponto atual:** a corte ainda não desconfia
+
+## História — O Cais
+- **Objetivo:** provar quem mata no cais
+- **Fecha quando:** o culpado é entregue ao Xerife
+- **Sessões:** previstas 4 · jogadas 2
+- **Ponto atual:** dois suspeitos
+
+## Aventura — A
+- **Objetivo:** entrar no armazém
+- **Fecha quando:** Mara sai de lá com o livro-caixa, ou é pega
+- **Sessões:** previstas 2 · jogadas 2
+- **Ponto atual:** o vigia foi comprado
+- **Falta para fechar:** achar o livro-caixa
+
+## Concluídos
+| Nível | Nome | Sessões | Como fechou |
+|---|---|---|---|
+"""
+
+
+def test_modelos_novos_existem_e_sao_legiveis():
+    modelos = Path(__file__).resolve().parents[1] / "08_Templates"
+    for nome in ("08_arcos.md", "09_objetivos.md", "10_objetivos_arquivo.md", "11_direcao.md", "12_glossario.md"):
+        assert (modelos / nome).read_text(encoding="utf-8").startswith("# ")
+
+
+def test_arcos_e_abertura_em_tres_linhas(tmp_path):
+    camp = montar(tmp_path, estado=estado_base())
+    assert c.abertura(camp) == [] and c.ler_arcos(camp) == {}
+    (camp / "arcos.md").write_text(ARCOS, encoding="utf-8")
+    arcos = c.ler_arcos(camp)
+    assert arcos["aventura"]["nome"] == "A" and arcos["partida"]["previstas"] == 12
+    assert arcos["historia"]["campos"]["ponto atual"] == "dois suspeitos"
+    linhas = c.abertura(camp)
+    assert len(linhas) == 3
+    assert linhas[0] == "Onde estamos: Partida A Queda > História O Cais > Aventura A (sessão 3 da aventura; previstas 2)."
+    assert linhas[1] == "Falta para fechar a aventura: achar o livro-caixa"
+    assert linhas[2] == "Decisão pendente: nenhuma registrada."
+    c.gravar_mesa(camp, "Armazém", "Abrir o cofre ou sair?")
+    assert c.abertura(camp)[2] == "Decisão pendente: Abrir o cofre ou sair?"
+    resumo = c.resumo(camp)
+    assert "Onde estamos" in resumo and "SEGREDO" not in resumo and len(resumo.splitlines()) <= 15
+
+
+def test_auditoria_de_ritmo(tmp_path):
+    camp = montar(tmp_path, estado=estado_base())
+    msgs = lambda: [(a.codigo, a.mensagem) for a in c.auditar(camp)]  # noqa: E731
+    assert any(cod == "ARCOS" and "ausente" in m for cod, m in msgs())
+    assert any(cod == "DIRECAO" and "tópicos fixos" in m for cod, m in msgs())
+    assert not any("SEGREDO" in m or "traidora" in m for _, m in msgs())
+
+    (camp / "arcos.md").write_text(ARCOS, encoding="utf-8")
+    assert not any(cod in ("ARCOS", "RITMO") for cod, _ in msgs())  # 2 sessões: dentro do orçamento
+    pasta_av = camp / "partidas" / "P" / "H" / "A"
+    (pasta_av / "sessao_03.md").write_text("# Sessão 3\n", encoding="utf-8")
+    assert any(cod == "RITMO" and "3ª sessão" in m for cod, m in msgs())
+    (pasta_av / "sessao_04.md").write_text("# Sessão 4\n", encoding="utf-8")
+    assert any(cod == "RITMO" and "tem 4 sessões" in m for cod, m in msgs())
+    assert "propor um fecho" in c.abertura(camp)[1]
+
+    (camp / "arcos.md").write_text(ARCOS.replace("- **Ponto atual:** dois suspeitos\n", ""), encoding="utf-8")
+    assert any(cod == "ARCOS" and 'História: campo "ponto atual" vazio' in m for cod, m in msgs())
+
+
+def test_auditoria_de_objetivos_e_direcao(tmp_path):
+    camp = montar(tmp_path, estado=estado_base())
+    (camp / "objetivos.md").write_text(
+        "# Objetivos\n" + "".join(f"- [ ] A{n} — fazer algo\n" for n in range(1, 10))
+        + "- [x] A10 — feito ✓ Sessão 1\n", encoding="utf-8")
+    msgs = [a.mensagem for a in c.auditar(camp) if a.codigo == "OBJETIVOS"]
+    assert any("9 objetivos ativos" in m for m in msgs) and any("objetivos_arquivo.md" in m for m in msgs)
+
+    modelos = Path(__file__).resolve().parents[1] / "08_Templates"
+    (camp / "objetivos.md").write_text((modelos / "09_objetivos.md").read_text(encoding="utf-8"), encoding="utf-8")
+    (camp / "direcao.md").write_text((modelos / "11_direcao.md").read_text(encoding="utf-8"), encoding="utf-8")
+    assert not [a for a in c.auditar(camp) if a.codigo in ("OBJETIVOS", "DIRECAO")]
+
+    (camp / "direcao.md").write_text(
+        "## Arco\n## Próxima cena\n## Ganchos\n## Decisões em aberto\n" + "palavra " * 40 + "\n", encoding="utf-8")
+    dire = [a for a in c.auditar(camp) if a.codigo == "DIRECAO"]
+    assert len(dire) == 1 and "texto corrido" in dire[0].mensagem and "palavra" not in dire[0].mensagem

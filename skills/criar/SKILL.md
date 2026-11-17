@@ -42,9 +42,13 @@ Criar e estruturar todos os níveis narrativos: Jogo, Partida, História, Aventu
 ├── estado.json              # Números da campanha (P8) — copiar de [Base]/08_Templates/07_estado.json
 ├── contexto.md              # Situação atual global (sem números)
 ├── personagem.md            # Ficha do PC
-├── direcao.md               # Segredos do narrador (NUNCA mostrar)
+├── direcao.md               # Segredos do narrador (NUNCA mostrar) — tópicos fixos, modelo 11_direcao.md
+├── arcos.md                 # Mapa público: Partida > História > Aventura — modelo 08_arcos.md
 ├── timeline.md              # Linha do tempo cronológica
-├── objetivos.md             # Tracker de objetivos (todos os níveis)
+├── objetivos.md             # Só objetivos ativos, até 8 — modelo 09_objetivos.md
+├── objetivos_arquivo.md     # Objetivos encerrados — modelo 10_objetivos_arquivo.md
+├── glossario.md             # Termos de lore explicados em uma linha — modelo 12_glossario.md
+├── mesa.json                # Cena em curso e decisão pendente (gravado pelo narrador)
 ├── npcs/
 │   ├── indice.md
 │   ├── relacoes.md
@@ -133,8 +137,10 @@ Criar todos os arquivos base:
 - `estado.json` — números iniciais, a partir de `[Base]/08_Templates/07_estado.json` (conferir com `python "${CLAUDE_PLUGIN_ROOT}/scripts/campanha.py" validar "<pasta do jogo>"`)
 - `contexto.md` — situação inicial (sem números)
 - `timeline.md` — marco zero (Abraço ou início da história)
-- `objetivos.md` — objetivos iniciais por nível
-- `direcao.md` — segredos, planos do narrador, revelações futuras
+- `arcos.md` — mapa público da Partida, da História e da Aventura iniciais (modelo `08_arcos.md`)
+- `objetivos.md` — objetivos iniciais por nível, até 8 (modelo `09_objetivos.md`); `objetivos_arquivo.md` vazio
+- `direcao.md` — segredos e planos do narrador, nos quatro tópicos fixos (modelo `11_direcao.md`)
+- `glossario.md` — termos do cenário que o jogador vai encontrar (modelo `12_glossario.md`)
 - `npcs/indice.md` — lista de NPCs criados
 - `npcs/relacoes.md` — mapa inicial de relações
 
@@ -148,7 +154,7 @@ Criar todos os arquivos base:
 6. Criar pasta `partidas/[Nome]/` com:
    - `partida.md` — resumo, arco, objetivos, NPCs-chave, tom
    - `ramificacoes.md` — vazio (será preenchido durante o jogo)
-7. Atualizar `objetivos.md` com novos objetivos
+7. Atualizar `objetivos.md` e a seção Partida de `arcos.md` (objetivo, fecha quando, sessões previstas)
 8. Criar primeira história da partida
 
 ## Fluxo: Criar História
@@ -156,34 +162,23 @@ Criar todos os arquivos base:
 1. Ler `partida.md` — entender arco e objetivos
 2. Definir quest: tipo (principal ligada ao eixo, ou secundária), objetivo, stakes
 3. Criar pasta `[Nome da História]/` dentro da partida
-4. Criar `historia.md` — resumo, objetivos, pistas, NPCs envolvidos, status
-5. Criar primeira aventura da história
+4. Criar `historia.md` — resumo, objetivos, pistas, NPCs envolvidos, status, número de aventuras previsto (em geral 2 a 4)
+5. Atualizar a seção História de `arcos.md`
+6. Criar primeira aventura da história
 
 ## Fluxo: Criar Aventura
 
 1. Ler `historia.md` — entender quest e objetivos
-2. Definir aventura: objetivo específico, cenas planejadas (3-5), resolução
-3. Criar pasta `[Nome da Aventura]/` dentro da história
-4. Criar `aventura.md`:
-   - Resumo e objetivo
-   - Cenas planejadas (local, propósito, testes prováveis, NPCs)
-   - Condições de sucesso/falha
-   - Status (ativa/concluída)
-5. Atualizar `objetivos.md` com objetivos da aventura
+2. Definir o **ponto de chegada** antes das cenas: objetivo em uma frase e "fecha quando" (o fato que encerra a aventura, com sucesso ou com fracasso)
+3. Definir o **orçamento: 1 a 3 sessões**. Se não couber em 3, dividir em duas aventuras, cada uma com seu ponto de chegada
+4. Planejar 3 a 5 cenas. Cada cena declara **objetivo, obstáculo e risco**; sem os três, não é cena, é transição de uma linha
+5. Criar pasta `[Nome da Aventura]/` dentro da história e `aventura.md` (modelo `[Base]/08_Templates/02_Aventura.md`): resumo, orçamento e ponto de chegada, cenas, condições de sucesso e falha, status
+6. Atualizar a seção Aventura de `arcos.md` (com "Falta para fechar") e os objetivos A1, A2 em `objetivos.md`; os objetivos da aventura anterior vão para `objetivos_arquivo.md`
+7. Atualizar "Próxima cena" em `direcao.md`
 
 ## Formato de Opções
 
-Seguir o formato das preferências (tabela Caminhos):
-
-```
-[Descrição da situação/proposta]
-
-**Opção A — [título]:** [detalhes com prós, contras, implicações]
-**Opção B — [título]:** [detalhes com prós, contras, implicações]
-**Opção C — [título]:** [detalhes com prós, contras, implicações]
-
-→ Widget com labels sucintos (≤7 palavras). Prós/contras NO TEXTO, nunca no widget.
-```
+Como no contrato da skill `narrar`: proposta em poucas linhas, depois opções A, B e C com **ganho · risco** em até 2 linhas cada, e seletor com rótulos de até 7 palavras e "Outra opção (descreva)". Ganho e risco ficam no texto, nunca no rótulo.
 
 ## Regras Universais
 

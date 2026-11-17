@@ -75,7 +75,7 @@ def modo_hook(stdin_txt: str, env: dict) -> str:
     elif pasta is not None:
         texto = c.resumo(pasta)
         mesa = c.ler_mesa(pasta)
-        if mesa:
+        if mesa and "Decisão pendente:" not in texto:
             texto += "\n" + "\n".join(c.linhas_mesa(mesa))
     elif len(jogos) > 1:
         texto = c.resumo_varios(jogos)

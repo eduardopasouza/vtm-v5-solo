@@ -84,6 +84,7 @@ Cada personagem tem a sua subpasta, e as campanhas são independentes. Para alte
 └── <Nome do personagem>/
     ├── estado.json        números: Fome, Humanidade, dano, XP, noite
     ├── contexto.md, personagem.md, objetivos.md, timeline.md
+    ├── arcos.md           mapa público: partida > história > aventura, e o que fecha cada uma
     ├── direcao.md         segredos do narrador (não leia, se quiser surpresa)
     ├── rolagens.jsonl     registro de toda rolagem
     ├── mesa.json          cena em curso e decisão pendente (para retomar depois da compactação)
