@@ -12,7 +12,7 @@
 | **Pastas narrativas** (Jogo, Partida, História, Aventura) | Legível | Espaços, acentos, maiúsculas em cada palavra |
 | **Arquivos técnicos** (`.md` de documentação) | snake_case | Minúsculas, underline, sem acentos |
 
-A razão: pastas narrativas aparecem em caminhos lidos por humanos ("A Coroa de Cinzas" é parte do nome do arco, não só do caminho). Arquivos técnicos entram em comandos, scripts e grep — simples e previsíveis.
+A razão: pastas narrativas aparecem em caminhos lidos por humanos ("A Queda do Príncipe" é parte do nome do arco, não só do caminho). Arquivos técnicos entram em comandos, scripts e grep — simples e previsíveis.
 
 ---
 
@@ -25,7 +25,7 @@ A razão: pastas narrativas aparecem em caminhos lidos por humanos ("A Coroa de 
 ```
 
 Nome legível do PC. Exemplos:
-- `[Campanhas]/Edward Bello/`
+- `[Campanhas]/Helena Prado/`
 - `[Campanhas]/Marcus Wells/`
 - `[Campanhas]/Dona Rita de Cássia/`
 
@@ -36,7 +36,7 @@ Nome legível do PC. Exemplos:
 ```
 
 Exemplos:
-- `A Coroa de Cinzas`
+- `A Queda do Príncipe`
 - `Noites de São Luís`
 - `A Grande Jyhad de 1888`
 
@@ -47,9 +47,9 @@ Exemplos:
 ```
 
 Exemplos:
-- `A Primeira Rachadura`
-- `O Peso do Speculum`
-- `O Espelho Ancestral`
+- `Os Corpos do Cais`
+- `A Dívida de Sangue`
+- `O Retorno do Ancião`
 
 ### Aventura
 
@@ -58,9 +58,9 @@ Exemplos:
 ```
 
 Exemplos:
-- `A Noite do Artigo`
-- `O Veredicto de Gideon`
-- `A Emissária de Viena`
+- `O Armazém do Cais`
+- `O Julgamento do Xerife`
+- `A Visita do Arconte`
 
 ---
 
@@ -97,8 +97,8 @@ sessao_NN.md
 ```
 
 - `[nome_npc]` em snake_case, nome principal sem título
-- Exemplos: `anne_bowesley.md`, `lord_ashworth.md`, `o_doktor.md`, `graf_auerbach.md`
-- Alcunhas (quando o nome real é desconhecido) também em snake_case: `o_doktor.md`, `the_feral.md`
+- Exemplos: `iris_kell.md`, `xerife_duarte.md`, `o_boticario.md`, `conde_varga.md`
+- Alcunhas (quando o nome real é desconhecido) também em snake_case: `o_boticario.md`, `a_fera.md`
 
 ### Índice e Relações
 
@@ -135,17 +135,17 @@ Resumo visual:
 
 ```
 [Campanhas]/                            ← técnico
-└── Edward Bello/                    ← LEGÍVEL (nome do PC)
+└── Helena Prado/                    ← LEGÍVEL (nome do PC)
     ├── contexto.md                  ← técnico
     ├── personagem.md                ← técnico
     ├── npcs/
-    │   └── lord_ashworth.md         ← técnico (snake_case)
+    │   └── xerife_duarte.md         ← técnico (snake_case)
     └── partidas/
-        └── A Coroa de Cinzas/       ← LEGÍVEL (partida)
-            └── O Peso do Speculum/  ← LEGÍVEL (história)
-                └── A Primeira Noite/ ← LEGÍVEL (aventura)
+        └── A Queda do Príncipe/       ← LEGÍVEL (partida)
+            └── A Dívida de Sangue/  ← LEGÍVEL (história)
+                └── O Armazém do Cais/ ← LEGÍVEL (aventura)
                     ├── aventura.md  ← técnico
-                    └── sessao_16.md ← técnico
+                    └── sessao_03.md ← técnico
 ```
 
 ---

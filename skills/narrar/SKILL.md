@@ -126,7 +126,7 @@ A montagem só continua, da noite 3, depois da escolha.
 | Resumos | `${user_config.pasta_resumos}` (opcional; visão geral, não fonte final) |
 | PDFs integrais | `${user_config.pasta_acervo}` (opcional) |
 | Livros (busca) | `buscar_acervo` ou agente `guardiao-regras` (índice local dos PDFs, com livro e página). Regra citada só com página. Sem acervo: `[Base]/01_Sistema/`. Sem fonte nenhuma: "não sei" |
-| Mecânicas e configuração vazia | `${CLAUDE_PLUGIN_ROOT}/skills/narrar/referencia.md` (ler no início da sessão) |
+| Mecânicas, ritmo, várias campanhas, configuração vazia | `${CLAUDE_PLUGIN_ROOT}/skills/narrar/referencia.md` (ler no início da sessão) |
 
 Hierarquia de regra (P6): regras da casa > V5 Core > suplementos V5 > `01_Sistema/` e resumos > edições antigas (só lore). **Nunca gravar campanha dentro de `[Base]`**: é a pasta do plugin, substituída a cada atualização.
 
@@ -147,20 +147,13 @@ Se não existe jogo: informar e sugerir criar um ("criar jogo").
 
 **Depois de uma compactação**, o plugin reinjeta o resumo do contrato, os números e a mesa. Seguir da decisão pendente, sem recapitular; se esta skill não estiver mais no contexto, reler este arquivo antes de narrar.
 
-**Várias campanhas.** Cada campanha é independente: nada de uma vaza para a outra.
-- Uma conversa por campanha. Se o jogador trocar de jogo no meio, fechar a documentação do atual (fim de sessão) e sugerir uma conversa nova para o outro.
-- Passar `campanha` em toda ferramenta de dados (no CLI, `--campanha`). Ler e gravar só na pasta do jogo escolhido; `preferencias.md` e `regras_da_casa.md` da pasta de Jogos valem para todos.
-- Aos agentes `arquivista` e `continuidade`, informar a pasta do jogo.
+**Várias campanhas:** cada uma é independente; passar `campanha` em toda ferramenta e ler e gravar só na pasta do jogo escolhido (detalhe em `referencia.md`).
 
 ## Loop de Jogo
 
 **NARRAR → ESCOLHER → RESOLVER → DOCUMENTAR**, a cada cena. Narrar e apresentar escolhas seguem o Contrato de resposta. Consultar `cenario/` e as fichas de NPC para não contradizer o que já existe.
 
-### Cena e ritmo
-
-- **Critério de cena.** Antes de narrar, definir para si (em `direcao.md`, "Próxima cena"; nunca na mensagem) o **objetivo**, o **obstáculo** e o **risco**. Sem os três, não é cena: resumir em uma linha de transição e ir para a próxima que tenha os três.
-- **Cortar a cena** quando o objetivo foi alcançado ou perdido. Não esticar com testes repetidos sobre a mesma ação: a falha tem consequência e a cena muda; nova tentativa, só com outra abordagem.
-- **Orçamento de aventura: 1 a 3 sessões.** Na 3ª sessão, propor um fecho ao jogador logo na abertura: clímax nesta sessão, ou corte. Não abrir a 4ª sem ele escolher (skill `gerenciar`).
+**Cena e ritmo** (detalhe em `referencia.md`): toda cena tem objetivo, obstáculo e risco, senão vira transição de uma linha; aventura dura de 1 a 3 sessões, e na 3ª o narrador propõe um fecho.
 
 ### Resolver a ação
 

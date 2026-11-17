@@ -60,25 +60,25 @@ def test_minimo_lista_rola_e_registra(tmp_path):
 
 
 def test_minimo_duas_campanhas_em_paralelo(tmp_path):
-    for nome in ("Edward", "Antônio"):
+    for nome in ("Helena", "Antônio"):
         (tmp_path / nome).mkdir()
     env = {"VTM_PASTA_CAMPANHAS": str(tmp_path), "VTM_CAMPANHA_ATIVA": ""}
     r = _conversar(env, INICIO + [
         _chamada(2, "listar_campanhas", {}),
         _chamada(3, "rolar", {"parada": 4, "fome": 1, "dificuldade": 2, "campanha": "Antônio"}),
-        _chamada(4, "rouse", {"fome_atual": 1, "campanha": "Edward"}),
+        _chamada(4, "rouse", {"fome_atual": 1, "campanha": "Helena"}),
         _chamada(5, "rolar", {"parada": 4, "fome": 1, "dificuldade": 2}),
         _chamada(6, "rolar", {"parada": 4, "fome": 1, "dificuldade": 2, "campanha": "../fora"}),
         _chamada(7, "auditar_campanha", {}),
-        _chamada(8, "auditar_campanha", {"campanha": "Edward"}),
+        _chamada(8, "auditar_campanha", {"campanha": "Helena"}),
     ])
     saida = [json.loads(x["result"]["content"][0]["text"]) for x in r[1:]]
-    assert saida[0] == {"campanhas": ["Antônio", "Edward"], "padrao": None}
-    assert saida[1]["campanha"] == "Antônio" and saida[2]["campanha"] == "Edward"
+    assert saida[0] == {"campanhas": ["Antônio", "Helena"], "padrao": None}
+    assert saida[1]["campanha"] == "Antônio" and saida[2]["campanha"] == "Helena"
     assert saida[3]["registrado_em"] is None and "mais de uma" in saida[3]["aviso"]
     assert saida[4]["registrado_em"] is None and "não encontrada" in saida[4]["aviso"]
-    assert "mais de uma" in saida[5]["erro"] and saida[6]["campanha"] == "Edward"
-    for nome in ("Edward", "Antônio"):
+    assert "mais de uma" in saida[5]["erro"] and saida[6]["campanha"] == "Helena"
+    for nome in ("Helena", "Antônio"):
         assert len((tmp_path / nome / "rolagens.jsonl").read_text(encoding="utf-8").splitlines()) == 1
     assert not (tmp_path / "fora").exists()
 

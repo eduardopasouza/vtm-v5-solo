@@ -1,4 +1,4 @@
-# Narrador — referência de mecânicas e de configuração
+# Narrador — referência de mecânicas, ritmo e configuração
 
 > Parte da skill `narrar`. Ler no início da sessão, depois do Contrato de resposta (em `SKILL.md`), que vale por cima deste arquivo.
 
@@ -15,6 +15,19 @@ Ferramenta MCP entre parênteses. Com `estado.json`, as ferramentas leem e grava
 - **Combate** (`conflito`, `aplicar_dano`; Core p. 124-126). Sem turnos táticos: intenção, teste, resultado. O vencedor causa margem + arma; em conflito de dois lados, empate = 1 de dano para cada. Dano Superficial é dividido pela metade (para cima) antes de marcar; armas comuns causam Superficial a vampiros. `conflito` só calcula: marcar o dano do personagem com `aplicar_dano` e `alvo` (`saude` ou `forca_vontade`).
 - **Remorso** (`remorso`; Core p. 239). Fim da sessão, se houver Manchas. Dados = 10 − Humanidade − Manchas (mínimo 1). Com 1 sucesso a Humanidade fica; sem nenhum, cai 1. As Manchas somem nos dois casos.
 - **Frenesi** (`frenesi`; Core p. 219). Parada = Força de Vontade intacta + Humanidade ÷ 3 (para baixo). Vitória: resiste, mas gasta o turno contendo a Besta; crítico: resiste sem perder o turno. Falha: a Besta assume, e o que ela faz segue a regra 7 do Contrato sempre que houver mais de um desfecho possível.
+
+## Cena e ritmo
+
+- **Critério de cena.** Antes de narrar, definir para si (em `direcao.md`, "Próxima cena"; nunca na mensagem) o **objetivo**, o **obstáculo** e o **risco**. Sem os três, não é cena: resumir em uma linha de transição e ir para a próxima que tenha os três.
+- **Cortar a cena** quando o objetivo foi alcançado ou perdido. Não esticar com testes repetidos sobre a mesma ação: a falha tem consequência e a cena muda; nova tentativa, só com outra abordagem.
+- **Orçamento de aventura: 1 a 3 sessões.** Na 3ª sessão, propor um fecho ao jogador logo na abertura: clímax nesta sessão, ou corte. Não abrir a 4ª sem ele escolher (skill `gerenciar`).
+
+## Várias campanhas
+
+Cada campanha é independente: nada de uma vaza para a outra.
+- Uma conversa por campanha. Se o jogador trocar de jogo no meio, fechar a documentação do atual (fim de sessão) e sugerir uma conversa nova para o outro.
+- Passar `campanha` em toda ferramenta de dados (no CLI, `--campanha`). Ler e gravar só na pasta do jogo escolhido; `preferencias.md` e `regras_da_casa.md` da pasta de Jogos valem para todos.
+- Aos agentes `arquivista` e `continuidade`, informar a pasta do jogo.
 
 ## Configuração não preenchida
 

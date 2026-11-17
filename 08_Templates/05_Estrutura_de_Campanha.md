@@ -68,7 +68,7 @@ Arquivos **dentro** das pastas narrativas seguem snake_case sem espaços nem ace
 - `sessao_01.md`, `sessao_02.md`, ..., `sessao_NN.md` (dois dígitos sempre)
 - `cenario.md`, `geografia.md`, `historia.md` (dentro de `cenario/`)
 - `indice.md`, `relacoes.md` (dentro de `npcs/`)
-- Fichas de NPC: `[nome].md` em snake_case (ex.: `anne_bowesley.md`, `lord_ashworth.md`)
+- Fichas de NPC: `[nome].md` em snake_case (ex.: `iris_kell.md`, `xerife_duarte.md`)
 
 Ver `06_Convencoes_de_Nomenclatura.md` para a regra completa.
 

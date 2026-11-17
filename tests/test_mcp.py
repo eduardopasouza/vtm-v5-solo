@@ -66,19 +66,19 @@ def test_buscar_acervo_pelo_servidor(tmp_path):
 
 
 def test_servidor_duas_campanhas_em_paralelo(tmp_path):
-    for nome in ("Edward", "Antônio"):
+    for nome in ("Helena", "Antônio"):
         (tmp_path / nome).mkdir()
     env = dict(os.environ, VTM_PASTA_CAMPANHAS=str(tmp_path), VTM_CAMPANHA_ATIVA="")
     _, (lista, a, e, sem) = asyncio.run(_chamar(env, [
         ("listar_campanhas", {}),
         ("rolar", {"parada": 4, "fome": 1, "dificuldade": 2, "campanha": "Antônio"}),
-        ("rouse", {"fome_atual": 1, "bp": 1, "campanha": "Edward"}),
+        ("rouse", {"fome_atual": 1, "bp": 1, "campanha": "Helena"}),
         ("rolar", {"parada": 4, "fome": 1, "dificuldade": 2}),
     ]))
-    assert lista == {"campanhas": ["Antônio", "Edward"], "padrao": None}
-    assert a["campanha"] == "Antônio" and e["campanha"] == "Edward"
+    assert lista == {"campanhas": ["Antônio", "Helena"], "padrao": None}
+    assert a["campanha"] == "Antônio" and e["campanha"] == "Helena"
     assert sem["registrado_em"] is None and "aviso" in sem
-    for nome in ("Edward", "Antônio"):
+    for nome in ("Helena", "Antônio"):
         assert len((tmp_path / nome / "rolagens.jsonl").read_text(encoding="utf-8").splitlines()) == 1
 
 

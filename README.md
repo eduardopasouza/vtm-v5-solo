@@ -71,7 +71,7 @@ As skills só disparam quando o pedido fala de VtM, vampiro ou da campanha.
 Cada personagem tem a sua subpasta, e as campanhas são independentes. Para alternar entre elas:
 
 - Deixe **Campanha ativa** vazia.
-- Abra **uma conversa por campanha** e diga qual quer jogar: "quero jogar VtM com o Edward". Sem nome, o narrador lista as campanhas e pergunta.
+- Abra **uma conversa por campanha** e diga qual quer jogar: "quero jogar VtM com a Helena". Sem nome, o narrador lista as campanhas e pergunta.
 - Cada rolagem vai para o `rolagens.jsonl` da campanha certa, porque o narrador passa o nome dela ao motor de dados.
 - Ao abrir o Claude Code na pasta de campanhas, o resumo inicial mostra uma linha de cada campanha. Aberto dentro da pasta de um personagem, mostra só aquela.
 
