@@ -110,6 +110,7 @@ Esta pasta é o plugin `vtm` para o Claude Code: skills de narração, motor de 
 | `10_objetivos_arquivo.md` | Objetivos encerrados |
 | `11_direcao.md` | Notas secretas do narrador em topicos fixos |
 | `12_glossario.md` | Glossario da campanha, um termo por linha |
+| `13_decisoes_narrador.md` | Regras improvisadas pelo narrador, a espera de aprovacao |
 
 ### 09_Preferencias/ — Configuracao de Jogo
 | Arquivo | Conteudo |

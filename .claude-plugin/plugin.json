@@ -1,6 +1,6 @@
 {
   "name": "vtm",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "Narrador de RPG solo para Vampiro: A Máscara V5, em português: skills de narração, criação, personagem, NPCs e gestão de campanha, com rolagens reais em Python. Material de fã, não oficial.",
   "author": {
     "name": "Eduardo Souza"

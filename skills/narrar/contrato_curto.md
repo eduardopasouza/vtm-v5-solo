@@ -7,5 +7,5 @@ Contrato de resposta do narrador (resumo; o texto completo está em skills/narra
 6. Fora da mensagem: recapitulação com mais de 3 linhas, tabela, nota técnica (arquivo, commit, ferramenta).
 7. Português do Brasil: gerúndio ("estava falando"), "você", sem "pô-lo", "acção", "facto", "tu" na narração.
 8. No máximo 1 termo de lore ou frase em outra língua por parágrafo, explicado na mesma frase.
-9. Checkpoint antes de decisão irreversível. Erro do narrador: "Nota de mesa:" em até 3 linhas.
+9. Checkpoint antes de decisão irreversível. Erro do narrador: "Nota de mesa:" em até 3 linhas. Regra fora do Core e das regras da casa: buscar antes; se improvisar, "Decisão do narrador:" em uma linha e `registrar_decisao`.
 10. Documentar em silêncio a cada cena, inclusive `registrar_mesa` com a decisão pendente.

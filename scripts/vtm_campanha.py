@@ -21,6 +21,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import vtm_motor as motor  # noqa: E402
+import vtm_estilo as estilo  # noqa: E402
 
 VERSAO_ESTADO = 1
 
@@ -361,6 +362,9 @@ def auditar(pasta: str | Path) -> list[Achado]:
 
     # 7. ritmo e planejamento: objetivos, arcos, orçamento da aventura, direção
     achados.extend(_auditar_ritmo(pasta))
+
+    # 8. conduta: Fome nas rolagens, língua nos logs, decisões do narrador pendentes
+    achados.extend(_auditar_conduta(pasta))
     return achados
 
 
@@ -583,6 +587,132 @@ def _auditar_ritmo(pasta: Path) -> list[Achado]:
         if corrido:
             achados.append(Achado("aviso", "DIRECAO", "direcao.md", corrido[0],
                                   f"{len(corrido)} trechos de texto corrido; usar tópicos de uma linha"))
+    return achados
+
+
+# --------------------------------------------------------------------------
+# Conduta (F5 + F7): Fome nas rolagens, língua nos logs, decisões do narrador
+# --------------------------------------------------------------------------
+
+MAX_ACHADOS_POR_TIPO = 8
+
+
+def fome_divergente(pasta: str | Path) -> list[tuple[int, str]]:
+    """Relê `rolagens.jsonl` na ordem e aponta (linha, mensagem) onde a Fome
+    usada não bate com a Fome que o próprio registro vinha mostrando: teste
+    rolado com a Fome de antes de um Rouse, ou Rouse/alimentação partindo de
+    um valor diferente do último gravado. Rolagens de NPC e as de Fome 0 sem
+    marca (logs antigos, em que NPC rolava com Fome 0) ficam de fora."""
+    arq = Path(pasta) / "rolagens.jsonl"
+    if not arq.exists():
+        return []
+    achados: list[tuple[int, str]] = []
+    fome: int | None = None
+    for n, bruto in enumerate(arq.read_text(encoding="utf-8").splitlines(), 1):
+        try:
+            reg = json.loads(bruto)
+        except json.JSONDecodeError:
+            continue
+        cmd = str(reg.get("comando", ""))
+        res = reg.get("resultado") or {}
+        if not isinstance(res, dict):
+            continue
+        partes = cmd.split()
+        base = partes[0] if partes else ""
+        if base in ("rolar", "roll"):
+            usada = (res.get("extra") or {}).get("fome")
+            if not isinstance(usada, int):
+                usada = len(res.get("dados_fome") or [])
+            if "npc" in partes[1:] or (usada == 0 and fome):
+                continue
+            if fome is not None and usada != fome:
+                achados.append((n, f"teste rolado com Fome {usada}; o registro estava em Fome {fome}"))
+            continue
+        bloco = res.get("rouse") if isinstance(res.get("rouse"), dict) else res
+        antes, depois = bloco.get("fome_antes"), bloco.get("fome_depois")
+        if not isinstance(antes, int) or not isinstance(depois, int):
+            continue
+        if fome is not None and antes != fome:
+            achados.append((n, f"{base} partiu de Fome {antes}; o registro estava em Fome {fome}"))
+        if base in ("rouse",) and len(res.get("checks") or []) > 3:
+            achados.append((n, f"{len(res['checks'])} Rouses num lote só; despertares de noites "
+                               "diferentes vão pela ferramenta montagem"))
+        fome = depois
+    return achados
+
+
+_LINHA_DECISAO = re.compile(r"^\|\s*(DN-\d+)\s*\|(.*)\|\s*$")
+
+
+def decisoes_narrador(pasta: str | Path) -> list[dict]:
+    """Linhas de `decisoes_narrador.md`: id, sessão, regra, motivo, situação."""
+    arq = Path(pasta) / "decisoes_narrador.md"
+    if not arq.exists():
+        return []
+    out = []
+    for n, linha in enumerate(arq.read_text(encoding="utf-8").splitlines(), 1):
+        m = _LINHA_DECISAO.match(linha.strip())
+        if not m:
+            continue
+        cel = [c.strip() for c in m.group(2).split("|")]
+        cel += [""] * (4 - len(cel))
+        out.append({"id": m.group(1), "sessao": cel[0], "regra": cel[1], "motivo": cel[2],
+                    "situacao": cel[3] or "pendente", "linha": n})
+    return out
+
+
+def registrar_decisao(pasta: str | Path, regra: str, motivo: str) -> dict:
+    """Acrescenta uma regra improvisada a `decisoes_narrador.md`, como
+    pendente, para o jogador aprovar (vira regra da casa) ou descartar no fim
+    da sessão. Cria o arquivo se ele não existe."""
+    pasta = Path(pasta)
+    limpo = lambda t: re.sub(r"\s+", " ", str(t)).replace("|", "/").strip()  # noqa: E731
+    regra, motivo = limpo(regra), limpo(motivo)
+    if not regra or not motivo:
+        raise ValueError("decisão do narrador: `regra` e `motivo` são obrigatórios")
+    arq = pasta / "decisoes_narrador.md"
+    if not arq.exists():
+        arq.write_text(
+            "# Decisões do Narrador\n\n"
+            "> Regras improvisadas em jogo, fora do Core e das regras da casa. Valem só até o fim da sessão.\n"
+            "> No fim da sessão o jogador decide cada uma: **aprovada** (vira regra da casa, RC-N) ou **descartada**.\n\n"
+            "| ID | Sessão | Regra | Motivo | Situação |\n|----|--------|-------|--------|----------|\n",
+            encoding="utf-8")
+    existentes = decisoes_narrador(pasta)
+    num = max([int(d["id"].split("-")[1]) for d in existentes] or [0]) + 1
+    estado, erros = ler_estado(pasta)
+    sessao = f"S{estado['sessao']:02d}" if estado and not erros else "—"
+    nova = {"id": f"DN-{num}", "sessao": sessao, "regra": regra, "motivo": motivo, "situacao": "pendente"}
+    texto = arq.read_text(encoding="utf-8")
+    if not texto.endswith("\n"):
+        texto += "\n"
+    arq.write_text(texto + f"| {nova['id']} | {sessao} | {regra} | {motivo} | pendente |\n", encoding="utf-8")
+    return nova
+
+
+def _auditar_conduta(pasta: Path) -> list[Achado]:
+    achados: list[Achado] = []
+    div = fome_divergente(pasta)
+    for n, msg in div[:MAX_ACHADOS_POR_TIPO]:
+        achados.append(Achado("aviso", "FOME_DIVERGENTE", "rolagens.jsonl", n, msg))
+    if len(div) > MAX_ACHADOS_POR_TIPO:
+        achados.append(Achado("aviso", "FOME_DIVERGENTE", "rolagens.jsonl", None,
+                              f"mais {len(div) - MAX_ACHADOS_POR_TIPO} divergências de Fome no registro"))
+    for arq in sorted(pasta.rglob("sessao_*.md")):
+        problemas = estilo.checar_log(arq.read_text(encoding="utf-8"))
+        for codigo, rotulo in (("PT_PT", "construções de português de Portugal"),
+                               ("LATIM", "frases em latim sem tradução")):
+            do_tipo = [p for p in problemas if p.codigo == codigo]
+            if do_tipo:
+                exemplos = ", ".join('"' + p.trecho.strip('"“”') + '"' for p in do_tipo[:3])
+                achados.append(Achado("aviso", "ESTILO", _rel(pasta, arq), do_tipo[0].linha,
+                                      f"{len(do_tipo)} {rotulo} (ex.: {exemplos})"))
+    pendentes = [d for d in decisoes_narrador(pasta) if _normalizar(d["situacao"]).startswith("pendente")]
+    if pendentes:
+        achados.append(Achado("aviso", "DECISAO_PENDENTE", "decisoes_narrador.md", pendentes[0]["linha"],
+                              f"{len(pendentes)} decisões do narrador sem resposta do jogador ("
+                              + ", ".join(d["id"] for d in pendentes[:6])
+                              + "): aprovar como regra da casa ou descartar"))
     return achados
 
 

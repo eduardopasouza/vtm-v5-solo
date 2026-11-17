@@ -165,6 +165,7 @@ Toda mensagem de jogo tem estas partes, nesta ordem, e mais nada:
 - **Montagem** (várias noites ou tarefas resumidas): o jogador aprova o plano antes; no máximo 3 rolagens por mensagem; Crítico Confuso ou Falha Bestial interrompe a montagem até o jogador escolher.
 - **Fica fora da mensagem de jogo:** recapitulação com mais de 3 linhas, tabela, regra que o jogador não perguntou e nota técnica (arquivo salvo, commit, nome de ferramenta, verificação).
 - **Checkpoint:** decisão moral, política ou irreversível leva, antes das opções, a linha `⚠️ CHECKPOINT — esta decisão tem consequências permanentes.`
+- **Decisão do narrador:** regra improvisada, fora do Core e das regras da casa, aparece em uma linha no topo, é registrada em `decisoes_narrador.md` e vale até o fim da sessão, quando o jogador aprova (vira regra da casa) ou descarta.
 - **Nota de mesa:** erro do narrador ou resposta a dúvida de regra, em até 3 linhas no topo, separadas da narração.
 - O jogador pode ignorar as opções e propor a própria ação.
 

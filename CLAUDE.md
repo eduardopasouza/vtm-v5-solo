@@ -23,6 +23,8 @@ skills/             → 5 skills de jogo: /vtm:narrar, /vtm:criar, /vtm:personag
 (resumos, acervo)  → fora daqui e opcionais: userConfig pasta_resumos e pasta_acervo; o plugin não distribui livros
 scripts/            → Motor de dados: vtm_motor.py (regras, com página do Core), vtm_dice.py (CLI, sem estado), vtm_mcp.py (servidor MCP com estado; roda só com a biblioteca padrão, usa o pacote `mcp` se existir), vtm_estado.py (lê e grava estado.json, confere números, lê a ficha)
 scripts/campanha.py → Memória da campanha: auditar, validar, resumo, hook (regras em vtm_campanha.py)
+scripts/estilo.py   → Conduta do narrador: português de Portugal e latim sem tradução nos logs; mensagem de jogo x contrato de resposta (regras em vtm_estilo.py)
+evals/              → Casos de avaliação da skill narrar (claude plugin eval)
 tests/              → Testes (python -m pytest tests)
 LICENSE, assets/    → MIT só para o código; material de referência sob o Dark Pack Agreement da Paradox (logo em assets/)
 .claude-plugin/plugin.json → também declara o servidor MCP `dados` (rolagens com estado, parada, chance, montagem, auditar_campanha, buscar_acervo). Não usar `.mcp.json` na raiz: aqui ele seria lido também como MCP do projeto, sem `${CLAUDE_PLUGIN_ROOT}`

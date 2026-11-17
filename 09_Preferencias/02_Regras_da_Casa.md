@@ -5,6 +5,13 @@
 >
 > **Este é o padrão do plugin** (regras da casa do autor para jogo solo). Para usar as suas, crie `regras_da_casa.md` na sua pasta de campanhas: quando esse arquivo existe, ele substitui este inteiro. Para jogar só pelo Core, crie o arquivo com a linha "Nenhuma regra da casa". Não edite este arquivo na pasta do plugin, porque ele é substituído a cada atualização.
 
+## Como uma regra entra aqui
+
+1. Em jogo, quando o Core e as regras da casa não cobrem a situação, o narrador busca a regra nos livros. Se não achar, improvisa e marca na mensagem: `Decisão do narrador: [regra]`.
+2. A decisão vale só até o fim daquela sessão e fica registrada, como pendente, em `decisoes_narrador.md`, na pasta da campanha.
+3. No fim da sessão o jogador responde a cada uma: **aprovar** ou **descartar**.
+4. A aprovada vira uma RC numerada, com a data e a regra do Core que ela substitui ou completa, no `regras_da_casa.md` da pasta de campanhas do jogador. A descartada não volta a ser usada.
+
 ---
 
 ## RC-1 — Experiência por sessão

@@ -490,10 +490,29 @@ def alimentar(fonte: str, fome_atual: int | None = None, bp: int | None = None,
 
 
 @_ferramenta
+def registrar_decisao(regra: str, motivo: str, campanha: str | None = None) -> dict:
+    """Registra uma "decisão do narrador": regra improvisada que não está no
+    Core nem nas regras da casa. Antes de chamar, buscar a regra (`buscar_acervo`
+    ou agente guardiao-regras). A decisão vale até o fim da sessão e fica
+    pendente em decisoes_narrador.md; no fim da sessão o jogador aprova (vira
+    regra da casa) ou descarta. `regra` = a regra em uma frase; `motivo` = por
+    que foi preciso e o que foi consultado."""
+    pasta = _pasta_campanha(campanha)
+    if pasta is None:
+        raise ValueError("campanha não encontrada: informe `campanha`")
+    nova = camp.registrar_decisao(pasta, regra, motivo)
+    pendentes = [d["id"] for d in camp.decisoes_narrador(pasta) if d["situacao"].lower().startswith("pendente")]
+    return {"campanha": pasta.name, "decisao": nova, "pendentes": pendentes,
+            "mostrar_ao_jogador": f"Decisão do narrador: {nova['regra']} ({nova['id']})"}
+
+
+@_ferramenta
 def auditar_campanha(campanha: str | None = None) -> dict:
     """Audita uma campanha (só leitura): estado.json, números divergentes entre
     estado e .md, Potência x tabela do Core, sessões fora da linha do tempo,
-    rodapés defasados e NPCs sem ficha. `campanha` = nome da pasta do jogo;
+    rodapés defasados, NPCs sem ficha, ritmo (arcos, objetivos, orçamento da
+    aventura, direção) e conduta (Fome divergente nas rolagens, português de
+    Portugal e latim sem tradução nos logs, decisões do narrador pendentes). `campanha` = nome da pasta do jogo;
     vazio = a configurada ou a única."""
     pasta = _pasta_campanha(campanha)
     if pasta is None:

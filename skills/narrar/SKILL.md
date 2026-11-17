@@ -36,7 +36,8 @@ Vale para **toda mensagem de jogo**, da primeira à última da sessão, inclusiv
     - tratamento: "você" (ou terceira pessoa); nunca "tu", "teu", "contigo". Só fala de NPC pode usar "tu", como marca de época ou de origem.
 12. **Jargão com orçamento.** No máximo 1 termo de lore ou frase em outra língua por parágrafo, explicado na mesma frase: "o Elysium, o salão neutro da corte". Termo de jogo em inglês só entre parênteses, na primeira menção da sessão. Se a campanha tiver `glossario.md`, usar as definições de lá e acrescentar cada termo novo, em uma linha.
 13. **Checkpoint.** Decisão moral, política ou irreversível leva, antes das opções, a linha `⚠️ CHECKPOINT — esta decisão tem consequências permanentes.`
-14. **Nota de mesa.** Erro do narrador ou resposta a dúvida de regra: até 3 linhas no topo, começando por `Nota de mesa:`, separadas da narração.
+14. **Regra improvisada é "decisão do narrador".** Antes de improvisar, buscar a regra (`buscar_acervo` ou agente `guardiao-regras`; sem acervo, `[Base]/01_Sistema/`). Se nada cobrir: uma linha no topo da mensagem, `Decisão do narrador: [a regra, em uma frase]`, e registro com `registrar_decisao`. Vale até o fim da sessão, quando o jogador aprova (vira regra da casa) ou descarta. Custo, bônus ou penalidade que não está no Core nem nas RC nunca entra sem essa linha.
+15. **Nota de mesa.** Erro do narrador ou resposta a dúvida de regra: até 3 linhas no topo, começando por `Nota de mesa:`, separadas da narração.
 
 ### Exemplos
 
@@ -169,7 +170,7 @@ Só rolar se houver chance de falha e depois que o jogador escolheu a ação. Da
 | Sangue e cura | `surto_de_sangue`, `curar`, `curar_agravado`, `tabela_potencia` |
 | Conflito e dano | `conflito`, `aplicar_dano` (com `alvo` para marcar no personagem) |
 | Trackers, frenesi, remorso | `teste_tracker`, `frenesi`, `remorso` |
-| Cena em curso e decisão pendente | `registrar_mesa` |
+| Cena em curso e decisão pendente; regra improvisada | `registrar_mesa`, `registrar_decisao` |
 
 - **O motor guarda o estado.** Ele lê Fome, Potência, Humanidade, Manchas e trackers do `estado.json` e grava ali Fome, dano, Força de Vontade gasta e Humanidade. Não regravar esses números à mão depois de uma ferramenta; conferir pelo campo `estado` da resposta.
 - **Parada:** `parada` soma Atributo + Habilidade (+ Disciplina, + bônus) pela ficha. Bônus de +1 ou +2 por vantagem na situação; penalidade só com desvantagem objetiva (Prejudicado: −2).
@@ -189,6 +190,7 @@ Atualizar logo depois das consequências, antes da próxima cena:
 | `mesa.json`, pela ferramenta `registrar_mesa`, **a cada mensagem que termina em escolha**: cena, decisão pendente, opções oferecidas e premissas combinadas com o jogador. É o que traz a cena de volta depois da compactação |  |
 | Sessão ativa (`sessao_XX.md`) — log da cena | `personagem.md` — ficha mudou (XP gasto, disciplina nova) — números de estado não |
 | | `npcs/[nome].md` — NPC novo ou atitude mudou |
+| | `decisoes_narrador.md` — regra improvisada (ferramenta `registrar_decisao`) |
 | | `direcao.md` — planos do narrador mudaram (só tópicos de uma linha) |
 | | `objetivos.md` e `arcos.md` — objetivo cumprido ou novo; ponto do arco mudou |
 
@@ -198,11 +200,12 @@ Não pedir permissão nem avisar que gravou (Contrato, regra 10).
 
 Quando o jogador encerrar:
 1. Se há Manchas, teste de Remorso. Depois, Rouse de despertar para a próxima noite.
-2. XP pelas regras da casa em vigor (no padrão do plugin, RC-1). Sem regra da casa de XP, vale o Core p. 130.
-3. Atualizar `estado.json` (ou a tabela de estado do `contexto.md`) com o estado final, e conferir que `contexto.md` reflete a situação exata.
-4. Atualizar `arcos.md` (ponto atual, sessões jogadas, falta para fechar), `objetivos.md` (concluídos vão para `objetivos_arquivo.md`), `direcao.md` (tópicos fixos) e `timeline.md`.
-5. Opcional: pedir ao agente `arquivista` a lista de mudanças por arquivo e conferir com a ferramenta `auditar_campanha` (ou `scripts/campanha.py auditar "<pasta da campanha>"`).
-6. Resumo em até 3 linhas: o que aconteceu e o que está por vir.
+2. **Decisões do narrador:** listar as pendentes de `decisoes_narrador.md`, uma linha cada, e perguntar pelo seletor o que fazer com cada uma: aprovar (vira regra da casa, com data, em `[Jogos]/regras_da_casa.md`; nunca no arquivo do plugin) ou descartar. Anotar a resposta na coluna Situação.
+3. XP pelas regras da casa em vigor (no padrão do plugin, RC-1). Sem regra da casa de XP, vale o Core p. 130.
+4. Atualizar `estado.json` (ou a tabela de estado do `contexto.md`) com o estado final, e conferir que `contexto.md` reflete a situação exata.
+5. Atualizar `arcos.md` (ponto atual, sessões jogadas, falta para fechar), `objetivos.md` (concluídos vão para `objetivos_arquivo.md`), `direcao.md` (tópicos fixos) e `timeline.md`.
+6. Opcional: pedir ao agente `arquivista` a lista de mudanças por arquivo e conferir com a ferramenta `auditar_campanha` (ou `scripts/campanha.py auditar "<pasta da campanha>"`).
+7. Resumo em até 3 linhas: o que aconteceu e o que está por vir.
 
 ## Outras regras
 

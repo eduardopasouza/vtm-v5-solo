@@ -49,6 +49,7 @@ Criar e estruturar todos os níveis narrativos: Jogo, Partida, História, Aventu
 ├── objetivos_arquivo.md     # Objetivos encerrados — modelo 10_objetivos_arquivo.md
 ├── glossario.md             # Termos de lore explicados em uma linha — modelo 12_glossario.md
 ├── mesa.json                # Cena em curso e decisão pendente (gravado pelo narrador)
+├── decisoes_narrador.md     # Regras improvisadas, à espera do jogador (criado no primeiro registro)
 ├── npcs/
 │   ├── indice.md
 │   ├── relacoes.md

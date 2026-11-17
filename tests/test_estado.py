@@ -313,3 +313,16 @@ def test_servidor_registra_a_mesa(tmp_path):
     assert lido["mesa"]["opcoes"] == ["A — Mostrar o que apurou", "B — Ler o Xerife"]
     assert "obrigatórias" in ruim["erro_ferramenta"]
     assert json.loads((pasta / "mesa.json").read_text(encoding="utf-8"))["cena"] == "Gabinete do Xerife"
+
+
+def test_servidor_registra_decisao_do_narrador(tmp_path):
+    pasta = _campanha(tmp_path)
+    d1, d2, ruim = _conversar(tmp_path, [
+        ("registrar_decisao", {"regra": "Ajuda do aliado dá +1 dado", "motivo": "o Core não cobre este caso"}),
+        ("registrar_decisao", {"regra": "Correr no telhado pede Destreza + Atletismo DD 3", "motivo": "sem tabela"}),
+        ("registrar_decisao", {"regra": "x", "motivo": ""}),
+    ])
+    assert d1["decisao"]["id"] == "DN-1" and d2["pendentes"] == ["DN-1", "DN-2"]
+    assert d1["mostrar_ao_jogador"] == "Decisão do narrador: Ajuda do aliado dá +1 dado (DN-1)"
+    assert "obrigatórios" in ruim["erro_ferramenta"]
+    assert "| DN-2 |" in (pasta / "decisoes_narrador.md").read_text(encoding="utf-8")
