@@ -4,16 +4,19 @@ Decisão P8: os números da campanha (Fome, Força de Vontade, Saúde, Humanidad
 Manchas, XP, Potência de Sangue, data ficcional, local, hora da noite) ficam
 só em `estado.json`; os `.md` guardam a narrativa.
 
-Nada aqui grava arquivo da campanha. A auditoria e o resumo só leem.
-O `direcao.md` (segredos do narrador) nunca entra no resumo.
+A auditoria e o resumo só leem. A única gravação daqui é `mesa.json` (a cena
+em curso e a decisão pendente), usada para retomar depois da compactação.
+O `direcao.md` (segredos do narrador) nunca entra no resumo nem na retomada.
 """
 
 from __future__ import annotations
 
 import json
+import os
 import re
 import sys
 from dataclasses import dataclass, asdict
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -419,6 +422,101 @@ def resumo(pasta: str | Path, max_linhas: int = 15) -> str:
             linhas.append("Próximos passos:")
             linhas.extend("  " + x for x in passos)
     return "\n".join(linhas[:max_linhas])
+
+
+# --------------------------------------------------------------------------
+# mesa.json — a cena em curso e a decisão pendente (o que o jogador já viu)
+# --------------------------------------------------------------------------
+
+VERSAO_MESA = 1
+
+
+def ler_mesa(pasta: str | Path) -> dict | None:
+    """mesa.json da campanha, ou None se não existe ou está ilegível."""
+    arq = Path(pasta) / "mesa.json"
+    try:
+        mesa = json.loads(arq.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return None
+    return mesa if isinstance(mesa, dict) else None
+
+
+def gravar_mesa(pasta: str | Path, cena: str, decisao_pendente: str, opcoes: list[str] | None = None,
+                situacao: str | None = None, premissas: list[str] | None = None,
+                agora: datetime | None = None) -> dict:
+    """Grava a cena atual, a decisão pendente e as opções oferecidas. As
+    premissas (combinados com o jogador que valem até o fim da sessão) ficam
+    as anteriores quando `premissas` não vem; lista vazia apaga."""
+    pasta = Path(pasta)
+    anterior = ler_mesa(pasta) or {}
+    if not cena.strip() or not decisao_pendente.strip():
+        raise ValueError("mesa: `cena` e `decisao_pendente` são obrigatórias")
+    opcoes = [str(o).strip() for o in (opcoes or []) if str(o).strip()]
+    if len(opcoes) > 4:
+        raise ValueError("mesa: no máximo 4 opções (A, B, C e \"Outra ação\")")
+    estado, erros = ler_estado(pasta)
+    mesa = {
+        "versao": VERSAO_MESA,
+        "atualizado_em": (agora or datetime.now(timezone.utc)).isoformat(timespec="seconds"),
+        "sessao": estado["sessao"] if estado and not erros else anterior.get("sessao"),
+        "cena": cena.strip(),
+        "situacao": (situacao or "").strip(),
+        "decisao_pendente": decisao_pendente.strip(),
+        "opcoes": opcoes,
+        "premissas": [str(x).strip() for x in premissas if str(x).strip()] if premissas is not None
+        else list(anterior.get("premissas") or []),
+    }
+    arq = pasta / "mesa.json"
+    tmp = arq.with_name("mesa.json.tmp")
+    tmp.write_text(json.dumps(mesa, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    os.replace(tmp, arq)
+    return mesa
+
+
+def mesa_recente(mesa: dict | None, horas: float = 6, agora: datetime | None = None) -> bool:
+    """A mesa foi gravada há pouco: sinal de jogo em andamento."""
+    try:
+        quando = datetime.fromisoformat(str((mesa or {}).get("atualizado_em")))
+    except ValueError:
+        return False
+    if quando.tzinfo is None:
+        quando = quando.replace(tzinfo=timezone.utc)
+    return (agora or datetime.now(timezone.utc)) - quando <= timedelta(hours=horas)
+
+
+def linhas_mesa(mesa: dict) -> list[str]:
+    linhas = [f"Mesa (gravada em {mesa.get('atualizado_em', '?')}):",
+              f"  Cena: {mesa.get('cena', '')}"]
+    if mesa.get("situacao"):
+        linhas.append(f"  Situação: {mesa['situacao']}")
+    linhas.append(f"  Decisão pendente: {mesa.get('decisao_pendente', '')}")
+    for o in mesa.get("opcoes") or []:
+        linhas.append(f"    - {o}")
+    if mesa.get("premissas"):
+        linhas.append("  Premissas combinadas com o jogador:")
+        linhas.extend(f"    - {x}" for x in mesa["premissas"])
+    return linhas
+
+
+def retomada(pasta: str | Path, contrato: str, motivo: str = "compact") -> str:
+    """Texto reinjetado depois da compactação (ou ao retomar a conversa): o
+    contrato de resposta, os números e a decisão pendente. Não lê direcao.md."""
+    pasta = Path(pasta)
+    quando = "a conversa foi compactada" if motivo == "compact" else "a conversa foi retomada"
+    linhas = [f"VtM, campanha {pasta.name}: {quando}. Se esta conversa é a sessão de jogo, "
+              "o que segue continua valendo (dados da campanha e formato de resposta)."]
+    if contrato.strip():
+        linhas.append(contrato.strip())
+    linhas.extend(resumo(pasta, max_linhas=3).splitlines()[1:])
+    mesa = ler_mesa(pasta)
+    if mesa:
+        linhas.extend(linhas_mesa(mesa))
+        linhas.append("Retomar exatamente dessa decisão, sem recapitular e sem decidir pelo jogador.")
+    else:
+        linhas.append("Sem mesa.json: confirmar com o jogador, em uma linha, onde a cena parou.")
+    linhas.append("Se a skill narrar não estiver mais no contexto, reler skills/narrar/SKILL.md do plugin "
+                  "e os arquivos da campanha (contexto.md, personagem.md, objetivos.md) antes de narrar.")
+    return "\n".join(linhas)
 
 
 def _base(pasta_campanhas: str | None) -> Path | None:

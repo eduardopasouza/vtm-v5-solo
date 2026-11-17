@@ -299,3 +299,17 @@ def test_servidor_sem_estado_segue_como_antes(tmp_path):
     assert len(com["dados_fome"]) == 2 and "estado" not in com
     assert "informe Fome" in sem["erro_ferramenta"]
     assert "estado.json" in mont["erro_ferramenta"]
+
+
+def test_servidor_registra_a_mesa(tmp_path):
+    pasta = _campanha(tmp_path)
+    reg, lido, ruim = _conversar(tmp_path, [
+        ("registrar_mesa", {"cena": "Gabinete do Xerife", "decisao_pendente": "Como responder?",
+                            "opcoes": ["A — Mostrar o que apurou", "B — Ler o Xerife"]}),
+        ("ler_estado", {}),
+        ("registrar_mesa", {"cena": "", "decisao_pendente": "x"}),
+    ])
+    assert reg["mesa"]["decisao_pendente"] == "Como responder?"
+    assert lido["mesa"]["opcoes"] == ["A — Mostrar o que apurou", "B — Ler o Xerife"]
+    assert "obrigatórias" in ruim["erro_ferramenta"]
+    assert json.loads((pasta / "mesa.json").read_text(encoding="utf-8"))["cena"] == "Gabinete do Xerife"

@@ -8,8 +8,11 @@
 
 O modo `hook` usa CLAUDE_PLUGIN_OPTION_PASTA_CAMPANHAS e
 CLAUDE_PLUGIN_OPTION_CAMPANHA_ATIVA (exportadas pelo Claude Code aos hooks de
-plugin). Só injeta o resumo quando a sessão abre dentro da pasta de campanhas
-ou numa pasta que a contém; fora disso, não imprime nada.
+plugin). Na abertura, só injeta o resumo quando a sessão abre dentro da pasta
+de campanhas ou no repositório do plugin logo acima dela. Depois de uma
+compactação ou retomada (`source` = compact ou resume), injeta o contrato de
+resposta, os números e a decisão pendente (`mesa.json`); fora da pasta de
+campanhas, só se a mesa foi gravada nas últimas horas (jogo em andamento).
 """
 
 from __future__ import annotations
@@ -54,13 +57,26 @@ def modo_hook(stdin_txt: str, env: dict) -> str:
     # repositório do plugin (tem .claude-plugin/plugin.json). Outras pastas
     # (ex.: C:\dev, mesmo sendo mãe da pasta de campanhas) não recebem o resumo.
     eh_repo_plugin = cwd == base.parent and (cwd / ".claude-plugin" / "plugin.json").is_file()
-    if not (_dentro(cwd, base) or eh_repo_plugin):
-        return ""
+    na_pasta = _dentro(cwd, base) or eh_repo_plugin
     # Sessão aberta dentro da pasta de um jogo: esse jogo, qualquer que seja a configuração.
     proprio = next((j for j in jogos if _dentro(cwd, j)), None)
     pasta = proprio or c.pasta_ativa(base_txt, env.get("CLAUDE_PLUGIN_OPTION_CAMPANHA_ATIVA", ""))
-    if pasta is not None:
+
+    if dados.get("source") in ("compact", "resume"):
+        # Sem campanha fixada: o jogo em andamento é o da mesa gravada por último.
+        if pasta is None:
+            recentes = [j for j in jogos if c.mesa_recente(c.ler_mesa(j))]
+            pasta = max(recentes, key=lambda j: c.ler_mesa(j)["atualizado_em"]) if recentes else None
+        if pasta is None or not (na_pasta or c.mesa_recente(c.ler_mesa(pasta))):
+            return ""
+        texto = c.retomada(pasta, _contrato_curto(), dados["source"])
+    elif not na_pasta:
+        return ""
+    elif pasta is not None:
         texto = c.resumo(pasta)
+        mesa = c.ler_mesa(pasta)
+        if mesa:
+            texto += "\n" + "\n".join(c.linhas_mesa(mesa))
     elif len(jogos) > 1:
         texto = c.resumo_varios(jogos)
     else:
@@ -68,6 +84,14 @@ def modo_hook(stdin_txt: str, env: dict) -> str:
     return json.dumps({"hookSpecificOutput": {"hookEventName": "SessionStart",
                                               "additionalContext": texto}},
                       ensure_ascii=False)
+
+
+def _contrato_curto() -> str:
+    arq = Path(__file__).resolve().parents[1] / "skills" / "narrar" / "contrato_curto.md"
+    try:
+        return arq.read_text(encoding="utf-8")
+    except OSError:
+        return ""
 
 
 def main(argv: list[str] | None = None) -> int:

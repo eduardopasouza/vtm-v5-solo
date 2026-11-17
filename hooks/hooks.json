@@ -1,5 +1,5 @@
 {
-  "description": "VtM: injeta um resumo curto da campanha ativa quando a sessão abre na pasta de campanhas (ou numa pasta que a contém). Só leitura; nunca lê direcao.md.",
+  "description": "VtM: na abertura, injeta um resumo curto da campanha ativa (só na pasta de campanhas ou no repositório do plugin). Depois de compactação ou retomada da conversa, reinjeta o contrato de resposta do narrador, os números e a decisão pendente (mesa.json). Nunca lê direcao.md.",
   "hooks": {
     "SessionStart": [
       {

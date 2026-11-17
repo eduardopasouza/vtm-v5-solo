@@ -86,6 +86,7 @@ Cada personagem tem a sua subpasta, e as campanhas são independentes. Para alte
     ├── contexto.md, personagem.md, objetivos.md, timeline.md
     ├── direcao.md         segredos do narrador (não leia, se quiser surpresa)
     ├── rolagens.jsonl     registro de toda rolagem
+    ├── mesa.json          cena em curso e decisão pendente (para retomar depois da compactação)
     ├── npcs/, cenario/
     └── partidas/<Partida>/<História>/<Aventura>/sessao_NN.md
 ```

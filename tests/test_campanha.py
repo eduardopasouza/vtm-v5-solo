@@ -204,3 +204,94 @@ def test_cli_auditar_codigo_de_saida(tmp_path):
                        capture_output=True, text=True, encoding="utf-8")
     assert p.returncode == 1
     assert any(a["codigo"] == "NUMERO_DIVERGENTE" for a in json.loads(p.stdout))
+
+
+# --- mesa.json e retomada depois da compactação (F4) ---------------------------
+
+
+def _jogo_com_estado(tmp_path, nome="Jogo"):
+    pasta = tmp_path / nome
+    pasta.mkdir()
+    modelo = Path(__file__).resolve().parents[1] / "08_Templates" / "07_estado.json"
+    (pasta / "estado.json").write_text(modelo.read_text(encoding="utf-8"), encoding="utf-8")
+    (pasta / "direcao.md").write_text("SEGREDO: o aliado é o traidor", encoding="utf-8")
+    return pasta
+
+
+def test_mesa_grava_e_mantem_premissas(tmp_path):
+    pasta = _jogo_com_estado(tmp_path)
+    m1 = c.gravar_mesa(pasta, "Gabinete do Xerife", "Como responder à acusação?",
+                       ["A — Mostrar o que apurou", "B — Ler o Xerife"], "Três corpos no cais.",
+                       ["Narrar em terceira pessoa"])
+    assert m1["sessao"] == 0 and c.ler_mesa(pasta) == m1
+    m2 = c.gravar_mesa(pasta, "Cais", "Entrar no armazém?")
+    assert m2["premissas"] == ["Narrar em terceira pessoa"] and m2["opcoes"] == []
+    assert c.gravar_mesa(pasta, "Cais", "Entrar?", premissas=[])["premissas"] == []
+    with pytest.raises(ValueError, match="obrigatórias"):
+        c.gravar_mesa(pasta, "Cais", " ")
+    with pytest.raises(ValueError, match="4 opções"):
+        c.gravar_mesa(pasta, "Cais", "Entrar?", list("abcde"))
+    (pasta / "mesa.json").write_text("{quebrado", encoding="utf-8")
+    assert c.ler_mesa(pasta) is None
+
+
+def test_mesa_recente():
+    from datetime import datetime, timedelta, timezone
+    agora = datetime(2026, 1, 1, 12, tzinfo=timezone.utc)
+    assert c.mesa_recente({"atualizado_em": (agora - timedelta(hours=2)).isoformat()}, agora=agora)
+    assert not c.mesa_recente({"atualizado_em": (agora - timedelta(hours=7)).isoformat()}, agora=agora)
+    assert not c.mesa_recente({"atualizado_em": "ontem"}, agora=agora)
+    assert not c.mesa_recente(None, agora=agora)
+
+
+def _contexto(saida):
+    return json.loads(saida)["hookSpecificOutput"]["additionalContext"]
+
+
+def test_hook_compact_reinjeta_contrato_estado_e_decisao(tmp_path):
+    pasta = _jogo_com_estado(tmp_path)
+    c.gravar_mesa(pasta, "Gabinete do Xerife", "Como responder à acusação?",
+                  ["A — Mostrar o que apurou", "B — Ler o Xerife"], premissas=["Sem cenas de tortura"])
+    env = {"CLAUDE_PLUGIN_OPTION_PASTA_CAMPANHAS": str(tmp_path), "CLAUDE_PLUGIN_OPTION_CAMPANHA_ATIVA": "Jogo"}
+    for origem in ("compact", "resume"):
+        txt = _contexto(cli.modo_hook(json.dumps({"cwd": str(pasta), "source": origem}), env))
+        assert "Contrato de resposta" in txt and "O jogador decide" in txt
+        assert "Fome 1" in txt
+        assert "Decisão pendente: Como responder à acusação?" in txt
+        assert "A — Mostrar o que apurou" in txt and "Sem cenas de tortura" in txt
+        assert "SEGREDO" not in txt
+    assert "compactada" in _contexto(cli.modo_hook(json.dumps({"cwd": str(pasta), "source": "compact"}), env))
+    # Na abertura normal: o resumo de sempre, mais a decisão pendente, sem o contrato.
+    inicio = _contexto(cli.modo_hook(json.dumps({"cwd": str(pasta), "source": "startup"}), env))
+    assert "Decisão pendente" in inicio and "Contrato de resposta" not in inicio
+
+
+def test_hook_compact_fora_da_pasta_so_com_mesa_recente(tmp_path):
+    base = tmp_path / "campanhas"
+    base.mkdir()
+    pasta = _jogo_com_estado(base)
+    fora = tmp_path / "outro"
+    fora.mkdir()
+    env = {"CLAUDE_PLUGIN_OPTION_PASTA_CAMPANHAS": str(base), "CLAUDE_PLUGIN_OPTION_CAMPANHA_ATIVA": ""}
+    entrada = json.dumps({"cwd": str(fora), "source": "compact"})
+    assert cli.modo_hook(entrada, env) == ""  # sem mesa: não há jogo em andamento
+    c.gravar_mesa(pasta, "Cais", "Entrar no armazém?")
+    assert "Entrar no armazém?" in _contexto(cli.modo_hook(entrada, env))
+    assert cli.modo_hook(json.dumps({"cwd": str(fora), "source": "startup"}), env) == ""
+    mesa = c.ler_mesa(pasta)
+    mesa["atualizado_em"] = "2020-01-01T00:00:00+00:00"
+    (pasta / "mesa.json").write_text(json.dumps(mesa), encoding="utf-8")
+    assert cli.modo_hook(entrada, env) == ""  # mesa velha: outra conversa, não reinjetar
+
+
+def test_hook_compact_sem_mesa_pede_confirmacao(tmp_path):
+    pasta = _jogo_com_estado(tmp_path)
+    env = {"CLAUDE_PLUGIN_OPTION_PASTA_CAMPANHAS": str(tmp_path), "CLAUDE_PLUGIN_OPTION_CAMPANHA_ATIVA": ""}
+    txt = _contexto(cli.modo_hook(json.dumps({"cwd": str(pasta), "source": "compact"}), env))
+    assert "Sem mesa.json" in txt and "Contrato de resposta" in txt
+
+
+def test_contrato_curto_cabe_em_poucas_linhas():
+    arq = Path(__file__).resolve().parents[1] / "skills" / "narrar" / "contrato_curto.md"
+    linhas = [x for x in arq.read_text(encoding="utf-8").splitlines() if x.strip()]
+    assert len(linhas) <= 11 and sum(len(x.split()) for x in linhas) <= 260

@@ -134,12 +134,14 @@ Hierarquia de regra (P6): regras da casa > V5 Core > suplementos V5 > `01_Sistem
 
 1. Escolher a campanha: a que o jogador nomeou; senão a campanha ativa; senão a única da pasta de Jogos; com várias e nenhuma fixada, listar (`listar_campanhas`) e perguntar. Dali em diante, a sessão é **desse jogo só**.
 2. Ler `estado.json`, **fonte única dos números** (Fome, Potência, Humanidade, Manchas, Saúde, Força de Vontade, XP, sessão, noite, local, hora). Campanha antiga sem `estado.json`: os números estão na tabela de estado do `contexto.md`.
-3. Ler `contexto.md` (situação, decisão pendente, relações), `personagem.md` (ficha) e `objetivos.md`.
+3. Ler `contexto.md` (situação, relações), `personagem.md` (ficha), `objetivos.md` e `mesa.json` (decisão pendente e premissas, se existir).
 4. Ler as regras da casa e `referencia.md` (tabela Caminhos). Cada RC entra no lugar da regra do Core que ela substitui.
 5. Ler `glossario.md` do jogo, se existir (Contrato, regra 12).
 6. Retomar em até 3 linhas ("Onde paramos: [situação]. [decisão pendente].") e seguir do ponto pendente, já no formato do Contrato.
 
 Se não existe jogo: informar e sugerir criar um ("criar jogo").
+
+**Depois de uma compactação**, o plugin reinjeta o resumo do contrato, os números e a mesa. Seguir da decisão pendente, sem recapitular; se esta skill não estiver mais no contexto, reler este arquivo antes de narrar.
 
 **Várias campanhas.** Cada campanha é independente: nada de uma vaza para a outra.
 - Uma conversa por campanha. Se o jogador trocar de jogo no meio, fechar a documentação do atual (fim de sessão) e sugerir uma conversa nova para o outro.
@@ -164,6 +166,7 @@ Só rolar se houver chance de falha e depois que o jogador escolheu a ação. Da
 | Sangue e cura | `surto_de_sangue`, `curar`, `curar_agravado`, `tabela_potencia` |
 | Conflito e dano | `conflito`, `aplicar_dano` (com `alvo` para marcar no personagem) |
 | Trackers, frenesi, remorso | `teste_tracker`, `frenesi`, `remorso` |
+| Cena em curso e decisão pendente | `registrar_mesa` |
 
 - **O motor guarda o estado.** Ele lê Fome, Potência, Humanidade, Manchas e trackers do `estado.json` e grava ali Fome, dano, Força de Vontade gasta e Humanidade. Não regravar esses números à mão depois de uma ferramenta; conferir pelo campo `estado` da resposta.
 - **Parada:** `parada` soma Atributo + Habilidade (+ Disciplina, + bônus) pela ficha. Bônus de +1 ou +2 por vantagem na situação; penalidade só com desvantagem objetiva (Prejudicado: −2).
@@ -180,6 +183,7 @@ Atualizar logo depois das consequências, antes da próxima cena:
 |--------|-------------|
 | `estado.json` — o que o motor não grava: Manchas ganhas, XP, sessão, noite, hora, local. Campanha sem `estado.json`: todos os números na tabela de estado do `contexto.md`; não criar o `estado.json` no meio do jogo | `ramificacoes.md` (na partida) — decisão com impacto |
 | `contexto.md` — situação, localização, pendências (sem números) | `historia.md` — pista ou arco avançou |
+| `mesa.json`, pela ferramenta `registrar_mesa`, **a cada mensagem que termina em escolha**: cena, decisão pendente, opções oferecidas e premissas combinadas com o jogador. É o que traz a cena de volta depois da compactação |  |
 | Sessão ativa (`sessao_XX.md`) — log da cena | `personagem.md` — ficha mudou (XP gasto, disciplina nova) — números de estado não |
 | | `npcs/[nome].md` — NPC novo ou atitude mudou |
 | | `direcao.md` — planos do narrador mudaram |

@@ -226,7 +226,23 @@ def ler_estado(campanha: str | None = None) -> dict:
     if estado is None:
         return {"erro": "campanha sem estado.json (ou não encontrada): os números vêm do contexto.md"}
     return {"campanha": pasta.name, "sessao": estado["sessao"], "tempo": estado["tempo"],
-            "estado": est.resumo(estado)}
+            "estado": est.resumo(estado), "mesa": camp.ler_mesa(pasta)}
+
+
+@_ferramenta
+def registrar_mesa(cena: str, decisao_pendente: str, opcoes: list[str] | None = None,
+                   situacao: str | None = None, premissas: list[str] | None = None,
+                   campanha: str | None = None) -> dict:
+    """Grava em mesa.json a cena em curso, a decisão pendente e as opções
+    oferecidas (só o que o jogador já viu; nada de segredo do narrador). Chamar
+    a cada mensagem de jogo que termina em escolha: é o que permite retomar do
+    ponto certo depois que a conversa é compactada. `premissas` = combinados com
+    o jogador que valem até o fim da sessão; sem o parâmetro, ficam as anteriores."""
+    pasta = _pasta_campanha(campanha)
+    if pasta is None:
+        raise ValueError("campanha não encontrada: informe `campanha`")
+    return {"campanha": pasta.name,
+            "mesa": camp.gravar_mesa(pasta, cena, decisao_pendente, opcoes, situacao, premissas)}
 
 
 @_ferramenta
